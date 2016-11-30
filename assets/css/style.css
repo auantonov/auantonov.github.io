@@ -1162,7 +1162,7 @@ body {
   font-size: 13px;
   line-height: 1.42857143;
   color: #404040;
-  background-color: #EEEEEE;
+  background-color: #fff;
 }
 input,
 button,
@@ -4985,7 +4985,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-fixed-top,
 .navbar-fixed-bottom {
-  position: fixed;
+  position: relative;
   right: 0;
   left: 0;
   z-index: 1030;
@@ -8049,7 +8049,6 @@ html {
 }
 body {
   padding: 0;
-  background-color: #EEEEEE;
   height: 100%;
 }
 a:hover,
@@ -8218,7 +8217,6 @@ canvas {
 */
 .be-wrapper {
   min-height: 100%;
-  padding-top: 61px;
 }
 @media (max-width: 767px) {
   .be-wrapper {
@@ -9950,7 +9948,7 @@ canvas {
   [Page head]
 */
 .page-head {
-  padding: 20px 25px 10px;
+  padding: 10px 20px;
   position: relative;
   background:#fff;
 }
@@ -20405,9 +20403,9 @@ fieldset[disabled] .full-calendar .fc-button.active {
 
 .video-wrap {
   width: 100%;
-  height: calc(100vh - 160px);
+  height: calc(100vh - 163px);
   left: 0;
-  position: absolute;
+  position: relative;
 }
 
 .video-descr{
@@ -20436,9 +20434,131 @@ fieldset[disabled] .full-calendar .fc-button.active {
   z-index: 11;
   height: 100%;
 }
-/*.mbYTP_wrapper {
-  min-height: 100vh!important;
-  position: absolute!important;
-  overflow: visible!;
-}*/
+.mbYTP_wrapper {
+  position: relative!important;
+}
+.our-mission {
+  background: #fff;
+  padding-top: 60px;
+  margin-bottom: 100px;
+}
+.our-mission h1,
+.our-values h1,
+.our-team h1{
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 44px;
+}
+.our-mission-image,
+.our-mission-descr {
+  width:50%;
+  float:left;
+  background-color: #f7f7f7;
+  height: 550px;
+}
+.our-mission-image{
+    background: url(../img/gallery/our-team.png);
+}
+.our-mission-descr{
+  padding: 140px;
+}
+.our-mission-descr h3 {
+  color: black;
+  display: block;
+  position: relative;
+  font-size: 1.85em;
+  margin-bottom: 45px;
+  font-weight: 400;
+}
+.our-mission-descr h3:before, 
+.value-item h2:before {
+  content: '';
+  border-bottom: 4px solid #000;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 45px;
+  bottom: -20px;
+}
+.our-mission-descr p {
+  color: #888;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.our-mission-descr span{
+  color: #888;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 300;
+}
+.our-values {
+  margin-bottom: 65px;
+}
+.our-values h1,
+.our-team h1 {
+  text-align: left;
+}
+.value-item {
+  margin-bottom: 60px;
+}
+.value-item h2 {
+  font-size: 45px;
+  position: relative;
+  margin-bottom: 50px;
+  color: #0089f4;
+}
+.value-item p {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 300;
+}
+.our-team {
+  margin-bottom: 40px;
+}
+.our-team-item {
+  margin-right: 30px;
+}
+.our-team-item {
+    width: 255px;
+    background: #f9f9f9;
+    padding: 30px;
+    margin-bottom: 60px;
+    text-align: center;
+    float: left;
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
+}
+.our-team-item-img {
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.our-team-item-title h5 {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color:#0089f4;
+}
+.our-team-item-title span{
+  color: #888;
+  font-size: 14px;
+}
+.our-team-item-description {
+  margin-top: 20px;
+  color: #888;
+  font-weight: 300;
+}
+.our-team-item:nth-child(3n) {
+  margin-right:0px;
+}
+
+
+
+
+
+
+
+
+
+
 

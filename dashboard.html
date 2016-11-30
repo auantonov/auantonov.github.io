@@ -14,6 +14,8 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+	
+	
   </head>
   <body>
     <div class="be-wrapper be-nosidebar-left">
@@ -23,7 +25,7 @@
           <div class="row">
             <div class="col-xs-12 col-md-8 col-md-offset-2">
                <div class="panel panel-default panel-table">
-					<div class="panel-heading">Паи которыми вы владеете
+					<div class="panel-heading">Паи которыми вы владеете (<span id='myeth'>loading</span>)
 					  <div class="tools"><span class="icon mdi mdi-download"></span><span class="icon mdi mdi-more-vert"></span></div>
 					</div>
 					<div class="panel-body">
@@ -40,6 +42,17 @@
 						  </tr>
 						</thead>
 						<tbody class="no-border-x">
+						<tr>
+							<td>TST тестовый</td>
+							<td class="number mytokenbalance" rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
+							loading
+							</td>
+							<td class="number"><span>100р</span></td>
+							<td class="number">+33%</td>
+							<td class="number">23.10.2019</td>
+							<td>Аргесивный</td>
+							<td class="action"><a href="#" class="icon"><i class="mdi mdi-plus"></i>Открыть</a></td>
+						  </tr>
 						  <tr>
 							<td>Меркурий</td>
 							<td class="number"> 2222</td>
@@ -74,7 +87,7 @@
            
             </div>
           </div>
-		  
+
 		  <div class="row">
             <div class="col-xs-12 col-md-8 col-md-offset-2">
                <div class="panel panel-default panel-table">
@@ -121,7 +134,67 @@
       </div>
     
 	</div>
-    <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+	
+	 <link rel="stylesheet" type="text/css" href="css/alertify.min.css"/> 
+	
+		<script>
+	var myeth;
+	function bundle_loaded() {
+		
+		if (typeof bundle != "undefined" && typeof bundle.Main != "undefined" && typeof bundle.Main.createAccount != "undefined") { 
+			myeth = localStorage.getItem('myethaddress');
+			if (!myeth) { 
+				console.log("!myeth");
+				var reg = bundle.Main.createAccount(); // return {address: address, privateKey: privateKey};
+				console.log(reg);
+				console.log("!lol");
+				localStorage.setItem("myethaddress",reg.address);
+				localStorage.setItem("myprivate",reg.privateKey);	
+				myeth = reg.address;
+			} 
+			$("#myeth").html(myeth);
+			
+			$('.mytokenbalance').each(function (index, value) { 
+			  var me = $(this);
+			  var url = "https://api.etherscan.io/api?module=proxy&data=0x70a08231000000000000000000000000"+myeth.replace('0x','')+"&to="+$(this).attr('rel')+"&action=eth_call";
+			  console.log(url);
+			  
+			  $.getJSON(url,function(d){	
+					$(me).html(parseInt(d.result, 16));
+				});
+			
+			});
+
+			//
+			/*
+			$url = 'https://api.etherscan.io/api?module=proxy&data=0x70a08231000000000000000000000000'.$adres.'&to='.$contr.'&apikey=BJY6AGT4AR8WHE8DRJV3Q549UU16GIMUKB&action=eth_call';
+			//echo $url;
+			$mytok = json_decode(send_post($url));
+			$tok = hexdec($mytok->result);
+			*/
+			
+		} else {
+			
+			setTimeout(bundle_loaded,3000);
+		}
+		
+	}
+	
+	
+	
+	</script>
+	
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery.translate.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/alertify.min.js" type="text/javascript"></script>
+    <script src="js/ejs_production.js" type="text/javascript"></script>
+    
+    <script src="js/translations.js" type="text/javascript"></script>
+    <script src="js/bundle.js" type="text/javascript"></script>
+    <script src="js/bundle.js" type="application/javascript;version=1.7"></script>
+    
+	
     <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
     <script src="assets/js/main.js" type="text/javascript"></script>
     <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
@@ -135,5 +208,8 @@
       	prettyPrint();
       });
     </script>
+	
+
+	
   </body>
 </html>

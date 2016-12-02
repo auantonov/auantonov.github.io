@@ -1073,8 +1073,22 @@ blockquote .small, blockquote footer, blockquote small {
     background: #fff;
     padding-bottom: 150px;
 }
-
-
+.mt130 {
+    margin-top: 130px;
+}
+.navbar-brand {
+    opacity: 1;
+}
+.navbar-brand>img {
+    width: 265px;
+}
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: -51px;
+}
+.navbar-brand {
+    padding: 0px 15px;
+    margin-top: -14px;
+}
 
 
 

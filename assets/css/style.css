@@ -1153,7 +1153,22 @@ blockquote .small, blockquote footer, blockquote small {
     margin-right: -7px;
 }
 
+h4.spaced {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.spaced-text {
+    width: 83%;
+    line-height: 28px;
+}
+.icon-holder {
+    margin-top:7px;
+}
 
+#team {
+    padding-top:0;
+}
 
 
 

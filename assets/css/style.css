@@ -1069,6 +1069,12 @@ blockquote .small, blockquote footer, blockquote small {
     padding-bottom: 100px;
 }
 
+.video-wrapper iframe{
+    margin: auto;
+    width: 70%;
+    height: 500px;
+    display: block;
+}
 .intro {
     padding-top: 120px;
     background: #fff;

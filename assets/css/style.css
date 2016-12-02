@@ -1068,32 +1068,84 @@ blockquote .small, blockquote footer, blockquote small {
     padding-top: 80px;
     padding-bottom: 100px;
 }
+
 .intro {
     padding-top: 120px;
     background: #fff;
     padding-bottom: 150px;
 }
+
 .mt130 {
     margin-top: 130px;
 }
+
 .navbar-brand {
     opacity: 1;
 }
+
 .navbar-brand>img {
     width: 265px;
 }
+
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
     margin-left: -51px;
 }
+
 .navbar-brand {
     padding: 0px 15px;
     margin-top: -14px;
 }
 
+.top-menu {
+    height: 50px;
+    width: 100%;
+    background: #474747;
+}
 
+.top-menu-left-section {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding-top: 13px;
+}
 
+.languages {
+    position: relative;
+    float: right;
+    top: 14px;
+    right: 0;
+}
 
+.phone {
+    color: white;
+    font-weight: 600;
+    padding-top: 14px;
+    display: block;
+    float: right;
+    margin-right: 35px;
+}
 
+.pe-7s-mail{
+    font-size: 31px;
+    color: white;
+    padding-top: 10px;
+    margin-right: 12px;
+}
+
+.languages span{
+    border: 3px solid #ffffff;
+    color: white;
+    padding: 15px;
+}
+
+.top-menu-right-section {
+    position: relative;
+}
+
+.languages span:first-child {
+    margin-right: -7px;
+}
 
 
 

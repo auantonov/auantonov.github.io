@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="assets/img/logo-fav.png">
     <title>Beagle</title>
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"/>
+<link href="css/bootstrap.min.css" rel="stylesheet">
 	
 	
   </head>
@@ -38,9 +38,9 @@
 						  </tr>
 						</thead>
 						<tbody class="no-border-x">
-						<tr>
+						<tr class='pie' data-buyprice='49000' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
 							<td>TST тестовый</td>
-							<td class="number mytokenbalance" rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
+							<td class="number mytokenbalance" >
 							loading
 							</td>
 							<td class="number"><span>100р</span></td>
@@ -78,8 +78,8 @@
 							  <p> Все отлично, идем ровно, купили компанию.</p>
 							</div>
 							<div id="buy2" class="tab-pane">
-								Хочу купить <input type='text' name='' class='form-control' value='1000'> паев проекта TST,  это примерно ~<span></span>р, для покупки переведите 1 BTC на адрес {1231231233}
-								
+								Хочу купить <input type='text' name='' class='form-control' id='kupit' value='1000'> паев проекта TST,  это примерно ~<span></span>р, для покупки переведите 1 BTC на адрес {1231231233}
+								14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ
 							</div>
 							<div id="sell" class="tab-pane">
 							  <p>Consectetur adipisicing elit. Ipsam ut praesentium, voluptate quidem necessitatibus quam nam officia soluta aperiam, recusandae.</p>
@@ -124,13 +124,13 @@
 			} 
 			$("#myeth").html(myeth);
 			
-			$('.mytokenbalance').each(function (index, value) { 
+			$('tr.pie').each(function (index, value) { 
 			  var me = $(this);
 			  var url = "https://api.etherscan.io/api?module=proxy&data=0x70a08231000000000000000000000000"+myeth.replace('0x','')+"&to="+$(this).attr('rel')+"&action=eth_call";
 			  console.log(url);
 			  
 			  $.getJSON(url,function(d){	
-					$(me).html(parseInt(d.result, 16));
+					$(me).find("mytokenbalance").html(parseInt(d.result, 16));
 				});
 			
 			});

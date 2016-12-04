@@ -38,7 +38,7 @@
 						  </tr>
 						</thead>
 						<tbody class="no-border-x">
-						<tr class='pie' data-buyprice='49000' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
+						<tr class='pie' data-price='49000' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
 							<td>TST тестовый</td>
 							<td class="number mytokenbalance" >
 							loading
@@ -58,10 +58,10 @@
             </div>
           </div>
 
-		  <div class="row">
+		  <div class="row" style='display:none' id='centru'>
             <div class="col-xs-12 col-md-8 col-md-offset-2">
                <div class="panel panel-default panel-table">
-				   <div class="panel-heading">Действия с паяи Меркурий
+				   <div class="panel-heading">Действия
 					  <div class="tools"><span class="icon mdi mdi-download"></span><span class="icon mdi mdi-more-vert"></span></div>
 					</div>
 					<div class="panel-body">
@@ -78,16 +78,55 @@
 							  <p> Все отлично, идем ровно, купили компанию.</p>
 							</div>
 							<div id="buy2" class="tab-pane">
-								Хочу купить <input type='text' name='' class='form-control' id='kupit' value='1000'> паев проекта TST,  это примерно ~<span></span>р, для покупки переведите 1 BTC на адрес {1231231233}
-								14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ
+							<p><br>
+								Хочу купить <input type='number' name='' onkeyup='recalc_buy()' id='kupit' value='1000'> паев проекта <span id='pr'>??</span>,  это примерно ~<span id='inrub'></span>р, для покупки переведите <span id='inbtc'>1</span> 
+								BTC на адрес 14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ 
+							</p>
 							</div>
 							<div id="sell" class="tab-pane">
 							  <p>Consectetur adipisicing elit. Ipsam ut praesentium, voluptate quidem necessitatibus quam nam officia soluta aperiam, recusandae.</p>
 							  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facilis laboriosam, vitae ipsum tenetur atque vel repellendus culpa reiciendis velit quas, unde soluta quidem voluptas ipsam, rerum fuga placeat rem error voluptate eligendi modi. Delectus, iure sit impedit? Facere provident expedita itaque, magni, quas assumenda numquam eum! Sequi deserunt, rerum.</p><a href="#">Read more  </a>
 							</div>
 							<div id="send" class="tab-pane">
-							  <p>Consectetur adipisicing elit. Ipsam ut praesentium, voluptate quidem necessitatibus quam nam officia soluta aperiam, recusandae.</p>
-							  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facilis laboriosam, vitae ipsum tenetur atque vel repellendus culpa reiciendis velit quas, unde soluta quidem voluptas ipsam, rerum fuga placeat rem error voluptate eligendi modi. Delectus, iure sit impedit? Facere provident expedita itaque, magni, quas assumenda numquam eum! Sequi deserunt, rerum.</p><a href="#">Read more  </a>
+								Получатель <input type='text' name='' placeholder='0x920ef9458B0023f64E16495956F9b9072b0c28d3' id='poluchatel'>
+								количество <input type='number' name='' class='' value='1000'> 
+								<input type='button' name='' onclick='send_token();' class='btn' value='Перевести'>
+								<script>
+								
+								function send_token(){
+									var options = options || {};
+									var to = $("#poluchatel").val();
+									bundle.utility.getNextNonce(web3, myeth, function(err, nextNonce){
+										options.nonce = nextNonce;
+										options.to = curaddr;
+										options.data = '0xa9059cbb000000000000000000000000'+$("#poluchatel").val().replace('0x','')+'00000000000000000000000000000000'+pad("5dc",32); //вставить перевод некой суммы 
+										console.log(options.data);
+										var tx = new Tx(options);
+										signTx(web3, myeth, tx, localStorage.getItem('myprivate'), function(err, tx){
+											var serializedTx = tx.serialize().toString('hex');
+											  var url = 'https://'+(config.ethTestnet ? 'testnet' : 'api')+'.etherscan.io/api';
+											  var formData = {module: 'proxy', action: 'eth_sendRawTransaction', hex: serializedTx};
+											  if (config.etherscanAPIKey) formData.apikey = config.etherscanAPIKey;
+											  postURL(url, formData, function(err, body){
+												if (!err) {
+												  try {
+													var result = JSON.parse(body);
+													if (result['result']) {
+													  callback(undefined, {txHash: result['result'], nonce: nonce+1});
+													} else if (result['error']) {
+													  callback(result['error']['message'], {txHash: undefined, nonce: nonce});
+													}
+												  } catch (err) {
+													callback(err, {txHash: undefined, nonce: nonce});
+												  }
+												} else {
+												  callback(err, {txHash: undefined, nonce: nonce});
+												}
+											  });
+										});
+									});
+								}
+								</script>
 							</div>
 						  </div>
 						</div>
@@ -109,10 +148,11 @@
 	
 		<script>
 	var myeth;
+	var cur,price;
 	function bundle_loaded() {
 		
 		if (typeof bundle != "undefined" && typeof bundle.Main != "undefined" && typeof bundle.Main.createAccount != "undefined") { 
-			myeth = localStorage.getItem('myethaddress');
+			myeth = localStorage.getItem('myethaddress'); 
 			if (!myeth) { 
 				console.log("!myeth");
 				var reg = bundle.Main.createAccount(); // return {address: address, privateKey: privateKey};
@@ -130,11 +170,26 @@
 			  console.log(url);
 			  
 			  $.getJSON(url,function(d){	
-					$(me).find("mytokenbalance").html(parseInt(d.result, 16));
+					$(me).find(".mytokenbalance").html(parseInt(d.result, 16));
 				});
 			
 			});
-
+			
+			$("tr.pie").on("click",function(){
+				
+				$("#centru").show();
+				
+				cur = $(this).attr('data-ticker');
+				curaddr = $(this).attr('rel');
+				price = $(this).attr('data-price'); //сколько токенов получаем за 1 биткоин
+				
+				$("#kupit").val(); //сколько он хочет купить
+				
+				recalc_buy();
+				
+			});
+			
+			
 			//
 			/*
 			$url = 'https://api.etherscan.io/api?module=proxy&data=0x70a08231000000000000000000000000'.$adres.'&to='.$contr.'&apikey=BJY6AGT4AR8WHE8DRJV3Q549UU16GIMUKB&action=eth_call';
@@ -150,8 +205,21 @@
 		
 	}
 	
+	function recalc_buy() {
+			
+				$("#kupit").val(); //сколько он хочет купить
+				$("#pr").html(cur); //тикер проекта
+				$("#inrub").html(); //в рублях 
+				$("#inbtc").html($("#kupit").val()/price); //в битках
+				 var tx = new Tx(options);
+			}
 	
-	
+	function pad(num, size) {
+		var s = num+"";
+		while (s.length < size) s = "0" + s;
+		return s;
+	}
+	//function 
 	</script>
 	
 	<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
@@ -169,15 +237,7 @@
     <script src="assets/js/main.js" type="text/javascript"></script>
     <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="assets/lib/prettify/prettify.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-      	//initialize the javascript
-      	App.init();
-      	
-      	//Runs prettify
-      	prettyPrint();
-      });
-    </script>
+
 	
 
 	

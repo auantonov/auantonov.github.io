@@ -4,17 +4,17 @@ Version:1.0
 Author:Denis Samardjiev
 */
 
-@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:100,300,700';
+
 
 /* =Common Styles
 -------------------------------------------------------------- */
 body {
 	background-color: #f5f5f5;
-	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	color: #8e8e8e;
 	height: 100%;
     padding-top: 80px;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 	min-height: 100% !important;
 }
@@ -210,7 +210,7 @@ a:focus {
 -------------------------------------------------------------- */
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 	color: #474747;
-    font-family: 'Montserrat';
+    
     font-weight: 400;
     text-transform: uppercase;
 }
@@ -227,7 +227,7 @@ a:focus {
 .paragraph-logo {
     font-size: 24px;
     color: #474747;
-    font-family: 'Montserrat';
+    
     display: inline-block;
     height: 52px;
     text-align: center;
@@ -239,9 +239,9 @@ a:focus {
 }
 
 .lead-rolla {
-    font-size: 16px;
-    text-transform: uppercase;
+    font-size: 19px;
     color: #a9a9a9;
+    line-height: 35px;
 }
 
 .lead-sm {
@@ -253,7 +253,7 @@ a:focus {
 }
 
 .heading-1 {
-    font-family: 'Montserrat', sans-serif;
+     sans-serif;
     color: #474747;
     font-weight: 700;
     text-transform: uppercase;
@@ -291,7 +291,7 @@ a:focus {
 
 .navbar-default .navbar-brand {
     color: #373737;
-	font-family: 'Montserrat';
+	
 	letter-spacing: -4.5px;
 	text-transform: uppercase;
 }
@@ -299,6 +299,7 @@ a:focus {
 .navbar-default .navbar-nav > li > a {
     color: #adadad;
     line-height: 50px;
+    letter-spacing: 0.7px;
     font-size: 14px;
     text-transform: uppercase;
     -webkit-transition: all 0.8s ease;
@@ -672,7 +673,7 @@ a:focus {
 
 .quote-author {
     font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
+     sans-serif;
     text-transform: uppercase;
     color: #474747;
     margin-top: 15px;
@@ -771,7 +772,7 @@ blockquote {
 blockquote .small, blockquote footer, blockquote small {
     font-size: 70%;
     color: #474747;
-    font-family: 'Montserrat';
+    
     font-weight: 400;
     text-transform: uppercase;
 }
@@ -888,7 +889,7 @@ blockquote .small, blockquote footer, blockquote small {
 }
 
 .badge {
-    font-family: 'Montserrat';
+    
     padding: 4px 4px;
     font-size: 12px;
     font-weight: 300;
@@ -1160,10 +1161,12 @@ h4.spaced {
 }
 .spaced-text {
     width: 83%;
-    line-height: 28px;
+    font-size: 17px;
+    line-height: 26px;
+    text-transform: none;
 }
 .icon-holder {
-    margin-top:7px;
+    margin-top:3px;
 }
 
 #team {
@@ -1180,10 +1183,21 @@ h4.spaced {
     margin-bottom: 10px;
 }
 .contact-info {
-    margin-bottom: 120px;
+    padding-top: 100px;
+    background: #fff;
+    padding-bottom: 120px;
+}
+.partners{
+    display: flex;
+    justify-content: space-around;
 }
 
-
+.intro-font {
+    font-size: 21px;
+}
+.intro-font p {
+    margin-bottom: 20px;
+}
 
 
 

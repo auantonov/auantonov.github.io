@@ -129,15 +129,14 @@
 	<!-- End About -->
 	<section class="intro">
 		<div class="container">
-					<div class="row">
-						<!-- Content -->
-						<div class="col-lg-12">
-								<p>BigTime Fund создает возможность для рядового российского инвестора принять участие в колоссальном росте (более 500% в год) капитализации новых блокчейн-стартапов, способных в корне изменить ту или иную отрасль современного бизнеса.</p>
-								<p class="mb20">Благодаря механике блокчейн BigTime Fund построен на принципах полной прозрачности для рядового инвестора - все операции можно посмотреть в любой момент, как с помощью сотрудников фонда, так и самостоятельно. Все транзакции совершаются в рамках публичных блокчейнов. Такую систему мы видим наиболее надежной и эффективной, и именно на такие рельсы мы будем перестраивать современный бизнес, с помощью наших инвестиций. </p>
-							</div>
-						</div><!-- /.column -->
-					</div><!-- /.row -->
-				</div>
+				<div class="row">
+					<!-- Content -->
+					<div class="col-lg-12">
+						<p>BigTime Fund создает возможность для рядового российского инвестора принять участие в колоссальном росте (более 500% в год) капитализации новых блокчейн-стартапов, способных в корне изменить ту или иную отрасль современного бизнеса.</p>
+						<p class="mb20">Благодаря механике блокчейн BigTime Fund построен на принципах полной прозрачности для рядового инвестора - все операции можно посмотреть в любой момент, как с помощью сотрудников фонда, так и самостоятельно. Все транзакции совершаются в рамках публичных блокчейнов. Такую систему мы видим наиболее надежной и эффективной, и именно на такие рельсы мы будем перестраивать современный бизнес, с помощью наших инвестиций. </p>
+					</div>
+				</div><!-- /.column -->
+			</div><!-- /.row -->
 	</section>
 		<section id="about" class="section-padding">
 				<div class="container">
@@ -239,7 +238,7 @@
 
 				</div><!-- /.container -->
 			</section>
-	<section id="team" class="section-padding section-border-bottom">
+	<section id="team" class="section-padding">
 			<div class="container">
 				<!-- Title -->
 				<div class="row mb60">
@@ -318,7 +317,31 @@
 			</div><!-- /.container -->
 		</section>
 	<!-- Begin Quotes -->
-
+	
+	<!-- Begin Map -->
+	<section class="contact-info">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div id="map1" class="map"></div>
+					<div class="map-content">
+						<h2 class="display-4">Contact Info:</h2>
+						<div class="nk-gap mnt-3"></div>
+							<p>Praesent interdum congue mauris, et fringilla lacus pel vitae. Quisque nisl mauris, aliquam eu ultrices vel, conse vitae sapien at imperdiet risus. Quisque cursus risus id. fermentum, in auctor quam consectetur.</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div id="map2" class="map"></div>
+					<div class="map-content">
+						<h2 class="display-4">Contact Info:</h2>
+						<div class="nk-gap mnt-3"></div>
+							<p>Praesent interdum congue mauris, et fringilla lacus pel vitae. Quisque nisl mauris, aliquam eu ultrices vel, conse vitae sapien at imperdiet risus. Quisque cursus risus id. fermentum, in auctor quam consectetur.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Map -->
 	<!-- End Quotes -->
 
 	<!-- Start Contact Information -->
@@ -330,9 +353,47 @@
 	<!-- End Footer -->
 
 	<!-- Javascript Files -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArLNT3t4qsJEBmR0R9P_6ueLIQz0Jvt1M" async defer></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 	<script type="text/javascript" src="js/scrollreveal.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	    <script type="text/javascript">
+	    		$(document).ready(function() {
+	    		 
+	    		    var pos1 = new google.maps.LatLng(18.520266, 73.856406),
+	    		        pos2 = new google.maps.LatLng(28.579943, 77.330006),
+	    		        
+	    		        option1 = {
+	    		            zoom: 17,
+	    		            center: pos1,
+	    		            mapTypeId: google.maps.MapTypeId.ROADMAP,
+	    		            styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
+	    		        },
+
+	    		        option2 = {
+	    		            zoom: 16,
+	    		            center: pos2,
+	    		            mapTypeId: google.maps.MapTypeId.ROADMAP,
+	    		            styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
+	    		        },
+	    		        
+	    		        map1 = new google.maps.Map(document.getElementById("map1"), option1),
+	    		        map2 = new google.maps.Map(document.getElementById("map2"), option2),
+
+	    		        myMarker = new google.maps.Marker({
+	    		            position: pos1,
+	    		            map: map1,
+	    		            title: "Pune"
+	    		        }),
+
+	    		        myMarker2 = new google.maps.Marker({
+	    		            position: pos2,
+	    		            map: map2,
+	    		            title: "Noida"
+	    		        });
+
+	    		});
+	    </script>
 </body>
 </html>

@@ -15,6 +15,7 @@ body {
 	height: 100%;
     padding-top: 80px;
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
     font-weight: 300;
 	min-height: 100% !important;
 }
@@ -1217,9 +1218,24 @@ h4.spaced + p{
 .vacancy-item h6 {
     font-size: 17px;
 }
+.SMI {
+    height: 600px;
+}
+.SMI-item {
+    margin-bottom: 60px;
+}
+.SMI-item img {
+    width: 26%;
+}
+.SMI-item a {
+    font-size: 21px;
+    margin-left: 35px;
+    text-decoration: underline;
+}
 
-
-
+.SMI-item a:hover {
+    text-decoration: none;
+}
 
 
 

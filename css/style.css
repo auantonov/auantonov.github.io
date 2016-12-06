@@ -1236,6 +1236,34 @@ h4.spaced + p{
 .SMI-item a:hover {
     text-decoration: none;
 }
+.video-wrapper {
+    background-image: url(../images/btf/STARTUP.jpg);
+    position: relative;
+    height: calc(100vh - 180px);
+}
+.video-wrapper:before {
+    content:'';
+    left:0;
+    top:0;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background-color: rgba(85, 202, 245, 0.8);
+}
+.promo-descr {
+    position: absolute;
+    z-index: 11111;
+    width: 600px;
+    text-transform: none;
+    line-height: 58px;
+    color:white;
+    font-size: 40px;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    left: 50%;
+    text-align: center;
+}
+
 
 
 

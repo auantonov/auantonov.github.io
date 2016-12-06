@@ -1078,9 +1078,9 @@ blockquote .small, blockquote footer, blockquote small {
     display: block;
 }
 .intro {
-    padding-top: 120px;
+    padding-top: 100px;
     background: #fff;
-    padding-bottom: 150px;
+    padding-bottom: 120px;
 }
 
 .mt130 {
@@ -1263,6 +1263,110 @@ h4.spaced + p{
     left: 50%;
     text-align: center;
 }
+
+/* news page */
+
+.single-news-item-img img {
+    width:100%;
+}
+
+.single-news{
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+.single-news-item h1{
+    line-height: 48px;
+    font-weight: 600;
+    text-transform: none;
+    margin-bottom: 25px;
+}
+
+.single-news-item-descr{
+    color: #474747;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.subscribe {
+    margin-bottom: 45px;
+}
+.subscribe span {
+    margin-bottom: 10px!important;
+    display: block;
+}
+
+.events-item {
+    display: flex;
+    align-items: flex-start;
+}
+.events-item img {
+    width: 100px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.events-item-info span {
+    display: block;
+    font-size: 13px;
+}
+.events-item-info a{
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.events > span,
+.subscribe span{
+    font-size: 20px;
+    margin-bottom: 25px;
+    display: block;
+    font-weight: 500;
+}
+
+.other-news-item-img img {
+    width:100%;
+}
+.other-news-item-img {
+    margin-right: 30px;
+}
+.other-news-item{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.other-news-item-content {
+    width:100%;
+    font-size: 17px;
+    line-height: 29px;
+}
+.tags-cont {
+    margin-bottom: 100px;
+    float: left;
+    margin-top: 20px;
+}
+.tags-cont a {
+    background: #fff;
+    display: inline-block;
+    padding: 10px 15px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+.other-news-bottom-descr {
+    font-size: 17px;
+    line-height: 29px;
+}
+.related-posts {
+    height: 600px;
+}
+.related-posts-item img {
+    width:100%;
+}
+
+
+
+
 
 
 

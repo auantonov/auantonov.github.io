@@ -1285,18 +1285,18 @@ h4.spaced + p{
 .single-news-item-descr{
     color: #474747;
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 400;
     line-height: 30px;
 }
 .subscribe {
     margin-bottom: 45px;
+    margin-top: 11px;
 }
 .subscribe span {
     margin-bottom: 10px!important;
     display: block;
 }
-
 .events-item {
     display: flex;
     align-items: flex-start;
@@ -1340,7 +1340,9 @@ h4.spaced + p{
 .other-news-item-content {
     width:100%;
     font-size: 17px;
-    line-height: 29px;
+    color: #474747;
+    font-weight: 400;
+    line-height: 30px;
 }
 .tags-cont {
     margin-bottom: 100px;
@@ -1356,7 +1358,9 @@ h4.spaced + p{
 }
 .other-news-bottom-descr {
     font-size: 17px;
-    line-height: 29px;
+    color: #474747;
+    font-weight: 400;
+    line-height: 30px;
 }
 .related-posts {
     margin-bottom: 120px;
@@ -1391,8 +1395,12 @@ h4.spaced + p{
     cursor: pointer;
 }
 .related-posts-item:hover:before {
-        background: rgba(0, 0, 0, 0.50);
+    background: rgba(0, 0, 0, 0.50);
 }
+.subscribe input {
+    padding:10px 16px;
+}
+
 
 
 

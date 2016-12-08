@@ -23,8 +23,8 @@
 		<div class="top-menu">
 			<div class="container">
 				<div class="top-menu-left-section pull-left">
-					<span>Курс BTC/$</span>
-					<span>Курс BTF/$</span>
+					<span>Курс <span id='rubbtc'></span> руб. / BTC</span>
+				<!-- <span>Курс BTF/$</span> -->
 				</div>
 				<div class="top-menu-right-section pull-right">
 					<div class="languages">
@@ -53,39 +53,11 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Главная</a>
-							<ul class="dropdown-menu dropdown-menu-first">
-								<li><a href="multipage-top-default.html">Default</a></li>
-								<li><a href="multipage-top-slider-image.html">Image Slider</a></li>
-								<li><a href="multipage-top-text-rotater.html">Rotate</a></li>
-								<li><a href="multipage-top-slider-transparent.html">No BG Slider</a></li>
-							</ul><!-- /.dropdown items -->
+						<li>
+							<a href="?" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Главная</a>
 						</li><!-- /.dropdown -->
-						<li><a href="multipage-services.html">Инвестиции</a></li>
-						<li><a href="multipage-team.html">Блокчейн</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Фонд</a>
-							<ul class="dropdown-menu dropdown-menu-first">
-								<li class="dropdown-submenu">
-									<a tabindex="-1" href="#">Masonry &nbsp;<span class="ion-ios-arrow-right"></span></a>
-									<ul class="dropdown-menu">
-										<li><a tabindex="-1" href="multipage-portfolio-masonry-2col.html">2 Columns</a></li>
-										<li><a tabindex="-1" href="multipage-portfolio-masonry-3col.html">3 Columns</a></li>
-										<li><a tabindex="-1" href="multipage-portfolio-masonry-4col.html">4 Columns</a></li>
-									</ul><!-- /.dropdown sub items -->
-								</li><!-- /.dropdown sub -->
-								<li class="dropdown-submenu">
-									<a href="#">Regular &nbsp;<span class="ion-ios-arrow-right"></span></a>
-									<ul class="dropdown-menu">
-										<li><a tabindex="-1" href="multipage-portfolio-aligned-2col.html">2 Columns</a></li>
-										<li><a tabindex="-1" href="multipage-portfolio-aligned-3col.html">3 Columns</a></li>
-										<li><a tabindex="-1" href="multipage-portfolio-aligned-4col.html">4 Columns</a></li>
-									</ul><!-- /.dropdown sub items -->
-								</li><!-- /.dropdown sub -->
-							</ul><!-- /.dropdown sub holder -->
-						</li><!-- /.dropdown -->
-						<li><a href="multipage-contact.html">Индустрия</a></li>
+			
+						<li><a href="news.html">Индустрия</a></li>
 						<li><a href="multipage-contact.html">Управление</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
@@ -97,7 +69,7 @@
 	<!-- End Header -->
     <div class="be-wrapper be-nosidebar-left">
       <div class="be-content">
-		
+		<Br><Br>
         <div class="main-content container-fluid">
           <div class="row">
             <div class="col-xs-12 col-md-8 col-md-offset-2">
@@ -119,16 +91,16 @@
 						  </tr>
 						</thead>
 						<tbody class="no-border-x">
-						<tr class='pie' data-price='49000' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
+						<tr class='pie' data-tokensold='300' data-interval='3 месяца' data-tip='Консервированный' data-start='23.10.2019' data-price='49000' data-lastprice='46000' data-startprice='45000' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
 							<td>TST тестовый</td>
 							<td class="number mytokenbalance" >
 							loading
 							</td>
-							<td class="number"><span>100р</span></td>
-							<td class="number">+33%</td>
-							<td class="number">23.10.2019</td>
-							<td>Аргесивный</td>
-							<td class="action"><a href="#" class="icon"><i class="mdi mdi-plus"></i>Открыть</a></td>
+							<td class="number"><span class='currentprice'>??</span> р</td> <!-- не менять! считается само-->
+							<td class="number rost">??%</td> <!-- не менять! считается само-->
+							<td class="number start">??</td> 
+							<td class='tip'>??</td>
+							<td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class="more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td>
 						  </tr>
 						 
 						</tbody>
@@ -150,13 +122,22 @@
 						  <ul class="nav nav-tabs">
 							<li class="active"><a href="#news" data-toggle="tab">Обзор</a></li>
 							<li ><a href="#buy2" data-toggle="tab">Купить</a></li>
-							<li><a href="#sell" data-toggle="tab">Продать</a></li>
+							<li><a href="#sell2" data-toggle="tab">Продать</a></li>
 							<li><a href="#send" data-toggle="tab">Перевести</a></li>
 						  </ul>
 						  <div class="tab-content">
 							<div id="news" class="tab-pane active cont">
-							  <h4>Новости</h4>
-							  <p> Все отлично, идем ровно, купили компанию.</p>
+							  
+							  Выпуск: <span id='x1'></span><br>
+								Тип: <span id='x2'></span> <br>
+								Интервал: <span id='x3'></span> <br>
+								Токенов: <span id='x4'></span> <br>
+								Текущая цена: <span id='x5'></span> <br>
+								Капитализация: <span id='x6'></span> <br>
+								Результат всего: <span id='x7'></span> <br>
+								Результат недельнцы: <span id='x8'></span> <br>
+								
+								<div id='other'></div>
 							</div>
 							<div id="buy2" class="tab-pane">
 							<p><br>
@@ -164,9 +145,10 @@
 								BTC на адрес 14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ 
 							</p>
 							</div>
-							<div id="sell" class="tab-pane">
-							  <p>Consectetur adipisicing elit. Ipsam ut praesentium, voluptate quidem necessitatibus quam nam officia soluta aperiam, recusandae.</p>
-							  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos facilis laboriosam, vitae ipsum tenetur atque vel repellendus culpa reiciendis velit quas, unde soluta quidem voluptas ipsam, rerum fuga placeat rem error voluptate eligendi modi. Delectus, iure sit impedit? Facere provident expedita itaque, magni, quas assumenda numquam eum! Sequi deserunt, rerum.</p><a href="#">Read more  </a>
+							<div id="sell2" class="tab-pane">
+							 <p><br>
+								Продать
+							  </p>
 							</div>
 							<div id="send" class="tab-pane">
 								Получатель <input type='text' name='' placeholder='0x920ef9458B0023f64E16495956F9b9072b0c28d3' id='poluchatel'>
@@ -233,24 +215,71 @@
       </div>
       <div class="modal-body">
 	  
-	  <form>
-          <div class="form-group">
-            <label for="name" class="control-label">Имя:</label>
-            <input type="text" class="form-control" id="name">
-          </div>
-          <div class="form-group">
-            <label for="phone" class="control-label">Телефон:</label>
-            <textarea class="form-control" id="phone"></textarea>
-          </div>
+	  <form onsubmit='return false' id='regform'>
 		  <div class="form-group">
             <label for="email" class="control-label">Email:</label>
-            <textarea class="form-control" id="email"></textarea>
+            <input class="form-control" required name="email">
           </div>
+		  
+		  <div class="form-group">
+            <label for="email" class="control-label">Pass:</label>
+            <input class="form-control" required name="pass">
+          </div>
+		  
+          <div class="form-group">
+            <label for="name" class="control-label">Имя:</label>
+            <input type="text" class="form-control" name="name">
+          </div>
+		  
+		  <div class="form-group">
+            <label for="name" class="control-label">Фамилия:</label>
+            <input type="text" class="form-control" name="fname">
+			вы можете оставаться анонимным
+          </div>
+		  
+          <div class="form-group">
+            <label for="phone" class="control-label">Телефон:</label>
+            <input class="form-control" name="phone">
+			Телефон используется для обеспечения допо мы не разглашем
+          </div>
+		   <br>
+		  <input type='checkbox' name='send_alert' class='' value='1'> Получать уведомления на почту <br>
+		  <input type='checkbox' name='send_news' class='' value='1'> Получать новости на почту 
+		  
+		  <button type="submit" onclick='reg();' class="btn btn-primary">Регистрация</button>
+		  <script>
+			 function reg() {
+					$.post( "https://reg.bigtime.fund/", $( "#regform" ).serialize() ,function(d){
+						$("#xd").html(d);
+					});
+					$("#regform").hide();
+					$("#regresult").show();
+				
+					$("#xpub").html(localStorage.getItem("myethaddress"));
+					$("#xpriv").html(localStorage.getItem("myprivate"));
+				}
+		  </script>
+		  
         </form>
+		
+		<div id='regresult' style='display:none'>
+			<h2>Вы зареганы</h2>
+			<span id='xd'></span>
+			Ваш логин: <span id='ulogin'></span> <br>
+			Ваш пароль: <span id='upass'></span><br>
+			Публичный ключ: <span id='xpub'></span><br>
+			Приватный ключ: <span id='xpriv'></span><br>
+			
+			<Br><br>
+			Вы можете хранить
+			
+	
+		</div>
+		
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-        <button type="button" class="btn btn-primary">Сохранить</button>
+       
+        
       </div>
     </div>
   </div>
@@ -270,11 +299,11 @@
 		
 		if (typeof bundle != "undefined" && typeof bundle.Main != "undefined" && typeof bundle.Main.createAccount != "undefined") { 
 			myeth = localStorage.getItem('myethaddress'); 
-			if (!myeth) { 
+			//alert(myeth);
+			if (!myeth || myeth.length<3 || myeth == 'undefined') { 
 				console.log("!myeth");
 				var reg = bundle.Main.createAccount(); // return {address: address, privateKey: privateKey};
 				console.log(reg);
-				console.log("!lol");
 				localStorage.setItem("myethaddress",reg.address);
 				localStorage.setItem("myprivate",reg.privateKey);	
 				myeth = reg.address;
@@ -282,7 +311,15 @@
 			$("#myeth").html(myeth);
 			
 			$('tr.pie').each(function (index, value) { 
+			  cur = $(this).attr('data-ticker');
+			 
 			  var me = $(this);
+			  
+			  $(me).find(".currentprice").html($(this).attr('data-price'));
+			  $(me).find(".rost").html($(this).attr('data-price')/$(this).attr('data-startprice')*100-100+"%");
+			  $(me).find(".start").html($(this).attr('data-start'));
+			  $(me).find(".tip").html($(this).attr('data-tip'));
+			  
 			  var url = "https://api.etherscan.io/api?module=proxy&data=0x70a08231000000000000000000000000"+myeth.replace('0x','')+"&to="+$(this).attr('rel')+"&action=eth_call";
 			  console.log(url);
 			  
@@ -300,13 +337,30 @@
 				curaddr = $(this).attr('rel');
 				price = $(this).attr('data-price'); //сколько токенов получаем за 1 биткоин
 				
+				$("#x1").html($(this).attr('data-start'));
+				$("#x2").html($(this).attr('data-tip'));
+				$("#x3").html($(this).attr('data-interval'));
+				$("#x4").html($(this).attr('data-tokensold'));
+				$("#x5").html($(this).attr('data-price'));
+				$("#x6").html($(this).attr('data-price')*$(this).attr('data-tokensold'));
+				$("#x7").html($(this).attr('data-price')/$(this).attr('data-startprice')*100-100+"%"); //$(this).attr('data-price')/$(this).attr('data-startprice')*100-100+"%"
+				$("#x8").html($(this).attr('data-price')/$(this).attr('data-lastprice')*100-100+"%");
 				$("#kupit").val(); //сколько он хочет купить
 				
+				$.get($(this).attr('data-ticker')+".html",function(d){
+					$("#other").html(d);
+				});
 				recalc_buy();
 				
 			});
 			
-			
+			/*	Выпуск: <span id='x1'></span><br>
+					Тип: <span id='x2'></span> <br>
+					Интервал: <span id='x3'></span> <br>
+					Токенов: <span id='x4'></span> <br>
+					Текущая цена: <span id='x5'></span> <br>
+					Капитализация: <span id='x6'></span> <br>
+					Результат: <span id='x7'></span> <br>*/
 			//
 			/*
 			$url = 'https://api.etherscan.io/api?module=proxy&data=0x70a08231000000000000000000000000'.$adres.'&to='.$contr.'&apikey=BJY6AGT4AR8WHE8DRJV3Q549UU16GIMUKB&action=eth_call';
@@ -354,9 +408,14 @@
     <script src="assets/js/main.js" type="text/javascript"></script>
     <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="assets/lib/prettify/prettify.js" type="text/javascript"></script>
-
+	
+	<script src="https://localbitcoins.com/bitcoincharts/{currency}/trades.json" type="text/javascript"></script>
 	
 
-	
+	<script>
+	$.getJSON("https://buygazprom.com/rateslocal.php",function(d){
+		$("#rubbtc").html(d.RUB.avg_1h);
+	});
+	</script>
   </body>
 </html>

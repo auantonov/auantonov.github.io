@@ -1495,3 +1495,85 @@ h4.spaced + p{
 .industry-list-news-item-info {
     margin-top: 15px;
 }
+
+.index-wrapper {
+    margin-bottom: 100px;
+}
+.our-projects-item {
+    width: 100%;
+    height: 165px;
+    background: #000;
+}
+.our-company {
+    margin-bottom: 90px;
+}
+.our-projects{
+    margin-bottom: 30px;
+}
+.our-company iframe{
+    padding: 60px;
+    height: 450px;
+}
+.align-center {
+    display: flex;
+    align-items: center;
+}
+.our-projects-item img {
+    width:100%;
+}
+.index-table {
+    margin-bottom: 100px;
+}
+.index-table table {
+    width:100%;
+}
+.index-table thead {
+    background: #474747;
+}
+.index-table thead td{
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+}
+.index-table td,
+.index-table th {
+    padding: 10px 15px;
+    border: 2px solid #474747;
+    text-align: center;
+    color: #474747;
+    font-size: 15px;
+}
+.index-table tr:nth-child(2n) {
+    background: #eee;
+}
+.graphic {
+    margin-bottom: 100px;
+}
+.graphic img {
+    width:100%;
+}
+.home {
+    background: #fff;
+}
+.graphic-buttons {
+    margin: auto;
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.graphic-buttons a span{
+    padding: 20px 30px;
+    font-size: 20px;
+    text-transform: none;
+}
+
+
+
+
+
+
+
+
+
+

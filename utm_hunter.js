@@ -1,0 +1,1 @@
+if (!localStorage.getItem("firstpage")) localStorage.setItem("firstpage",window.location.href);

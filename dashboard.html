@@ -245,10 +245,11 @@
 		   <br>
 		  <input type='checkbox' name='send_alert' class='' value='1'> Получать уведомления на почту <br>
 		  <input type='checkbox' name='send_news' class='' value='1'> Получать новости на почту 
-		  
+		  <input type='hidden' name='firstpage' class='form-control' id='firstpage' value='?'>
 		  <button type="submit" onclick='reg();' class="btn btn-primary">Регистрация</button>
 		  <script>
 			 function reg() {
+					$("#firstpage").val(localStorage.getItem("firstpage"));
 					$.post( "https://reg.bigtime.fund/", $( "#regform" ).serialize() ,function(d){
 						$("#xd").html(d);
 					});
@@ -417,5 +418,7 @@
 		$("#rubbtc").html(d.RUB.avg_1h);
 	});
 	</script>
+	
+	<script src='utm_hunter.js'></script>
   </body>
 </html>

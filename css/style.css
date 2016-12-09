@@ -1525,20 +1525,20 @@ h4.spaced + p{
     margin-bottom: 100px;
 }
 .index-table table {
+    border: 2px solid #ddd;
     width:100%;
 }
 .index-table thead {
-    background: #474747;
 }
-.index-table thead td{
+.index-table thead th{
     font-size: 17px;
     font-weight: 500;
-    color: #fff;
+    font-weight: bold;
+    color: #8e8e8e;
 }
 .index-table td,
 .index-table th {
     padding: 10px 15px;
-    border: 2px solid #474747;
     text-align: center;
     color: #474747;
     font-size: 15px;
@@ -1567,13 +1567,81 @@ h4.spaced + p{
     font-size: 20px;
     text-transform: none;
 }
+#myModal .modal-body {
+    position: relative;
+    padding: 30px;
+}
+#myModal label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #474747;
+}
+#myModal .form-control{
+    border: 2px solid #474747;
+}
+#myModal .modal-title {
+    font-weight: 600;
+    text-transform: none;
+}
+#myModal .form-bottom{
+    font-size: 12px;
+    margin-top: 5px;
+    font-style: normal;
+    display: inline-block;
+}
 
+/*** custom checkboxes ***/
 
+input[type=checkbox] { display:none; } /* to hide the checkbox itself */
+input[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+}
 
+input[type=checkbox] + label:before { content: "\f096"; } /* unchecked icon */
+input[type=checkbox] + label:before { letter-spacing: 10px; } /* space between checkbox and label */
 
+input[type=checkbox]:checked + label:before { content: "\f046"; } /* checked icon */
+input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow space for check mark */
 
-
-
-
+#myModal .label-check {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 13px;
+    text-decoration: underline;
+    padding-left: 26px;
+    color: #474747;
+    position: relative;
+}
+input[type=checkbox] + label:before {
+    content: "\f096";
+    position: absolute;
+    font-size: 23px;
+    left: 0;
+    top: -5px;
+}
+#myModal .checkbox {
+    margin-bottom: 2px;
+}
+#myModal .btn-primary{
+    margin: 20px auto 20px;
+    display: block;
+    font-size: 17px;
+    padding: 15px 30px;
+}
+#myModal .modal-footer{
+    display: none;
+}
+#myModal .modal-dialog {
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
 
 

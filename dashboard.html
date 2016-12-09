@@ -17,6 +17,7 @@
 	<link href="css/style.css" rel="stylesheet" title="main-css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&amp;subset=cyrillic" rel="stylesheet">
 		<link href="https://etherdelta.github.io/css/alertify-bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body class="body-static-navbar">
   <header>
@@ -211,7 +212,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Алерт</h4>
+        <h4 class="modal-title" id="myModalLabel">Регистрация</h4>
       </div>
       <div class="modal-body">
 	  
@@ -222,7 +223,7 @@
           </div>
 		  
 		  <div class="form-group">
-            <label for="email" class="control-label">Pass:</label>
+            <label for="email" class="control-label">Пароль:</label>
             <input class="form-control" required name="pass">
           </div>
 		  
@@ -234,17 +235,22 @@
 		  <div class="form-group">
             <label for="name" class="control-label">Фамилия:</label>
             <input type="text" class="form-control" name="fname">
-			вы можете оставаться анонимным
+			<span class="form-bottom">вы можете оставаться анонимным</span>
           </div>
 		  
           <div class="form-group">
             <label for="phone" class="control-label">Телефон:</label>
             <input class="form-control" name="phone">
-			Телефон используется для обеспечения допо мы не разглашем
+			<span class="form-bottom">Телефон используется для обеспечения допо мы не разглашаем</span>
           </div>
-		   <br>
-		  <input type='checkbox' name='send_alert' class='' value='1'> Получать уведомления на почту <br>
-		  <input type='checkbox' name='send_news' class='' value='1'> Получать новости на почту 
+          <div class="checkbox">
+          	<input id="box1" type="checkbox" />
+          	<label for="box1" class="label-check">Получать уведомления на почту</label>
+          </div>
+          <div class="checkbox">
+          	<input id="box1" type="checkbox" />
+          	<label for="box1" class="label-check">Получать новости на почту</label>
+          </div>
 		  <input type='hidden' name='firstpage' class='form-control' id='firstpage' value='?'>
 		  <button type="submit" onclick='reg();' class="btn btn-primary">Регистрация</button>
 		  <script>

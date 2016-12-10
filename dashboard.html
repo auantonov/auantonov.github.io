@@ -218,12 +218,12 @@
 	  
 	  <form onsubmit='return false' id='regform'>
 		  <div class="form-group">
-            <label for="email" class="control-label">Email:</label>
+            <label for="email" class="control-label">Email*:</label>
             <input class="form-control" required name="email">
           </div>
 		  
 		  <div class="form-group">
-            <label for="email" class="control-label">Пароль:</label>
+            <label for="email" class="control-label">Пароль*:</label>
             <input class="form-control" required name="pass">
           </div>
 		  
@@ -241,15 +241,15 @@
           <div class="form-group">
             <label for="phone" class="control-label">Телефон:</label>
             <input class="form-control" name="phone">
-			<span class="form-bottom">Телефон используется для обеспечения допо мы не разглашаем</span>
+			<span class="form-bottom">Телефон используется для дополнительных мер безопасности, мы не разглашаем ваши данные</span>
           </div>
           <div class="checkbox">
           	<input id="box1" type="checkbox" />
           	<label for="box1" class="label-check">Получать уведомления на почту</label>
           </div>
           <div class="checkbox">
-          	<input id="box1" type="checkbox" />
-          	<label for="box1" class="label-check">Получать новости на почту</label>
+          	<input id="box2" type="checkbox" />
+          	<label for="box2" class="label-check">Получать новости на почту</label>
           </div>
 		  <input type='hidden' name='firstpage' class='form-control' id='firstpage' value='?'>
 		  <button type="submit" onclick='reg();' class="btn btn-primary">Регистрация</button>
@@ -270,17 +270,20 @@
         </form>
 		
 		<div id='regresult' style='display:none'>
-			<h2>Вы зареганы</h2>
+			<h2>Вы зарегистрировались!</h2>
 			<span id='xd'></span>
-			Ваш логин: <span id='ulogin'></span> <br>
-			Ваш пароль: <span id='upass'></span><br>
-			Публичный ключ: <span id='xpub'></span><br>
-			Приватный ключ: <span id='xpriv'></span><br>
-			
-			<Br><br>
-			Вы можете хранить
-			
-	
+			<div class="reg-result-login">Ваш логин: <span id='ulogin'>Alex</span></div>
+			<div class="reg-result-password">Ваш пароль: <span id='upass'>Ghbdtndctv</span></div>
+			<div class="reg-result-publicKey">Публичный ключ: <span id='xpub'></span></div>
+			<div class="reg-result-privateKey">Приватный ключ: <span id='xpriv'></span></div>
+			<div class="reg-result-info">
+				<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+				Вы можете хранить свой приватный ключ самостоятельно (желательно на бумаге в сейфе), либо положиться на нашу зашифрованную базу данных. Помните, что если вы храните его самостоятельно, у нас не будет возможности вернуть вам доступ к вашим токенам в случае потери вами ключа. Никаким способом, даже зная вас лично, у нас не будет возможности восстановить доступ к активам, если ключ будет утерян. 
+			</div>
+			<div class="reg-result-buttons">
+				<button class="btn btn-primary btn-lg">Хранить ключ на сервере</button>
+				<button class="btn btn-primary btn-lg">Хранить ключ самостоятельно</button>
+			</div>
 		</div>
 		
       </div>

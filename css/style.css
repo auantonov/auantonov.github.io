@@ -1567,6 +1567,35 @@ h4.spaced + p{
     font-size: 20px;
     text-transform: none;
 }
+.graphic-buttons-item {
+    text-align: center;
+}
+.graphic-buttons-item p{
+    margin-top: 10px;
+    font-size: 14px;
+    color: #474747;
+    line-height: 22px;
+}
+.index-news {
+    margin-bottom: 30px;
+}
+.index-news .industry-list-news-item {
+    height: calc(555px / 2);
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.index-news .industry-list-news-item h2 {
+    font-size: 18px;
+    line-height: 1.4;
+}
+.index-news .industry-list-news-item-info p {
+    font-size: 14px;
+    height: 70px;
+    overflow: hidden;
+}
+.index-news .industry-list-news-item-info {
+    margin-top: 10px;
+}
 #myModal .modal-body {
     position: relative;
     padding: 30px;

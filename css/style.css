@@ -1253,11 +1253,12 @@ h4.spaced + p{
 .promo-descr {
     position: absolute;
     z-index: 11111;
-    width: 600px;
+    width: 1170px;
     text-transform: none;
-    line-height: 58px;
-    color:white;
-    font-size: 40px;
+    line-height: 50px;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.42);
+    color: white;
+    font-size: 28px;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     left: 50%;
@@ -1505,14 +1506,14 @@ h4.spaced + p{
     background: #000;
 }
 .our-company {
-    margin-bottom: 90px;
+    margin-bottom: 80px;
 }
 .our-projects{
     margin-bottom: 30px;
 }
-.our-company iframe{
-    padding: 60px;
-    height: 450px;
+.our-company iframe {
+    height: 555px;
+    border: 30px solid #ddd;
 }
 .align-center {
     display: flex;
@@ -1525,26 +1526,31 @@ h4.spaced + p{
     margin-bottom: 100px;
 }
 .index-table table {
-    border: 2px solid #ddd;
     width:100%;
 }
 .index-table thead {
 }
 .index-table thead th{
     font-size: 17px;
+    height: 75px;
+    background: #474747;
     font-weight: 500;
     font-weight: bold;
-    color: #8e8e8e;
+    color: #fff;
+    vertical-align: middle!important;
+    border-bottom: none!important;
 }
 .index-table td,
 .index-table th {
-    padding: 10px 15px;
+    padding: 14px!important;
+    line-height: 1.42857143;
+    vertical-align: top;
     text-align: center;
-    color: #474747;
-    font-size: 15px;
+    border: 1px solid #474747!important;
 }
-.index-table tr:nth-child(2n) {
-    background: #eee;
+.index-table td {
+    background: #fff;
+    color: #474747;
 }
 .graphic {
     margin-bottom: 100px;

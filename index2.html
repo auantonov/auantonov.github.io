@@ -352,9 +352,12 @@
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 	<script type="text/javascript" src="js/scrollreveal.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	    <script type="text/javascript">
+	<script type="text/javascript">
 	    		$(document).ready(function() {
+
+	    			 $('.promo-descr').addClass('fade-IN');
 	    		 
+	    			// map init
 	    		    var pos1 = new google.maps.LatLng(18.520266, 73.856406),
 	    		        pos2 = new google.maps.LatLng(28.579943, 77.330006),
 	    		        
@@ -386,8 +389,11 @@
 	    		            map: map2,
 	    		            title: "Noida"
 	    		        });
+	    		     // end map init
+
+
 
 	    		});
-	    </script>
+	 </script>
 </body>
 </html>

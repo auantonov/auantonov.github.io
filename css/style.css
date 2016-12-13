@@ -1578,7 +1578,8 @@ h4.spaced + p{
     font-weight: 500;
     color: #474747;
 }
-#myModal .form-control{
+#myModal .form-control,
+.total .form-control{
     border: 2px solid #474747;
 }
 #myModal .modal-title {
@@ -1677,7 +1678,7 @@ input[type=checkbox] + label:before {
     color: red;
     margin-right: 5px;
 }
-#myModal .reg-result-buttons button{
+#myModal .reg-result-buttons button {
     margin: 0px auto 20px;
     display: block;
     font-size: 14px;
@@ -1686,6 +1687,113 @@ input[type=checkbox] + label:before {
 .reg-result-buttons {
     display: flex;
 }
+
+/* buy */
+
+#buy2,
+#sell2,
+#send {
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#buy2.active,
+#sell2.active,
+#send.active {
+    display: flex;
+}
+.line-item {
+    text-align: center;
+    margin-bottom: 12px;
+}
+.line-item p,
+.total p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #474747;
+    margin-bottom: 2px;
+}
+.total p {
+    margin-bottom: 8px;
+}
+.line-item span {
+    color: #474747;
+    font-size: 14px;
+    font-weight: 300;
+}
+.line-address p {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: -12px;
+    margin-bottom: 3px;
+}
+.line-address span {
+    font-size: 13px;
+    text-decoration: underline;
+}
+.history-table.table>tbody>tr>td, 
+.history-table.table>tbody>tr>th, 
+.history-table.table>tfoot>tr>td, 
+.history-table.table>tfoot>tr>th, 
+.history-table.table>thead>tr>td, 
+.history-table.table>thead>tr>th {
+    border: 1px solid #474747!important;
+    color: #474747;
+}
+.history-table th,
+.history-table td {
+    text-align: center;
+    vertical-align: middle!important;
+}
+.history-table .link-th {
+    width: 18%;
+}
+.history-table a {
+    text-decoration: underline;
+}
+.history-table a:hover {
+    text-decoration: none;
+}
+.valute {
+    font-weight: 600;
+    font-size: 17px;
+}
+#history h1{
+    text-align: center;
+    font-size: 26px;
+    text-transform: none;
+    padding: 40px 0 50px;
+}
+.line-address .btn {
+    display: block;
+    margin-top: 15px;
+}
+
+.tab-pane-tooltip{
+    position: absolute;
+    bottom: -157px;
+    width: 500px;
+    z-index: 3333;
+    background: #474747;
+    color: white;
+    padding: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+}
+.tab-pane-tooltip:before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    margin-left: -10px;
+    z-index: -1;
+    top: -15px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid rgb(71, 71, 71);
+}
+
+
 
 
 

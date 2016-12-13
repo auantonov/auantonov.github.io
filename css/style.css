@@ -1702,6 +1702,7 @@ input[type=checkbox] + label:before {
 #sell2.active,
 #send.active {
     display: flex;
+    align-items: baseline;
 }
 .line-item {
     text-align: center;
@@ -1792,7 +1793,18 @@ input[type=checkbox] + label:before {
     border-right: 20px solid transparent;
     border-bottom: 20px solid rgb(71, 71, 71);
 }
-
+.total .form-control:focus {
+    border-color:rgb(85, 202, 245);
+}
+.buy-info {
+    width: 31%;
+    font-size: 16px;
+    line-height: 25px;
+    color: #474747;
+}
+.buy-input {
+    width:10%;
+}
 
 
 

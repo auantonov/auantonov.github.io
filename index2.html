@@ -275,7 +275,230 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<img src="images/btf/graphic.png" alt="">
+					 <div class="chart2"></div>
+					 
+					 <script>
+					 $(document).ready(function(){
+						now = new Date();
+							$.when(
+							$.getJSON('https://noxonfund.com/btcchart.php')
+							).done(function(btc) {
+								//console.log(btc);
+							
+								$('.chart2').highcharts({
+									chart: {
+										type: 'spline',
+										width: 1000,
+										height:400
+									},
+									title: {
+										text: false,
+									},
+									legend: {
+										enabled: true
+									},
+									tooltip: {
+										pointFormat: '',
+									},
+									credits: {
+										enabled: false
+									},
+									subtitle: {
+										text: false,
+									},
+									xAxis: {
+										type: 'datetime',
+									
+										labels: {
+											enabled: false,
+										},
+										color: 'red',
+									  
+									},
+									
+									
+									
+									tooltip: {
+										
+										formatter: function () {
+											return this.y;
+										},
+										shared: true
+									}, 
+									yAxis: [{ 
+										//maxPadding: 0.07,
+										title: {
+											text: 'Value',
+											style: {
+												color: Highcharts.getOptions().colors[0]
+											}
+										},
+										labels: {
+											
+											formatter: function() {
+												return Math.round(this.value/1000000).toString()+"m. USD";
+											}
+										},
+										opposite: true
+									},{
+										//max: 0.01,
+										title: {
+											text: true
+										},
+										plotLines: [{
+											value: 0,
+											width: 1,
+											color: 'rgba(255,255,255,0)'
+										}]
+									}
+								
+									],
+									plotOptions: {
+										spline: {
+											lineWidth: 2,
+											states: {
+												hover: {
+													lineWidth: 2
+												}
+											},
+										}
+									},
+									series: [{
+										name: 'Price BTC/USD',
+										yAxis: 1,
+										data: btc.price_usd
+									}, {
+										name: 'BTC, Volume',
+										data: btc.volume_usd,
+										yAxis: 0,
+										type:'column'
+									}
+									]
+								}, function(chart) { });
+							});
+
+						var dateNow = new Date();
+
+
+						Highcharts.createElement('link', {
+							href: 'https://fonts.googleapis.com/css?family=Lato:400,700',
+							rel: 'stylesheet',
+							type: 'text/css'
+						}, null, document.getElementsByTagName('head')[0]);
+
+
+						Highcharts.theme = {
+							colors: ["blue", "red"],
+							chart: {
+								backgroundColor: null,
+								style: {
+									fontFamily: "Lato, serif"
+								},
+								annotations: [{
+									xAxis: 2,
+									yAxis: 2,
+									
+									title: {
+										text: "Ann4234234otated chart!"
+									}
+								  }]
+							},
+							title: {
+								style: {
+									color: 'black',
+									fontSize: '18px',
+									fontWeight: 'bold'
+								}
+							},
+							subtitle: {
+								style: {
+									color: 'black'
+								}
+							},
+							xAxis: {
+								gridLineColor: 'black',
+								labels: {
+									style: {
+										color: 'black'
+									}
+								},
+								lineColor: 'black',
+								minorGridLineColor: 'black',
+								tickColor: 'black',
+								title: {
+									style: {
+										color: 'black'
+									}
+								}
+							},
+							yAxis: {
+								gridLineColor: 'blue',
+								labels: {
+									style: {
+										color: '#fff'
+									}
+								},
+								lineColor: 'blue',
+								minorGridLineColor: 'yellow',
+								tickColor: 'yellow',
+								tickWidth: 1,
+								title: {
+									style: {
+										color: 'yellow'
+									}
+								}
+							},
+							legend: {
+								itemStyle: {
+									fontWeight: 'bold',
+									fontSize: '18px'
+								}
+							},
+							tooltip: {
+								backgroundColor: '#002C59',
+								style: {
+									color: '#F0F0F0'
+								}
+							},
+							plotOptions: {
+								series: {
+									dataLabels: {
+										color: '#B0B0B3'
+									},
+									marker: {
+										lineColor: 'rgba(255,255,255,0)'
+									},
+									connectNulls: true
+								},
+								boxplot: {
+									fillColor: '#505053'
+								},
+								candlestick: {
+									lineColor: 'white'
+								},
+								errorbar: {
+									color: 'white'
+								}
+							},
+							legend: {
+								itemStyle: {
+									color: '#E0E0E3'
+								},
+								itemHoverStyle: {
+									color: '#FFF'
+								},
+								itemHiddenStyle: {
+									color: '#606063'
+								}
+							},
+							background2: '#fff'
+						};
+
+
+						Highcharts.setOptions(Highcharts.theme);
+						});
+							
+					  </script>
 				</div>
 			</div>
 			<div class="row graphic-buttons">
@@ -380,6 +603,8 @@
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 	<script type="text/javascript" src="js/scrollreveal.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script src="js/highstock.js"></script>
+	
 	<script type="text/javascript">
 	    		$(document).ready(function() {
 
@@ -403,8 +628,8 @@
 	    		            styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
 	    		        },
 	    		        
-	    		        map1 = new google.maps.Map(document.getElementById("map1"), option1),
-	    		        map2 = new google.maps.Map(document.getElementById("map2"), option2),
+	    		        //map1 = new google.maps.Map(document.getElementById("map1"), option1),
+	    		        //map2 = new google.maps.Map(document.getElementById("map2"), option2),
 
 	    		        myMarker = new google.maps.Marker({
 	    		            position: pos1,

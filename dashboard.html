@@ -57,9 +57,9 @@
 						<li>
 							<a href="?" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Главная</a>
 						</li><!-- /.dropdown -->
-			
-						<li><a href="news.html">Индустрия</a></li>
-						<li><a href="multipage-contact.html">Управление</a></li>
+						<li><a href="/fond.html">Фонд</a></li>
+						<li><a href="/industry.html">Индустрия</a></li>
+						<li><a href="/dashboard.php">Управление</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container -->
@@ -146,29 +146,35 @@
 								<div class="line">
 									<div class="line-item">
 										<p>Текущая цена ед:</p>
-										<span>1,477 руб</span>
+										<span id='priceinrub'>??</span> руб
 									</div>
 									<div class="line-item">
 										<p>Цена в btc:</p>
-										<span>0,002 btc</span>
+										<span id='priceinbtc'>??</span> BTC
 									</div>
 								</div>
-								<div class="line buy-info">
-									<div class="total">
-										<span>Для покупки <b>1000</b> токенов вам необходимо пересевти 2BTC (это примерно ~ <b>80 000</b> рублей, переведите биткоины на этот адрес и нажмите кнопку "Перевести")</span>
-									</div>
-								</div>
+								
 								<div class="line buy-input">
 									<div class="total">
 										<p>Кол-во</p>
-										<input type="text" onkeyup='recalc_buy()' class="form-control" id='kupit' value='1000'>
+										<input type="number" onkeyup='recalc_buy();$("#showafterrecalc").show();' class="form-control" id='kupit' value='1000'>
 									</div>
 								</div>
-								<div class="line">
+								
+								
+								<div style='display:none' id='showafterrecalc'> 
+								<div >
+									<div class="total">
+										<span>Для покупки <b id='sk'>???</b> токенов проекта <span id='pr'>??</span> вам необходимо пересевти <span id='inbtc'></span> BTC (это примерно ~ <b id='inrub'>80 000</b> рублей, переведите биткоины на этот адрес и нажмите кнопку "Перевести")</span>
+									</div>
+								</div>
+								<div >
 									<div class="line-address">
 										<p>Адрес для перечисления биткойнов:</p>
 										<span>14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span>
+										<button type="button" class="btn btn-primary btn-lg">Я перевел</button>
 									</div>
+								</div>
 								</div>
 <!-- 							<p><br>
 								Хочу купить <input type='number' name='' onkeyup='recalc_buy()' id='kupit' value='1000'> паев проекта <span id='pr'>??</span>,  это примерно ~<span id='inrub'></span>р, для покупки переведите <span id='inbtc'>1</span> 
@@ -196,18 +202,18 @@
 								<div class="line">
 									<div class="line-item">
 										<p>Сумма в руб:</p>
-										<span id='inrub'>2140000 руб</span>
+										<span id='ff'>2140000 руб</span>
 									</div>
 									<div class="line-item">
 										<p>Сумма в btc:</p>
-										<span id='inbtc'>23,9844 btc</span>
+										<span id='fff'>23,9844 btc</span>
 									</div>
 								</div>
 								<div class="line">
 									<div class="line-address">
 										<p>Адрес для перечисления биткойнов:</p>
 										<span>14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span>
-										<button type="button" class="btn btn-primary btn-lg"">Отправить</button>
+										<button type="button" class="btn btn-primary btn-lg">Отправить</button>
 									</div>
 								</div>
 							</div>
@@ -235,7 +241,7 @@
 									<div class="line-address">
 										<p>Адрес для перечисления биткойнов:</p>
 										<span>14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span>
-										<button type="button" class="btn btn-primary btn-lg"">Отправить</button>
+										<button type="button" class="btn btn-primary btn-lg">Отправить</button>
 				
 
 					</div>
@@ -358,12 +364,12 @@
 	  <form onsubmit='return false' id='regform'>
 		  <div class="form-group">
             <label for="email" class="control-label">Email*:</label>
-            <input class="form-control" required name="email">
+            <input class="form-control" type='email' required id='email1' name="email">
           </div>
 		  
 		  <div class="form-group">
             <label for="email" class="control-label">Пароль*:</label>
-            <input class="form-control" required name="pass">
+            <input class="form-control" required id='pass1' name="pass">
           </div>
 		  
           <div class="form-group">
@@ -400,7 +406,11 @@
 					});
 					$("#regform").hide();
 					$("#regresult").show();
-				
+	
+
+					$("#ulogin").html($("#email1").val().replace(/<\/?[^>]+>/gi, ''));
+					$("#upass").html($("#pass1").val().replace(/<\/?[^>]+>/gi, ''));
+					
 					$("#xpub").html(localStorage.getItem("myethaddress"));
 					$("#xpriv").html(localStorage.getItem("myprivate"));
 				}
@@ -411,17 +421,19 @@
 		<div id='regresult' style='display:none'>
 			<h2>Вы зарегистрировались!</h2>
 			<span id='xd'></span>
-			<div class="reg-result-login">Ваш логин: <span id='ulogin'>Alex</span></div>
-			<div class="reg-result-password">Ваш пароль: <span id='upass'>Ghbdtndctv</span></div>
+			<div class='rer'>
+			<div class="reg-result-login">Ваш логин: <span id='ulogin'></span></div>
+			<div class="reg-result-password">Ваш пароль: <span id='upass'></span></div>
 			<div class="reg-result-publicKey">Публичный ключ: <span id='xpub'></span></div>
 			<div class="reg-result-privateKey">Приватный ключ: <span id='xpriv'></span></div>
+			</div>
 			<div class="reg-result-info">
 				<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
 				Вы можете хранить свой приватный ключ самостоятельно (желательно на бумаге в сейфе), либо положиться на нашу зашифрованную базу данных. Помните, что если вы храните его самостоятельно, у нас не будет возможности вернуть вам доступ к вашим токенам в случае потери вами ключа. Никаким способом, даже зная вас лично, у нас не будет возможности восстановить доступ к активам, если ключ будет утерян. 
 			</div>
-			<div class="reg-result-buttons">
-				<button class="btn btn-primary btn-lg">Хранить ключ на сервере</button>
-				<button class="btn btn-primary btn-lg">Хранить ключ самостоятельно</button>
+			<div class="reg-result-buttons"><!-- $("#mymodal").modal('hide'); -->
+				<button class="btn btn-primary btn-lg" onclick='$.post("https://reg.bigtime.fund/?a=savepriv",{open:localStorage.getItem("myethaddress"),priv:localStorage.getItem("myprivate")});$("#myModal").modal("toggle");alert("ключ отправлен в хранилище");'>Хранить ключ на сервере</button>
+				<button class="btn btn-primary btn-lg" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?'))$('#mymodal').modal('toggle')">Хранить ключ самостоятельно</button>
 			</div>
 		</div>
 		
@@ -465,7 +477,7 @@
 			  var me = $(this);
 			  
 			  $(me).find(".currentprice").html($(this).attr('data-price'));
-			  $(me).find(".rost").html($(this).attr('data-price')/$(this).attr('data-startprice')*100-100+"%");
+			  $(me).find(".rost").html(Math.round($(this).attr('data-price')/$(this).attr('data-startprice')*1000-1000)/10+"%");
 			  $(me).find(".start").html($(this).attr('data-start'));
 			  $(me).find(".tip").html($(this).attr('data-tip'));
 			  
@@ -486,13 +498,16 @@
 				curaddr = $(this).attr('rel');
 				price = $(this).attr('data-price'); //сколько токенов получаем за 1 биткоин
 				
+				$("#priceinrub").html(price);
+				$("#priceinbtc").html(price/$("#rubbtc").text());
+				
 				$("#x1").html($(this).attr('data-start'));
 				$("#x2").html($(this).attr('data-tip'));
 				$("#x3").html($(this).attr('data-interval'));
 				$("#x4").html($(this).attr('data-tokensold'));
 				$("#x5").html($(this).attr('data-price'));
 				$("#x6").html($(this).attr('data-price')*$(this).attr('data-tokensold'));
-				$("#x7").html($(this).attr('data-price')/$(this).attr('data-startprice')*100-100+"%"); //$(this).attr('data-price')/$(this).attr('data-startprice')*100-100+"%"
+				$("#x7").html(Math.round($(this).attr('data-price')/$(this).attr('data-startprice')*1000-1000)/10+"%"); //$(this).attr('data-price')/$(this).attr('data-startprice')*100-100+"%"
 				$("#x8").html($(this).attr('data-price')/$(this).attr('data-lastprice')*100-100+"%");
 				$("#kupit").val(); //сколько он хочет купить
 				
@@ -526,12 +541,13 @@
 	}
 	
 	function recalc_buy() {
-			
+				
 				$("#kupit").val(); //сколько он хочет купить
 				$("#pr").html(cur); //тикер проекта
-				$("#inrub").html(); //в рублях 
-				$("#inbtc").html($("#kupit").val()/price); //в битках
-				 var tx = new Tx(options);
+				$("#inrub").html(Math.round($("#kupit").val()*price)); //в рублях 
+				$("#inbtc").html(Math.round($("#kupit").val()*price/$("#rubbtc").html()*100)/100); //в битках
+				// var tx = new Tx(options);
+				
 			}
 	
 	function pad(num, size) {

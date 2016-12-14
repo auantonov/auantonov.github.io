@@ -119,16 +119,16 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="tags-cont" itemprop="keywords">
-							<a href="https://birdinflight.com/ru/tag/pornhub" rel="tag">Финансы</a> 
-							<a href="https://birdinflight.com/ru/tag/illyustratsiya" rel="tag">Бизнес</a>
-							<a href="https://birdinflight.com/tag/porno-2" rel="tag">Биткоин</a> 
-							<a href="https://birdinflight.com/ru/tag/raskraska" rel="tag">Криптовалюта</a>
+							<a href="#Финансы" rel="tag">Финансы</a> 
+							<a href="#Бизнес" rel="tag">Бизнес</a>
+							<a href="#Биткоин" rel="tag">Биткоин</a> 
+							<a href="#криптовалюты" rel="tag">Криптовалюта</a>
 						</div>
 					</div>
-					<div class="col-md-8">
+					<div class="col-md-8 news">
 						<div class="single-news-item industry-news-item">
-							<h1><a href="#">Проект Bletchley: Microsoft и смарт-контракты</a></h1>
-							<div class="single-news-item-img"><img src="images/btf/industry-promo.jpg" alt=""></div>
+							<h1><a href="#" class='news_link news_title'>Проект Bletchley: Microsoft и смарт-контракты</a></h1>
+							<div class="single-news-item-img"><img class='news_image' src="images/btf/industry-promo.jpg" alt=""></div>
 						</div>
 					</div>
 					<div class="col-md-4">
@@ -171,6 +171,7 @@
 				</div>
 			</div>
 		</section>
+		
 		<section class="industry-other-news">
 			<div class="container">
 				<div class="row">
@@ -195,6 +196,7 @@
 				</div>
 			</div>
 		</section>
+		
 		<section class="industry-list-news">
 			<div class="container">
 				<div class="row">
@@ -280,5 +282,34 @@
 
 	    		});
 	    </script>
+		
+		<script>
+		$(document).ready(function(){
+
+
+			$.ajax({
+				 url: 'https://noxonfund.com/btnews.php',
+				 dataType: 'xml'
+			}).done(function (xmlDoc) {
+			
+				console.log(xmlDoc);
+			
+				$(xmlDoc).find('item').each(function(index){
+				
+						console.log($(this).find('thumbnail'));
+						
+						$(".news:first .news_title").html($(this).find('title').text());
+						$(".news:first .news_image").attr("src",$(this).find('thumbnail').attr("url"));
+						//v$(".news:first .news_title").html($(this).find('title').text());ar channel = $(this).find('encoded').html();
+						//var hd = $(this).find('FeedIsHD').text();
+						//$('.box ul').append('<li>'+channel+'</li>');
+					});
+				// do stuff
+			});
+			
+		
+		});
+		
+		</script>
 </body>
 </html>

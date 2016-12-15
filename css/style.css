@@ -292,7 +292,6 @@ a:focus {
 
 .navbar-default .navbar-brand {
     color: #373737;
-	
 	letter-spacing: -4.5px;
 	text-transform: uppercase;
 }
@@ -300,16 +299,37 @@ a:focus {
 .navbar-default .navbar-nav > li > a {
     color: #474747;
     line-height: 50px;
-    font-weight: 500;
+    position: relative;
+    font-weight: 400;
     letter-spacing: 0.7px;
-    font-size: 17px;
-    text-transform: uppercase;
+    font-size: 15px;
     -webkit-transition: all 0.8s ease;
     -moz-transition: all 0.8s ease;
     -o-transition: all 0.8s ease;
     transition: all 0.8s ease;
 }
+.navbar-default .navbar-nav > li > a:before {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    z-index: 11111;
+    width: 0%;
+    height: 3px;
+    background: rgb(85, 202, 245);
+    transition: width 0.5s ease-in-out;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    margin: 10px 15px;
+    padding-left: 0;
+    padding-right: 0;
+}
 
+.navbar-default .navbar-nav > li > a:hover:before {
+    width:100%;
+}
 .navbar-brand {
     height: 80px;
     font-size: 36px;
@@ -1098,6 +1118,7 @@ blockquote .small, blockquote footer, blockquote small {
 
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
     margin-left: -51px;
+    margin-top: -3px;
 }
 
 .navbar-brand {
@@ -1108,16 +1129,18 @@ blockquote .small, blockquote footer, blockquote small {
 .top-menu {
     height: 50px;
     width: 100%;
-    border-bottom: 1px solid #d7d7d7;
-    background: #ffffff;
+    border-bottom: 1px solid #ffffff;
+    background: rgb(85, 202, 245);
 }
 
 .top-menu-left-section {
     width: 200px;
     display: flex;
     justify-content: space-between;
-    color: #000;
-    padding-top: 13px;
+    color: #fff;
+    padding-top: 12px;
+    font-size: 17px;
+    font-weight: 500;
 }
 
 .languages {
@@ -1128,7 +1151,7 @@ blockquote .small, blockquote footer, blockquote small {
 }
 
 .phone {
-    color: #000;
+    color: #fff;
     font-weight: 600;
     padding-top: 14px;
     display: block;
@@ -1138,13 +1161,14 @@ blockquote .small, blockquote footer, blockquote small {
 
 .pe-7s-mail{
     font-size: 31px;
-    color: #000;
+    color: #fff;
     padding-top: 10px;
     margin-right: 12px;
 }
 
 .languages span{
-    color: #000;
+    color: #fff;
+    font-weight: 600;
     padding: 15px;
 }
 
@@ -2184,17 +2208,22 @@ input[type=checkbox] + label:before {
     height: calc(100vh - 180px)!important;
 }
 .blockchain-slider {
-    width:1170px;
+    width:100%;
     margin:auto;
 }
 
-.blockchain-info p{
+.blockchain-info p,
+.blockchain-forecast p{
     margin-top: 75px;
     line-height: 1.5;
     margin-bottom: 90px;
     font-size: 28px;
     text-align: left;
     color: #474747;
+}
+.blockchain-forecast p {
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 .blockchain-comments {
     width:700px;
@@ -2246,7 +2275,25 @@ input[type=checkbox] + label:before {
 #slider-2 button {
     display: none!important;
 }
-
+.blockchain {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.blockchain-stories-item img {
+    width:100%;
+}
+.blockchain-stories-item-descr {
+    font-size: 21px;
+    margin-top: 15px;
+    line-height: 1.6;
+    margin-bottom: 60px;
+    color: #474747;
+}
+.blockchain-forecast {
+    margin-bottom: 110px;
+}
 
 
 /**/

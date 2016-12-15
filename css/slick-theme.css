@@ -69,15 +69,16 @@
     font-family: 'slick';
     font-size: 60px;
     line-height: 1;
-    opacity: .75;
-    color: #474747;
+    opacity: .85;
+    color: #fff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 .slick-prev
 {
-    left: -100px;
+    left: 10px;
+    z-index: 11111;
 }
 [dir='rtl'] .slick-prev
 {
@@ -95,7 +96,8 @@
 
 .slick-next
 {
-    right: -96px;
+    right: 14px;
+    z-index: 11111;
 }
 [dir='rtl'] .slick-next
 {

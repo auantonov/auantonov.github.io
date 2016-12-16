@@ -14,7 +14,9 @@ body {
 	color: #8e8e8e;
 	height: 100%;
     padding-top: 80px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     font-weight: 300;
 	min-height: 100% !important;
@@ -350,10 +352,10 @@ a:focus {
     padding-top: 50px;
 }
 
-.navbar-spacing-top-static {
+/*.navbar-spacing-top-static {
     padding-top: 25px;
     padding-bottom: 25px;
-}
+}*/
 
 .navbar-switch {
     padding-top: 0;
@@ -1045,46 +1047,6 @@ blockquote .small, blockquote footer, blockquote small {
     font-size: 14px;
 }
 
-/* =Media Queries
--------------------------------------------------------------- */
-@media (max-width:767px) {
-    .text-center-xs { text-align:center; }
-    .mt10-xs { margin-top:10px; }
-    .mt20-xs { margin-top:20px; }
-    .mt30-xs { margin-top:30px; }
-    .mt40-xs { margin-top:40px; }
-    .mb10-xs { margin-bottom:10px; }
-    .mb20-xs { margin-bottom:20px; }
-    .mb30-xs { margin-bottom:30px; }
-    .mb40-xs { margin-bottom:40px; }
-    .section-padding { padding-top:80px; padding-bottom:80px; }
-    .section-padding-top { padding-top:75px; }
-    .navbar-default .navbar-nav > li > a { line-height:1; }
-    .navbar-nav .open .dropdown-menu { padding:0; }
-    .progress-bars-holder { margin-top: 40px; }
-    .section-padding-work { padding: 80px 0 60px 0; }
-    .navbar { padding-top: 0; }
-    body { padding-top: 80px; }
-    body.body-spacing-top { padding-top:80px; }
-    .ticker h2 { font-size: 27px; }
-    #carousel-top-transparent .carousel-control, #carousel-top-image .carousel-control { width:50px }
-    .top-content-carousel { padding: 0 40px; border-left: 0; }
-    .navbar-spacing-top-static { padding-bottom: 0; }
-}
-
-@media (min-width: 768px) and (max-width:992px) {
-    .mt10-sm { margin-top:10px; }
-    .mb10-sm { margin-bottom:10px; }
-    .mt20-sm { margin-top:20px; }
-    .mb20-sm { margin-bottom:20px; }
-    .mt30-sm { margin-top:30px; }
-    .mb30-sm { margin-bottom:30px; }
-    .mt40-sm { margin-top:40px; }
-    .mb40-sm { margin-bottom:40px; }
-    .progress-bars-holder { margin-top: 40px; }
-    .skill-holder { margin-top: 83px; }
-}
-
 /*main styles*/
 
 .video-wrapper {
@@ -1129,18 +1091,19 @@ blockquote .small, blockquote footer, blockquote small {
 .top-menu {
     height: 50px;
     width: 100%;
+    font-size: 15px;
     border-bottom: 1px solid #ffffff;
     background: rgb(85, 202, 245);
 }
 
 .top-menu-left-section {
-    width: 200px;
+    width: 185px;
     display: flex;
     justify-content: space-between;
     color: #fff;
-    padding-top: 12px;
-    font-size: 17px;
-    font-weight: 500;
+    padding-top: 13px;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .languages {
@@ -2193,19 +2156,19 @@ input[type=checkbox] + label:before {
     background: url(../images/btf/slick-1.jpg);
     background-size: cover;
     background-position: center;
-    height: calc(100vh - 180px)!important;
+    height: calc(100vh - 150px)!important;
 }
 .slide-2 {
     background: url(../images/btf/slick-2.jpg);
     background-size: cover;
     background-position: center;
-    height: calc(100vh - 180px)!important;
+    height: calc(100vh - 150px)!important;
 }
 .slide-3 {
     background: url(../images/btf/slick-3.png);
     background-size: cover;
     background-position: center;
-    height: calc(100vh - 180px)!important;
+    height: calc(100vh - 150px)!important;
 }
 .blockchain-slider {
     width:100%;
@@ -2217,7 +2180,8 @@ input[type=checkbox] + label:before {
     margin-top: 75px;
     line-height: 1.5;
     margin-bottom: 90px;
-    font-size: 28px;
+    font-size: 20px;
+    font-weight: 300;
     text-align: left;
     color: #474747;
 }
@@ -2228,20 +2192,21 @@ input[type=checkbox] + label:before {
 .blockchain-comments {
     width:700px;
     margin:auto;
-    margin-bottom: 120px;
-}
-.blockchain-comments .slick-list {
-    overflow: visible;
+    margin-bottom: 110px;
 }
 .slide-comment {
+    position: relative;
     height: 299px!important;
     background: #fff;
     box-shadow: 0px 0px 38px rgba(0, 0, 0, 0.09);
+    margin: 30px;
+    outline: none;
 }
 .slide-comment-item {
     display: flex;
     padding-top: 30px;
     align-items: center;
+    padding-right: 40px;
 }
 .slide-comment-ava {
     width: 180px;
@@ -2262,9 +2227,10 @@ input[type=checkbox] + label:before {
     background-position: 213px -207px;
 }
 .slide-comment-descr{
-    line-height: 1.5;
+    line-height: 1.4;
     font-size: 15px;
-    width: 61%;
+    width: 63%;
+    word-spacing: 0.05em;
 }
 .slide-comment-link{
     position: absolute;
@@ -2276,24 +2242,107 @@ input[type=checkbox] + label:before {
     display: none!important;
 }
 .blockchain {
-    font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 .blockchain-stories-item img {
     width:100%;
 }
 .blockchain-stories-item-descr {
-    font-size: 21px;
-    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 400;
     line-height: 1.6;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     color: #474747;
+    background: #f5f5f5;
+    padding: 30px 35px;
+    padding-bottom: 45px;
 }
 .blockchain-forecast {
-    margin-bottom: 110px;
+    margin-bottom: 50px;
+}
+
+/* =Media Queries
+-------------------------------------------------------------- */
+
+@media (min-width: 768px) and (max-width:992px) {
+    .mt10-sm { margin-top:10px; }
+    .mb10-sm { margin-bottom:10px; }
+    .mt20-sm { margin-top:20px; }
+    .mb20-sm { margin-bottom:20px; }
+    .mt30-sm { margin-top:30px; }
+    .mb30-sm { margin-bottom:30px; }
+    .mt40-sm { margin-top:40px; }
+    .mb40-sm { margin-bottom:40px; }
+    .progress-bars-holder { margin-top: 40px; }
+    .skill-holder { margin-top: 83px; }
+}
+@media (max-width:993px) {
+    .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+        margin-left: -41px;
+        margin-top: 7px;
+    }
+    .navbar-brand>img {
+        width: 200px;
+    }
+    .nav>li>a {
+        margin: 10px 10px;
+    }
+    .navbar-default .navbar-nav > li > a {
+        font-size: 13px;
+    }
+    .blockchain-info p, .blockchain-forecast p {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .blockchain-comments {
+        margin-bottom: 60px;
+    }
+    .blockchain-forecast p {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    .blockchain-stories-item-descr {
+        margin-bottom: 60px;
+    }
+}
+@media (max-width:767px) {
+    .text-center-xs { text-align:center; }
+    .mt10-xs { margin-top:10px; }
+    .mt20-xs { margin-top:20px; }
+    .mt30-xs { margin-top:30px; }
+    .mt40-xs { margin-top:40px; }
+    .mb10-xs { margin-bottom:10px; }
+    .mb20-xs { margin-bottom:20px; }
+    .mb30-xs { margin-bottom:30px; }
+    .mb40-xs { margin-bottom:40px; }
+    .section-padding { padding-top:80px; padding-bottom:80px; }
+    .section-padding-top { padding-top:75px; }
+    .navbar-default .navbar-nav > li > a { line-height:1; }
+    .navbar-nav .open .dropdown-menu { padding:0; }
+    .progress-bars-holder { margin-top: 40px; }
+    .section-padding-work { padding: 80px 0 60px 0; }
+    .navbar { padding-top: 0; }
+    body { padding-top: 80px; }
+    body.body-spacing-top { padding-top:80px; }
+    .ticker h2 { font-size: 27px; }
+    #carousel-top-transparent .carousel-control, #carousel-top-image .carousel-control { width:50px }
+    .top-content-carousel { padding: 0 40px; border-left: 0; }
+    .navbar-spacing-top-static { padding-bottom: 0; }
+    .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+        margin-left: -29px;
+        margin-top: -1px;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: #2b2a29;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #2b2a29;
+    }
+    .navbar-default .navbar-toggle:focus, 
+    .navbar-default .navbar-toggle:hover {
+        background-color: #2b2a29;
+        border-color: #474747;
+    }
 }
 
 
-/**/

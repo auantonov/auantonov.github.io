@@ -23,7 +23,7 @@ body {
 }
 
 body.body-spacing-top {
-    padding-top: 130px;
+    padding-top: 130px;.navbar-default .navbar-nav > li > a:before
 }
 
 body.body-static-navbar {
@@ -320,6 +320,9 @@ a:focus {
     height: 3px;
     background: rgb(85, 202, 245);
     transition: width 0.5s ease-in-out;
+}
+.navbar-default .navbar-nav > li > a.active:before {
+    width: 100%;
 }
 .nav>li>a {
     position: relative;
@@ -806,7 +809,14 @@ blockquote .small, blockquote footer, blockquote small {
 .grid-item {
     position: relative;
     margin-bottom: 30px;
+    height: 375px;
+    overflow: hidden;
 }
+.grid-item img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
 
 .grid-item:hover .overlay {
     opacity: 1;
@@ -1038,7 +1048,7 @@ blockquote .small, blockquote footer, blockquote small {
 }
 
 #contact-information {
-    background-color: #ebebeb;
+    background-color: #fbfbfb;
     padding: 100px 0;
 }
 
@@ -1107,6 +1117,7 @@ blockquote .small, blockquote footer, blockquote small {
 }
 
 .languages {
+    display: none;
     position: relative;
     float: right;
     top: 14px;
@@ -1119,7 +1130,7 @@ blockquote .small, blockquote footer, blockquote small {
     padding-top: 14px;
     display: block;
     float: right;
-    margin-right: 35px;
+    margin-right: 15px;
 }
 
 .pe-7s-mail{
@@ -1165,7 +1176,9 @@ h4.spaced + p{
 
 #team {
     padding-top:0;
+    padding-bottom: 0;
 }
+
 .map {
     width: 100%;
     height: 440px;
@@ -1181,11 +1194,15 @@ h4.spaced + p{
     background: #fff;
     padding-bottom: 120px;
 }
-.partners{
+.partners {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
-
+.partners a {
+    margin-right: 40px;
+    margin-bottom: 25px;
+}
 .intro-font {
     font-size: 21px;
 }
@@ -1205,6 +1222,7 @@ h4.spaced + p{
 }
 .vacancy-item h6 {
     font-size: 17px;
+    letter-spacing: 0.7px;
 }
 .SMI {
     height: 600px;
@@ -1220,14 +1238,16 @@ h4.spaced + p{
     margin-left: 35px;
     text-decoration: underline;
 }
-
 .SMI-item a:hover {
     text-decoration: none;
+}
+.fond-page {
+    background: #fff;
 }
 .video-wrapper {
     background-image: url(../images/btf/STARTUP.jpg);
     position: relative;
-    height: calc(100vh - 180px);
+    height: calc(100vh - 150px);
 }
 .video-wrapper:before {
     content:'';
@@ -2344,5 +2364,7 @@ input[type=checkbox] + label:before {
         border-color: #474747;
     }
 }
+
+
 
 

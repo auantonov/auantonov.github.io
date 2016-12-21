@@ -9,7 +9,7 @@ Author:Denis Samardjiev
 /* =Common Styles
 -------------------------------------------------------------- */
 body {
-	background-color: #f5f5f5;
+	background-color: #fff;
 	font-size: 16px;
 	color: #8e8e8e;
 	height: 100%;
@@ -240,11 +240,10 @@ a:focus {
     margin-right: 20px;
     border: 3px solid #474747;
 }
-
 .lead-rolla {
-    font-size: 19px;
-    color: #a9a9a9;
-    line-height: 35px;
+    font-size: 18px;
+    color: #474747;
+    line-height: 1.6;
 }
 
 .lead-sm {
@@ -256,14 +255,17 @@ a:focus {
 }
 
 .heading-1 {
-     sans-serif;
     color: #474747;
-    font-weight: 700;
-    text-transform: uppercase;
-    border-bottom: 2px solid #d7d7d7;
-    padding-bottom: 4px;
-    display: inline-block;
-    margin: 0;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    margin-top: -26px;
+    color: white;
+    background: #474747;
+    font-size: 13px;
+    padding: 10px;
+    float: left;
+    margin-right: 2px;
 }
 
 .text-light {
@@ -349,16 +351,12 @@ a:focus {
     min-height: 80px;
     margin-bottom: 0;
     border: none;
+    border-bottom: 2px solid #f5f5f5;
 }
 
 .navbar-spacing-top-fixed {
     padding-top: 50px;
 }
-
-/*.navbar-spacing-top-static {
-    padding-top: 25px;
-    padding-bottom: 25px;
-}*/
 
 .navbar-switch {
     padding-top: 0;
@@ -1048,7 +1046,7 @@ blockquote .small, blockquote footer, blockquote small {
 }
 
 #contact-information {
-    background-color: #fbfbfb;
+/*    background-color: #fbfbfb;*/
     padding: 100px 0;
 }
 
@@ -1073,7 +1071,8 @@ blockquote .small, blockquote footer, blockquote small {
 .intro {
     padding-top: 100px;
     background: #fff;
-    padding-bottom: 120px;
+    color: #474747;
+    margin-bottom: -25px;
 }
 
 .mt130 {
@@ -1207,13 +1206,22 @@ h4.spaced + p{
 }
 .partners a {
     margin-right: 40px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
+    background: #fff;
+    width: 440px;
+    height: 252px;
+    box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.05);
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 .intro-font {
     font-size: 21px;
 }
 .intro-font p {
     margin-bottom: 20px;
+    font-size: 25px;
+    line-height: 1.6;
 }
 
 .vacancy {
@@ -1229,6 +1237,9 @@ h4.spaced + p{
 .vacancy-item h6 {
     font-size: 17px;
     letter-spacing: 0.7px;
+}
+.vacancy-item p {
+    color:#474747;
 }
 .SMI {
     height: 600px;
@@ -1292,12 +1303,12 @@ h4.spaced + p{
 }
 
 .single-news{
-    padding-top: 100px;
+    padding-top: 80px;
     padding-bottom: 60px;
 }
 
 .single-news-item h1{
-    line-height: 48px;
+    line-height: 1.3;
     font-weight: 600;
     text-transform: none;
     margin-bottom: 25px;
@@ -1311,7 +1322,7 @@ h4.spaced + p{
     line-height: 30px;
 }
 .subscribe {
-    margin-bottom: 45px;
+    margin-bottom: 30px;
     margin-top: 11px;
 }
 .subscribe span {
@@ -1329,20 +1340,23 @@ h4.spaced + p{
 }
 .events-item-info span {
     display: block;
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: 400;
 }
 .events-item-info a{
-    font-weight: 500;
-    margin-bottom: 10px;
+    font-weight: 700;
+    margin-bottom: 3px;
     display: block;
+    color: #474747;
 }
 
 .events > span,
 .subscribe span{
-    font-size: 20px;
+    font-size: 18px;
+    letter-spacing: 0.4px;
     margin-bottom: 25px;
     display: block;
-    color: #000;
+    color: #474747;
     font-weight: 500;
 }
 
@@ -1421,6 +1435,7 @@ h4.spaced + p{
 }
 .subscribe input {
     padding:10px 16px;
+    border: 2px solid #474747;
 }
 .industry-news-item,
 .industry-other-news-item {
@@ -1462,7 +1477,7 @@ h4.spaced + p{
     margin-top: -6px;
 }
 .industry-news .tags-cont {
-    margin-bottom: 20px;
+    margin-bottom: -20px;
     float: left;
     margin-top: -2px;
 }
@@ -1474,11 +1489,11 @@ h4.spaced + p{
     bottom: 0;
     color: white;
     z-index: 1111;
+    text-transform: none;
     font-weight: 600;
     font-size: 21px;
-    padding: 30px 30px;
-    line-height: 30px;
-    text-transform: none;
+    padding: 20px 25px;
+    line-height: 1.3;
 }
 .industry-other-news-item h1 a {
     color:inherit;
@@ -2302,7 +2317,14 @@ input[type=checkbox] + label:before {
 .modal {
     z-index: 11111111;
 }
+.map-content h2 {
+    font-size: 20px;
+    margin-top: -20px;
+    line-height: 1.5;
+    text-transform: initial;
+}
 /* =Media Queries
+
 -------------------------------------------------------------- */
 
 @media (min-width: 768px) and (max-width:992px) {

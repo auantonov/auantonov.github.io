@@ -11,7 +11,7 @@
 	<link href="css/royal_preloader.css" rel="stylesheet">
 
 	<!-- jQuery Files -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
 
 	<!-- Royal Preloader -->
 <!-- 	<script type="text/javascript" src="js/royal_preloader.min.js"></script> -->
@@ -45,10 +45,11 @@
 					<span>Курс BTF/$</span>
 				</div>
 				<div class="top-menu-right-section pull-right">
-					<div class="languages">
-						<span>EN</span>
-						<span>RU</span>
-					</div>
+				<div class="languages">
+					<span><img src="images/btf/russia_fluttering_flag_256.png" alt=""></span>
+					<span><img src="images/btf/united_states_of_america_fluttering_flag_256.png" alt="" ></span>
+					<span><img src="images/btf/china_fluttering_flag_256.png" alt="" class="united-lang"></span>
+				</div>
 					<span class="phone">8-800-1234567</span>
 					<span class="pe-7s-mail"></span>
 				</div>
@@ -72,38 +73,15 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
-							<a href="index2.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Главная</a>
-							<ul class="dropdown-menu dropdown-menu-first">
-								<li><a href="multipage-top-default.html">Default</a></li>
-								<li><a href="multipage-top-slider-image.html">Image Slider</a></li>
-								<li><a href="multipage-top-text-rotater.html">Rotate</a></li>
-								<li><a href="multipage-top-slider-transparent.html">No BG Slider</a></li>
-							</ul><!-- /.dropdown items -->
+							<a href="index2.html">Главная</a>
 						</li><!-- /.dropdown -->
 						<li><a href="investment.html">Инвестиции</a></li>
 						<li><a href="blockchain.html">Блокчейн</a></li>
 						<li class="dropdown">
-							<a href="fond.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Фонд</a>
-							<ul class="dropdown-menu dropdown-menu-first">
-								<li class="dropdown-submenu">
-									<a tabindex="-1" href="#">Masonry &nbsp;<span class="ion-ios-arrow-right"></span></a>
-									<ul class="dropdown-menu">
-										<li><a tabindex="-1" href="multipage-portfolio-masonry-2col.html">2 Columns</a></li>
-										<li><a tabindex="-1" href="multipage-portfolio-masonry-3col.html">3 Columns</a></li>
-										<li><a tabindex="-1" href="multipage-portfolio-masonry-4col.html">4 Columns</a></li>
-									</ul><!-- /.dropdown sub items -->
-								</li><!-- /.dropdown sub -->
-								<li class="dropdown-submenu">
-									<a href="#">Regular &nbsp;<span class="ion-ios-arrow-right"></span></a>
-									<ul class="dropdown-menu">
-										<li><a tabindex="-1" href="multipage-portfolio-aligned-2col.html">2 Columns</a></li>
-										<li><a tabindex="-1" href="multipage-portfolio-aligned-3col.html">3 Columns</a></li>
-										<li><a tabindex="-1" href="multipage-portfolio-aligned-4col.html">4 Columns</a></li>
-									</ul><!-- /.dropdown sub items -->
-								</li><!-- /.dropdown sub -->
-							</ul><!-- /.dropdown sub holder -->
+							<a href="fond.html">Фонд</a>
 						</li><!-- /.dropdown -->
 						<li><a href="industry.html" class="active">Индустрия</a></li>
+						<li><a href="http://corp.ff.ru/">Холдинг</a></li>
 						<li><a href="dashboard.html">Управление</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
@@ -119,10 +97,10 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="tags-cont" itemprop="keywords">
-							<a href="#Финансы" rel="tag">Финансы</a> 
-							<a href="#Бизнес" rel="tag">Бизнес</a>
-							<a href="#Биткоин" rel="tag">Биткоин</a> 
-							<a href="#криптовалюты" rel="tag">Криптовалюта</a>
+							<h5 class="heading-1 mb20">Финансы</h5>
+							<h5 class="heading-1 mb20">Бизнес</h5>
+							<h5 class="heading-1 mb20">Биткоин</h5>
+							<h5 class="heading-1 mb20">Криптовалюта</h5>
 						</div>
 					</div>
 					<div class="col-md-8 news">
@@ -159,13 +137,13 @@
 									<span>Июль 27, 2017</span>
 								</div>
 							</div>
-							<div class="events-item">
+<!-- 							<div class="events-item">
 								<img src="images/btf/events-4.jpg" alt="">
 								<div class="events-item-info">
 									<a href="#">Как не нужно обращаться со своими биткойнами</a>
 									<span>Август 20, 2017</span>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -199,17 +177,17 @@
 		
 		<section class="industry-list-news">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
+				<div class="row masonry-wrap">
+					<div class="col-md-6 masonry-item">
 						<div class="industry-list-news-item">
 							<img src="images/btf/list-news-item-1.jpg" alt="">
 							<div class="industry-list-news-item-info">
 								<h2><a href="#">Интервью c менеджером биржи</a></h2>
-								<p>Криптовалютная биржа Livecoin, открывшая торги в апреле этого года, очень быстро смогла набрать... значительное количество клиентов и обеспечить ликвидность для торговли Bitcoin...</p>
+								<p>Обычно майнеры выбирают транзакции с самыми высокими комиссиями и включают их в блоки первыми. Транзакции с более низкими комиссионными «перебиваются» высокими и остаются в пулах памяти майнеров до обнаружения нового блока. Если же после нахождения блока ожидающую подтверждения транзакцию снова перебивает транзакция с более высокой комиссией, приходится ждать следующего блока, и так далее.</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 masonry-item">
 						<div class="industry-list-news-item">
 							<img src="images/btf/list-news-item-2.jpg" alt="">
 							<div class="industry-list-news-item-info">
@@ -218,7 +196,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 masonry-item">
 						<div class="industry-list-news-item">
 							<img src="images/btf/list-news-item-3.png" alt="">
 							<div class="industry-list-news-item-info">
@@ -227,7 +205,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 masonry-item">
 						<div class="industry-list-news-item">
 							<img src="images/btf/list-news-item-4.jpg" alt="">
 							<div class="industry-list-news-item-info">
@@ -240,12 +218,24 @@
 			</div>
 		</section>
 	<!-- Javascript Files -->
+	<script src="js/jquery.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArLNT3t4qsJEBmR0R9P_6ueLIQz0Jvt1M" async defer></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 	<script type="text/javascript" src="js/scrollreveal.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	    <script type="text/javascript">
+
+
+	    		$('.masonry-wrap').masonry({
+	    		    // options
+	    		    // set itemSelector so .grid-sizer is not used in layout
+	    		    itemSelector: '.masonry-item',
+	    		    // use element for option
+	    		    percentPosition: true
+	    		});
+
 	    		$(document).ready(function() {
 	    		 
 	    		    var pos1 = new google.maps.LatLng(18.520266, 73.856406),

@@ -1779,20 +1779,22 @@ input[type=checkbox] + label:before {
 
 /* buy */
 
-#buy2,
+#news,#buy2,
 #sell2,
 #send {
     align-items: center;
     justify-content: space-around;
-    padding-top: 40px;
+    padding-top: 20px;
     padding-bottom: 40px;
+	color:#474747;
 }
-#buy2.active,
+
 #sell2.active,
 #send.active {
     display: flex;
     align-items: baseline;
 }
+
 .line-item {
     text-align: center;
     margin-bottom: 12px;

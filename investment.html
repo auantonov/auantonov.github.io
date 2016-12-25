@@ -11,9 +11,9 @@
 	<!-- <link href="css/royal_preloader.css" rel="stylesheet"> -->
 
 	<!-- jQuery Files -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 	<!-- Royal Preloader -->
-	<script src="js/jquery.min.js"></script>
 <!-- 	<script type="text/javascript" src="js/royal_preloader.min.js"></script> -->
 <!-- 	<script type="text/javascript">
 		Royal_Preloader.config({
@@ -57,7 +57,7 @@
 			</div>
 		</div>
 		<!-- Begin Navigation -->
-		<nav class="navbar navbar-default navbar-spacing-top-static border-none">
+		<nav class="navbar navbar-default navbar-spacing-top-static">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -74,12 +74,36 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
-							<a href="#">Главная</a>
+							<a href="index2.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Главная</a>
+							<ul class="dropdown-menu dropdown-menu-first">
+								<li><a href="multipage-top-default.html">Default</a></li>
+								<li><a href="multipage-top-slider-image.html">Image Slider</a></li>
+								<li><a href="multipage-top-text-rotater.html">Rotate</a></li>
+								<li><a href="multipage-top-slider-transparent.html">No BG Slider</a></li>
+							</ul><!-- /.dropdown items -->
 						</li><!-- /.dropdown -->
-						<li><a href="investment.html">Инвестиции</a></li>
+						<li><a href="investment.html" class="active">Инвестиции</a></li>
 						<li><a href="blockchain.html">Блокчейн</a></li>
 						<li class="dropdown">
-							<a href="fond.html">Фонд</a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Фонд</a>
+							<ul class="dropdown-menu dropdown-menu-first">
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">Masonry &nbsp;<span class="ion-ios-arrow-right"></span></a>
+									<ul class="dropdown-menu">
+										<li><a tabindex="-1" href="multipage-portfolio-masonry-2col.html">2 Columns</a></li>
+										<li><a tabindex="-1" href="multipage-portfolio-masonry-3col.html">3 Columns</a></li>
+										<li><a tabindex="-1" href="multipage-portfolio-masonry-4col.html">4 Columns</a></li>
+									</ul><!-- /.dropdown sub items -->
+								</li><!-- /.dropdown sub -->
+								<li class="dropdown-submenu">
+									<a href="#">Regular &nbsp;<span class="ion-ios-arrow-right"></span></a>
+									<ul class="dropdown-menu">
+										<li><a tabindex="-1" href="multipage-portfolio-aligned-2col.html">2 Columns</a></li>
+										<li><a tabindex="-1" href="multipage-portfolio-aligned-3col.html">3 Columns</a></li>
+										<li><a tabindex="-1" href="multipage-portfolio-aligned-4col.html">4 Columns</a></li>
+									</ul><!-- /.dropdown sub items -->
+								</li><!-- /.dropdown sub -->
+							</ul><!-- /.dropdown sub holder -->
 						</li><!-- /.dropdown -->
 						<li><a href="industry.html">Индустрия</a></li>
 						<li><a href="http://corp.ff.ru/">Холдинг</a></li>
@@ -93,53 +117,63 @@
 	</header>
 	<!-- End Header -->
 
-
-
 	<!-- Begin About -->
 	<section class="video-wrapper index-wrapper">
-		<div class="type-wrap">
-		  <div id="typed-strings">
-		  <h1 class="typed-h1"><span class="name">Мы - команда блокчейн-энтузиастов</span></h1>
-		  </div>
-		  <span id="typed" style="white-space:pre"></span>
-		</div>
+		<h1 class="promo-descr">Представьте технологию, которая позволит безопасно и надежно владеть любой собственностью - деньгами, акциями, медиаконтентом, объектами творчества? И совершать транзакции без необходимости доверять кому-либо третьему? А теперь представьте себе банк, музыкальную корпорацию, сеть поликлиник или брокера, вся механика работы которого выстроена на этой технологии? Это однозначно не случится сегодня, но это непременно произойдет завтра - с внедрением блокчейн-технологии во все аспекты работы общества, государства и бизнеса.</h1>
 	</section>
 	<!-- End About -->
-
-	<section class="video-content">
-		<div class="row mb40">
-			<div class="col-xs-12 text-center">
-				<h2>Что такое блокчейн?</h2>
-				<span class="divider divider-center divider-dark no-margin-bottom"></span>
-			</div>
-			<!-- /.column -->
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<iframe width="70%" height="500" src="https://www.youtube.com/embed/23NM6wSXKCk" frameborder="0" allowfullscreen></iframe>
-					<center>Куда-то сюда посреди экрана надо запилить ссылку на раздел "Блокчейн" с текстом "Разобраться подробнее, как работает технология"</center>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-
 	<section class="our-company">
 		<div class="row mb40">
 			<div class="col-xs-12 text-center">
-				<h2>Компании и проекты, в которые мы инвестируем</h2>
+				<h2>Наши проекты</h2>
 				<span class="divider divider-center divider-dark no-margin-bottom"></span>
-			</div>
-			<!-- /.column -->
+			</div><!-- /.column -->
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 position-static">
+				<div class="col-md-6 position-static">
+	<!-- 				<div class="our-projects">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="our-projects-item"><img src="images/btf/project-1.jpg" alt=""></div>
+							</div>
+							<div class="col-md-4">
+								<div class="our-projects-item"><img src="images/btf/project-2.png" alt=""></div>
+							</div>
+							<div class="col-md-4">
+								<div class="our-projects-item"><img src="images/btf/project-3.jpg" alt=""></div>
+							</div>
+						</div>
+					</div>
+					<div class="our-projects">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="our-projects-item"><img src="images/btf/project-4.png" alt=""></div>
+							</div>
+							<div class="col-md-4">
+								<div class="our-projects-item"><img src="images/btf/project-5.jpg" alt=""></div>
+							</div>
+							<div class="col-md-4">
+								<div class="our-projects-item"><img src="images/btf/project-6.png" alt=""></div>
+							</div>
+						</div>
+					</div>
+					<div class="our-projects">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="our-projects-item"><img src="images/btf/project-7.jpg" alt=""></div>
+							</div>
+							<div class="col-md-4">
+								<div class="our-projects-item"><img src="images/btf/project-8.jpg" alt=""></div>
+							</div>
+							<div class="col-md-4">
+								<div class="our-projects-item"><img src="images/btf/project-9.png" alt=""></div>
+							</div>
+						</div>
+					</div> -->
 				<div class='projects-items'>
 				  <ul>
-				  	<div class="col-md-3 position-static col-padding-5">
+				  	<div class="col-md-4 position-static col-padding-5">
 				  		<li>
 				  		  <a class='normal' href='#'>
 							<img src="images/btf/project-1.jpg">
@@ -150,7 +184,7 @@
 				  		  </div>
 				  		</li>
 				  	</div>
-				  	<div class="col-md-3 position-static col-padding-5">
+				  	<div class="col-md-4 position-static col-padding-5">
 				  		<li>
 				  		  <a class='normal' href='#'>
 							<img src="images/btf/project-2.png">
@@ -161,7 +195,7 @@
 				  		  </div>
 				  		</li>
 				  	</div>
-				  	<div class="col-md-3 position-static col-padding-5">
+				  	<div class="col-md-4 position-static col-padding-5">
 				  		<li>
 				  		  <a class='normal' href='#'>
 							<img src="images/btf/project-3.jpg">
@@ -172,7 +206,7 @@
 				  		  </div>
 				  		</li>
 				  	</div>
-				  	<div class="col-md-3 position-static col-padding-5">
+				  	<div class="col-md-4 position-static col-padding-5">
 				  		<li>
 				  		  <a class='normal' href='#'>
 							<img src="images/btf/project-4.png">
@@ -183,7 +217,7 @@
 				  		  </div>
 				  		</li>
 				  	</div>
-				  	<div class="col-md-3 position-static col-padding-5">
+				  	<div class="col-md-4 position-static col-padding-5">
 				  		<li>
 				  		  <a class='normal' href='#'>
 							<img src="images/btf/project-5.jpg">
@@ -194,7 +228,7 @@
 				  		  </div>
 				  		</li>
 				  	</div>
-				  	<div class="col-md-3 position-static col-padding-5">
+				  	<div class="col-md-4 position-static col-padding-5">
 				  		<li>
 				  		  <a class='normal' href='#'>
 							<img src="images/btf/project-6.png">
@@ -205,7 +239,7 @@
 				  		  </div>
 				  		</li>
 				  	</div>
-				  	<div class="col-md-3 position-static col-padding-5">
+				  	<div class="col-md-4 position-static col-padding-5">
 				  		<li>
 				  		  <a class='normal' href='#'>
 							<img src="images/btf/project-7.jpg">
@@ -216,7 +250,7 @@
 				  		  </div>
 				  		</li>
 				  	</div>
-				  	<div class="col-md-3 position-static col-padding-5">
+				  	<div class="col-md-4 position-static col-padding-5">
 				  		<li>
 				  		  <a class='normal' href='#'>
 							<img src="images/btf/project-8.jpg">
@@ -227,7 +261,7 @@
 				  		  </div>
 				  		</li>
 				  	</div>
-<!-- 				  	<div class="col-md-3 position-static col-padding-5">
+				  	<div class="col-md-4 position-static col-padding-5">
 				  		<li>
 				  		  <a class='normal' href='#'>
 							<img src="images/btf/project-9.png">
@@ -237,22 +271,26 @@
 				  		    <p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh</p>
 				  		  </div>
 				  		</li>
-				  	</div> -->
+				  	</div>
 
-
+				   
 				  </ul>
 				</div>
 				</div>
-<!-- 				<div class="col-md-6">
+				<div class="col-md-6">
 					<iframe width="100%" height="310" src="https://www.youtube.com/embed/23NM6wSXKCk" frameborder="0" allowfullscreen></iframe>
-				</div> -->
+				</div>
 			</div>
 		</div>
 	</section>
 
-
-
-	<section class="index-table hidden">
+	<section class="index-table">
+		<div class="row mb40">
+			<div class="col-xs-12 text-center">
+				<h2>таблица инвестиций</h2>
+				<span class="divider divider-center divider-dark no-margin-bottom"></span>
+			</div><!-- /.column -->
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -312,19 +350,13 @@
 			</div>
 		</div>
 	</section>
-
+	
 	<section class="graphic">
-		<div class="row mb40">
-			<div class="col-xs-12 text-center">
-				<h2>Рост блокчейн-индустрии</h2>
-				<span class="divider divider-center divider-dark no-margin-bottom"></span>
-			</div><!-- /.column -->
-		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					 <div class="chart2"></div>
-
+					 
 					 <script>
 					 $(document).ready(function(){
 						now = new Date();
@@ -332,16 +364,15 @@
 							$.getJSON('https://noxonfund.com/btcchart.php')
 							).done(function(btc) {
 								//console.log(btc);
-
+							
 								$('.chart2').highcharts({
 									chart: {
 										type: 'spline',
-										width: 1140,
-										height:500
+										width: 1000,
+										height:400
 									},
 									title: {
-										text: '111111',
-										style:{ "color" : "transparent"}
+										text: false,
 									},
 									legend: {
 										enabled: true
@@ -357,24 +388,24 @@
 									},
 									xAxis: {
 										type: 'datetime',
-
+									
 										labels: {
 											enabled: false,
 										},
 										color: 'red',
-
+									  
 									},
-
-
-
+									
+									
+									
 									tooltip: {
-
+										
 										formatter: function () {
 											return this.y;
 										},
 										shared: true
-									},
-									yAxis: [{
+									}, 
+									yAxis: [{ 
 										//maxPadding: 0.07,
 										title: {
 											text: 'Value',
@@ -383,7 +414,7 @@
 											}
 										},
 										labels: {
-
+											
 											formatter: function() {
 												return Math.round(this.value/1000000).toString()+"m. USD";
 											}
@@ -400,7 +431,7 @@
 											color: 'rgba(255,255,255,0)'
 										}]
 									}
-
+								
 									],
 									plotOptions: {
 										spline: {
@@ -437,232 +468,133 @@
 
 
 						Highcharts.theme = {
-						   colors: ['#fa3b5a', '#55caf5', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
-						      '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'],
-						   chart: {
-						      backgroundColor: {
-						         linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
-						         stops: [
-						            [0, '#2a2a2b'],
-						            [1, '#3e3e40']
-						         ]
-						      },
-						      style: {
-						         fontFamily: '\'Unica One\', sans-serif'
-						      },
-						      plotBorderColor: '#606063'
-						   },
-						   title: {
-						      style: {
-						         color: '#E0E0E3',
-						         textTransform: 'uppercase',
-						         fontSize: '20px'
-						      }
-						   },
-						   subtitle: {
-						      style: {
-						         color: '#E0E0E3',
-						         textTransform: 'uppercase'
-						      }
-						   },
-						   xAxis: {
-						      gridLineColor: '#707073',
-						      labels: {
-						         style: {
-						            color: '#E0E0E3'
-						         }
-						      },
-						      lineColor: '#707073',
-						      minorGridLineColor: '#505053',
-						      tickColor: '#707073',
-						      title: {
-						         style: {
-						            color: '#A0A0A3'
-
-						         }
-						      }
-						   },
-						   yAxis: {
-						      gridLineColor: '#707073',
-						      labels: {
-						         style: {
-						            color: '#E0E0E3'
-						         }
-						      },
-						      lineColor: '#707073',
-						      minorGridLineColor: '#505053',
-						      tickColor: '#707073',
-						      tickWidth: 1,
-						      title: {
-						         style: {
-						            color: '#A0A0A3'
-						         }
-						      }
-						   },
-						   tooltip: {
-						      backgroundColor: 'rgba(0, 0, 0, 0.85)',
-						      style: {
-						         color: '#F0F0F0'
-						      }
-						   },
-						   plotOptions: {
-						      series: {
-						         dataLabels: {
-						            color: '#B0B0B3'
-						         },
-						         marker: {
-						            lineColor: '#333'
-						         }
-						      },
-						      boxplot: {
-						         fillColor: '#505053'
-						      },
-						      candlestick: {
-						         lineColor: 'white'
-						      },
-						      errorbar: {
-						         color: 'white'
-						      }
-						   },
-						   legend: {
-						      itemStyle: {
-						         color: '#E0E0E3'
-						      },
-						      itemHoverStyle: {
-						         color: '#FFF'
-						      },
-						      itemHiddenStyle: {
-						         color: '#606063'
-						      }
-						   },
-						   credits: {
-						      style: {
-						         color: '#666'
-						      }
-						   },
-						   labels: {
-						      style: {
-						         color: '#707073'
-						      }
-						   },
-
-						   drilldown: {
-						      activeAxisLabelStyle: {
-						         color: '#F0F0F3'
-						      },
-						      activeDataLabelStyle: {
-						         color: '#F0F0F3'
-						      }
-						   },
-
-						   navigation: {
-						      buttonOptions: {
-						         symbolStroke: '#DDDDDD',
-						         theme: {
-						            fill: '#505053'
-						         }
-						      }
-						   },
-
-						   // scroll charts
-						   rangeSelector: {
-						      buttonTheme: {
-						         fill: '#505053',
-						         stroke: '#000000',
-						         style: {
-						            color: '#CCC'
-						         },
-						         states: {
-						            hover: {
-						               fill: '#707073',
-						               stroke: '#000000',
-						               style: {
-						                  color: 'white'
-						               }
-						            },
-						            select: {
-						               fill: '#000003',
-						               stroke: '#000000',
-						               style: {
-						                  color: 'white'
-						               }
-						            }
-						         }
-						      },
-						      inputBoxBorderColor: '#505053',
-						      inputStyle: {
-						         backgroundColor: '#333',
-						         color: 'silver'
-						      },
-						      labelStyle: {
-						         color: 'silver'
-						      }
-						   },
-
-						   navigator: {
-						      handles: {
-						         backgroundColor: '#666',
-						         borderColor: '#AAA'
-						      },
-						      outlineColor: '#CCC',
-						      maskFill: 'rgba(255,255,255,0.1)',
-						      series: {
-						         color: '#7798BF',
-						         lineColor: '#A6C7ED'
-						      },
-						      xAxis: {
-						         gridLineColor: '#505053'
-						      }
-						   },
-
-						   scrollbar: {
-						      barBackgroundColor: '#808083',
-						      barBorderColor: '#808083',
-						      buttonArrowColor: '#CCC',
-						      buttonBackgroundColor: '#606063',
-						      buttonBorderColor: '#606063',
-						      rifleColor: '#FFF',
-						      trackBackgroundColor: '#404043',
-						      trackBorderColor: '#404043'
-						   },
-
-						   // special colors for some of the
-						   legendBackgroundColor: 'rgba(0, 0, 0, 0.5)',
-						   background2: '#505053',
-						   dataLabelsColor: '#B0B0B3',
-						   textColor: '#C0C0C0',
-						   contrastTextColor: '#F0F0F3',
-						   maskColor: 'rgba(255,255,255,0.3)'
+							colors: ["blue", "red"],
+							chart: {
+								backgroundColor: null,
+								style: {
+									fontFamily: "Lato, serif"
+								},
+								annotations: [{
+									xAxis: 2,
+									yAxis: 2,
+									
+									title: {
+										text: "Ann4234234otated chart!"
+									}
+								  }]
+							},
+							title: {
+								style: {
+									color: 'black',
+									fontSize: '18px',
+									fontWeight: 'bold'
+								}
+							},
+							subtitle: {
+								style: {
+									color: 'black'
+								}
+							},
+							xAxis: {
+								gridLineColor: 'black',
+								labels: {
+									style: {
+										color: 'black'
+									}
+								},
+								lineColor: 'black',
+								minorGridLineColor: 'black',
+								tickColor: 'black',
+								title: {
+									style: {
+										color: 'black'
+									}
+								}
+							},
+							yAxis: {
+								gridLineColor: 'blue',
+								labels: {
+									style: {
+										color: '#fff'
+									}
+								},
+								lineColor: 'blue',
+								minorGridLineColor: 'yellow',
+								tickColor: 'yellow',
+								tickWidth: 1,
+								title: {
+									style: {
+										color: 'yellow'
+									}
+								}
+							},
+							legend: {
+								itemStyle: {
+									fontWeight: 'bold',
+									fontSize: '18px'
+								}
+							},
+							tooltip: {
+								backgroundColor: '#002C59',
+								style: {
+									color: '#F0F0F0'
+								}
+							},
+							plotOptions: {
+								series: {
+									dataLabels: {
+										color: '#B0B0B3'
+									},
+									marker: {
+										lineColor: 'rgba(255,255,255,0)'
+									},
+									connectNulls: true
+								},
+								boxplot: {
+									fillColor: '#505053'
+								},
+								candlestick: {
+									lineColor: 'white'
+								},
+								errorbar: {
+									color: 'white'
+								}
+							},
+							legend: {
+								itemStyle: {
+									color: '#E0E0E3'
+								},
+								itemHoverStyle: {
+									color: '#FFF'
+								},
+								itemHiddenStyle: {
+									color: '#606063'
+								}
+							},
+							background2: '#fff'
 						};
 
-						// Apply the theme
+
 						Highcharts.setOptions(Highcharts.theme);
-
 						});
-
+							
 					  </script>
 				</div>
 			</div>
 			<div class="row graphic-buttons">
 				<div class="graphic-buttons-item">
-					<a href="#"><span class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#myModal">Связаться с нами</span></a>
+					<a href="#"><span class="btn btn-primary btn-lg">Связаться с нами</span></a>
 					<p>Появились вопросы или предложения?<br> Cвяжитесь с нами</p>
 				</div>
 				<div class="graphic-buttons-item">
-					<a href="dashboard.html"><span class="btn btn-primary btn-lg">Зарегистрироваться</span></a>
-					<p>Создать аккаунт для управления <br>токенами фонда</p>
+					<a href="#"><span class="btn btn-primary btn-lg">Зарегистрироваться</span></a>
+					<p>Зарегистрировать счет для покупки <br>токенов паевых фондов</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<section class="index-news">
-		<div class="row mb40">
-			<div class="col-xs-12 text-center">
-				<h2>Новости индустрии</h2>
-				<span class="divider divider-center divider-dark no-margin-bottom"></span>
-			</div><!-- /.column -->
-		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
@@ -734,32 +666,6 @@
 			</div>
 		</div>
 	</section>
-	<!-- Modal -->
-	<div class="modal fade call-back" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Контактная информация</h4>
-	      </div>
-	      <div class="modal-body">
-			<span class="call-back-address">
-				115054, Москва <br>
-				ул. Малая Пионерская, д.21, строение 1
-			</span>
-			<span class="call-back-address">
-				email - <b>info@ff.ru</b>
-			</span>
-			<span class="call-back-address">
-				телефон - <b>8 800 700-24-93</b>
-			</span>
-	      </div>
-	      <div class="modal-footer">
-
-	      </div>
-	    </div>
-	  </div>
-	</div>
 	<!-- End Map -->
 	<!-- End Quotes -->
 
@@ -772,45 +678,14 @@
 	<!-- End Footer -->
 
 	<!-- Javascript Files -->
-
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArLNT3t4qsJEBmR0R9P_6ueLIQz0Jvt1M" async defer></script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArLNT3t4qsJEBmR0R9P_6ueLIQz0Jvt1M" async defer></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script src="js/typed.js"></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-	<script type="text/javascript" src="js/scrollreveal.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/scrollreveal.min.js"></script> -->
+	<!-- <script type="text/javascript" src="js/main.js"></script> -->
 	<script src="js/highstock.js"></script>
 	<script type="text/javascript">
 
-				// setTimeout(function(){
-				//     $('.typed-cursor').hide();
-				// },6100);
-
-
-				$(function(){
-
-				    $("#typed").typed({
-				        strings: ["Мы - команда блокчейн-энтузиастов из России<br>которая прямо сейчас создает<br>инвестиционный фонд нового поколения<br>на основе цифровой собственности<br>и прозрачности всех операций."],
-				        // stringsElement: $('#typed-strings'),
-				        typeSpeed: 10,
-				        backDelay: 0,
-				        loop: false,
-				        // contentType: 'html', // or text
-				        // defaults to false for infinite loop
-				        loopCount: false,
-				        // callback: function(){ foo(); },
-				        // resetCallback: function() { newTyped(); }
-				    });
-
-				    // $(".reset").click(function(){
-				    //     $("#typed").typed('reset');
-				    // });
-
-				});
-
-				function newTyped(){ /* A new typed object */ }
-
-				function foo(){ console.log("Callback"); }
 
 
 				// - Noel Delgado | @pixelia_me
@@ -825,23 +700,23 @@
 				        x = (ev.pageX - obj.offsetLeft - (w / 2) * (w > h ? (h / w) : 1)),
 				        y = (ev.pageY - obj.offsetTop - (h / 2) * (h > w ? (w / h) : 1)),
 				        d = Math.round( Math.atan2(y, x) / 1.57079633 + 5 ) % 4;
-
+				  
 				    return d;
 				};
 
 				var addClass = function ( ev, obj, state ) {
 				    var direction = getDirection( ev, obj ),
 				        class_suffix = "";
-
+				    
 				    obj.className = "";
-
+				    
 				    switch ( direction ) {
 				        case 0 : class_suffix = '-top';    break;
 				        case 1 : class_suffix = '-right';  break;
 				        case 2 : class_suffix = '-bottom'; break;
 				        case 3 : class_suffix = '-left';   break;
 				    }
-
+				    
 				    obj.classList.add( state + class_suffix );
 				};
 
@@ -859,13 +734,13 @@
 	    		$(document).ready(function() {
 
 
-	    			//promo fade in
+	    			//promo fade in 
 	    			$('.promo-descr').addClass('fade-IN');
-
+	    		 
 	    			//map init
 	    		    var pos1 = new google.maps.LatLng(18.520266, 73.856406),
 	    		        pos2 = new google.maps.LatLng(28.579943, 77.330006),
-
+	    		        
 	    		        option1 = {
 	    		            zoom: 17,
 	    		            center: pos1,
@@ -879,7 +754,7 @@
 	    		            mapTypeId: google.maps.MapTypeId.ROADMAP,
 	    		            styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
 	    		        },
-
+	    		        
 	    		        //map1 = new google.maps.Map(document.getElementById("map1"), option1),
 	    		        //map2 = new google.maps.Map(document.getElementById("map2"), option2),
 

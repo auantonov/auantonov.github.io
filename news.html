@@ -32,6 +32,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body class="body-static-navbar">
+	<div id="scrollbar"></div>
 
 	<!-- Preloader -->
 	<!-- <div id="royal_preloader"></div> -->
@@ -241,6 +242,11 @@ Microsoft предлагает разработчикам комплект ср�
 	<script type="text/javascript" src="js/main.js"></script>
 	    <script type="text/javascript">
 	    		$(document).ready(function() {
+
+	    			$( window ).scroll(function() {
+	    			  var percentage = document.body.scrollTop / ($(document).height() - window.innerHeight );
+	    			  $("#scrollbar").width(percentage*100 + "%");
+	    			});
 	    		 
 	    		    var pos1 = new google.maps.LatLng(18.520266, 73.856406),
 	    		        pos2 = new google.maps.LatLng(28.579943, 77.330006),

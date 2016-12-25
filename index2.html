@@ -93,6 +93,8 @@
 	</header>
 	<!-- End Header -->
 
+
+
 	<!-- Begin About -->
 	<section class="video-wrapper index-wrapper">
 		<div class="type-wrap">
@@ -103,6 +105,24 @@
 		</div>
 	</section>
 	<!-- End About -->
+
+	<section class="video-content">
+		<div class="row mb40">
+			<div class="col-xs-12 text-center">
+				<h2>Что такое блокчейн?</h2>
+				<span class="divider divider-center divider-dark no-margin-bottom"></span>
+			</div>
+			<!-- /.column -->
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<iframe width="70%" height="500" src="https://www.youtube.com/embed/23NM6wSXKCk" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section class="our-company">
 		<div class="row mb40">
 			<div class="col-xs-12 text-center">
@@ -216,7 +236,7 @@
 				  		</li>
 				  	</div> -->
 
-				   
+
 				  </ul>
 				</div>
 				</div>
@@ -227,22 +247,7 @@
 		</div>
 	</section>
 
-	<section class="video-content">
-		<div class="row mb40">
-			<div class="col-xs-12 text-center">
-				<h2>Что такое блокчейн?</h2>
-				<span class="divider divider-center divider-dark no-margin-bottom"></span>
-			</div>
-			<!-- /.column -->
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<iframe width="70%" height="500" src="https://www.youtube.com/embed/23NM6wSXKCk" frameborder="0" allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-	</section>
+
 
 	<section class="index-table hidden">
 		<div class="container">
@@ -304,7 +309,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<section class="graphic">
 		<div class="row mb40">
 			<div class="col-xs-12 text-center">
@@ -316,7 +321,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					 <div class="chart2"></div>
-					 
+
 					 <script>
 					 $(document).ready(function(){
 						now = new Date();
@@ -324,7 +329,7 @@
 							$.getJSON('https://noxonfund.com/btcchart.php')
 							).done(function(btc) {
 								//console.log(btc);
-							
+
 								$('.chart2').highcharts({
 									chart: {
 										type: 'spline',
@@ -349,24 +354,24 @@
 									},
 									xAxis: {
 										type: 'datetime',
-									
+
 										labels: {
 											enabled: false,
 										},
 										color: 'red',
-									  
+
 									},
-									
-									
-									
+
+
+
 									tooltip: {
-										
+
 										formatter: function () {
 											return this.y;
 										},
 										shared: true
-									}, 
-									yAxis: [{ 
+									},
+									yAxis: [{
 										//maxPadding: 0.07,
 										title: {
 											text: 'Value',
@@ -375,7 +380,7 @@
 											}
 										},
 										labels: {
-											
+
 											formatter: function() {
 												return Math.round(this.value/1000000).toString()+"m. USD";
 											}
@@ -392,7 +397,7 @@
 											color: 'rgba(255,255,255,0)'
 										}]
 									}
-								
+
 									],
 									plotOptions: {
 										spline: {
@@ -631,7 +636,7 @@
 						Highcharts.setOptions(Highcharts.theme);
 
 						});
-							
+
 					  </script>
 				</div>
 			</div>
@@ -740,14 +745,14 @@
 				ул. Малая Пионерская, д.21, строение 1
 			</span>
 			<span class="call-back-address">
-				email - <b>info@ff.ru</b> 
+				email - <b>info@ff.ru</b>
 			</span>
 			<span class="call-back-address">
 				телефон - <b>8 800 700-24-93</b>
 			</span>
 	      </div>
 	      <div class="modal-footer">
-	        
+
 	      </div>
 	    </div>
 	  </div>
@@ -817,23 +822,23 @@
 				        x = (ev.pageX - obj.offsetLeft - (w / 2) * (w > h ? (h / w) : 1)),
 				        y = (ev.pageY - obj.offsetTop - (h / 2) * (h > w ? (w / h) : 1)),
 				        d = Math.round( Math.atan2(y, x) / 1.57079633 + 5 ) % 4;
-				  
+
 				    return d;
 				};
 
 				var addClass = function ( ev, obj, state ) {
 				    var direction = getDirection( ev, obj ),
 				        class_suffix = "";
-				    
+
 				    obj.className = "";
-				    
+
 				    switch ( direction ) {
 				        case 0 : class_suffix = '-top';    break;
 				        case 1 : class_suffix = '-right';  break;
 				        case 2 : class_suffix = '-bottom'; break;
 				        case 3 : class_suffix = '-left';   break;
 				    }
-				    
+
 				    obj.classList.add( state + class_suffix );
 				};
 
@@ -851,13 +856,13 @@
 	    		$(document).ready(function() {
 
 
-	    			//promo fade in 
+	    			//promo fade in
 	    			$('.promo-descr').addClass('fade-IN');
-	    		 
+
 	    			//map init
 	    		    var pos1 = new google.maps.LatLng(18.520266, 73.856406),
 	    		        pos2 = new google.maps.LatLng(28.579943, 77.330006),
-	    		        
+
 	    		        option1 = {
 	    		            zoom: 17,
 	    		            center: pos1,
@@ -871,7 +876,7 @@
 	    		            mapTypeId: google.maps.MapTypeId.ROADMAP,
 	    		            styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
 	    		        },
-	    		        
+
 	    		        //map1 = new google.maps.Map(document.getElementById("map1"), option1),
 	    		        //map2 = new google.maps.Map(document.getElementById("map2"), option2),
 

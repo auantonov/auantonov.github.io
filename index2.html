@@ -42,8 +42,7 @@
 		<div class="top-menu">
 			<div class="container">
 				<div class="top-menu-left-section pull-left">
-					<span>Курс BTC/$</span>
-					<span>Курс BTF/$</span>
+					<span>Курс <span id='rubbtc'></span> руб. / BTC</span>
 				</div>
 				<div class="top-menu-right-section pull-right">
 					<div class="languages">
@@ -346,9 +345,7 @@
 									legend: {
 										enabled: true
 									},
-									tooltip: {
-										pointFormat: '',
-									},
+									
 									credits: {
 										enabled: false
 									},
@@ -369,17 +366,20 @@
 
 									tooltip: {
 
-										formatter: function () {
-											return this.y;
+										 formatter: function() {
+											var date=new Date(new Date().setTime(this.x));
+											return  date.toLocaleDateString() + " - "+ this.y/1000000000+" млрд. долл.";// this.series.name ;//+'</b>';'<br/>' + this.y + ' ETH <br/>' + //(~$'+Math.round(this.y*1300)/100+')
+												date.toLocaleDateString();//+' '+date.getHours()+':'+date.getMinutes()+':'+date.getSeconds()
+											
 										},
 										shared: true
 									},
 									yAxis: [{
 										//maxPadding: 0.07,
 										title: {
-											text: 'Value',
+											text: '24h volume',
 											style: {
-												color: Highcharts.getOptions().colors[0]
+												color: Highcharts.getOptions().colors[1]
 											}
 										},
 										labels: {
@@ -392,7 +392,10 @@
 									},{
 										//max: 0.01,
 										title: {
-											text: true
+											text: 'Market Cap',
+											style: {
+												color: Highcharts.getOptions().colors[0]
+											}
 										},
 										plotLines: [{
 											value: 0,
@@ -413,11 +416,11 @@
 										}
 									},
 									series: [{
-										name: 'Price BTC/USD',
+										name: 'Market CAP, USD',
 										yAxis: 1,
-										data: btc.price_usd
+										data: btc.market_cap_by_available_supply
 									}, {
-										name: 'BTC, Volume',
+										name: '24h trade volume, USD',
 										data: btc.volume_usd,
 										yAxis: 0,
 										type:'column'
@@ -466,6 +469,7 @@
 						      }
 						   },
 						   xAxis: {
+							  type: 'datetime',
 						      gridLineColor: '#707073',
 						      labels: {
 						         style: {

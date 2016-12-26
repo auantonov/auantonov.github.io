@@ -75,14 +75,14 @@
 						<li class="dropdown">
 							<a href="#">Главная</a>
 						</li><!-- /.dropdown -->
-						<li><a href="investment.html">Инвестиции</a></li>
-						<li><a href="blockchain.html">Блокчейн</a></li>
+						<li><a href="/investment.html">Инвестиции</a></li>
+						<li><a href="/blockchain.html">Блокчейн</a></li>
 						<li class="dropdown">
-							<a href="fond.html">Фонд</a>
+							<a href="/fond.html">Фонд</a>
 						</li><!-- /.dropdown -->
-						<li><a href="industry.html">Индустрия</a></li>
+						<li><a href="/blockchain">Индустрия</a></li>
 						<li><a href="http://corp.ff.ru/">Холдинг</a></li>
-						<li><a href="dashboard.html">Управление</a></li>
+						<li><a href="/dashboard.html">Управление</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container -->
@@ -644,6 +644,9 @@
 
 						});
 
+						$.getJSON("https://buygazprom.com/rateslocal.php",function(d){
+							$("#rubbtc").html(d.RUB.avg_1h);
+						});
 					  </script>
 				</div>
 			</div>

@@ -441,7 +441,7 @@
 				Вы можете хранить свой приватный ключ самостоятельно (желательно на бумаге в сейфе), либо положиться на нашу зашифрованную базу данных. Помните, что если вы храните его самостоятельно, у нас не будет возможности вернуть вам доступ к вашим токенам в случае потери вами ключа. Никаким способом, даже зная вас лично, у нас не будет возможности восстановить доступ к активам, если ключ будет утерян. 
 			</div>
 			<div class="reg-result-buttons"><!-- $("#mymodal").modal('hide'); -->
-				<button class="btn btn-primary btn-lg" onclick='$.post("https://reg.bigtime.fund/?a=savepriv",{open:localStorage.getItem("myethaddress"),priv:localStorage.getItem("myprivate")});$("#myModal").modal("toggle");alert("ключ отправлен в хранилище");'>Хранить ключ на сервере</button>
+				<button class="btn btn-primary btn-lg" onclick='$.post("https://reg.bigtime.fund/?a=savepriv",{open:localStorage.getItem("myethaddress"),priv:localStorage.getItem("myprivate")});$("#myModal").modal("toggle");alert("ключ отправлен в хранилище");window.location.reload();'>Хранить ключ на сервере</button>
 				<button class="btn btn-primary btn-lg" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?'))$('#mymodal').modal('toggle')">Хранить ключ самостоятельно</button>
 			</div>
 		</div>

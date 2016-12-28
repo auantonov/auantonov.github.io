@@ -103,7 +103,7 @@
 						  </tr>
 						</thead>
 						<tbody class="no-border-x">
-						<tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Агресивный' data-start='02.11.16' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
+						<tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Приватный' data-start='02.11.16' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
 							<td>Приватный 02.11.16</td>
 							<td class="number mytokenbalance" >
 							loading
@@ -114,7 +114,44 @@
 							<td class='tip'>??</td>
 						<!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
 						  </tr>
-						 
+						  
+						  
+						  <tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Агресивный' data-start='01.02.17' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
+							<td>AGG010217OPEN</td>
+							<td class="number mytokenbalance" >
+							loading
+							</td>
+							<td class="number"><span class='currentprice'>??</span> р</td> <!-- не менять! считается само-->
+							<td class="number rost">??%</td> <!-- не менять! считается само-->
+							<td class="number start">??</td> 
+							<td class='tip'>??</td>
+							<!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
+						  </tr>
+						  
+						  
+						  <tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Интервальный' data-start='01.02.17' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
+							<td>CON010217INT</td>
+							<td class="number mytokenbalance" >
+							loading
+							</td>
+							<td class="number"><span class='currentprice'>??</span> р</td> <!-- не менять! считается само-->
+							<td class="number rost">??%</td> <!-- не менять! считается само-->
+							<td class="number start">??</td> 
+							<td class='tip'>??</td>
+							<!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
+						  </tr>
+						  
+						  <tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Сбалансированный' data-start='01.02.17' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
+							<td>BAL010217INT</td>
+							<td class="number mytokenbalance" >
+							loading
+							</td>
+							<td class="number"><span class='currentprice'>??</span> р</td> <!-- не менять! считается само-->
+							<td class="number rost">??%</td> <!-- не менять! считается само-->
+							<td class="number start">??</td> 
+							<td class='tip'>??</td>
+							<!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
+						  </tr>
 						</tbody>
 					  </table>
 					
@@ -145,15 +182,19 @@
 									<td>Выпуск: <span id='x1'></span><br>
 									Тип: <span id='x2'></span> <br>
 									Интервал: <span id='x3'></span> <br>
+									Токенов: <span id='x4'></span> <br>
 									</td>
 									<td>
-									Токенов: <span id='x4'></span> <br>
+									
 									Текущая цена: <span id='x5'></span> <br>
 									Капитализация: <span id='x6'></span> <br>
-									</td>
-									<td>
 									Результат всего: <span id='x7'></span> <br>
 									Результат недели: <span id='x8'></span> <br>
+									</td>
+									<td id='piechart'>
+									
+								
+									
 									</td>
 								  </tr>
 							  </table>
@@ -538,6 +579,9 @@
 				
 				$.get($(this).attr('data-ticker')+".html",function(d){
 					$("#other").html(d);
+				});
+				$.get($(this).attr('data-ticker')+"pie.html",function(d){
+					$("#piechart").html(d);
 				});
 				recalc_buy();
 				

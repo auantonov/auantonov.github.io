@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>График роста Агрессивный (сен 2016)</title>
+	<script src="js/jquery.min.js"></script>
+<script src="js/highstock.js"></script>
+</head>
+<body>
+<div class="chart2"></div>
+
+					 <script>
+					 $(document).ready(function(){
+						now = new Date();
+						
+						$('.chart2').highcharts({
+									chart: {
+										type: 'spline'
+									},
+									title: {
+										text: '111111',
+										style:{ "color" : "transparent"}
+									},
+									legend: {
+										enabled: true
+									},
+
+									credits: {
+										enabled: false
+									},
+									
+									xAxis: {
+										type: 'datetime',
+
+										labels: {
+											enabled: false,
+										},
+										color: 'red',
+
+									},
+
+
+
+									tooltip: {
+
+										 formatter: function () {
+											var date=new Date(new Date().setTime(this.x));
+											//console.log();
+											var s = '<b>'+date.getDay()+'</b>';
+											console.log(this);
+											$.each(this.points, function () {
+												s += '<br/>' + this.series.name + ': ' +
+													this.y;
+											});
+
+											return s;
+										},
+										shared: true
+									},
+									yAxis: [{
+										//maxPadding: 0.07,
+										title: {
+											text: 'в RUR',
+											style: {
+												color: Highcharts.getOptions().colors[1]
+											}
+										},
+										labels: {
+
+											formatter: function() {
+												return Math.round(this.value).toString()+" руб.";
+											}
+										},
+										opposite: true
+									},{
+										//max: 0.01,
+										title: {
+											text: 'в USD',
+											style: {
+												color: Highcharts.getOptions().colors[0]
+											}
+										},
+										plotLines: [{
+											value: 0,
+											width: 1,
+											color: 'rgba(255,255,255,0)'
+										}]
+									},{
+										//max: 0.01,
+										title: {
+											text: 'в BTC',
+											style: {
+												color: Highcharts.getOptions().colors[0]
+											}
+										},
+										plotLines: [{
+											value: 0,
+											width: 1,
+											color: 'rgba(255,255,255,0)'
+										}]
+									}
+
+									],
+									plotOptions: {
+										spline: {
+											lineWidth: 2,
+											states: {
+												hover: {
+													lineWidth: 2
+												}
+											},
+										}
+									},
+									series: [{
+										name: 'В RUR',
+										// Define the data points. All series have a dummy year
+										// of 1970/71 in order to be compared on the same x axis. Note
+										// that in JavaScript, months start at 0 for January, 1 for February etc.
+										yAxis: 0,
+										data: [
+											[Date(2016, 11, 2), 724286.829],
+											[Date(2016, 11, 9), 730936.822],
+											[Date(2016, 11, 16), 710966.949],
+											[Date(2016, 11, 23), 732540.984],
+											[Date(2016, 11, 30), 763543.95],
+											[Date(2016, 12, 07), 768737.684],
+											[Date(2016, 12, 14), 776581],
+											[Date(2016, 12, 21), 912276.768],
+											[Date(2016, 12, 28), 1002608.82]
+										]
+									}, {
+										name: 'В USD',
+										yAxis: 1,
+										data: [
+											[Date(2016, 11, 2), 11442.13],
+											[Date(2016, 11, 9), 11456.69],
+											[Date(2016, 11, 16), 10988.67],
+											[Date(2016, 11, 23), 11374.86],
+											[Date(2016, 11, 30), 11746.83],
+											[Date(2016, 12, 07), 12049.18],
+											[Date(2016, 12, 14), 12710],
+											[Date(2016, 12, 21), 14930.88],
+											[Date(2016, 12, 28), 16544.7]
+										]
+									}, {
+										name: 'В BTC',
+										yAxis: 2,
+										data: [
+											[Date(2016, 11, 2), 15.61],
+											[Date(2016, 11, 9), 15.89],
+											[Date(2016, 11, 16), 14.91],
+											[Date(2016, 11, 23), 15.33],
+											[Date(2016, 11, 30), 15.81],
+											[Date(2016, 12, 07), 15.73],
+											[Date(2016, 12, 14), 16.4],
+											[Date(2016, 12, 21), 18.12],
+											[Date(2016, 12, 28), 17.79]
+										]
+									}]
+								}, function(chart) { });
+
+						var dateNow = new Date();
+
+
+						Highcharts.createElement('link', {
+							href: 'https://fonts.googleapis.com/css?family=Lato:400,700',
+							rel: 'stylesheet',
+							type: 'text/css'
+						}, null, document.getElementsByTagName('head')[0]);
+
+
+						Highcharts.theme = {
+						   colors: ['#fa3b5a', '#55caf5', '#f45b5b', '#7798BF', '#aaeeee', '#ff0066', '#eeaaee',
+						      '#55BF3B', '#DF5353', '#7798BF', '#aaeeee'],
+						   chart: {
+						      backgroundColor: {
+						         linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
+						         stops: [
+						            [0, '#2a2a2b'],
+						            [1, '#3e3e40']
+						         ]
+						      },
+						      style: {
+						         fontFamily: '\'Unica One\', sans-serif'
+						      },
+						      plotBorderColor: '#606063'
+						   },
+						   title: {
+						      style: {
+						         color: '#E0E0E3',
+						         textTransform: 'uppercase',
+						         fontSize: '20px'
+						      }
+						   },
+						   subtitle: {
+						      style: {
+						         color: '#E0E0E3',
+						         textTransform: 'uppercase'
+						      }
+						   },
+						   xAxis: {
+							  type: 'datetime',
+						      gridLineColor: '#707073',
+						      labels: {
+						         style: {
+						            color: '#E0E0E3'
+						         }
+						      },
+						      lineColor: '#707073',
+						      minorGridLineColor: '#505053',
+						      tickColor: '#707073'
+						   },
+						   yAxis: {
+						      gridLineColor: '#707073',
+						      labels: {
+						         style: {
+						            color: '#E0E0E3'
+						         }
+						      },
+						      lineColor: '#707073',
+						      minorGridLineColor: '#505053',
+						      tickColor: '#707073',
+						      tickWidth: 1,
+						      title: {
+						         style: {
+						            color: '#A0A0A3'
+						         }
+						      }
+						   },
+						   tooltip: {
+						      backgroundColor: 'rgba(0, 0, 0, 0.85)',
+						      style: {
+						         color: '#F0F0F0'
+						      }
+						   },
+						   plotOptions: {
+						      series: {
+						         dataLabels: {
+						            color: '#B0B0B3'
+						         },
+						         marker: {
+						            lineColor: '#333'
+						         }
+						      },
+						      boxplot: {
+						         fillColor: '#505053'
+						      },
+						      candlestick: {
+						         lineColor: 'white'
+						      },
+						      errorbar: {
+						         color: 'white'
+						      }
+						   },
+						   legend: {
+						      itemStyle: {
+						         color: '#E0E0E3'
+						      },
+						      itemHoverStyle: {
+						         color: '#FFF'
+						      },
+						      itemHiddenStyle: {
+						         color: '#606063'
+						      }
+						   },
+						   credits: {
+						      style: {
+						         color: '#666'
+						      }
+						   },
+						   labels: {
+						      style: {
+						         color: '#707073'
+						      }
+						   },
+
+						   drilldown: {
+						      activeAxisLabelStyle: {
+						         color: '#F0F0F3'
+						      },
+						      activeDataLabelStyle: {
+						         color: '#F0F0F3'
+						      }
+						   },
+
+						   navigation: {
+						      buttonOptions: {
+						         symbolStroke: '#DDDDDD',
+						         theme: {
+						            fill: '#505053'
+						         }
+						      }
+						   },
+
+						   // scroll charts
+						   rangeSelector: {
+						      buttonTheme: {
+						         fill: '#505053',
+						         stroke: '#000000',
+						         style: {
+						            color: '#CCC'
+						         },
+						         states: {
+						            hover: {
+						               fill: '#707073',
+						               stroke: '#000000',
+						               style: {
+						                  color: 'white'
+						               }
+						            },
+						            select: {
+						               fill: '#000003',
+						               stroke: '#000000',
+						               style: {
+						                  color: 'white'
+						               }
+						            }
+						         }
+						      },
+						      inputBoxBorderColor: '#505053',
+						      inputStyle: {
+						         backgroundColor: '#333',
+						         color: 'silver'
+						      },
+						      labelStyle: {
+						         color: 'silver'
+						      }
+						   },
+
+						   navigator: {
+						      handles: {
+						         backgroundColor: '#666',
+						         borderColor: '#AAA'
+						      },
+						      outlineColor: '#CCC',
+						      maskFill: 'rgba(255,255,255,0.1)',
+						      series: {
+						         color: '#7798BF',
+						         lineColor: '#A6C7ED'
+						      },
+						      xAxis: {
+						         gridLineColor: '#505053'
+						      }
+						   },
+
+						   scrollbar: {
+						      barBackgroundColor: '#808083',
+						      barBorderColor: '#808083',
+						      buttonArrowColor: '#CCC',
+						      buttonBackgroundColor: '#606063',
+						      buttonBorderColor: '#606063',
+						      rifleColor: '#FFF',
+						      trackBackgroundColor: '#404043',
+						      trackBorderColor: '#404043'
+						   },
+
+						   // special colors for some of the
+						   legendBackgroundColor: 'rgba(0, 0, 0, 0.5)',
+						   background2: '#505053',
+						   dataLabelsColor: '#B0B0B3',
+						   textColor: '#C0C0C0',
+						   contrastTextColor: '#F0F0F3',
+						   maskColor: 'rgba(255,255,255,0.3)'
+						};
+
+						// Apply the theme
+						Highcharts.setOptions(Highcharts.theme);
+
+						});
+
+						$.getJSON("https://buygazprom.com/rateslocal.php",function(d){
+							$("#rubbtc").html(d.RUB.avg_1h);
+						});
+					  </script>
+</body>
+</html>

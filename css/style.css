@@ -815,7 +815,12 @@ blockquote .small, blockquote footer, blockquote small {
     position: relative;
     margin-bottom: 30px;
     height: 375px;
+    cursor: pointer;
     overflow: hidden;
+}
+.grid-item:hover .overlay {
+    opacity: 1;
+    z-index: 1111111;
 }
 .grid-item img {
     -webkit-filter: grayscale(100%);
@@ -1001,6 +1006,9 @@ blockquote .small, blockquote footer, blockquote small {
 -------------------------------------------------------------- */
 #map { 
     height: 400px;
+}
+.map > div {
+    pointer-events: none;
 }
 
 .form-control {
@@ -1246,6 +1254,7 @@ h4.spaced + p{
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+    height: 140px;
 }
 .vacancy-item h6 {
     font-size: 17px;
@@ -2400,9 +2409,11 @@ input[type=checkbox] + label:before {
 }
 .type-wrap {
     position: relative;
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
+    width:800px;
     transform: translate(-50%,-50%);
 }
 .promo h1, #typed {

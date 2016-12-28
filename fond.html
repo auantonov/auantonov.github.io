@@ -94,11 +94,13 @@
 	<!-- End Header -->
 
 	<!-- Begin About -->
-	<section class="video-wrapper">
-		<h1 class="promo-descr">We're a team of digital natives with deep financial expertise, backed by some of the world's most notable investors.</h1>
-<!-- 		<div class="container">
-			<iframe width="100%" height="600" src="https://www.youtube.com/embed/23NM6wSXKCk" frameborder="0" allowfullscreen></iframe>
-		</div> -->
+	<section class="video-wrapper index-wrapper">
+		<div class="type-wrap">
+		  <div id="typed-strings">
+		  <h1 class="typed-h1"><span class="name">Мы - команда блокчейн-энтузиастов</span></h1>
+		  </div>
+		  <span id="typed" style="white-space:pre"></span>
+		</div>
 	</section>
 	<!-- End About -->
 	<section class="intro">
@@ -353,8 +355,11 @@
 				<div class="col-md-6">
 					<div id="map1" class="map"></div>
 					<div class="map-content">
-						<h2 class="display-4">614000, Пермь <br>
-ул. Николая Островского, д.59, офис 800</h2>
+						<h2 class="display-4">Atlanta</h2>
+						<span>3455 Peachtree Road NE<br>
+							  Atlanta, GA,<br>
+							  USA 30326
+						</span>
 						<div class="nk-gap mnt-3"></div>
 							<p></p>
 					</div>
@@ -362,10 +367,14 @@
 				<div class="col-md-6">
 					<div id="map2" class="map"></div>
 					<div class="map-content">
-						<h2 class="display-4">
-							115054, Москва <br>
-							ул. Малая Пионерская, д.21, строение 1
-						</h2>
+						<h2 class="display-4">Baltimore</h2>
+						<span>111 South Calvert Street <br>
+						  Baltimore, MD,<br>
+						  USA 21202 <br>
+						  Phone : 
+						</span>
+						<div class="nk-gap mnt-3"></div>
+							<p></p>
 					</div>
 				</div>
 			</div>
@@ -526,9 +535,46 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 	<script type="text/javascript" src="js/scrollreveal.min.js"></script>
+	<script src="js/typed.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	    <script type="text/javascript">
+
+
+	    		$(function(){
+
+	    		    $("#typed").typed({
+	    		        strings: ["Мы - команда блокчейн-энтузиастов из России<br>которая прямо сейчас создает инвестиционный<br> фонд нового поколения на основе цифровой<br> собственности и прозрачности всех операций."],
+	    		        // stringsElement: $('#typed-strings'),
+	    		        typeSpeed: 10,
+	    		        backDelay: 0,
+	    		        loop: false,
+	    		        // contentType: 'html', // or text
+	    		        // defaults to false for infinite loop
+	    		        loopCount: false,
+	    		        // callback: function(){ foo(); },
+	    		        // resetCallback: function() { newTyped(); }
+	    		    });
+
+	    		    // $(".reset").click(function(){
+	    		    //     $("#typed").typed('reset');
+	    		    // });
+
+	    		});
+
+	    		function newTyped(){ /* A new typed object */ }
+
+	    		function foo(){ console.log("Callback"); }
+
+
 	    		$(document).ready(function() {
+
+	    			$('.map').click(function(){
+	    				$('.map div').css("pointer-events", "auto");
+	    			});
+
+	    			$( ".map" ).mouseleave(function() {
+	    			  $('.map div').css("pointer-events", "none"); 
+	    			});
 
 	    			// $('.masonry-wrap').masonry({
 	    			//     // options

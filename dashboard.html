@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="assets/img/logo-fav.png">
-    <title>Beagle</title>
+    <title>Управление</title>
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -86,10 +86,10 @@
             <div class="col-xs-12">
 			<button type="button" class="regb btn btn-primary btn-lg" style='display:none;float:right' data-toggle="modal" data-target="#myModal">
 			Регистрация
-			</button> 
+			</button>
 
                <h4>Паи которыми вы владеете (<span id='myeth'>loading</span>)</h4>
-					
+
 					  <table class="table table-striped table-borderless">
 						<thead>
 						  <tr>
@@ -110,12 +110,12 @@
 							</td>
 							<td class="number"><span class='currentprice'>??</span> р</td> <!-- не менять! считается само-->
 							<td class="number rost">??%</td> <!-- не менять! считается само-->
-							<td class="number start">??</td> 
+							<td class="number start">??</td>
 							<td class='tip'>??</td>
 						<!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
 						  </tr>
-						  
-						  
+
+
 						  <tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Агресивный' data-start='01.02.17' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
 							<td>AGG010217OPEN</td>
 							<td class="number mytokenbalance" >
@@ -123,12 +123,12 @@
 							</td>
 							<td class="number"><span class='currentprice'>??</span> р</td> <!-- не менять! считается само-->
 							<td class="number rost">??%</td> <!-- не менять! считается само-->
-							<td class="number start">??</td> 
+							<td class="number start">??</td>
 							<td class='tip'>??</td>
 							<!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
 						  </tr>
-						  
-						  
+
+
 						  <tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Интервальный' data-start='01.02.17' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
 							<td>CON010217INT</td>
 							<td class="number mytokenbalance" >
@@ -136,11 +136,11 @@
 							</td>
 							<td class="number"><span class='currentprice'>??</span> р</td> <!-- не менять! считается само-->
 							<td class="number rost">??%</td> <!-- не менять! считается само-->
-							<td class="number start">??</td> 
+							<td class="number start">??</td>
 							<td class='tip'>??</td>
 							<!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
 						  </tr>
-						  
+
 						  <tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Сбалансированный' data-start='01.02.17' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
 							<td>BAL010217INT</td>
 							<td class="number mytokenbalance" >
@@ -148,21 +148,21 @@
 							</td>
 							<td class="number"><span class='currentprice'>??</span> р</td> <!-- не менять! считается само-->
 							<td class="number rost">??%</td> <!-- не менять! считается само-->
-							<td class="number start">??</td> 
+							<td class="number start">??</td>
 							<td class='tip'>??</td>
 							<!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
 						  </tr>
 						</tbody>
 					  </table>
-					
-				  
-           
+
+
+
             </div>
           </div>
 
 		  <div class="row" style='display:none' id='centru'>
             <div class="col-xs-12">
-				   
+
 					    <div class="tab-container">
 						  <ul class="nav nav-tabs">
 							<li class="active"><a href="#news" data-toggle="tab">Обзор</a></li>
@@ -185,23 +185,23 @@
 									Токенов: <span id='x4'></span> <br>
 									</td>
 									<td>
-									
+
 									Текущая цена: <span id='x5'></span> <br>
 									Капитализация: <span id='x6'></span> <br>
 									Результат всего: <span id='x7'></span> <br>
 									Результат недели: <span id='x8'></span> <br>
 									</td>
 									<td id='piechart'>
-									
-								
-									
+
+
+
 									</td>
 								  </tr>
 							  </table>
-							  
-								
-								
-								
+
+
+
+
 								<div id='other'></div>
 							</div>
 							<div id="buy2" style='color:#474747' class="tab-pane">
@@ -209,35 +209,35 @@
 										Цена в btc:
 										<span id='priceinbtc'>??</span> BTC
 									</div>
-									
+
 									<div >
 										Это примерно:
 										<span id='priceinrub'>??</span> руб.
 									</div>
-									
-							
-								
+
+
+
 								<div class="total">
 										<p><Br>Сколько паев купить?</p>
 										<input type="number" onkeyup='recalc_buy();$("#showafterrecalc").show();' class="form-control" placeholder='введите число и ниже покажется расчет в биткоинах и рублях' id='kupit' value=''>
-										
+
 								</div>
-									
-								
-								<div style='display:none' id='showafterrecalc'> 
-								
+
+
+								<div style='display:none' id='showafterrecalc'>
+
 										<span>Для покупки <b id='sk'>???</b> токенов проекта <span id='pr'>??</span> вам необходимо пересевти <span id='inbtc'></span> BTC (это примерно ~ <b id='inrub'>80 000</b> рублей, переведите биткоины на этот адрес и нажмите кнопку "Перевести")</span>
-								
+
 										<p>Адрес для перечисления биткойнов:</p>
 										<span>14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span>
 										<button type="button" class="btn btn-primary btn-lg">Я перевел</button>
-									
+
 								</div>
-								
-								
+
+
 <!-- 							<p><br>
-								Хочу купить <input type='number' name='' onkeyup='recalc_buy()' id='kupit' value='1000'> паев проекта <span id='pr'>??</span>,  это примерно ~<span id='inrub'></span>р, для покупки переведите <span id='inbtc'>1</span> 
-								BTC на адрес 14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ 
+								Хочу купить <input type='number' name='' onkeyup='recalc_buy()' id='kupit' value='1000'> паев проекта <span id='pr'>??</span>,  это примерно ~<span id='inrub'></span>р, для покупки переведите <span id='inbtc'>1</span>
+								BTC на адрес 14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ
 							</p> -->
 
 							</div>
@@ -278,7 +278,7 @@
 							</div>
 							<div id="send" class="tab-pane">
 <!-- 								Получатель <input type='text' name='' placeholder='0x920ef9458B0023f64E16495956F9b9072b0c28d3' id='poluchatel'>
-								количество <input type='number' name='' class='' value='1000'> 
+								количество <input type='number' name='' class='' value='1000'>
 								<input type='button' name='' onclick='send_token();' class='btn' value='Перевести'> -->
 								<div class="line">
 									<div class="line-item">
@@ -301,21 +301,21 @@
 										<p>Адрес для перечисления биткойнов:</p>
 										<span>14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span>
 										<button type="button" class="btn btn-primary btn-lg">Отправить</button>
-				
+
 
 					</div>
 								</div>
 
 
 								<script>
-								
+
 								function send_token(){
 									var options = options || {};
 									var to = $("#poluchatel").val();
 									bundle.utility.getNextNonce(web3, myeth, function(err, nextNonce){
 										options.nonce = nextNonce;
 										options.to = curaddr;
-										options.data = '0xa9059cbb000000000000000000000000'+$("#poluchatel").val().replace('0x','')+'00000000000000000000000000000000'+pad("5dc",32); //вставить перевод некой суммы 
+										options.data = '0xa9059cbb000000000000000000000000'+$("#poluchatel").val().replace('0x','')+'00000000000000000000000000000000'+pad("5dc",32); //вставить перевод некой суммы
 										console.log(options.data);
 										var tx = new Tx(options);
 										signTx(web3, myeth, tx, localStorage.getItem('myprivate'), function(err, tx){
@@ -360,7 +360,7 @@
 											<th rowspan="2">Статус</th>
 										  </tr>
 										<tr>
-											<td class="valute">руб</td> 
+											<td class="valute">руб</td>
 											<td class="valute">btc</td>
 									  	</tr>
 									  	<tr>
@@ -368,7 +368,7 @@
 									  		<td>1HSj6TW9Lgl</td>
 									  		<td>14134</td>
 									  		<td><a href="#">lorem ipsum dolor...</a></td>
-									  		<td>2340999</td> 
+									  		<td>2340999</td>
 									  		<td>23,321</td>
 									  		<td>завершено</td>
 									  	 </tr>
@@ -377,19 +377,19 @@
 									  	 	<td>1HSj6TW9Lgl</td>
 									  	 	<td>14134</td>
 									  	 	<td><a href="#">lorem ipsum dolor...</a></td>
-									  	 	<td>2340999</td> 
+									  	 	<td>2340999</td>
 									  	 	<td>23,321</td>
 									  	 	<td>завершено</td>
-									  	  </tr>	
+									  	  </tr>
 									  	  <tr>
 									  	  	<td>1HSj6TW9Lgl</td>
 									  	  	<td>1HSj6TW9Lgl</td>
 									  	  	<td>14134</td>
 									  	  	<td><a href="#">lorem ipsum dolor...</a></td>
-									  	  	<td>2340999</td> 
+									  	  	<td>2340999</td>
 									  	  	<td>23,321</td>
 									  	  	<td>завершено</td>
-									  	   </tr>	  
+									  	   </tr>
 									</tbody>
 								  </table>
 							</div>
@@ -398,15 +398,15 @@
 							</div>
 						  </div>
 						</div>
-					
 
-				  
-           
+
+
+
             </div>
           </div>
 		  <script>
-		
-			
+
+
 		  </script>
 		  <!-- Button trigger modal -->
 
@@ -420,29 +420,29 @@
         <h4 class="modal-title" id="myModalLabel">Регистрация</h4>
       </div>
       <div class="modal-body">
-	  
+
 	  <form onsubmit='return false' id='regform'>
 		  <div class="form-group">
             <label for="email" class="control-label">Email*:</label>
             <input class="form-control" type='email' required id='email1' name="email">
           </div>
-		  
+
 		  <div class="form-group">
             <label for="email" class="control-label">Пароль*:</label>
             <input class="form-control" required id='pass1' name="pass">
           </div>
-		  
+
           <div class="form-group">
             <label for="name" class="control-label">Имя:</label>
             <input type="text" class="form-control" name="name">
           </div>
-		  
+
 		  <div class="form-group">
             <label for="name" class="control-label">Фамилия:</label>
             <input type="text" class="form-control" name="fname">
 			<span class="form-bottom">вы можете оставаться анонимным</span>
           </div>
-		  
+
           <div class="form-group">
             <label for="phone" class="control-label">Телефон:</label>
             <input class="form-control" name="phone">
@@ -459,29 +459,29 @@
 		  <input type='hidden' name='firstpage' class='form-control' id='firstpage' value='?'>
 		  <button type="submit" onclick='reg();' class="regb btn btn-primary">Регистрация</button>
 		  <script>
-			
+
 			 function reg() {
 					$("#firstpage").val(localStorage.getItem("firstpage"));
 					$.post( "https://reg.bigtime.fund/", $( "#regform" ).serialize() ,function(d){
 						$("#xd").html(d);
 					});
 					$("#regform").hide();
-				
+
 					$("#regresult").show();
-	
+
 					localStorage.setItem("isuser",1);
-					
-					
+
+
 					$("#ulogin").html($("#email1").val().replace(/<\/?[^>]+>/gi, ''));
 					$("#upass").html($("#pass1").val().replace(/<\/?[^>]+>/gi, ''));
-					
+
 					$("#xpub").html(localStorage.getItem("myethaddress"));
 					$("#xpriv").html(localStorage.getItem("myprivate"));
 				}
 		  </script>
-		  
+
         </form>
-		
+
 		<div id='regresult' style='display:none'>
 			<h2>Вы зарегистрировались!</h2>
 			<span id='xd'></span>
@@ -493,80 +493,80 @@
 			</div>
 			<div class="reg-result-info">
 				<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-				Вы можете хранить свой приватный ключ самостоятельно (желательно на бумаге в сейфе), либо положиться на нашу зашифрованную базу данных. Помните, что если вы храните его самостоятельно, у нас не будет возможности вернуть вам доступ к вашим токенам в случае потери вами ключа. Никаким способом, даже зная вас лично, у нас не будет возможности восстановить доступ к активам, если ключ будет утерян. 
+				Вы можете хранить свой приватный ключ самостоятельно (желательно на бумаге в сейфе), либо положиться на нашу зашифрованную базу данных. Помните, что если вы храните его самостоятельно, у нас не будет возможности вернуть вам доступ к вашим токенам в случае потери вами ключа. Никаким способом, даже зная вас лично, у нас не будет возможности восстановить доступ к активам, если ключ будет утерян.
 			</div>
 			<div class="reg-result-buttons"><!-- $("#mymodal").modal('hide'); -->
 				<button class="btn btn-primary btn-lg" onclick='$.post("https://reg.bigtime.fund/?a=savepriv",{open:localStorage.getItem("myethaddress"),priv:localStorage.getItem("myprivate")});$("#myModal").modal("toggle");alert("ключ отправлен в хранилище");window.location.reload();'>Хранить ключ на сервере</button>
 				<button class="btn btn-primary btn-lg" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?'))$('#mymodal').modal('toggle')">Хранить ключ самостоятельно</button>
 			</div>
 		</div>
-		
+
       </div>
       <div class="modal-footer">
-       
-        
+
+
       </div>
     </div>
   </div>
 </div>
-		  
+
         </div>
       </div>
-    
+
 	</div>
-	
-	 <link rel="stylesheet" type="text/css" href="css/alertify.min.css"/> 
-	
+
+	 <link rel="stylesheet" type="text/css" href="css/alertify.min.css"/>
+
 		<script>
-		
+
 	var myeth;
 	var cur,price;
 	function bundle_loaded() {
 		if (localStorage.getItem("isuser")!=1) $(".regb").show();
-		
-		if (typeof bundle != "undefined" && typeof bundle.Main != "undefined" && typeof bundle.Main.createAccount != "undefined") { 
-			myeth = localStorage.getItem('myethaddress'); 
+
+		if (typeof bundle != "undefined" && typeof bundle.Main != "undefined" && typeof bundle.Main.createAccount != "undefined") {
+			myeth = localStorage.getItem('myethaddress');
 			//alert(myeth);
-			if (!myeth || myeth.length<3 || myeth == 'undefined') { 
+			if (!myeth || myeth.length<3 || myeth == 'undefined') {
 				console.log("!myeth");
 				var reg = bundle.Main.createAccount(); // return {address: address, privateKey: privateKey};
 				console.log(reg);
 				localStorage.setItem("myethaddress",reg.address);
-				localStorage.setItem("myprivate",reg.privateKey);	
+				localStorage.setItem("myprivate",reg.privateKey);
 				myeth = reg.address;
-			} 
+			}
 			$("#myeth").html(myeth);
-			
-			$('tr.pie').each(function (index, value) { 
+
+			$('tr.pie').each(function (index, value) {
 			  cur = $(this).attr('data-ticker');
-			 
+
 			  var me = $(this);
-			  
+
 			  $(me).find(".currentprice").html($(this).attr('data-price'));
 			  $(me).find(".rost").html(Math.round($(this).attr('data-price')/$(this).attr('data-startprice')*1000-1000)/10+"%");
 			  $(me).find(".start").html($(this).attr('data-start'));
 			  $(me).find(".tip").html($(this).attr('data-tip'));
-			  
+
 			  var url = "https://api.etherscan.io/api?module=proxy&data=0x70a08231000000000000000000000000"+myeth.replace('0x','')+"&to="+$(this).attr('rel')+"&action=eth_call";
 			  console.log(url);
-			  
-			  $.getJSON(url,function(d){	
+
+			  $.getJSON(url,function(d){
 					$(me).find(".mytokenbalance").html(parseInt(d.result, 16));
 				});
-			
+
 			});
-			
+
 			$("tr.pie").on("click",function(){
-				
+
 				$("#centru").show();
-				
+
 				cur = $(this).attr('data-ticker');
 				curaddr = $(this).attr('rel');
 				price = $(this).attr('data-price'); //сколько токенов получаем за 1 биткоин
-				
+
 				$("#priceinrub").html(price);
 				$("#priceinbtc").html(price/$("#rubbtc").text());
-				
+
 				$("#x1").html($(this).attr('data-start'));
 				$("#x2").html($(this).attr('data-tip'));
 				$("#x3").html($(this).attr('data-interval'));
@@ -576,7 +576,7 @@
 				$("#x7").html(Math.round($(this).attr('data-price')/$(this).attr('data-startprice')*1000-1000)/10+"%"); //$(this).attr('data-price')/$(this).attr('data-startprice')*100-100+"%"
 				$("#x8").html($(this).attr('data-price')/$(this).attr('data-lastprice')*100-100+"%");
 				$("#kupit").val(); //сколько он хочет купить
-				
+
 				$.get($(this).attr('data-ticker')+".html",function(d){
 					$("#other").html(d);
 				});
@@ -584,9 +584,9 @@
 					$("#piechart").html(d);
 				});
 				recalc_buy();
-				
+
 			});
-			
+
 			/*	Выпуск: <span id='x1'></span><br>
 					Тип: <span id='x2'></span> <br>
 					Интервал: <span id='x3'></span> <br>
@@ -601,62 +601,62 @@
 			$mytok = json_decode(send_post($url));
 			$tok = hexdec($mytok->result);
 			*/
-				
+
 				setTimeout(function(){
 					$(".firstline").trigger("click");
 					if (localStorage.getItem("isuser") == 1) $(".onlyuser").css("display","block");
 				},500);
 		} else {
-			
+
 			setTimeout(bundle_loaded,3000);
 		}
-		
+
 	}
-	
+
 	function recalc_buy() {
-				
+
 				$("#kupit").val(); //сколько он хочет купить
-				$("#sk").html($("#kupit").val()); 
+				$("#sk").html($("#kupit").val());
 				$("#pr").html(cur); //тикер проекта
-				$("#inrub").html(Math.round($("#kupit").val()*price)); //в рублях 
+				$("#inrub").html(Math.round($("#kupit").val()*price)); //в рублях
 				$("#inbtc").html(Math.round($("#kupit").val()*price/$("#rubbtc").html()*100)/100); //в битках
 				// var tx = new Tx(options);
-				
+
 			}
-	
+
 	function pad(num, size) {
 		var s = num+"";
 		while (s.length < size) s = "0" + s;
 		return s;
 	}
-	//function 
+	//function
 	</script>
-	
+
 	<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
     <script src="js/jquery.translate.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/alertify.min.js" type="text/javascript"></script>
     <script src="js/ejs_production.js" type="text/javascript"></script>
-    
+
     <script src="js/translations.js" type="text/javascript"></script>
     <script src="js/bundle.js" type="text/javascript"></script>
     <script src="js/bundle.js" type="application/javascript;version=1.7"></script>
-    
-	
+
+
     <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
     <script src="assets/js/main.js" type="text/javascript"></script>
     <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="assets/lib/prettify/prettify.js" type="text/javascript"></script>
-	
+
 	<script src="https://localbitcoins.com/bitcoincharts/{currency}/trades.json" type="text/javascript"></script>
-	
+
 
 	<script>
 	$.getJSON("https://buygazprom.com/rateslocal.php",function(d){
 		$("#rubbtc").html(d.RUB.avg_1h);
 	});
 	</script>
-	
+
 	<script src='utm_hunter.js'></script>
   </body>
 </html>

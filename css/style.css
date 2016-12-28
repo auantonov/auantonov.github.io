@@ -2434,6 +2434,11 @@ input[type=checkbox] + label:before {
     height: 0;
     opacity: 0;
 }
+.token {
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
 .blurred-bg{
   background-image:url("../img/main.jpg");
   background-repeat:no-repeat;
@@ -2451,7 +2456,27 @@ input[type=checkbox] + label:before {
   position:absolute;
   display: none;
 }
-
+.reg-btn {
+    margin: auto;
+    text-align: center;
+    display: block;
+    margin-top: 60px;
+}
+.reg-btn span {
+    font-size: 24px;
+    padding: 30px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.reg-button-info {
+    text-align: center;
+    margin: auto;
+    display: block;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
 
 /* code for animated blinking cursor */
 .typed-cursor{

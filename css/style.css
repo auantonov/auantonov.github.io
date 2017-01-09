@@ -14,7 +14,7 @@ body {
 	color: #8e8e8e;
 	height: 100%;
     padding-top: 80px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -2488,7 +2488,8 @@ input[type=checkbox] + label:before {
     padding: 4px 9px;
 }
 .be-wrapper table tr:hover {
-    background: #e5e5e5;
+    background: rgb(71, 71, 71);
+    color: white;
 }
 
 /* code for animated blinking cursor */

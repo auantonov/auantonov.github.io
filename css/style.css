@@ -1106,11 +1106,9 @@ blockquote .small, blockquote footer, blockquote small {
 .navbar-brand > img {
     width: 210px;
     margin-top: 29px;
-    margin-left: 37px;
 }
 
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
-    margin-left: -51px;
     margin-top: -3px;
 }
 
@@ -2343,9 +2341,10 @@ input[type=checkbox] + label:before {
     background-position: 213px -207px;
 }
 .slide-comment-descr{
-    line-height: 1.4;
+    line-height: 1.6;
     color: #474747;
-    font-size: 15px;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
     width: 63%;
     font-weight: 500;
 }
@@ -2369,10 +2368,11 @@ input[type=checkbox] + label:before {
     margin-bottom: 50px;
 }
 .blockchain-stories-item-descr {
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
     margin-bottom: 30px;
+    font-family: 'Open Sans', sans-serif;
     color: #ffffff;
     background: #474747;
     padding: 30px 35px;
@@ -2561,17 +2561,43 @@ input[type=checkbox] + label:before {
 }
 @media (max-width:993px) {
     .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
-        margin-left: -41px;
         margin-top: 7px;
     }
     .navbar-brand>img {
         width: 200px;
     }
+    .navbar-collapse {
+        padding: 0;
+    }
+    .navbar-nav li:last-child a{
+        border-bottom: 1px solid #e8e8e8;
+    }
+    .navbar-default .navbar-nav > li > a:before {
+        display: block;
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: url(../images/main_6.min.svg) -118px -113px no-repeat;
+        position: absolute;
+        left: 19px;
+        top: 22px;
+        -webkit-transition: transform .25s ease-in-out;
+        transition: transform .25s ease-in-out;
+    }
+    .navbar-default .navbar-nav > li > a:hover:before,
+    .navbar-default .navbar-nav > li > a.active:before {
+        width: 7px;
+        -webkit-transform: scale(2.1,2.1);
+        transform: scale(2.1,2.1);
+    }
     .nav>li>a {
         margin: 10px 10px;
     }
     .navbar-default .navbar-nav > li > a {
-        font-size: 13px;
+        margin: 0;
+        line-height: inherit;
+        padding-left: 45px;
+        border-top: 1px solid #e8e8e8;
     }
     .blockchain-info p, .blockchain-forecast p {
         margin-top: 40px;
@@ -2586,6 +2612,69 @@ input[type=checkbox] + label:before {
     }
     .blockchain-stories-item-descr {
         margin-bottom: 60px;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #2b2a29;
+    }
+    .navbar-default .navbar-toggle:focus, 
+    .navbar-default .navbar-toggle:hover {
+        background-color: transparent;
+        border-color: transparent;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar>.container .navbar-brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .navbar-brand > img {
+        width: 165px;
+        margin-top: 14px;
+    }
+    .navbar-collapse.collapse {
+        display: none;
+        height: 100vh!important;
+        padding-bottom: 0;
+        overflow: visible!important;
+    }
+    .navbar-collapse.collapse {
+        position: absolute;
+        top: -50px;
+        width: 300px;
+        background: #ffffff;
+        left: 0;
+        height: 100%;
+        z-index: 11111111;
+    }
+    .navbar-right {
+        float: none!important;
+        padding-top: 49px;
+        margin: 0;
+    }
+    .navbar-header {
+        float: left;
+    }
+    .navbar .container,
+    .top-menu .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+    }
+    .navbar-header {
+        border-right: 1px solid #e8e8e8;
+    }
+    .container>.navbar-header {
+        margin: 0;
+    }
+    .navbar-nav>li {
+        float: none;
     }
 }
 @media (max-width:767px) {
@@ -2611,21 +2700,6 @@ input[type=checkbox] + label:before {
     #carousel-top-transparent .carousel-control, #carousel-top-image .carousel-control { width:50px }
     .top-content-carousel { padding: 0 40px; border-left: 0; }
     .navbar-spacing-top-static { padding-bottom: 0; }
-    .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
-        margin-left: -29px;
-        margin-top: -1px;
-    }
-    .navbar-default .navbar-toggle {
-        border-color: #2b2a29;
-    }
-    .navbar-default .navbar-toggle .icon-bar {
-        background-color: #2b2a29;
-    }
-    .navbar-default .navbar-toggle:focus, 
-    .navbar-default .navbar-toggle:hover {
-        background-color: #2b2a29;
-        border-color: #474747;
-    }
 }
 
 

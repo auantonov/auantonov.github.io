@@ -310,8 +310,8 @@ h2 {
 .navbar-default .navbar-nav > li > a {
     color: #474747;
     line-height: 50px;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
     position: relative;
     font-size: 14px;
     -webkit-transition: all 0.8s ease;
@@ -322,7 +322,7 @@ h2 {
 .navbar-default .navbar-nav > li > a:before {
     content: '';
     position: absolute;
-    bottom: 20px;
+    bottom: 22px;
     left: 0;
     z-index: 11111;
     width: 0%;
@@ -1123,6 +1123,7 @@ blockquote .small, blockquote footer, blockquote small {
     height: 50px;
     width: 100%;
     font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
     border-bottom: 1px solid rgba(19, 17, 17, 0.1);
 }
 
@@ -1131,8 +1132,8 @@ blockquote .small, blockquote footer, blockquote small {
     display: flex;
     justify-content: space-between;
     color: #474747;
-    padding-top: 14px;
-    font-size: 15px;
+    padding-top: 15px;
+    font-size: 13px;
     font-weight: 500;
 }
 
@@ -1151,8 +1152,9 @@ blockquote .small, blockquote footer, blockquote small {
 .phone {
     color: #474747;
     font-weight: 400;
-    font-size: 14px;
-    padding-top: 16px;
+    font-size: 12px;
+    font-weight: 800;
+    padding-top: 17px;
     display: block;
     float: right;
     margin-right: 15px;

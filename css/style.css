@@ -322,7 +322,7 @@ h2 {
 .navbar-default .navbar-nav > li > a:before {
     content: '';
     position: absolute;
-    bottom: 22px;
+    bottom: 15px;
     left: 0;
     z-index: 11111;
     width: 0%;
@@ -2538,7 +2538,21 @@ input[type=checkbox] + label:before {
 .highcharts-title tspan {
     text-transform: none;
 }
-
+.navbar .container {
+    position: relative;
+}
+/*.black-line {
+    background: #1c1b17;
+    height: 49px;
+    position: absolute;
+    width: 930px;
+    left: 225px;
+    top: 26px;
+}*/
+.navbar-brand {
+    z-index: 1111111;
+    position: relative;
+}
 
 
 
@@ -2633,8 +2647,8 @@ input[type=checkbox] + label:before {
         transform: translateX(-50%);
     }
     .navbar-brand > img {
-        width: 165px;
-        margin-top: 14px;
+        width: 150px;
+        margin-top: 6px;
     }
     .navbar-collapse.collapse {
         display: none;
@@ -2653,7 +2667,7 @@ input[type=checkbox] + label:before {
     }
     .navbar-right {
         float: none!important;
-        padding-top: 49px;
+        padding-top: 113px;
         margin: 0;
     }
     .navbar-header {
@@ -2675,6 +2689,33 @@ input[type=checkbox] + label:before {
     }
     .navbar-nav>li {
         float: none;
+    }
+    .top-menu {
+        display: none;
+    }
+    .navbar-toggle {
+        padding: 0;
+    }
+    .overlay {
+        background: rgba(0, 0, 0, 0.76);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 11111111;
+        top: 63px;
+    }
+    .navbar {
+        min-height: 63px;
+        height: 63px;
+    }
+    .navbar>.container .navbar-brand {
+        margin-left: 0;
+    }
+    .closed {
+        position: absolute;
+        top: 50px;
+        left: 18px;
+        z-index: 11111;
     }
 }
 @media (max-width:767px) {

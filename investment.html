@@ -555,6 +555,176 @@
 												});
 											});
 
+												$(function () {
+												Highcharts.chart('mypie2', {
+													chart: {
+														plotBackgroundColor: null,
+														plotBorderWidth: null,
+														plotShadow: false,
+														type: 'pie'
+													},
+													title: {
+														text: ''
+													},
+													tooltip: {
+														pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+													},
+													plotOptions: {
+														pie: {
+															allowPointSelect: true,
+															cursor: 'pointer',
+															dataLabels: {
+																enabled: true,
+																format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+																style: {
+																	color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+																}
+															}
+														}
+													},
+													series: [{
+														name: 'Share',
+														colorByPoint: true,
+														data: [{
+															name: 'Bitcoin',
+															y: 0.5118,
+															sliced: true,
+															selected: true
+														},
+														{
+															name: 'Ethereum',
+															y: 0.1620,
+														},
+														{
+															name: 'Factom',
+															y: 0.0220,
+														},
+														{
+															name: 'LBRY Credits',
+															y: 0.0051,
+														},
+														{
+															name: 'Lisk',
+															y: 0.0163,
+														},
+														{
+															name: 'PotCoin',
+															y: 0.0271,
+														},
+														{
+															name: 'Augur',
+															y: 0.0159,
+														},
+														{
+															name: 'Ripple',
+															y: 0.0159,
+														},
+														{
+															name: 'Arcade.city',
+															y: 0.0562,
+														},
+														{
+															name: 'vDice',
+															y: 0.0552,
+														},
+														{
+															name: 'Wings',
+															y: 0.0562,
+														},
+														{
+															name: 'Mass Coin',
+															y: 0.0562,
+														}	]
+													}]
+												});
+											});
+
+
+												$(function () {
+												Highcharts.chart('mypie3', {
+													chart: {
+														plotBackgroundColor: null,
+														plotBorderWidth: null,
+														plotShadow: false,
+														type: 'pie'
+													},
+													title: {
+														text: ''
+													},
+													tooltip: {
+														pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+													},
+													plotOptions: {
+														pie: {
+															allowPointSelect: true,
+															cursor: 'pointer',
+															dataLabels: {
+																enabled: true,
+																format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+																style: {
+																	color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+																}
+															}
+														}
+													},
+													series: [{
+														name: 'Share',
+														colorByPoint: true,
+														data: [{
+															name: 'Bitcoin',
+															y: 0.5118,
+															sliced: true,
+															selected: true
+														},
+														{
+															name: 'Ethereum',
+															y: 0.1620,
+														},
+														{
+															name: 'Factom',
+															y: 0.0220,
+														},
+														{
+															name: 'LBRY Credits',
+															y: 0.0051,
+														},
+														{
+															name: 'Lisk',
+															y: 0.0163,
+														},
+														{
+															name: 'PotCoin',
+															y: 0.0271,
+														},
+														{
+															name: 'Augur',
+															y: 0.0159,
+														},
+														{
+															name: 'Ripple',
+															y: 0.0159,
+														},
+														{
+															name: 'Arcade.city',
+															y: 0.0562,
+														},
+														{
+															name: 'vDice',
+															y: 0.0552,
+														},
+														{
+															name: 'Wings',
+															y: 0.0562,
+														},
+														{
+															name: 'Mass Coin',
+															y: 0.0562,
+														}	]
+													}]
+												});
+											});
+
+
 											  </script>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, doloremque delectus modi ducimus voluptatem possimus similique perspiciatis consectetur fugiat nam.</p>
 					</div>
@@ -563,6 +733,7 @@
 					<div class="products-item">
 						<img src="" alt="">
 						<h2>Сбалансированный</h2>
+						<div id="mypie2"></div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, doloremque delectus modi ducimus voluptatem possimus similique perspiciatis consectetur fugiat nam.</p>
 					</div>
 				</div>
@@ -570,6 +741,7 @@
 					<div class="products-item">
 						<img src="" alt="">
 						<h2>Агрессивный</h2>
+						<div id="mypie3"></div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, doloremque delectus modi ducimus voluptatem possimus similique perspiciatis consectetur fugiat nam.</p>
 					</div>
 				</div>

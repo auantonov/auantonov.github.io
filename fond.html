@@ -29,8 +29,9 @@
 	<link href="css/pe-icon-7-stroke.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" title="main-css">
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
-<!-- 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&amp;subset=cyrillic" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body class="body-static-navbar fond-page">
 
@@ -43,6 +44,7 @@
 			<div class="container">
 				<div class="top-menu-left-section pull-left">
 					<span>Курс <span id='rubbtc'></span> руб. / BTC</span>
+					<span>Курс BTF/$</span>
 				</div>
 				<div class="top-menu-right-section pull-right">
 					<div class="languages">
@@ -56,35 +58,70 @@
 			</div>
 		</div>
 		<!-- Begin Navigation -->
-		<nav class="navbar navbar-default navbar-spacing-top-static border-none">
+		<nav class="navbar navbar-default navbar-spacing-top-static">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<button class="navbar-toggle collapsed menu-icon">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand scroll-top" href="#"><img src="images/btf/BigTime_Fund_logo_full_version_black_01.png" alt=""></a>
+					<a class="navbar-brand scroll-top" href="#"><img src="images/logo_new11.png" alt=""></a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-							<a href="#">Главная</a>
-						</li><!-- /.dropdown -->
-						<li><a href="/investment.html">Инвестиции</a></li>
-						<li><a href="/blockchain.html">Блокчейн</a></li>
-						<li class="dropdown">
-							<a href="/fond.html" class='active'>Фонд</a>
-						</li><!-- /.dropdown -->
-						<li><a href="/blockchain">Индустрия</a></li>
-						<li><a href="http://corp.ff.ru/">Холдинг</a></li>
-						<li><a href="/dashboard.html">Управление</a></li>
-					</ul>
-				</div><!-- /.navbar-collapse -->
+				<div class="menu-wrapper">
+					<div class="collapse navbar-collapse menu-cont">
+						<a class="navbar-toggle collapsed menu-toggle-js closed">
+					        <span class="sr-only">Toggle navigation</span>
+					    </a>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown">
+								<a href="index2.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Главная</a>
+								<ul class="dropdown-menu dropdown-menu-first">
+									<li><a href="multipage-top-default.html">Default</a></li>
+									<li><a href="multipage-top-slider-image.html">Image Slider</a></li>
+									<li><a href="multipage-top-text-rotater.html">Rotate</a></li>
+									<li><a href="multipage-top-slider-transparent.html">No BG Slider</a></li>
+								</ul><!-- /.dropdown items -->
+							</li><!-- /.dropdown -->
+							<li><a href="investment.html">Инвестиции</a></li>
+							<li><a href="blockchain.html">Блокчейн</a></li>
+							<li class="dropdown">
+								<a href="fond.html" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Фонд</a>
+								<ul class="dropdown-menu dropdown-menu-first">
+									<li class="dropdown-submenu">
+										<a tabindex="-1" href="#">Masonry &nbsp;<span class="ion-ios-arrow-right"></span></a>
+										<ul class="dropdown-menu">
+											<li><a tabindex="-1" href="multipage-portfolio-masonry-2col.html">2 Columns</a></li>
+											<li><a tabindex="-1" href="multipage-portfolio-masonry-3col.html">3 Columns</a></li>
+											<li><a tabindex="-1" href="multipage-portfolio-masonry-4col.html">4 Columns</a></li>
+										</ul><!-- /.dropdown sub items -->
+									</li><!-- /.dropdown sub -->
+									<li class="dropdown-submenu">
+										<a href="#">Regular &nbsp;<span class="ion-ios-arrow-right"></span></a>
+										<ul class="dropdown-menu">
+											<li><a tabindex="-1" href="multipage-portfolio-aligned-2col.html">2 Columns</a></li>
+											<li><a tabindex="-1" href="multipage-portfolio-aligned-3col.html">3 Columns</a></li>
+											<li><a tabindex="-1" href="multipage-portfolio-aligned-4col.html">4 Columns</a></li>
+										</ul><!-- /.dropdown sub items -->
+									</li><!-- /.dropdown sub -->
+								</ul><!-- /.dropdown sub holder -->
+							</li><!-- /.dropdown -->
+							<li><a href="/blockchain">Индустрия</a></li>
+							<li><a href="http://corp.ff.ru/">Холдинг</a></li>
+							<li><a href="dashboard.html">Управление</a></li>
+						</ul>
+						<div class="languages">
+							<span><img src="images/btf/russia_fluttering_flag_256.png" alt=""></span>
+							<span><img src="images/btf/united_states_of_america_fluttering_flag_256.png" alt=""></span>
+							<span><img src="images/btf/china_fluttering_flag_256.png" alt="" class="united-lang"></span>
+						</div>
+					</div><!-- /.navbar-collapse -->
+
+				</div>
 			</div><!-- /.container -->
 		</nav><!-- /.nav -->
 		<!-- End Navigation -->
@@ -580,6 +617,10 @@
 
 
 	    		$(document).ready(function() {
+
+	    			$.getJSON("https://buygazprom.com/rateslocal.php",function(d){
+	    				$("#rubbtc").html(d.RUB.avg_1h);
+	    			});
 
 	    			$('.map').click(function(){
 	    				$('.map div').css("pointer-events", "auto");

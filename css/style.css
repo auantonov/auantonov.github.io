@@ -2215,7 +2215,7 @@ input[type=checkbox] + label:before {
     background: #fff;
 }
 .projects-items li .normal.project-3 img {
-    transform: scale(1.8);
+    transform: scale(1.3);
     display: block;
     width:60%;
     margin: auto;
@@ -2226,8 +2226,14 @@ input[type=checkbox] + label:before {
 .projects-items li .normal.project-5 {
     background: #fff;
 }
+.projects-items li .normal.project-5 img {
+    transform: scale(0.7);
+}
 .projects-items li .normal.project-6 {
     background: #fff;
+}
+.projects-items li .normal.project-6 img{
+    transform: scale(0.75);
 }
 .projects-items li .normal.project-7 {
     background: #fff;
@@ -2235,17 +2241,14 @@ input[type=checkbox] + label:before {
 .projects-items li .normal.project-8 {
     background: #fff;
 }
+.projects-items li .normal.project-8 img {
+    transform: scale(0.7);
+}
 .projects-items li .normal.project-9 {
-    background: #000;
+    background: #fff;
 }
 .projects-items li .normal.project-10 {
-    background: #000;
-}
-.projects-items li .normal.project-10 {
-    background: #000;
-}
-.projects-items li .normal.project-10 {
-    background: #000;
+    background: #fff;
 }
 .projects-items li .normal svg {
   pointer-events: none;
@@ -2261,6 +2264,158 @@ input[type=checkbox] + label:before {
     position: static;
     padding: 0;
 }
+.project-1 img {
+    transform: scale(0.8);
+}
+.project-2 img {
+    transform: scale(1.3);
+}
+.project-4 img{
+    transform: scale(0.8);
+}
+.project-3 img{
+    transform: scale(0.66);
+}
+.project-5 img {
+    transform: scale(0.5);
+}
+.project-6 img {
+    transform: scale(0.64);
+}
+.project-7 img {
+    transform: scale(0.75);
+}
+.project-8 img {
+    transform: scale(0.65);
+}
+.project-9 img {
+    transform: scale(1);
+}
+.project-10 img {
+    transform: scale(0.8);
+}
+.project-11 img {
+    
+}
+.project-12 img {
+    transform: scale(0.8);
+}
+
+/*@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);*/
+figure {
+    background: #fff;
+    display: flex;
+    height: 268px;
+    align-items: center;
+    justify-content: center;
+    width: 268px;
+}
+figure.snip0016 {
+/*  font-family: 'Raleway', Arial, sans-serif;*/
+  color: #fff;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  text-align: left;
+}
+figure h2 {
+    color: white;
+    font-size: 20px;
+}
+figure.snip0016 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip0016 img {
+  max-width: 100%;
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+figure.snip0016 figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px 3em;
+  width: 100%;
+  height: 100%;
+}
+figure.snip0016 figcaption::before {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 100%;
+  border-left: 4px solid rgb(85, 202, 245);
+  content: '';
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip0016 h2,
+figure.snip0016 p {
+  margin: 0 0 5px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+}
+figure.snip0016 h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+  text-transform: uppercase;
+  -webkit-transform: translate3d(30%, 0%, 0);
+  transform: translate3d(30%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip0016 h2 span {
+  font-weight: 800;
+}
+figure.snip0016 p {
+  font-weight: 200;
+  -webkit-transform: translate3d(0%, 30%, 0);
+  transform: translate3d(0%, 30%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0016 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+/*figure.snip0016:hover img {
+  opacity: 0.3;
+}*/
+figure.snip0016:hover figcaption h2 {
+  opacity: 1;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+figure.snip0016:hover figcaption p {
+  opacity: 0.9;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip0016:hover figcaption::before {
+  background: rgba(24, 23, 23, 0.8);
+  left: 0px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
 /*.col-padding-5 {
     padding-right: 5px;
     padding-left: 5px;

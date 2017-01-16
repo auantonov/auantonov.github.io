@@ -327,7 +327,7 @@
 						</figcaption>
 					</figure>
 					<figure class="snip0016 project-7">
-						<img src="images/btf/project-77.jpg" alt="sample43"/>
+						<img src="images/btf/project-golem.jpg" alt="sample43"/>
 						<figcaption>
 							<h2><span>Namecoin</span></h2>
 							<p>Децентрализованный сервис на блокчейне Bitcoin, реализующий возможночть регистрации пар key/value.</p>
@@ -351,7 +351,7 @@
 						</figcaption>
 					</figure>
 					<figure class="snip0016 project-10">
-						<img src="images/btf/project-1010.png" alt="sample43"/>
+						<img src="images/btf/project-wings.png" alt="sample43"/>
 						<figcaption>
 							<h2><span>StorJ</span></h2>
 							<p>Облачная платформа для хранения данных без привлечения централизованного сервера.</p>
@@ -383,7 +383,7 @@
 		</section>
 		<div class="row mb40">
 			<div class="col-xs-12 text-center">
-				<h1>Инвестиционные портфели</h1>
+				<h2>Инвестиционные портфели</h2>
 				<span class="divider divider-center divider-dark no-margin-bottom"></span>
 			</div><!-- /.column -->
 		</div>
@@ -404,260 +404,181 @@
 						<div id="mypie"></div>
 
 											 <script>
+											 $(function () {
 
-												$(function () {
-												Highcharts.chart('mypie', {
-													chart: {
-														plotBackgroundColor: null,
-														plotBorderWidth: null,
-														plotShadow: false,
-														type: 'pie'
-													},
-													title: {
-														text: ''
-													},
-													tooltip: {
-														pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-													},
-													plotOptions: {
-														pie: {
-															allowPointSelect: true,
-															cursor: 'pointer',
-															dataLabels: {
-																enabled: true,
-																format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-																style: {
-																	color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-																}
-															}
-														}
-													},
-													series: [{
-														name: 'Share',
-														colorByPoint: true,
-														data: [{
-															name: 'Bitcoin',
-															y: 0.5118,
-															sliced: true,
-															selected: true
-														},
-														{
-															name: 'Ethereum',
-															y: 0.1620,
-														},
-														{
-															name: 'Factom',
-															y: 0.0220,
-														},
-														{
-															name: 'LBRY Credits',
-															y: 0.0051,
-														},
-														{
-															name: 'Lisk',
-															y: 0.0163,
-														},
-														{
-															name: 'PotCoin',
-															y: 0.0271,
-														},
-														{
-															name: 'Augur',
-															y: 0.0159,
-														},
-														{
-															name: 'Ripple',
-															y: 0.0159,
-														},
-														{
-															name: 'Arcade.city',
-															y: 0.0562,
-														},
-														{
-															name: 'vDice',
-															y: 0.0552,
-														},
-														{
-															name: 'Wings',
-															y: 0.0562,
-														},
-														{
-															name: 'Mass Coin',
-															y: 0.0562,
-														}	]
-													}]
-												});
-											});
+											     $(document).ready(function () {
 
-												$(function () {
-												Highcharts.chart('mypie2', {
-													chart: {
-														plotBackgroundColor: null,
-														plotBorderWidth: null,
-														plotShadow: false,
-														type: 'pie'
-													},
-													title: {
-														text: ''
-													},
-													tooltip: {
-														pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-													},
-													plotOptions: {
-														pie: {
-															allowPointSelect: true,
-															cursor: 'pointer',
-															dataLabels: {
-																enabled: true,
-																format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-																style: {
-																	color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-																}
-															}
-														}
-													},
-													series: [{
-														name: 'Share',
-														colorByPoint: true,
-														data: [{
-															name: 'Bitcoin',
-															y: 0.5118,
-															sliced: true,
-															selected: true
-														},
-														{
-															name: 'Ethereum',
-															y: 0.1620,
-														},
-														{
-															name: 'Factom',
-															y: 0.0220,
-														},
-														{
-															name: 'LBRY Credits',
-															y: 0.0051,
-														},
-														{
-															name: 'Lisk',
-															y: 0.0163,
-														},
-														{
-															name: 'PotCoin',
-															y: 0.0271,
-														},
-														{
-															name: 'Augur',
-															y: 0.0159,
-														},
-														{
-															name: 'Ripple',
-															y: 0.0159,
-														},
-														{
-															name: 'Arcade.city',
-															y: 0.0562,
-														},
-														{
-															name: 'vDice',
-															y: 0.0552,
-														},
-														{
-															name: 'Wings',
-															y: 0.0562,
-														},
-														{
-															name: 'Mass Coin',
-															y: 0.0562,
-														}	]
-													}]
-												});
-											});
+											         // Build the chart
+											         Highcharts.chart('mypie', {
+											             chart: {
+											             	backgroundColor: null,
+											                 type: 'pie'
+											             },
+											             title: {
+											                 text: ''
+											             },
+											             tooltip: {
+											                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+											             },
+											             legend: {
+											             	itemStyle: { "color": "#474747", "cursor": "pointer", "fontSize": "11px", "fontWeight": "bold", 'margin-bottom' : "10px" },
+											             	itemMarginBottom: 10,
+											             	itemHoverStyle: { "color": "#474747" },
+											             	align: 'center',
+											             	verticalAlign: 'bottom',
+											             	layout: 'vertical',
+											             },
+											             plotOptions: {
+											                 pie: {
+											                     allowPointSelect: true,
+											                     cursor: 'pointer',
+											                     dataLabels: {
+											                         enabled: false
+											                     },
+											                     showInLegend: true
+											                 }
+											             },
+											             series: [{
+											                 name: 'Brands',
+											                 colorByPoint: true,
+											                 data: [{
+											                     name: 'Microsoft Internet Explorer',
+											                     y: 56.33
+											                 }, {
+											                     name: 'Chrome',
+											                     y: 24.03,
+											                     sliced: true,
+											                     selected: true
+											                 }, {
+											                     name: 'Firefox',
+											                     y: 10.38
+											                 }, {
+											                     name: 'Safari',
+											                     y: 4.77
+											                 }, {
+											                     name: 'Opera',
+											                     y: 0.91
+											                 }, {
+											                     name: 'Proprietary or Undetectable',
+											                     y: 0.2
+											                 }]
+											             }]
+											         });
 
+											        Highcharts.chart('mypie2', {
+											            chart: {
+											            	backgroundColor: null,
+											                type: 'pie'
+											            },
+											            title: {
+											                text: ''
+											            },
+											            tooltip: {
+											                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+											            },
+											            legend: {
+											            	itemStyle: { "color": "#474747", "cursor": "pointer", "fontSize": "11px", "fontWeight": "bold", 'margin-bottom' : "10px" },
+											            	itemMarginBottom: 10,
+											            	itemHoverStyle: { "color": "#474747" },
+											            	align: 'center',
+											            	verticalAlign: 'bottom',
+											            	layout: 'vertical',
+											            },
+											            plotOptions: {
+											                pie: {
+											                    allowPointSelect: true,
+											                    cursor: 'pointer',
+											                    dataLabels: {
+											                        enabled: false
+											                    },
+											                    showInLegend: true
+											                }
+											            },
+											            series: [{
+											                name: 'Brands',
+											                colorByPoint: true,
+											                data: [{
+											                    name: 'Microsoft Internet Explorer',
+											                    y: 56.33
+											                }, {
+											                    name: 'Chrome',
+											                    y: 24.03,
+											                    sliced: true,
+											                    selected: true
+											                }, {
+											                    name: 'Firefox',
+											                    y: 10.38
+											                }, {
+											                    name: 'Safari',
+											                    y: 4.77
+											                }, {
+											                    name: 'Opera',
+											                    y: 0.91
+											                }, {
+											                    name: 'Proprietary or Undetectable',
+											                    y: 0.2
+											                }]
+											            }]
+											        });
 
-												$(function () {
-												Highcharts.chart('mypie3', {
-													chart: {
-														plotBackgroundColor: null,
-														plotBorderWidth: null,
-														plotShadow: false,
-														type: 'pie'
-													},
-													title: {
-														text: ''
-													},
-													tooltip: {
-														pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-													},
-													plotOptions: {
-														pie: {
-															allowPointSelect: true,
-															cursor: 'pointer',
-															dataLabels: {
-																enabled: true,
-																format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-																style: {
-																	color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-																}
-															}
-														}
-													},
-													series: [{
-														name: 'Share',
-														colorByPoint: true,
-														data: [{
-															name: 'Bitcoin',
-															y: 0.5118,
-															sliced: true,
-															selected: true
-														},
-														{
-															name: 'Ethereum',
-															y: 0.1620,
-														},
-														{
-															name: 'Factom',
-															y: 0.0220,
-														},
-														{
-															name: 'LBRY Credits',
-															y: 0.0051,
-														},
-														{
-															name: 'Lisk',
-															y: 0.0163,
-														},
-														{
-															name: 'PotCoin',
-															y: 0.0271,
-														},
-														{
-															name: 'Augur',
-															y: 0.0159,
-														},
-														{
-															name: 'Ripple',
-															y: 0.0159,
-														},
-														{
-															name: 'Arcade.city',
-															y: 0.0562,
-														},
-														{
-															name: 'vDice',
-															y: 0.0552,
-														},
-														{
-															name: 'Wings',
-															y: 0.0562,
-														},
-														{
-															name: 'Mass Coin',
-															y: 0.0562,
-														}	]
-													}]
-												});
-											});
-
+											        Highcharts.chart('mypie3', {
+											            chart: {
+											            	backgroundColor: null,
+											                type: 'pie'
+											            },
+											            title: {
+											                text: ''
+											            },
+											            tooltip: {
+											                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+											            },
+											            legend: {
+											            	itemStyle: { "color": "#474747", "cursor": "pointer", "fontSize": "11px", "fontWeight": "bold", 'margin-bottom' : "10px" },
+											            	itemMarginBottom: 10,
+											            	itemHoverStyle: { "color": "#474747" },
+											            	align: 'center',
+											            	verticalAlign: 'bottom',
+											            	layout: 'vertical',
+											            },
+											            plotOptions: {
+											                pie: {
+											                    allowPointSelect: true,
+											                    cursor: 'pointer',
+											                    dataLabels: {
+											                        enabled: false
+											                    },
+											                    showInLegend: true
+											                }
+											            },
+											            series: [{
+											                name: 'Brands',
+											                colorByPoint: true,
+											                data: [{
+											                    name: 'Microsoft Internet Explorer',
+											                    y: 56.33
+											                }, {
+											                    name: 'Chrome',
+											                    y: 24.03,
+											                    sliced: true,
+											                    selected: true
+											                }, {
+											                    name: 'Firefox',
+											                    y: 10.38
+											                }, {
+											                    name: 'Safari',
+											                    y: 4.77
+											                }, {
+											                    name: 'Opera',
+											                    y: 0.91
+											                }, {
+											                    name: 'Proprietary or Undetectable',
+											                    y: 0.2
+											                }]
+											            }]
+											        });
+											     });
+											 });
+	
 
 											  </script>
 						<p>Стандартный финансовый анализ стартапов применим и в случае с блокчейн-проектами, и когда такую информацию удается получить, мы анализируем стратегические планы компании в части финансов, на коротком и длинном периоде.</p>
@@ -1191,9 +1112,22 @@
 
 
 			</section>
-
-	<a href="/dashboard.html" class="reg-btn"><span class="btn btn-primary btn-lg ">Зарегистрироваться</span></a>
-		<span class="reg-button-info">Управление токенами, инвестиции в паи фонда</span>
+		<div class="container">
+			<div class="row graphic-buttons">
+				<div class="col-md-6">
+					<div class="graphic-buttons-item">
+						<a href="/fond.html" class="reg-btn"><span class="btn btn-primary btn-lg call-back">Связаться с нами</span></a>
+						<p class="reg-button-info">Появились вопросы или предложения?<br> Cвяжитесь с нами</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="graphic-buttons-item">
+						<a href="/dashboard.html" class="reg-btn"><span class="btn btn-primary btn-lg">Зарегистрироваться</span></a>
+						<p class="reg-button-info">Создать аккаунт для управления <br>токенами фонда</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 

@@ -455,7 +455,7 @@
 												return Math.round(this.value/1000000).toString()+"m. USD";
 											}
 										},
-										opposite: true
+										
 									},{
 										//max: 0.01,
 										title: {
@@ -464,11 +464,18 @@
 												color: Highcharts.getOptions().colors[0]
 											}
 										},
+										labels: {
+
+											formatter: function() {
+												return Math.round(this.value/1000000000).toString()+"B. USD";
+											}
+										},
 										plotLines: [{
 											value: 0,
 											width: 1,
 											color: 'rgba(255,255,255,0)'
-										}]
+										}],
+										opposite: true
 									}
 
 									],

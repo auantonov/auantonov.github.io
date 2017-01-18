@@ -703,7 +703,6 @@ h2 {
 
 .quote-author {
     font-size: 16px;
-     sans-serif;
     text-transform: uppercase;
     color: #474747;
     margin-top: 15px;
@@ -1462,6 +1461,7 @@ h4.spaced + p{
 .industry-news-item,
 .industry-other-news-item {
     position: relative;
+    overflow: hidden;
 }
 .industry-news-item:before,
 .industry-other-news-item:before{
@@ -3197,4 +3197,11 @@ figure p {
 .def-tabs > li > a {
     padding: 10px 15px;
     margin: 0 2px 0 0;
+}
+.industry-other-news-item:hover img {
+    transform: scale(1.25);
+}
+
+.industry-other-news-item img {
+    transition: all 0.4s ease 0s;
 }

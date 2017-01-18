@@ -13,51 +13,6 @@
 					 $(document).ready(function(){
 						now = new Date();
 						
-						rur = [{x:new Date(2016, 11-1, 2).getTime(), y:(s=724286.829)},
-											{x:new Date(2016, 11-1, 9).getTime(), y:730936.822},
-											{x:new Date(2016, 11-1, 16).getTime(), y:710966.949},
-											{x:new Date(2016, 11-1, 23).getTime(), y:732540.984},
-											{x:new Date(2016, 11-1, 30).getTime(), y:763543.95},
-											{x:new Date(2016, 12-1, 07).getTime(), y:768737.684},
-											{x:new Date(2016, 12-1, 14).getTime(), y:776581},
-											{x:new Date(2016, 12-1, 21).getTime(), y:912276.768},
-											{x:new Date(2016, 12-1, 28).getTime(), y:1002608.82}];
-											
-						usd = [{x:new Date(2016, 11-1, 2).getTime(), y:(s=11442.13)},
-											{x:new Date(2016, 11-1, 9).getTime(), y:11456.69},
-											{x:new Date(2016, 11-1, 16).getTime(), y:10988.67},
-											{x:new Date(2016, 11-1, 23).getTime(), y:11374.86},
-											{x:new Date(2016, 11-1, 30).getTime(), y:11746.83},
-											{x:new Date(2016, 12-1, 07).getTime(), y:12049.18},
-											{x:new Date(2016, 12-1, 14).getTime(), y:12710},
-											{x:new Date(2016, 12-1, 21).getTime(), y:14930.88},
-											{x:new Date(2016, 12-1, 28).getTime(), y:16544.7}];
-											
-						btc = [{x:new Date(2016, 11-1, 2).getTime(), y:(s=15.61)},
-											{x:new Date(2016, 11-1, 9).getTime(), y:15.89},
-											{x:new Date(2016, 11-1, 16).getTime(), y:14.91},
-											{x:new Date(2016, 11-1, 23).getTime(), y:15.33},
-											{x:new Date(2016, 11-1, 30).getTime(), y:15.81},
-											{x:new Date(2016, 12-1, 07).getTime(), y:15.73},
-											{x:new Date(2016, 12-1, 14).getTime(), y:16.4},
-											{x:new Date(2016, 12-1, 21).getTime(), y:18.12},
-											{x:new Date(2016, 12-1, 28).getTime(), y:17.79}];
-						
-						function inp(arr) {
-							ret = new Array();
-	
-							arr.forEach(function(item, i, arr) {
-							  console.log(item);
-							 
-							  ret[i] = {
-								 x : item.x,
-								 y : item.y/arr[0].y*100-100
-							  }
-							  //alert( i + ": " + item + " (массив:" + arr + ")" );
-							});
-							console.log(ret);
-							return ret;
-						}
 						$('.chart2').highcharts({
 									
 									title: {
@@ -88,9 +43,9 @@
 
 										 formatter: function () {
 											var date=new Date(new Date().setTime(this.x));
-											//console.log(date);
-											var s = '<b>'+(date.getUTCDate())+"."+(date.getUTCMonth() + 1)+"."+(date.getUTCFullYear())+'</b>';
-											//console.log(this);
+											//console.log();
+											var s = '<b>'+date.getDay()+'</b>';
+											console.log(this);
 											$.each(this.points, function () {
 												s += '<br/>' + this.series.name + ': ' +
 													this.y;
@@ -153,20 +108,50 @@
 									],
 									
 									series: [{
-										name: 'RUR',
+										name: 'В RUR',
 										// Define the data points. All series have a dummy year
 										// of 1970/71 in order to be compared on the same x axis. Note
 										// that in JavaScript, months start at 0 for January, 1 for February etc.
 										yAxis: 0,
-										data: inp(rur)
+										data: [
+											[x:Date(2016, 11, 2), (s=724286.829)/724286.829*100-100],
+											[x:Date(2016, 11, 9), 730936.822/s*100-100],
+											[x:Date(2016, 11, 16), 710966.949/s*100-100],
+											[x:Date(2016, 11, 23), 732540.984/s*100-100],
+											[x:Date(2016, 11, 30), 763543.95/s*100-100],
+											[x:Date(2016, 12, 07), 768737.684/s*100-100],
+											[x:Date(2016, 12, 14), 776581/s*100-100],
+											[x:Date(2016, 12, 21), 912276.768/s*100-100],
+											[x:Date(2016, 12, 28), 1002608.82/s*100-100]
+										]
 									}, {
-										name: 'USD',
-										yAxis: 0,
-										data: inp(usd)
+										name: 'В USD',
+										yAxis: 1,
+										data: [
+											[x:Date(2016, 11, 2), (s=11442.13)/11442.13*100-100],
+											[x:Date(2016, 11, 9), 11456.69/s*100-100],
+											[x:Date(2016, 11, 16), 10988.67/s*100-100],
+											[x:Date(2016, 11, 23), 11374.86/s*100-100],
+											[x:Date(2016, 11, 30), 11746.83/s*100-100],
+											[x:Date(2016, 12, 07), 12049.18/s*100-100],
+											[x:Date(2016, 12, 14), 12710/s*100-100],
+											[x:Date(2016, 12, 21), 14930.88/s*100-100],
+											[x:Date(2016, 12, 28), 16544.7/s*100-100]
+										]
 									}, {
-										name: 'BTC',
-										yAxis: 0,
-										data: inp(btc)
+										name: 'В BTC',
+										yAxis: 2,
+										data: [
+											[x:Date(2016, 11, 2), (s=15.61)/15.61*100-100],
+											[x:Date(2016, 11, 9), 15.89/s*100-100],
+											[x:Date(2016, 11, 16), 14.91/s*100-100],
+											[x:Date(2016, 11, 23), 15.33/s*100-100],
+											[x:Date(2016, 11, 30), 15.81/s*100-100],
+											[x:Date(2016, 12, 07), 15.73/s*100-100],
+											[x:Date(2016, 12, 14), 16.4/s*100-100],
+											[x:Date(2016, 12, 21), 18.12/s*100-100],
+											[x:Date(2016, 12, 28), 17.79/s*100-100]
+										]
 									}]
 								}, function(chart) { });
 

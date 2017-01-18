@@ -3191,3 +3191,10 @@ figure p {
 
 
 
+/************************** Vladimir's changes ********************************/
+
+
+.def-tabs > li > a {
+    padding: 10px 15px;
+    margin: 0 2px 0 0;
+}

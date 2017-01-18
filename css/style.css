@@ -246,7 +246,7 @@ h2 {
     border: 3px solid #474747;
 }
 .lead-rolla {
-    font-size: 18px;
+    font-size: 16px;
     color: #474747;
     line-height: 1.6;
 }
@@ -311,7 +311,7 @@ h2 {
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
     position: relative;
-    font-size: 14px;
+    font-size: 16px;
     -webkit-transition: all 0.8s ease;
     -moz-transition: all 0.8s ease;
     -o-transition: all 0.8s ease;
@@ -499,7 +499,7 @@ h2 {
 /* =Buttons
 -------------------------------------------------------------- */
 .btn {
-    font-size: 14px;
+    font-size: 16px;
     text-transform: capitalize;
     border: none;
     font-weight: 300;
@@ -702,7 +702,7 @@ h2 {
 }
 
 .quote-author {
-    font-size: 14px;
+    font-size: 16px;
      sans-serif;
     text-transform: uppercase;
     color: #474747;
@@ -865,7 +865,7 @@ blockquote .small, blockquote footer, blockquote small {
 }
 
 .grid-item .overlay .inner-overlay span {
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 1px;
     color: #a9a9a9;
     font-style: italic;
@@ -878,7 +878,7 @@ blockquote .small, blockquote footer, blockquote small {
 }
 
 .list-work-filter > li {
-    font-size: 14px;
+    font-size: 16px;
     padding-right: 12px;
     padding-left: 12px;
     margin-right: 10px;
@@ -967,7 +967,7 @@ blockquote .small, blockquote footer, blockquote small {
 }
 
 .pricing-box h1 .plan-time {
-    font-size: 14px;
+    font-size: 16px;
     text-transform: capitalize;
     color: #b3b3b3;
     letter-spacing: 2px;
@@ -1063,7 +1063,7 @@ blockquote .small, blockquote footer, blockquote small {
 }
 #contact-information h5 {
     color: #686868;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /*main styles*/
@@ -1638,7 +1638,7 @@ h4.spaced + p{
 }
 .graphic-buttons-item p{
     margin-top: 15px;
-    font-size: 14px;
+    font-size: 16px;
     color: #474747;
     line-height: 1.5;
     font-weight: 400;
@@ -1779,7 +1779,7 @@ input[type=checkbox] + label:before {
 #myModal .reg-result-buttons button {
     margin: 0px auto 20px;
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     padding: 15px 30px;
 }
 .reg-result-buttons {
@@ -1820,7 +1820,7 @@ input[type=checkbox] + label:before {
 }
 .line-item span {
     color: #474747;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 300;
 }
 .line-address p {
@@ -2190,7 +2190,7 @@ input[type=checkbox] + label:before {
   margin-bottom: 5px;
 }
 .projects-items li p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     color: #474747;
 }
@@ -2318,7 +2318,7 @@ figure.snip0016 {
 }
 figure h2 {
     color: white;
-    font-size: 20px;
+    font-size: 16px;
 }
 figure.snip0016 * {
   -webkit-box-sizing: border-box;
@@ -2454,7 +2454,7 @@ figure.snip0016:hover figcaption::before {
     margin-top: 80px;
     line-height: 1.5;
     margin-bottom: 90px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
     text-align: left;
     color: #474747;
@@ -2550,15 +2550,15 @@ figure.snip0016:hover figcaption::before {
 .call-back-address {
     display: block;
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 10px;
 }
 .call-back-address {
-    font-size: 20px;
+    font-size: 16px;
     color:#474747;
 }
 .map-content h2 {
-    font-size: 20px;
+    font-size: 16px;
     margin-top: -20px;
     line-height: 1.5;
     text-transform: initial;
@@ -2631,7 +2631,7 @@ figure.snip0016:hover figcaption::before {
     border-color: #55caf5;
 }
 .reg-btn span {
-    font-size: 20px;
+    font-size: 16px;
     padding: 20px 30px;
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
@@ -2643,7 +2643,7 @@ figure.snip0016:hover figcaption::before {
     display: block;
     color: #474747;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     margin-top: 15px;
     margin-bottom: 50px;
@@ -2736,7 +2736,7 @@ figure.snip0016:hover figcaption::before {
 .inv-products p {
     line-height: 1.5;
     margin-bottom: 30px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
     text-align: left;
     color: #474747;
@@ -2788,7 +2788,7 @@ figure.snip0016:hover figcaption::before {
     padding-right: 50px;
     line-height: 1.7;
     position: relative;
-    font-size: 14px;
+    font-size: 16px;
 }
 .inv-grid-item:nth-child(2) .inv-grid-item-descr {
     height: 184px;

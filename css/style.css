@@ -1281,7 +1281,9 @@ h4.spaced + p{
     background: #fff;
 }
 .video-wrapper {
-    background-image: url(../images/btf/STARTUP.jpg);
+    background-image: url(../images/btf/13.png);
+    background-position: center center;
+    background-size: cover;
     position: relative;
     height: calc(100vh - 150px);
 }

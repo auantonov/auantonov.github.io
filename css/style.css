@@ -14,7 +14,7 @@ body {
 	color: #8e8e8e;
 	height: 100%;
     padding-top: 80px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -329,7 +329,7 @@ h2 {
     transition: width 0.5s ease-in-out;
 }
 .navbar-default .navbar-nav > li > a.active:before {
-    width: 100%;
+    width: 100%;1
 }
 .navbar-default .navbar-nav > li > a:hover {
     color: rgb(85, 202, 245);
@@ -2457,12 +2457,13 @@ figure.snip0016:hover figcaption::before {
 .blockchain-info p,
 .blockchain-forecast p{
     margin-top: 80px;
-    line-height: 1.5;
     margin-bottom: 90px;
     font-size: 16px;
-    font-weight: 300;
     text-align: left;
-    color: #474747;
+    line-height: 1.6;
+    font-family: "Roboto", sans-serif;
+    color: rgba(0,0,0,0.71);
+    font-weight: 400;
 }
 .blockchain-forecast p {
     margin-top: 0;

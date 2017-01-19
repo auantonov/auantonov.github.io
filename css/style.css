@@ -2782,13 +2782,9 @@ figure.snip0016:hover figcaption::before {
 .inv-grid-item-descr {
     margin-bottom: 50px;
     min-height: 90px;
-    font-family: 'Open Sans', sans-serif;
     color: #474747;
-    font-weight: 500;
     padding-right: 50px;
-    line-height: 1.7;
     position: relative;
-    font-size: 16px;
 }
 .inv-grid-item:nth-child(2) .inv-grid-item-descr {
     height: 184px;

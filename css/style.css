@@ -2798,13 +2798,11 @@ figure.snip0016:hover figcaption::before {
 .inv-grid-item .col-md-6 {
     background: #fff227;
     padding-top: 30px;
-    padding-left: 30px;
     color: white;
 }
 .inv-grid-item:nth-child(2) .col-md-6 {
     background: #55caf5;
     padding-top: 30px;
-    padding-left: 30px;
     color: white;
 }
 .inv-grid-item:nth-child(3) .col-md-6 {

@@ -1283,12 +1283,54 @@ h4.spaced + p{
 .fond-page {
     background: #fff;
 }
+.graphic-buttons .btn {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 25px 0;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.graphic-buttons .btn-1 {
+    border: 3px solid #55caf5;
+    color: #55caf5;
+    font-size: 16px;
+    width: 280px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 80px;
+    margin-bottom: 0px;
+}
+.graphic-buttons .btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.graphic-buttons .btn-1a:hover,
+.graphic-buttons .btn-1a:active {
+    color: #fff;
+    background: #55caf5;
+}
 .video-wrapper {
     background-image: url(../images/btf/13.png);
-    background-position: center center;
     background-size: cover;
     position: relative;
-    height: calc(100vh - 150px);
+    background-position-y: -240px;
+    height: 100%;
 }
 .video-wrapper:before {
     content:'';
@@ -1643,7 +1685,7 @@ h4.spaced + p{
 }
 .graphic-buttons-item p{
     margin-top: 15px;
-    font-size: 16px;
+    font-size: 14px;
     color: #474747;
     line-height: 1.5;
     font-weight: 400;
@@ -2424,36 +2466,49 @@ figure.snip0016:hover figcaption::before {
   transition-delay: 0s;
 }
 
-/*.col-padding-5 {
-    padding-right: 5px;
-    padding-left: 5px;
-}*/
 .blockchain {
     background: #fff;
 }
-.slide-1 {
-    background: url(../images/btf/slick-1.jpg);
-    background-size: cover;
-    background-position: center;
-    height: calc(100vh - 150px)!important;
+.slick-slide img {
+    display: block;
+    width: 100%;
+    position: relative;
 }
-.slide-2 {
-    background: url(../images/btf/slick-2.jpg);
-    background-size: cover;
-    background-position: center;
-    height: calc(100vh - 150px)!important;
-}
-.slide-3 {
-    background: url(../images/btf/slick-3.png);
-    background-size: cover;
-    background-position: center;
-    height: calc(100vh - 150px)!important;
+.slide-descr {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    font-weight: bold;
+    color: #474747;
+    line-height: 1.6;
+    font-size: 15px;
 }
 .blockchain-slider {
-    width:100%;
-    margin:auto;
+    position: relative;
 }
-
+.blockchain-slider:before,
+.blockchain-slider:after{
+    background: #fff;
+    content: '';
+    z-index: 111;
+    position: absolute;
+    width: 100%;
+}
+.blockchain-slider:before {
+    top: 0;
+    left: 0;
+    height: 46px;
+}
+.blockchain-slider:after {
+    top: 417px;
+    left: 0px;
+    height: 7px;
+    background: #ffffff;
+}
+.blockchain-slider {
+    width: 600px;
+    margin: auto;
+    margin-top: 40px;
+}
 .blockchain-info p,
 .blockchain-forecast p{
     margin-top: 80px;

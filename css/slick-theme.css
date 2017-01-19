@@ -70,14 +70,14 @@
     font-size: 60px;
     line-height: 1;
     opacity: .85;
-    color: #fff;
+    color: #000;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 .slick-prev
 {
-    left: 10px;
+    left: -105px;
     z-index: 11111;
 }
 [dir='rtl'] .slick-prev
@@ -96,7 +96,7 @@
 
 .slick-next
 {
-    right: 14px;
+    right: -100px;
     z-index: 11111;
 }
 [dir='rtl'] .slick-next

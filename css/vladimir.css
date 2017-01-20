@@ -55,6 +55,10 @@
     margin-right: 30px;
 }
 
+.inv-grid-item-descr {
+    display: none;
+}
+
 @media (max-width:993px) {
     .b-footer__logo {
         width: 100%;

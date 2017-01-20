@@ -1126,13 +1126,13 @@ blockquote .small, blockquote footer, blockquote small {
 }
 
 .top-menu-left-section {
-    width: 250px;
+    width: 300px;
     display: flex;
     justify-content: space-between;
     color: #474747;
     padding-top: 15px;
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .languages {
@@ -1150,9 +1150,9 @@ blockquote .small, blockquote footer, blockquote small {
 .phone {
     color: #474747;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 800;
-    padding-top: 17px;
+    padding-top: 15px;
     display: block;
     float: right;
     margin-right: 15px;
@@ -2492,10 +2492,10 @@ figure.snip0016:hover figcaption::before {
 .slide-descr {
     margin-top: 20px;
     margin-bottom: 100px;
-    font-weight: bold;
+    font-weight: 500;
     color: #474747;
     line-height: 1.6;
-    font-size: 15px;
+    font-size: 18px;
 }
 .blockchain-slider {
     position: relative;
@@ -2511,18 +2511,41 @@ figure.snip0016:hover figcaption::before {
 .blockchain-slider:before {
     top: 0;
     left: 0;
-    height: 46px;
+    height: 60px;
 }
 .blockchain-slider:after {
-    top: 417px;
+    top: 501px;
     left: 0px;
-    height: 7px;
+    height: 30px;
     background: #ffffff;
 }
 .blockchain-slider {
-    width: 600px;
+    width: 750px;
     margin: auto;
-    margin-top: 40px;
+}
+.blockchain-slider .slick-dots {
+    bottom: 251px;
+    z-index: 111111;
+}
+.blockchain-slider .slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #54caf5;
+}
+.blockchain-slider .slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 21px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: 1;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .blockchain-info p,
 .blockchain-forecast p{
@@ -2783,6 +2806,10 @@ figure.snip0016:hover figcaption::before {
 }
 .navbar .container {
     position: relative;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+     color: #fff; 
+    background-color: transparent;
 }
 /*.black-line {
     background: #1c1b17;

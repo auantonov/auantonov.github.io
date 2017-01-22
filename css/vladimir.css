@@ -1,3 +1,24 @@
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
 .b-footer {
     background: #1C1B17 none repeat scroll 0 0;
     color: #fff;
@@ -62,6 +83,13 @@
 @media (max-width:993px) {
     .b-footer__logo {
         width: 100%;
+    }
+    .inv-our-company .snip0016 {
+        display: inline-block;
+        float: none;
+    }
+    .inv-our-company {
+        text-align: center;
     }
 }
 

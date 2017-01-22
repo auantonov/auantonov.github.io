@@ -115,4 +115,7 @@
         margin: 0 0 5px 0;
         text-align: center;
     }
+    .graphic-buttons .btn-1 {
+        margin: 0;
+    }
 }

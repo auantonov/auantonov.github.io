@@ -2757,10 +2757,10 @@ figure.snip0016:hover figcaption::before {
     border: 1px solid #fff;
     padding: 4px 9px;
 }
-.be-wrapper table tr:hover {
-    background: rgb(71, 71, 71);
-    color: white;
-}
+/*.be-wrapper table tr:hover {*/
+    /*background: rgb(71, 71, 71);*/
+    /*color: white;*/
+/*}*/
 
 /* code for animated blinking cursor */
 .typed-cursor{

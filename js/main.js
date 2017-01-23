@@ -29,6 +29,18 @@ function submitForm() {
     });
 }
 
+// init Masonry
+var $grid = $('.b-place-list').masonry({
+  itemSelector: '.b-grid-item',
+  percentPosition: true,
+  gutter: 20
+});
+// layout Isotope after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.masonry();
+  $(window).resize();
+});  
+
 function formSuccess() {
     $("#contactForm")[0].reset();
     submitMSG(true, "Message Submitted!")

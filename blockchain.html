@@ -47,7 +47,7 @@
 			<div class="container">
 				<div class="top-menu-left-section pull-left">
 					<span>Курс <span id='rubbtc'></span> руб. / BTC</span>
-					<span>Курс BTF/$</span>
+				
 				</div>
 				<div class="top-menu-right-section pull-right">
 					<div class="languages">
@@ -396,6 +396,7 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/masonry.pkgd.min.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
 	<script src="https://code.highcharts.com/highcharts.js"></script>
 	<script src="https://code.highcharts.com/modules/data.js"></script>
 	<script src="https://code.highcharts.com/modules/drilldown.js"></script>
@@ -438,18 +439,31 @@
 			slidesToScroll: 1,
 			infinite: true,
 			speed: 2000,
-			autoplay: false,
+			autoplay: true,
   			autoplaySpeed: 2000,
 			// fade: true,
 			cssEase: 'linear'
 		});
-		$('.masonry-wrap').masonry({
-		    // options
-		    // set itemSelector so .grid-sizer is not used in layout
-		    itemSelector: '.masonry-item',
-		    // use element for option
-		    percentPosition: true
+
+		// $('.masonry-wrap').masonry({
+		//     // options
+		//     // set itemSelector so .grid-sizer is not used in layout
+		//     itemSelector: '.masonry-item',
+		//     // use element for option
+		//     percentPosition: true
+		// });
+
+		// init Masonry
+		var $grid = $('.masonry-wrap').masonry({
+			itemSelector: '.masonry-item',
+			percentPosition: true
 		});
+		// layout Isotope after each image loads
+		$grid.imagesLoaded().progress( function() {
+		  $grid.masonry();
+		  $(window).resize();
+		});  
+
 		$('.navbar-toggle').click(function(){
 			$('.collapse').toggle();
 		});

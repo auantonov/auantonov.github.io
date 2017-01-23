@@ -52,7 +52,7 @@ span.divider-center {
 }
 
 span.divider-dark {
-	background-color: #d7d7d7;
+	background-color: #1c1b17;
 }
 
 .section-padding {
@@ -1082,7 +1082,12 @@ blockquote .small, blockquote footer, blockquote small {
     display: block;
 }
 .video-content {
-    margin-bottom: 110px;
+    margin-bottom: 90px;
+}
+.video-more {
+    font-size: 18px;
+    font-weight: 500;
+    color: #474747;
 }
 .video-content iframe{
     margin:auto;
@@ -1309,7 +1314,7 @@ h4.spaced + p{
     width: 280px;
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
-    margin-top: 80px;
+    margin-top: 90px;
     margin-bottom: 0px;
 }
 .graphic-buttons .btn:after {
@@ -1325,6 +1330,10 @@ h4.spaced + p{
     color: #fff;
     background: #55caf5;
 }
+.fond-page .video-wrapper {
+    background: #1c1b17;
+    height: calc(100vh - 150px);
+}
 .video-wrapper {
     background-image: url(../images/btf/13.png);
     background-size: cover;
@@ -1333,13 +1342,13 @@ h4.spaced + p{
     height: 100%;
 }
 .video-wrapper:before {
-    content:'';
-    left:0;
-    top:0;
+    content: '';
+    left: 0;
+    top: 0;
     position: absolute;
     height: 100%;
-    width:100%;
-    background-color: rgba(71, 71, 71, 0.61);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
 }
 .promo-descr {
     position: absolute;
@@ -1620,7 +1629,7 @@ h4.spaced + p{
 }
 
 .index-wrapper {
-    margin-bottom: 80px;
+    margin-bottom: 90px;
 }
 .our-projects-item {
     width: 100%;
@@ -2745,7 +2754,7 @@ figure.snip0016:hover figcaption::before {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     margin-top: 15px;
-    margin-bottom: 50px;
+/*    margin-bottom: 50px;*/
 }
 .news-category {
     position: absolute;
@@ -2844,9 +2853,7 @@ figure.snip0016:hover figcaption::before {
     text-align: left;
     color: #474747;
 }
-.inv-our-company {
-    margin-bottom: 95px;
-}
+
 .about-team {
     text-align: left;
     font-size: 16px;
@@ -2946,7 +2953,7 @@ figure.snip0016:hover figcaption::before {
     left: 0;
 }
 .inv-our-company {
-    margin-bottom: 85px;
+    margin-bottom: 80px;
 }
 .inv-products .products-item {
     position: relative;
@@ -2973,7 +2980,10 @@ figure.snip0016:hover figcaption::before {
 }
 .col-xs-12 h2 {
     position: relative;
+    text-transform: none;
     display: inline-block;
+    font-weight: bold;
+    color: #1c1b17;
 }
 /*.col-xs-12 h2:before {
     content: '';
@@ -3034,6 +3044,166 @@ figure p {
 .navbar .container {
     overflow: hidden;
 }
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+figure.snip0058 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 220px;
+  max-width: 310px;
+  max-height: 220px;
+  width: 100%;
+  background: #000000;
+}
+figure.snip0058 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip0058 > img {
+  opacity: 1;
+  width: 100%;
+  filter: blur(0px);
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+figure.snip0058 figcaption {
+  left: 30px;
+  margin-bottom: -52px;
+  position: absolute;
+  right: 30px;
+  text-align: left;
+  bottom: 100%;
+  -webkit-transition: bottom 0.35s;
+  transition: bottom 0.35s;
+}
+figure.snip0058 figcaption h2 {
+  width: 100%;
+  text-align: left;
+  border-radius: 0 0 5px 5px;
+  margin: 0;
+  padding: 15px 20px;
+  font-size: 1.1em;
+  bottom: 0;
+  font-weight: 300;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background-color: #000000;
+  position: relative;
+  z-index: 1;
+}
+figure.snip0058 figcaption h2 span {
+  font-weight: 800;
+}
+figure.snip0058 figcaption p {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  margin: 0;
+  font-size: 0.9em;
+  min-height: 220px;
+}
+figure.snip0058 figcaption p span {
+  padding: 15px 20px;
+  position: absolute;
+  bottom: 0;
+}
+figure.snip0058 figcaption .icons {
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+figure.snip0058 figcaption .icons i {
+  font-size: 23px;
+  padding: 4px;
+  color: #ffffff;
+  opacity: 1;
+  position: relative;
+  bottom: -90px;
+  opacity: 0;
+  -webkit-transition: bottom 0.35s, opacity 0.35s;
+  transition: bottom 0.35s, opacity 0.35s;
+}
+figure.snip0058 figcaption .icons a:first-child i {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip0058 figcaption .icons a:nth-child(2) i {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+figure.snip0058 figcaption .icons a:nth-child(3) i {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+figure.snip0058:after {
+  position: absolute;
+  display: block;
+  bottom: -15px;
+  height: 15px;
+  right: 30px;
+  left: 30px;
+  border-radius: 5px 5px 0 0;
+  background-color: #000000;
+  z-index: 2;
+  content: '';
+  -webkit-transition: bottom 0.35s;
+  transition: bottom 0.35s;
+}
+figure.snip0058.blue:after,
+figure.snip0058.blue h2 {
+  background: #20638f;
+}
+figure.snip0058.red:after,
+figure.snip0058.red h2 {
+  background: #962d22;
+}
+figure.snip0058.yellow:after,
+figure.snip0058.yellow h2 {
+  background: #bf6516;
+}
+figure.snip0058.green:after,
+figure.snip0058.green h2 {
+  background: #1e8449;
+}
+figure.snip0058 a {
+  opacity: 0.7;
+}
+figure.snip0058 a:hover {
+  opacity: 1;
+}
+figure.snip0058:hover > img,
+figure.snip0058.hover > img {
+  opacity: 0.5;
+  filter: blur(5px);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+figure.snip0058:hover figcaption,
+figure.snip0058.hover figcaption {
+  bottom: 115px;
+}
+figure.snip0058:hover figcaption .icons i,
+figure.snip0058.hover figcaption .icons i {
+  opacity: 1;
+  bottom: -41px;
+}
+figure.snip0058:hover figcaption::before,
+figure.snip0058.hover figcaption::before {
+  opacity: 0.8;
+}
+figure.snip0058:hover:after,
+figure.snip0058.hover:after {
+  bottom: 0;
+}
+
 /* =Media Queries
 
 -------------------------------------------------------------- */

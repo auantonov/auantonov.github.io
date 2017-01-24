@@ -30,7 +30,7 @@
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" title="main-css">
 	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">  
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
 	<link rel="stylesheet" type="text/css" href="css/vladimir.css"/>
@@ -49,7 +49,7 @@
 				<div class="top-menu-left-section pull-left">
 					<span>Курс <span id='rubbtc'></span> руб. / BTC</span>
 					<span>Курс <span>927.57</span> $ / BTC</span>
-				
+
 				</div>
 				<div class="top-menu-right-section pull-right">
 					<div class="languages">
@@ -311,9 +311,13 @@
 						<div class="blockchain-stories-item-img">
 							<img src="images/btf/stories-3.gif" alt="">
 						</div>
-						<div class="blockchain-stories-item-descr">
+						<div class="wrapper">
+							<section class="text-container gradient">
+								<p class="blockchain-stories-item-descr">
 							WINGS - первая социальная краудсейл платформа, в основе которой объединены приципы блохчейн технологии и машинного обучения. Платформа позволяет разработчикам и командам выдвигать проект на рассмотрение участников сообщества, владельцев токенов wings. Во время голосования, участники могут предлагать изменения и улучшения проекта, что делает его более привлекательным для потенциальных инвесторов. Предложения будут ранжироваться, что позволит автоматически продвигать наиболее успешные проекты и опускать в конец списка заявки низкого качества. По окончанию голосования, предложение формируется в полноценное ДАО. Инициализируется процесс сбора средств для реализации проекта, после чего часть токенов выпущенных ДАО распределяется между участниками голосования. Принимать участие в голосовании и становлении проекта могут создатели заявок, и члены сообщества, данный механизм взаимодействия стимулирует отбирать предложения с наивысшим потенциалом. Огромное внимание команда проекта уделила безопастности умных контрактов и собранных средств, защите от sybil атак и спама. Для ее достижениям применяется ряд инноваций, таких как: формальная верификация кода контракта, применение функционального программирования и создание резервных протоколов. Платформа создана для первоначального сбора средств и подготовки отчётности, предоставляя участникам инструменты для совместного принятия ключевых решений. Проекты представленные на площадке смогут получить маркетинговую поддержку, усиленное внимание со стороны сообщества и инвесторов.
-						</div>
+						</section>
+						<button class="show-btn fa fa-chevron-down"></button>
+					</div>
 					</div>
 				</div>
 				<div class="col-md-6 masonry-item">
@@ -471,7 +475,7 @@
 		$grid.imagesLoaded().progress( function() {
 		  $grid.masonry();
 		  $(window).resize();
-		});  
+		});
 
 		$('.navbar-toggle').click(function(){
 			$('.collapse').toggle();

@@ -30,6 +30,7 @@
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" title="main-css">
 	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">  
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
 	<link rel="stylesheet" type="text/css" href="css/vladimir.css"/>
@@ -47,6 +48,7 @@
 			<div class="container">
 				<div class="top-menu-left-section pull-left">
 					<span>Курс <span id='rubbtc'></span> руб. / BTC</span>
+					<span>Курс <span>927.57</span> $ / BTC</span>
 				
 				</div>
 				<div class="top-menu-right-section pull-right">
@@ -292,9 +294,15 @@
 						<div class="blockchain-stories-item-img">
 							<img src="images/btf/stories-1.gif" alt="">
 						</div>
-						<div class="blockchain-stories-item-descr">
+<!-- 						<div class="blockchain-stories-item-descr">
 							Golem Projekt - децентрализованный и масштабируемый рынок вычислительных мощностей.
 Платформа объединяет вычислительную мощность машин - участников сети, и позволяет арендовать ее для реализации огромного спектра задач. Бизнес, криптография и наука, финансовые институты, далеко не полный список сфер применения Golem Projekt. Разработчики могут развернуть проект на базе Golem и внедрить свою схему монетизации, что делает платформу еще более ривлекательной для пользователей и инвесторов.
+						</div> -->
+						<div class="wrapper">
+							<section class="text-container gradient">
+								<p class="blockchain-stories-item-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend, velit quis porta lacinia, massa nibh imperdiet tellus, in pharetra lacus risus ac justo. Integer consequat massa vitae ex lacinia, nec vestibulum felis facilisis. Sed orci arcu, consectetur sed elit at, scelerisque faucibus arcu. Nam id porta ipsum. Vivamus nunc magna, mollis ac aliquam elementum, tempor in diam. Donec semper nisi a nisi scelerisque, quis placerat neque condimentum. Cras venenatis non tortor eu varius. Maecenas at libero arcu. Donec dictum vulputate augue eget tincidunt. Nam at lobortis metus, in tempus quam. Proin vitae sapien eu leo tristique viverra. Proin sit amet ante id turpis tempor pulvinar. In imperdiet, felis a dignissim fringilla, nibh quam posuere massa, aliquam semper lacus lectus in tellus. Praesent venenatis quis sapien nec aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend, velit quis porta lacinia, massa nibh imperdiet tellus, in pharetra lacus risus ac justo.  </p>
+							</section>
+							<button class="show-btn fa fa-chevron-down"></button>
 						</div>
 					</div>
 				</div>
@@ -439,10 +447,11 @@
 			slidesToScroll: 1,
 			infinite: true,
 			speed: 2000,
-			autoplay: true,
+			autoplay: false,
   			autoplaySpeed: 2000,
 			// fade: true,
-			cssEase: 'linear'
+			cssEase: 'linear',
+			dots: true
 		});
 
 		// $('.masonry-wrap').masonry({
@@ -470,6 +479,11 @@
 
 		$.getJSON("https://buygazprom.com/rateslocal.php",function(d){
 			$("#rubbtc").html(d.RUB.avg_1h);
+		});
+
+		$('.show-btn').click(function() {
+				$('.text-container').toggleClass("show");
+				$(this).toggleClass("rotate");
 		});
 	});
 	</script>

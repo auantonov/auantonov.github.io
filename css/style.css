@@ -52,7 +52,7 @@ span.divider-center {
 }
 
 span.divider-dark {
-	background-color: #1c1b17;
+	background-color: #474747;
 }
 
 .section-padding {
@@ -225,8 +225,8 @@ a:focus {
     text-transform: none;
 }
 h2 {
-    font-size: 36px;
-    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 1.1;
 }
 .h5, h5 {
     font-size: 16px;
@@ -1088,6 +1088,7 @@ blockquote .small, blockquote footer, blockquote small {
     font-size: 18px;
     font-weight: 500;
     color: #474747;
+    font-family: 'Open Sans', sans-serif;
 }
 .video-content iframe{
     margin:auto;
@@ -1131,14 +1132,18 @@ blockquote .small, blockquote footer, blockquote small {
 }
 
 .top-menu-left-section {
-    width: 300px;
+    width: 355px;
     display: flex;
     justify-content: space-between;
     color: #474747;
     padding-top: 15px;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 400;
 }
+.top-menu-left-section span span {
+    font-weight: bold
+}
+
 
 .languages {
     position: relative;
@@ -2572,7 +2577,7 @@ figure.snip0016:hover figcaption::before {
     margin-bottom: 30px;
 }
 .blockchain-comments {
-    width:700px;
+    width:1000px;
     margin:auto;
     margin-bottom: 90px;
 }
@@ -2608,14 +2613,15 @@ figure.snip0016:hover figcaption::before {
 ._ava-3 {
     background-position: 213px -207px;
 }
-.slide-comment-descr{
+.slide-comment-descr {
     line-height: 1.6;
     color: #474747;
-    font-size: 13px;
+    font-size: 16px;
     font-family: 'Open Sans', sans-serif;
-    width: 63%;
+    width: 71%;
     font-weight: 500;
 }
+
 .slide-comment-link{
     position: absolute;
     right: 30px;
@@ -2623,8 +2629,11 @@ figure.snip0016:hover figcaption::before {
     font-weight: 500;
     text-decoration: underline;
 }
-#slider-2 button {
+#slider-2 .slick-arrow{
     display: none!important;
+}
+#slider-2 .slick-dots li button:before {
+    font-size: 16px;
 }
 .blockchain {
     font-size: 15px;
@@ -2641,8 +2650,8 @@ figure.snip0016:hover figcaption::before {
     line-height: 1.6;
     margin-bottom: 30px;
     font-family: 'Open Sans', sans-serif;
-    color: #ffffff;
-    background: #474747;
+    color: #000000;
+    overflow: hidden;
     padding: 30px 35px;
     padding-bottom: 45px;
 }
@@ -2691,6 +2700,7 @@ figure.snip0016:hover figcaption::before {
 .promo h1, #typed {
     font-size: 30px;
     color: white;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     line-height: 1.6;
 }
@@ -2982,8 +2992,6 @@ figure.snip0016:hover figcaption::before {
     position: relative;
     text-transform: none;
     display: inline-block;
-    font-weight: bold;
-    color: #1c1b17;
 }
 /*.col-xs-12 h2:before {
     content: '';
@@ -3204,6 +3212,63 @@ figure.snip0058.hover:after {
   bottom: 0;
 }
 
+
+.wrapper {
+    background-color: #fff;
+    margin: 0 auto;
+    position: relative;
+}
+
+.text-container {
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.75rem;
+    max-height: 200px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    z-index: 1111111;
+    transition: max-height .5s ease;
+}
+.text-container.show {
+    max-height: 2000px;
+    z-index: 11111111111;
+    background: #fff;
+    position: relative;
+}
+
+.gradient::before {
+    content:'';  height:150px; position:absolute; bottom:0px; left:0; width:100%; background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 70%); transition:height .25s ease;
+}
+.show.gradient::before { height:50px;}
+
+.show-btn {
+    box-shadow: 0 2px 5px rgba(0,0,0,.6);
+    background-color: #55caf5;
+    border: none;
+    border-radius: 100%;
+    bottom: 20px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 11111111111;
+    outline: none;
+    height: 40px;
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    transition: background-color .25s ease;
+    width: 40px;
+    font-size: 20px;
+}
+
+.show-btn:hover {
+    background-color: #474747;
+}
+
+.show-btn.fa.rotate {
+    transform: rotate(180deg);
+/*    z-index: 11111111111;
+    position: relative;*/
+ }
 /* =Media Queries
 
 -------------------------------------------------------------- */

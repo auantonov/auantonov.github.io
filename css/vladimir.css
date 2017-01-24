@@ -48,26 +48,6 @@
     transition: color 0.2s ease 0s;
     color: rgba(255,255,255,.7);
 }
-.b-footer a:before {
-    display: block;
-    content: '';
-    width: 8px;
-    height: 8px;
-    background: url(../images/main_6.min.svg) -118px -113px no-repeat;
-    position: absolute;
-    left: 19px;
-    top: 22px;
-    -webkit-transition: transform .25s ease-in-out;
-    transition: transform .25s ease-in-out;
-    }    
-}
-
-.b-footer a:hover:before {
-
-    width: 7px;
-    -webkit-transform: scale(2.1,2.1);
-    transform: scale(2.1,2.1);
-}
 
 .b-footer__logo {
     width: 210px;

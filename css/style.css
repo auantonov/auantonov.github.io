@@ -2506,8 +2506,10 @@ figure.snip0016:hover figcaption::before {
 .slide-descr {
     margin-top: 20px;
     margin-bottom: 100px;
-    font-weight: 500;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
     color: #474747;
+    text-align: center;
     line-height: 1.6;
     font-size: 18px;
 }
@@ -2538,7 +2540,7 @@ figure.snip0016:hover figcaption::before {
     margin: auto;
 }
 .blockchain-slider .slick-dots {
-    bottom: 251px;
+    bottom: 285px;
     z-index: 111111;
 }
 .blockchain-slider .slick-dots li.slick-active button:before {

@@ -150,7 +150,9 @@
         font-size: 18px;
     }
     h2 {
-        font-size: 25px;
+        font-size: 28px;
+        line-height: 1.2em;
+        padding: 0 40px;
     }
     .video-wrapper {
         background-image: none;
@@ -167,9 +169,6 @@
     .b-footer__bottom ul li, .language-switch-footer li, .b-footer__copyright {
         display: block;
         margin: 0 0 5px 0;
-    }
-    h2 {
-        font-size: 22px;
     }
     .video-more {
         font-size: 15px;}

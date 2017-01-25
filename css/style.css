@@ -1608,12 +1608,12 @@ h4.spaced + p{
 }
 
 .industry-list-news-item {
-    align-items: flex-start;
     margin-bottom: 30px;
     height: 500px;
 }
 .industry-list-news-item img {
     width: 100%;
+    height: auto;
 }
 .industry-list-news-item h2{
     font-size: 26px;
@@ -3485,6 +3485,9 @@ figure.snip0058.hover:after {
     .industry-news .subscribe {
         text-align: right;
     }
+    .industry-list-news-item {
+        height: auto;
+    }
 }
 @media (max-width:767px) {
     .text-center-xs { text-align:center; }
@@ -3510,6 +3513,10 @@ figure.snip0058.hover:after {
     .navbar-spacing-top-static { padding-bottom: 0; }
     .menu-wrapper { 
         top: -1px;
+    }
+    .industry-news .subscribe {
+        text-align: left;
+        margin-bottom: 20px;
     }
 }
 

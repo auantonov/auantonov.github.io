@@ -105,84 +105,7 @@
     background-color: rgba(0, 0, 0, .3);
 }
 
-.def-tabs > li > a {
-    padding: 10px 15px;
-    margin: 0 2px 0 0;
-}
-.industry-other-news-item:hover img {
-    transform: scale(1.25);
-}
 
-.industry-other-news-item img {
-    transition: all 0.4s ease 0s;
-}
-
-.events-item__img {
-    display: block;
-    height: 100px;
-    width: 100px;
-    margin: 0 20px 16px 0;
-    float: left;
-}
-
-.industry-list-news-item__img {
-    position: relative;
-    overflow: hidden;
-    display: block;
-}
-
-.industry-list-news-item__img img {
-    transition: all 0.4s ease 0s;
-}
-
-.industry-list-news-item__img:hover img {
-    transform: scale(1.25);
-}
-
-.single-news-item__cat {
-    color: #fff;
-    left: 20px;
-    position: absolute;
-    top: 20px;
-    z-index: 111;
-}
-
-.single-news-item__cat .cat {
-    border: 2px solid #fff;
-    border-radius: 3px;
-    padding: 5px 20px;
-    margin-right: 15px;
-}
-
-.single-news-item {
-    display: block;
-    overflow: hidden;
-}
-
-.single-news-item img {
-    transition: all 0.4s ease 0s;
-}
-
-.single-news-item:hover img {
-    transform: scale(1.25);
-}
-
-.single-news-item img {
-    max-width:100%;
-    height: auto;
-}
-
-.industry-news-item .news_title{
-    bottom: 0px;
-    color: white;
-    left: 30px;
-    font-size: 33px;
-    z-index: 111;
-    position: absolute;
-    line-height: 1.3;
-    margin-right: 30px;
-    margin-bottom: 25px;
-}
 
 @media (max-width: 1200px) {
     .inv-our-company .snip0016 {
@@ -231,7 +154,6 @@
     h2 {
         font-size: 28px;
         line-height: 1.2em;
-        padding: 0 40px;
     }
     .video-wrapper {
         background-image: none;

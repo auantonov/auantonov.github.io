@@ -1392,7 +1392,6 @@ h4.spaced + p{
 
 .single-news{
     padding-top: 20px;
-    padding-bottom: 60px;
 }
 
 .single-news-item h1{
@@ -1482,6 +1481,7 @@ h4.spaced + p{
     padding: 10px 15px;
     margin-right: 10px;
     font-weight: 500;
+    border: 3px solid #ccc;
 }
 .other-news-bottom-descr {
     font-size: 17px;
@@ -1534,6 +1534,7 @@ h4.spaced + p{
     position: relative;
     overflow: hidden;
     display: block;
+    margin-bottom: 60px;
 }
 .industry-news-item:before,
 .industry-other-news-item:before{
@@ -1567,9 +1568,6 @@ h4.spaced + p{
 .industry-news-item h1 a:hover {
     text-decoration: none;
 }
-.industry-other-news{
-    margin-bottom: 60px;
-}
 .industry-news .subscribe {
     margin: 0px;
 }
@@ -1582,11 +1580,13 @@ h4.spaced + p{
 }
 .industry-news .tags-cont {
     margin-bottom: 20px;
-    float: left;
+    float: none;
     margin-top: 0px;
 }
 .industry-other-news-item img {
     width: 100%;
+    height: auto;
+    display: block;
 }
 .industry-other-news-item span{
     position: absolute;

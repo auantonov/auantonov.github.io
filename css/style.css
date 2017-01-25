@@ -3709,6 +3709,9 @@ figure.snip0058.hover:after {
     .industry-list-news-item {
         height: auto;
     }
+    .events {
+        margin-bottom: 44px;
+    }
 }
 @media (max-width:767px) {
     .text-center-xs { text-align:center; }
@@ -3738,6 +3741,12 @@ figure.snip0058.hover:after {
     .industry-news .subscribe {
         text-align: left;
         margin-bottom: 20px;
+    }
+    html .industry-news-item .news_title {
+        font-size: 20px;
+    }
+    .tags-cont a {
+        margin-bottom: 10px;
     }
 }
 

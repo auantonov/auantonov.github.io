@@ -169,8 +169,8 @@
 		</div>
 		<div class="inv-grid-items mb40">
 			<div class="container">
-				<div class="row">
-					<div class="inv-grid-item">
+			
+<!-- 					<div class="inv-grid-item">
 						<div class="col-md-6">
 							<div class="inv-grid-item-header">
 								<i></i>
@@ -257,8 +257,77 @@
 								<p>Изучаем технологическая архитектура проекта. Алгоритм консенсуса. Каким образом работает сама архитектура согласования решений, каковы её перспективы при масштабировании. Насколько проект вписывается в существующие разработки, есть ли пересечения и какие новые решения  авторы проекта готовы предложить. Не делают ли они лишнюю работу, реализуя какие-то процессы ради самой реализации, насколько основатели проекта следят за происходящим в индустрии и есть ли понятная технологическая ниша и т.п.</p>
 							</div>
 						</div>
-					</div>
-				</div>
+					</div> -->
+
+				<div class="row">
+				                <div class="col-lg-12">
+				                    <ul class="timeline">
+				                        <li>
+				                            <div class="timeline-image">
+				                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
+				                            </div>
+				                            <div class="timeline-panel">
+				                                <div class="timeline-heading">
+				                                    <h4>2009-2011</h4>
+				                                    <h4 class="subheading">Our Humble Beginnings</h4>
+				                                </div>
+				                                <div class="timeline-body">
+				                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+				                                </div>
+				                            </div>
+				                        </li>
+				                        <li class="timeline-inverted">
+				                            <div class="timeline-image">
+				                                <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+				                            </div>
+				                            <div class="timeline-panel">
+				                                <div class="timeline-heading">
+				                                    <h4>March 2011</h4>
+				                                    <h4 class="subheading">An Agency is Born</h4>
+				                                </div>
+				                                <div class="timeline-body">
+				                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+				                                </div>
+				                            </div>
+				                        </li>
+				                        <li>
+				                            <div class="timeline-image">
+				                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+				                            </div>
+				                            <div class="timeline-panel">
+				                                <div class="timeline-heading">
+				                                    <h4>December 2012</h4>
+				                                    <h4 class="subheading">Transition to Full Service</h4>
+				                                </div>
+				                                <div class="timeline-body">
+				                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+				                                </div>
+				                            </div>
+				                        </li>
+				                        <li class="timeline-inverted">
+				                            <div class="timeline-image">
+				                                <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
+				                            </div>
+				                            <div class="timeline-panel">
+				                                <div class="timeline-heading">
+				                                    <h4>July 2014</h4>
+				                                    <h4 class="subheading">Phase Two Expansion</h4>
+				                                </div>
+				                                <div class="timeline-body">
+				                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+				                                </div>
+				                            </div>
+				                        </li>
+				                        <li class="timeline-inverted">
+				                            <div class="timeline-image">
+				                                <h4>Be Part
+				                                    <br>Of Our
+				                                    <br>Story!</h4>
+				                            </div>
+				                        </li>
+				                    </ul>
+				                </div>
+				            </div>
 			</div>
 		</div>
 		<!--<div class="inv-grid-items inv-assets">-->
@@ -1262,46 +1331,6 @@
 				// - Noel Delgado | @pixelia_me
 				$.getJSON("https://buygazprom.com/rateslocal.php",function(d){
 					$("#rubbtc").html(d.RUB.avg_1h);
-				});
-
-				var nodes  = document.querySelectorAll('li'),
-				    _nodes = [].slice.call(nodes, 0);
-
-				var getDirection = function (ev, obj) {
-				    var w = obj.offsetWidth,
-				        h = obj.offsetHeight,
-				        x = (ev.pageX - obj.offsetLeft - (w / 2) * (w > h ? (h / w) : 1)),
-				        y = (ev.pageY - obj.offsetTop - (h / 2) * (h > w ? (w / h) : 1)),
-				        d = Math.round( Math.atan2(y, x) / 1.57079633 + 5 ) % 4;
-
-				    return d;
-				};
-
-				var addClass = function ( ev, obj, state ) {
-				    var direction = getDirection( ev, obj ),
-				        class_suffix = "";
-
-				    obj.className = "";
-
-				    switch ( direction ) {
-				        case 0 : class_suffix = '-top';    break;
-				        case 1 : class_suffix = '-right';  break;
-				        case 2 : class_suffix = '-bottom'; break;
-				        case 3 : class_suffix = '-left';   break;
-				    }
-
-				    obj.classList.add( state + class_suffix );
-				};
-
-				// bind events
-				_nodes.forEach(function (el) {
-				    el.addEventListener('mouseover', function (ev) {
-				        addClass( ev, this, 'in' );
-				    }, false);
-
-				    el.addEventListener('mouseout', function (ev) {
-				        addClass( ev, this, 'out' );
-				    }, false);
 				});
 
 	    		$(document).ready(function() {

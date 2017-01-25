@@ -209,6 +209,9 @@
     h2 {
         font-size: 30px;
     }
+    html .industry-list-news-item {
+        height: auto;
+    }
 }
 
 @media (max-width:768px) {

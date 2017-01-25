@@ -3730,7 +3730,7 @@ figure.snip0058.hover:after {
     .industry-news .subscribe {
         text-align: right;
     }
-    .industry-list-news-item {
+    html .industry-list-news-item {
         height: auto;
     }
     .events {

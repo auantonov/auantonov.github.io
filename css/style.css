@@ -2749,10 +2749,12 @@ figure.snip0016:hover figcaption::before {
     opacity: 0;
 }
 .token {
-    margin-top: 60px;
-    margin-bottom: 70px;
+    margin-top: 0;
+    margin-bottom: 35px;
 }
-
+.blockchain-reg {
+    margin-top: -70px;
+}
 .blurred-bg{
   background-image:url("../img/main.jpg");
   background-repeat:no-repeat;
@@ -2887,15 +2889,18 @@ figure.snip0016:hover figcaption::before {
 
 /* investment */
 .inv-our-company p,
-.inv-products p {
-    line-height: 1.5;
-    margin-bottom: 30px;
+.inv-products p, .inv-p {
     font-size: 16px;
-    font-weight: 300;
     text-align: left;
-    color: #474747;
+    line-height: 1.6;
+    font-family: "Roboto", sans-serif;
+    color: rgba(0,0,0,0.71);
+    font-weight: 400;
+    margin-bottom: 30px;
 }
-
+.inv-p {
+    margin-bottom: 0;
+}
 .about-team {
     text-align: left;
     font-size: 16px;
@@ -2995,14 +3000,14 @@ figure.snip0016:hover figcaption::before {
     left: 0;
 }
 .inv-our-company {
-    margin-bottom: 80px;
+    margin-bottom: 90px;
 }
 .inv-products .products-item {
     position: relative;
 }
 .inv-products .products-item h2 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 24px;
+    font-size: 26px;
     text-align: center;
     text-transform: none;
     position: relative;
@@ -3011,6 +3016,9 @@ figure.snip0016:hover figcaption::before {
     margin-bottom: 15px;
     transform: translate(-50%,-50%);
     top: -5px;
+}
+.inv-products p{
+    margin-bottom: 50px;
 }
 .inv-products .products-item p {
     font-family: 'Open Sans', sans-serif;
@@ -3472,6 +3480,22 @@ figure.snip0058.hover:after {
      float: right;
      text-align: left;
      padding: 0 30px 20px 20px;
+ }
+
+ .timeline:before {
+     top: 0;
+     bottom: 0;
+     position: absolute;
+     content: "";
+     width: 2px;
+     background-color: #f1f1f1;
+     left: 40px;
+     margin-left: -1.5px;
+ }
+
+ @media (min-width: 768px) {
+ .timeline:before {
+     left: 50%;
  }
 
 /* =Media Queries

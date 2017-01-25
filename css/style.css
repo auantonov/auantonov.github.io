@@ -1728,7 +1728,6 @@ h4.spaced + p{
     margin-bottom: 30px;
 }
 .index-news .industry-list-news-item {
-    height: calc(555px / 2);
     overflow: hidden;
     margin-bottom: 15px;
 }

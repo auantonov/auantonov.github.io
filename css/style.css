@@ -1232,8 +1232,8 @@ h4.spaced + p{
     margin-bottom: 10px;
 }
 .contact-info {
-    padding-top: 100px;
     background: #fff;
+    padding-bottom: 60px;
 }
 .partners {
     display: flex;
@@ -1262,7 +1262,7 @@ h4.spaced + p{
 
 .vacancy {
     margin-top: 80px;
-    margin-bottom: 90px;
+    margin-bottom: 60px;
 }
 .vacancy-item {
     display: flex;

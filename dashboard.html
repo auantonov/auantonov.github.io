@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Управление - Federal Finance Fund">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <link rel="shortcut icon" href="assets/img/logo-fav.png">
-    <title>Управление - Federal Finance Fund</title>
+    <title>Управление</title>
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -33,7 +34,7 @@
   		<div class="container">
   			<div class="top-menu-left-section pull-left">
   				<span>Курс <span id='rubbtc'></span> руб. / BTC</span>
-
+ 
   			</div>
   			<div class="top-menu-right-section pull-right">
   				<div class="languages">
@@ -126,9 +127,13 @@
 			<button type="button" class="regb btn btn-primary btn-lg" style='display:none;float:right' data-toggle="modal" data-target="#myModal">
 			Регистрация
 			</button>
-
-               <h4>Инвестиционные паи (<span id='myeth'>loading</span>)</h4>
-
+			
+			<button type="button" onclick='window.localStorage.removeItem("isuser");window.localStorage.removeItem("myprivate");window.location.reload();' class="bexit exitb btn btn-primary btn-lg" style='display:none;float:right'>
+			Выход
+			</button>
+			
+               <h4>Паи которыми вы владеете</h4>
+				Ваш публичный ключ: <span id='myeth'>loading</span>
 					  <table class="table table-striped table-borderless">
 						<thead>
 						  <tr>
@@ -250,14 +255,14 @@
 									</div>
 
 									<div >
-										Это приблизительно:
+										Это примерно:
 										<span id='priceinrub'>??</span> руб.
 									</div>
 
 
 
 								<div class="total">
-										<p><Br>Какое количество токенов пая приобрести?</p>
+										<p><Br>Сколько паев купить?</p>
 										<input type="number" onkeyup='recalc_buy();$("#showafterrecalc").show();' class="form-control" placeholder='введите число и ниже покажется расчет в биткоинах и рублях' id='kupit' value=''>
 
 								</div>
@@ -265,11 +270,11 @@
 
 								<div style='display:none' id='showafterrecalc'>
 
-										<span>Для покупки <b id='sk'>???</b> токенов пая <span id='pr'>??</span> вам необходимо перевести <span id='inbtc'></span> BTC (это приблизительно ~ <b id='inrub'>80 000</b> рублей) <br> Переведите биткоины и нажмите кнопку.</span>
+										<span>Для покупки <b id='sk'>???</b> токенов проекта <span id='pr'>??</span> вам необходимо пересевти <span id='inbtc'></span> BTC (это примерно ~ <b id='inrub'>80 000</b> рублей, переведите биткоины на этот адрес и нажмите кнопку "Перевести")</span>
 
 										<p>Адрес для перечисления биткойнов:</p>
 										<span>14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span>
-										<button type="button" class="btn btn-primary btn-lg">Я перевел биткойны.</button>
+										<button type="button" class="btn btn-primary btn-lg">Я перевел</button>
 
 								</div>
 
@@ -309,7 +314,7 @@
 								</div>
 								<div class="line">
 									<div class="line-address">
-										<p>Проверье Ваш адрес, на него поступят биткойны:</p>
+										<p>Адрес для перечисления биткойнов:</p>
 										<span>14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span>
 										<button type="button" class="btn btn-primary btn-lg">Отправить</button>
 									</div>
@@ -465,6 +470,9 @@
             <label for="email" class="control-label">Email*:</label>
             <input class="form-control" type='email' required id='email1' name="email">
           </div>
+		  
+		<input type='hidden' name='openkey' class='form-control' value=''>
+		<input type='hidden' name='privkey' class='form-control' value=''>
 
 		  <div class="form-group">
             <label for="email" class="control-label">Пароль*:</label>
@@ -501,15 +509,14 @@
 
 			 function reg() {
 					$("#firstpage").val(localStorage.getItem("firstpage"));
-					$.post( "https://reg.bigtime.fund/", $( "#regform" ).serialize() ,function(d){
-						$("#xd").html(d);
-					});
+					
+					
 					$("#regform").hide();
 
 					$("#regresult").show();
 
-					localStorage.setItem("isuser",1);
-
+					
+					
 
 					$("#ulogin").html($("#email1").val().replace(/<\/?[^>]+>/gi, ''));
 					$("#upass").html($("#pass1").val().replace(/<\/?[^>]+>/gi, ''));
@@ -535,9 +542,26 @@
 				Вы можете хранить свой приватный ключ самостоятельно (желательно на бумаге в сейфе), либо положиться на нашу зашифрованную базу данных. Помните, что если вы храните его самостоятельно, у нас не будет возможности вернуть вам доступ к вашим токенам в случае потери вами ключа. Никаким способом, даже зная вас лично, у нас не будет возможности восстановить доступ к активам, если ключ будет утерян.
 			</div>
 			<div class="reg-result-buttons"><!-- $("#mymodal").modal('hide'); -->
-				<button class="btn btn-primary btn-lg" onclick='$.post("https://reg.bigtime.fund/?a=savepriv",{open:localStorage.getItem("myethaddress"),priv:localStorage.getItem("myprivate")});$("#myModal").modal("toggle");alert("ключ отправлен в хранилище");window.location.reload();'>Хранить ключ на сервере</button>
-				<button class="btn btn-primary btn-lg" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?'))$('#mymodal').modal('toggle')">Хранить ключ самостоятельно</button>
+				<button class="btn btn-primary btn-lg" onclick='sendreg(1);$("#myModal").modal("toggle");alert("ключ отправлен в хранилище");window.location.reload();'>Хранить ключ на сервере</button>
+				<button class="btn btn-primary btn-lg" onclick="sendreg(0);if(confirm('Вы уверены, что сохранили приватный ключ?'))$('#mymodal').modal('toggle')">Хранить ключ самостоятельно</button>
 			</div>
+			<script>
+				function sendreg(saveprivate) {
+				
+					$("input[name=openkey]").val(localStorage.getItem("myethaddress"));
+					
+					if (saveprivate == 1) {
+						$("input[name=privkey]").val(localStorage.getItem("myprivate"));
+					}
+					
+					$.post("https://reg.bigtime.com/",$("#regform").serialize(),function(d){
+						alert(d);
+					});
+					
+					localStorage.setItem("isuser",1)
+					
+				}
+			</script>
 		</div>
 
       </div>
@@ -554,64 +578,64 @@
 
 	</div>
 
-	<div class="b-footer">
-		<div class="container">
-			<div class="row b-footer__top">
-				<div class="col-md-3 col-sm-3 col-xs-6">
-					<a href="#"><img class="b-footer__logo" src="images/logo-footer.png" alt=""></a>
-				</div>
-				<div class="col-md-2 col-sm-2 col-xs-6">
-					<ul>
-						<li class="header">Фонд</li>
-						<li><a href="https://app.xapo.com/#dashboard/buy">Инвестиции</a></li>
-						<li><a href="/card/">Команда</a></li>
-						<li><a href="/institutions/">Контакты</a></li>
-						<li><a href="http://developers.xapo.com">Вакансии</a></li>
-					</ul>
-				</div>
-				<div class="col-md-2 col-sm-2 col-xs-6">
-					<ul>
-						<li class="header">Блокчейн</li>
-						<li><a href="/security/">Технология</a></li>
-						<li><a href="/brand/">Новости</a></li>
-						<li><a href="/terms/">Мероприятия</a></li>
-						<li><a href="/terms/">Терминология</a></li>
-					</ul>
-				</div>
-				<div class="col-md-2 col-sm-2 col-xs-6">
-					<ul>
-						<li class="header">Управление</li>
-						<li><a href="http://support.xapo.com/what-is-bitcoin">Купить паи</a></li>
-						<li><a href="http://support.xapo.com">Помощь</a></li>
-					</ul>
-				</div>
-				<div class="col-md-2 col-sm-2 col-xs-6">
-					<ul>
-						<li class="header">Соцсети</li>
-						<li><a href="https://blog.xapo.com">Youtube</a></li>
-						<li><a class="fb" href="https://www.facebook.com/xapoapp"> Facebook </a></li>
-						<li><a class="tw" href="https://twitter.com/xapo"> Twitter </a></li>
-						<li><a class="yt" href="https://www.youtube.com/channel/UC4MCNbUPZxhq1p6jZoCeUUA"> Instagram </a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="row b-footer__bottom">
-				<div class="col-md-3">
-					<ul>
-						<li><a href="/privacy/">Политика конфиденциальности</a></li>
-					</ul>
-				</div>
-				<div class="col-md-9 text-right">
-					<ul class="language-switch language-switch-footer">
-						<li class="active"><a class="active" href="/">Русский</a></li>
-						<li><a class="" href="/es">English</a></li>
-						<li> <a class="" href="/pt">Chinese</a></li>
-					</ul>
-					<span class="b-footer__copyright">&copy; 2017 Federal Finance Fund</span>
-				</div>
-			</div>
-		</div>
-	</div><!-- .b-footer -->
+  <div class="b-footer">
+	  <div class="container">
+		  <div class="row b-footer__top">
+			  <div class="col-md-3 col-sm-3 col-xs-6">
+				  <a href="#"><img class="b-footer__logo" src="images/logo-footer.png" alt=""></a>
+			  </div>
+			  <div class="col-md-2 col-sm-2 col-xs-6">
+				  <ul>
+					  <li class="header">Products</li>
+					  <li><a href="https://app.xapo.com/#dashboard/buy">Buy Bitcoins</a></li>
+					  <li><a href="/card/">Debit Card</a></li>
+					  <li><a href="/institutions/">Institutions</a></li>
+					  <li><a href="http://developers.xapo.com">Developers</a></li>
+				  </ul>
+			  </div>
+			  <div class="col-md-2 col-sm-2 col-xs-6">
+				  <ul>
+					  <li class="header">About Xapo</li>
+					  <li><a href="/security/">Security</a></li>
+					  <li><a href="/brand/">Brand</a></li>
+					  <li><a href="/terms/">Terms of Use</a></li>
+				  </ul>
+			  </div>
+			  <div class="col-md-2 col-sm-2 col-xs-6">
+				  <ul>
+					  <li class="header">Help Center</li>
+					  <li><a href="http://support.xapo.com/what-is-bitcoin">What is Bitcoin</a></li>
+					  <li><a href="http://support.xapo.com">FAQ</a></li>
+				  </ul>
+			  </div>
+			  <div class="col-md-2 col-sm-2 col-xs-6">
+				  <ul>
+					  <li class="header">Social</li>
+					  <li><a href="https://blog.xapo.com">Blog</a></li>
+					  <li><a class="fb" href="https://www.facebook.com/xapoapp"> Facebook </a></li>
+					  <li><a class="tw" href="https://twitter.com/xapo"> Twitter </a></li>
+					  <li><a class="yt" href="https://www.youtube.com/channel/UC4MCNbUPZxhq1p6jZoCeUUA"> Youtube </a></li>
+				  </ul>
+			  </div>
+		  </div>
+		  <div class="row b-footer__bottom">
+			  <div class="col-md-3">
+				  <ul>
+					  <li><a href="/terms/">Terms of Use</a></li>
+					  <li><a href="/privacy/">Privacy</a></li>
+				  </ul>
+			  </div>
+			  <div class="col-md-9 text-right">
+				  <ul class="language-switch language-switch-footer">
+					  <li class="active"><a class="active" href="/">English</a></li>
+					  <li><a class="" href="/es">Español</a></li>
+					  <li> <a class="" href="/pt">Português</a></li>
+				  </ul>
+				  <span class="b-footer__copyright">&copy; 2017 Federal Finance Fund</span>
+			  </div>
+		  </div>
+	  </div>
+  </div><!-- .b-footer -->
 
 	 <link rel="stylesheet" type="text/css" href="css/alertify.min.css"/>
 
@@ -621,7 +645,8 @@
 	var cur,price;
 	function bundle_loaded() {
 		if (localStorage.getItem("isuser")!=1) $(".regb").show();
-
+		if (localStorage.getItem("isuser") == 1) $(".bexit").show();
+		
 		if (typeof bundle != "undefined" && typeof bundle.Main != "undefined" && typeof bundle.Main.createAccount != "undefined") {
 			myeth = localStorage.getItem('myethaddress');
 			//alert(myeth);
@@ -632,6 +657,7 @@
 				localStorage.setItem("myethaddress",reg.address);
 				localStorage.setItem("myprivate",reg.privateKey);
 				myeth = reg.address;
+				
 			}
 			$("#myeth").html(myeth);
 

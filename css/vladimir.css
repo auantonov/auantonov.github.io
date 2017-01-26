@@ -219,6 +219,9 @@
         width: 100%;
         padding: 0 10px;
     }
+    .slick-prev, .slick-next {
+        position: static;
+    }
 }
 
 @media (max-width:768px) {

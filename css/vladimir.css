@@ -216,11 +216,7 @@
         height: auto;
     }
     .blockchain-slider {
-        width: 100%;
-        padding: 0 10px;
-    }
-    .slick-prev, .slick-next {
-        position: static;
+        width: 70%;
     }
 }
 
@@ -249,6 +245,19 @@
     }
     .video-wrapper {
         background-image: none;
+    }
+    .blockchain-slider {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .slick-next {
+        right: 0;
+    }
+    .slick-prev {
+        left: 0;
+    }
+    .slick-prev:before, .slick-next:before {
+        font-size: 40px;
     }
 }
 

@@ -10,7 +10,7 @@
 	<!-- <link href="css/royal_preloader.css" rel="stylesheet"> -->
 
 	<!-- jQuery Files -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 	<!-- Royal Preloader -->
 <!-- 	<script type="text/javascript" src="js/royal_preloader.min.js"></script> -->
@@ -28,6 +28,7 @@
 	<link href="css/pe-icon-7-stroke.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" title="main-css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
 	<link rel="stylesheet" type="text/css" href="css/vladimir.css"/>
@@ -132,7 +133,10 @@
 	<!-- End Header -->
 
 	<!-- Begin About -->
-	<section class="video-wrapper index-wrapper investment-bg">
+
+
+	<section class="video-wrapper index-wrapper" class="parallax-window" data-parallax="scroll" data-image-src="images/foto/04.jpg">
+
 		<div class="type-wrap">
 		  <div id="typed-strings">
 		  <h1 class="typed-h1"><span class="name">Federal Finance Fund отличается</span></h1>
@@ -1274,14 +1278,17 @@
 							<li><a href="http://support.xapo.com">Помощь</a></li>
 						</ul>
 					</div>
-					<div class="col-md-2 col-sm-2 col-xs-6">
-						<ul>
+					<div class="col-md-3 col-sm-2 col-xs-6">
+						<ul class="soc-buttons">
 							<li class="header">Соцсети</li>
-							<li><a href="https://blog.xapo.com">Youtube</a></li>
-							<li><a class="fb" href="https://www.facebook.com/xapoapp"> Facebook </a></li>
-							<li><a class="tw" href="https://twitter.com/xapo"> Twitter </a></li>
-							<li><a class="yt" href="https://www.youtube.com/channel/UC4MCNbUPZxhq1p6jZoCeUUA"> Instagram </a></li>
+							<li class="soc-items"><a href="https://blog.xapo.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+							<li class="soc-items"><a class="fb" href="https://www.facebook.com/xapoapp"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li class="soc-items"><a class="tw" href="https://twitter.com/xapo"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li class="soc-items"><a class="yt" href="https://www.youtube.com/channel/UC4MCNbUPZxhq1p6jZoCeUUA"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li class="soc-items"><a class="vk" href=""><i class="fa fa-vk" aria-hidden="true"></i></a></li>	
 						</ul>
+						<input type="text" placeholder="Подписаться на новости" class="subscribe-input">
+						<button class="subscribe-btn">submit</button>
 					</div>
 				</div>
 				<div class="row b-footer__bottom">
@@ -1321,8 +1328,10 @@
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 	<script type="text/javascript" src="js/scrollreveal.min.js"></script> -->
 	<!-- <script type="text/javascript" src="js/main.js"></script> -->
+
 	<script src="js/typed.js"></script>
 	<script src="js/highstock.js"></script>
+	<script src="js/parallax.min.js"></script>
 	<script type="text/javascript">
 
 
@@ -1366,39 +1375,39 @@
 	    			//promo fade in
 	    			$('.promo-descr').addClass('fade-IN');
 
-	    			//map init
-	    		    var pos1 = new google.maps.LatLng(18.520266, 73.856406),
-	    		        pos2 = new google.maps.LatLng(28.579943, 77.330006),
+	    		// 	//map init
+	    		//     var pos1 = new google.maps.LatLng(18.520266, 73.856406),
+	    		//         pos2 = new google.maps.LatLng(28.579943, 77.330006),
 
-	    		        option1 = {
-	    		            zoom: 17,
-	    		            center: pos1,
-	    		            mapTypeId: google.maps.MapTypeId.ROADMAP,
-	    		            styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
-	    		        },
+	    		//         option1 = {
+	    		//             zoom: 17,
+	    		//             center: pos1,
+	    		//             mapTypeId: google.maps.MapTypeId.ROADMAP,
+	    		//             styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
+	    		//         },
 
-	    		        option2 = {
-	    		            zoom: 16,
-	    		            center: pos2,
-	    		            mapTypeId: google.maps.MapTypeId.ROADMAP,
-	    		            styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
-	    		        },
+	    		//         option2 = {
+	    		//             zoom: 16,
+	    		//             center: pos2,
+	    		//             mapTypeId: google.maps.MapTypeId.ROADMAP,
+	    		//             styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
+	    		//         },
 
-	    		        //map1 = new google.maps.Map(document.getElementById("map1"), option1),
-	    		        //map2 = new google.maps.Map(document.getElementById("map2"), option2),
+	    		//         //map1 = new google.maps.Map(document.getElementById("map1"), option1),
+	    		//         //map2 = new google.maps.Map(document.getElementById("map2"), option2),
 
-	    		        myMarker = new google.maps.Marker({
-	    		            position: pos1,
-	    		            map: map1,
-	    		            title: "Pune"
-	    		        }),
+	    		//         myMarker = new google.maps.Marker({
+	    		//             position: pos1,
+	    		//             map: map1,
+	    		//             title: "Pune"
+	    		//         }),
 
-	    		        myMarker2 = new google.maps.Marker({
-	    		            position: pos2,
-	    		            map: map2,
-	    		            title: "Noida"
-	    		        });
-	    		     // end map init
+	    		//         myMarker2 = new google.maps.Marker({
+	    		//             position: pos2,
+	    		//             map: map2,
+	    		//             title: "Noida"
+	    		//         });
+	    		//      // end map init
 
 
 	    		});

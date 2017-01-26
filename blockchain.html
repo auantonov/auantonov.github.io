@@ -497,8 +497,11 @@
 		});
 
 		$('.show-btn').click(function() {
-				$('.text-container').toggleClass("show");
-				$(this).toggleClass("rotate");
+			$(this).siblings('.text-container').toggleClass("show");
+			$(this).toggleClass("rotate");
+			// $(this).parents('.masonry-item').siblings().toggleClass('opacity-all');
+			$(this).parents('.masonry-item').siblings().find('.text-container').removeClass('show');
+			$(this).parents('.masonry-item').siblings().find('.show-btn').removeClass('rotate');
 		});
 	});
 	</script>

@@ -269,6 +269,9 @@
     .slick-prev:before, .slick-next:before {
         font-size: 30px;
     }
+    .slide-descr {
+        margin-top: 15px;
+    }
 }
 
 @media (max-width:600px) {

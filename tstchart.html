@@ -47,17 +47,19 @@
 							ret = new Array();
 	
 							arr.forEach(function(item, i, arr) {
-							  console.log(item);
+							 // console.log(item);
 							 
 							  ret[i] = {
 								 x : item.x,
-								 y : item.y/arr[0].y*100-100
+								 y : item.y/arr[0].y*100-100,
+								 z : item.y
 							  }
 							  //alert( i + ": " + item + " (массив:" + arr + ")" );
 							});
-							console.log(ret);
+							//console.log(ret);
 							return ret;
 						}
+						
 						$('.chart2').highcharts({
 									
 									title: {
@@ -92,8 +94,9 @@
 											var s = '<b>'+(date.getUTCDate())+"."+(date.getUTCMonth() + 1)+"."+(date.getUTCFullYear())+'</b>';
 											//console.log(this);
 											$.each(this.points, function () {
+											//console.log(this);
 												s += '<br/>' + this.series.name + ': ' +
-													this.y;
+													nf(this.point.z);
 											});
 
 											return s;
@@ -187,6 +190,14 @@
 						$.getJSON("https://buygazprom.com/rateslocal.php",function(d){
 							$("#rubbtc").html(d.RUB.avg_1h);
 						});
+						
+						
+						function nf(num) {
+							var p = num.toFixed(2).split(".");
+							return p[0].split("").reverse().reduce(function(acc, num, i, orig) {
+								return  num=="-" ? acc : num + (i && !(i % 3) ? " " : "") + acc;
+							}, "") + "." + p[1];
+						}
 					  </script>
 </body>
 </html>

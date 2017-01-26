@@ -261,5 +261,10 @@
         margin: 0 0 5px 0;
     }
     .video-more {
-        font-size: 15px;}
+        font-size: 15px;
+    }
+    .slide-descr {
+        font-size: 16px;
+        font-weight: 400;
+    }
 }

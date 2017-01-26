@@ -2526,25 +2526,6 @@ figure.snip0016:hover figcaption::before {
 .blockchain-slider {
     position: relative;
 }
-.blockchain-slider:before,
-.blockchain-slider:after{
-    background: #fff;
-    content: '';
-    z-index: 111;
-    position: absolute;
-    width: 100%;
-}
-.blockchain-slider:before {
-    top: 0;
-    left: 0;
-    height: 60px;
-}
-.blockchain-slider:after {
-    top: 501px;
-    left: 0px;
-    height: 30px;
-    background: #ffffff;
-}
 .blockchain-slider {
     width: 750px;
     height: calc(100vh - 152px);

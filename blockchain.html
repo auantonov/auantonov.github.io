@@ -443,21 +443,25 @@
 
 		$('#slider-1').slick({
 			infinite: true,
-			infinite: true,
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			infinite: true,
 			speed: 1000,
 			fade: true,
 			cssEase: 'linear',
-			dots: true
-
+			dots: true,
+			responsive: [
+				{
+					breakpoint: 993,
+					settings: {
+						dots: false
+					}
+				}
+			]
 		});
 		$('#slider-2').slick({
 			infinite: true,
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			infinite: true,
 			speed: 1000,
 			autoplay: true,
   			autoplaySpeed: 5000,

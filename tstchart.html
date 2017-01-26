@@ -95,8 +95,8 @@
 											//console.log(this);
 											$.each(this.points, function () {
 											//console.log(this);
-												s += '<br/>' + this.series.name + ': ' +
-													nf(this.point.z);
+												s += '<br/>' +
+													nf(this.point.z) + " " + this.series.name;
 											});
 
 											return s;

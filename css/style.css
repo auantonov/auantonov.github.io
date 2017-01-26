@@ -235,7 +235,6 @@ h2 {
 .paragraph-logo {
     font-size: 24px;
     color: #474747;
-    
     display: inline-block;
     height: 52px;
     text-align: center;
@@ -247,9 +246,14 @@ h2 {
 }
 .lead-rolla {
     font-size: 16px;
-    color: #474747;
+    text-align: left;
     line-height: 1.6;
+    font-family: "Roboto", sans-serif;
+    color: rgba(0,0,0,0.71);
+    font-weight: 400;
+    margin-bottom: 30px;
 }
+
 
 .lead-sm {
     font-size: 18px;
@@ -257,6 +261,22 @@ h2 {
 
 .lead {
     font-weight: 200;
+}
+
+.intro-font p {
+    font-size: 30px;
+    color: #474747;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.leftReveal h3 {
+    font-size: 26px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
 }
 
 .heading-1 {
@@ -366,7 +386,7 @@ h2 {
     padding-top: 50px;
 }
 
-.navbar-switch {
+/*.navbar-switch {
     padding-top: 0;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -376,7 +396,7 @@ h2 {
     -webkit-box-shadow: -1px 4px 18px -3px rgba(0,0,0,0.07);
     -moz-box-shadow: -1px 4px 18px -3px rgba(0,0,0,0.07);
     box-shadow: -1px 4px 18px -3px rgba(0,0,0,0.07);
-}
+}*/
 
 .navbar-toggle {
     margin-top: 23px;
@@ -1250,14 +1270,6 @@ h4.spaced + p{
     align-items: center;
     display: flex;
     justify-content: center;
-}
-.intro-font {
-    font-size: 21px;
-}
-.intro-font p {
-    margin-bottom: 20px;
-    font-size: 25px;
-    line-height: 1.6;
 }
 
 .vacancy {
@@ -3380,14 +3392,14 @@ figure.snip0058.hover:after {
     float: right;
     font-size: 14px;
     position: relative;
-    background: #55caf5;
+    background: #bbbbb9;
     color: #fff;
     -webkit-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
     font-weight: 400;
 }
 .subscribe-btn:hover {
-    background: rgba(85, 202, 245, 0.85);;
+    background: rgba(187, 187, 185, 0.68);
 }
 .soc-items {
      display: inline-block;

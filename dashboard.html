@@ -128,7 +128,7 @@
 			Регистрация
 			</button>
 			
-			<button type="button" onclick='window.localStorage.removeItem("isuser");window.localStorage.removeItem("myprivate");window.location.reload();' class="bexit exitb btn btn-primary btn-lg" style='display:none;float:right'>
+			<button type="button" onclick='window.localStorage.removeItem("isuser");window.localStorage.removeItem("myprivate");window.localStorage.removeItem("myethaddress");window.location.reload();' class="bexit exitb btn btn-primary btn-lg" style='display:none;float:right'>
 			Выход
 			</button>
 			
@@ -539,11 +539,11 @@
 			</div>
 			<div class="reg-result-info">
 				<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-				Вы можете хранить свой приватный ключ самостоятельно (желательно на бумаге в сейфе), либо положиться на нашу зашифрованную базу данных. Помните, что если вы храните его самостоятельно, у нас не будет возможности вернуть вам доступ к вашим токенам в случае потери вами ключа. Никаким способом, даже зная вас лично, у нас не будет возможности восстановить доступ к активам, если ключ будет утерян.
+				Вы можете хранить свой приватный ключ самостоятельно (желательно на бумаге в сейфе), либо положиться на нашу базу данных. Помните, что если вы храните его самостоятельно, у нас не будет возможности вернуть вам доступ к вашим токенам в случае потери вами ключа. Никаким способом, даже зная вас лично, у нас не будет возможности восстановить доступ к активам, если ключ будет утерян.
 			</div>
 			<div class="reg-result-buttons"><!-- $("#mymodal").modal('hide'); -->
-				<button class="btn btn-primary btn-lg" onclick='sendreg(1);$("#myModal").modal("toggle");alert("ключ отправлен в хранилище");window.location.reload();'>Хранить ключ на сервере</button>
-				<button class="btn btn-primary btn-lg" onclick="sendreg(0);if(confirm('Вы уверены, что сохранили приватный ключ?'))$('#mymodal').modal('toggle')">Хранить ключ самостоятельно</button>
+				<button class="btn btn-primary btn-lg" onclick='$(this).prop("disabled",true);sendreg(1);'>Хранить ключ на сервере</button>
+				<button class="btn btn-primary btn-lg" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?')){ $(this).prop('disabled',true);sendreg(0); }">Хранить ключ самостоятельно</button>
 			</div>
 			<script>
 				function sendreg(saveprivate) {
@@ -552,13 +552,18 @@
 					
 					if (saveprivate == 1) {
 						$("input[name=privkey]").val(localStorage.getItem("myprivate"));
+					} else {
+						$("input[name=privkey]").val("ключ хранит сам");
 					}
 					
-					$.post("https://reg.bigtime.com/",$("#regform").serialize(),function(d){
-						alert(d);
+					$.post("https://reg.bigtime.fund/",$("#regform").serialize(),function(d){
+						//alert(d);
+						localStorage.setItem("isuser",1);
+						$('#mymodal').modal('toggle');
+						window.location.reload();
 					});
 					
-					localStorage.setItem("isuser",1)
+					
 					
 				}
 			</script>
@@ -656,11 +661,13 @@
 				console.log(reg);
 				localStorage.setItem("myethaddress",reg.address);
 				localStorage.setItem("myprivate",reg.privateKey);
+				//alert(reg.privateKey);
 				myeth = reg.address;
 				
 			}
 			$("#myeth").html(myeth);
-
+			if (localStorage.getItem("isuser")!=1) $("#myeth").html("неизвестен");
+			
 			$('tr.pie').each(function (index, value) {
 			  cur = $(this).attr('data-ticker');
 

@@ -184,6 +184,9 @@
     margin-bottom: 25px;
 }
 
+.investment-bg {
+    background-image: url("../images/btf/14.png");
+}
 
 
 @media (max-width: 1200px) {

@@ -3004,9 +3004,7 @@ figure.snip0016:hover figcaption::before {
     font-weight: 400;
     margin-top: 10px;
 }
-figure p {
-    color: white!important;
-}
+
 .token table {
     font-family: 'Open Sans', sans-serif;
 }
@@ -3105,7 +3103,7 @@ figure.snip0058 figcaption p {
   background-color: rgba(255, 255, 255, 0.9);
   color: #000;
   margin: 0;
-  font-size: 0.9em;
+  font-size: 0.7em;
   min-height: 220px;
 }
 figure.snip0058 figcaption p span {

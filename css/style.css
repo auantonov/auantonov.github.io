@@ -443,7 +443,6 @@ h2 {
     color: #474747;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    text-align: center;
     line-height: 1.6;
     margin-bottom: 30px;
 }
@@ -1436,9 +1435,12 @@ h4.spaced {
 }
 
 h4.spaced+p {
-    line-height: 27px;
-    font-size: 15px;
-    margin-top: 25px;
+	  line-height: 1.7;
+	  font-size: 14px;
+	  font-family: 'Open Sans', sans-serif;
+	  margin-top: 20px;
+	  color: #474747;
+	  font-weight: 500;
 }
 
 .spaced-text {

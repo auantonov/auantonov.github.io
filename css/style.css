@@ -1,3 +1,4 @@
+
 /*
 Name:Rolla | Minimal Portfolio Template
 Version:1.0
@@ -13,12 +14,10 @@ body {
 	font-size: 16px;
 	color: #8e8e8e;
 	height: 100%;
-    padding-top: 80px;
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
-    font-weight: 300;
+  padding-top: 80px;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  font-weight: 300;
 	min-height: 100% !important;
 }
 
@@ -583,7 +582,7 @@ h2 {
 }
 
 .btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
-    color: #fff;   
+    color: #fff;
     background-color: #5c5c5c;
     border-color: #5c5c5c;
 }
@@ -671,11 +670,11 @@ h2 {
     font-size: 32px;
 }
 
-.carousel-control.right { 
+.carousel-control.right {
     background-image: none;
 }
 
-.carousel-control.left { 
+.carousel-control.left {
     background-image: none;
 }
 
@@ -824,7 +823,7 @@ blockquote {
 blockquote .small, blockquote footer, blockquote small {
     font-size: 70%;
     color: #474747;
-    
+
     font-weight: 400;
     text-transform: uppercase;
 }
@@ -953,7 +952,7 @@ blockquote .small, blockquote footer, blockquote small {
 }
 
 .badge {
-    
+
     padding: 4px 4px;
     font-size: 12px;
     font-weight: 300;
@@ -1024,7 +1023,7 @@ blockquote .small, blockquote footer, blockquote small {
 
 /* =Contact
 -------------------------------------------------------------- */
-#map { 
+#map {
     height: 400px;
 }
 .map > div {
@@ -1926,11 +1925,11 @@ input[type=checkbox] + label:before {
     font-size: 13px;
     text-decoration: underline;
 }
-.history-table.table>tbody>tr>td, 
-.history-table.table>tbody>tr>th, 
-.history-table.table>tfoot>tr>td, 
-.history-table.table>tfoot>tr>th, 
-.history-table.table>thead>tr>td, 
+.history-table.table>tbody>tr>td,
+.history-table.table>tbody>tr>th,
+.history-table.table>tfoot>tr>td,
+.history-table.table>tfoot>tr>th,
+.history-table.table>thead>tr>td,
 .history-table.table>thead>tr>th {
     border: 1px solid #474747!important;
     color: #474747;
@@ -2387,7 +2386,7 @@ input[type=checkbox] + label:before {
     transform: scale(0.8);
 }
 .project-11 img {
-    
+
 }
 .project-12 img {
     transform: scale(0.8);
@@ -2849,7 +2848,7 @@ figure.snip0016:hover figcaption::before {
     position: relative;
 }
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
-     color: #fff; 
+     color: #fff;
     background-color: transparent;
 }
 /*.black-line {
@@ -3441,19 +3440,22 @@ figure.snip0058.hover:after {
 }
 
  @media (min-width: 768px) {
- .timeline>li {
-     margin-bottom: 100px;
-     min-height: 100px;
+   .timeline>li {
+       margin-bottom: 100px;
+       min-height: 100px;
+   }
  }
 
  @media (min-width: 992px) {
- .timeline>li {
-     min-height: 150px;
+   .timeline>li {
+       min-height: 150px;
+   }
  }
 
  @media (min-width: 1200px) {
- .timeline>li {
-     min-height: 170px;
+   .timeline>li {
+       min-height: 170px;
+   }
  }
 
  .timeline>li .timeline-image {
@@ -3470,25 +3472,27 @@ figure.snip0058.hover:after {
      text-align: center;
  }
  @media (min-width: 768px) {
- .timeline>li .timeline-image {
-     width: 100px;
-     height: 100px;
-     left: 50%;
-     margin-left: -50px;
+   .timeline>li .timeline-image {
+       width: 100px;
+       height: 100px;
+       left: 50%;
+       margin-left: -50px;
+   }
  }
 
  @media (min-width: 992px) {
- .timeline>li .timeline-image {
-     width: 150px;
-     height: 150px;
-     margin-left: -75px;
- }
-
+   .timeline>li .timeline-image {
+       width: 150px;
+       height: 150px;
+       margin-left: -75px;
+   }
+}
  @media (min-width: 1200px) {
- .timeline>li .timeline-image {
-     width: 170px;
-     height: 170px;
-     margin-left: -85px;
+   .timeline>li .timeline-image {
+       width: 170px;
+       height: 170px;
+       margin-left: -85px;
+   }
  }
 
  .timeline>li .timeline-panel {
@@ -3499,19 +3503,22 @@ figure.snip0058.hover:after {
      text-align: left;
  }
  @media (min-width: 768px) {
- .timeline>li .timeline-panel {
-     width: 41%;
-     float: left;
-     padding: 0 20px 20px 30px;
-     text-align: right;
+   .timeline>li .timeline-panel {
+       width: 41%;
+       float: left;
+       padding: 0 20px 20px 30px;
+       text-align: right;
+   }
  }
  @media (min-width: 992px) {
- .timeline>li .timeline-panel, .timeline>li.timeline-inverted>.timeline-panel {
-     padding: 0 20px 20px;
+   .timeline>li .timeline-panel, .timeline>li.timeline-inverted>.timeline-panel {
+       padding: 0 20px 20px;
+   }
  }
   @media (min-width: 1200px) {
- .timeline>li .timeline-panel {
-     padding: 0 20px 20px 100px;
+   .timeline>li .timeline-panel {
+       padding: 0 20px 20px 100px;
+   }
  }
 
  .timeline>li.timeline-inverted>.timeline-panel {
@@ -3521,13 +3528,15 @@ figure.snip0058.hover:after {
  }
 
  @media (min-width: 1200px) {
- .timeline>li.timeline-inverted>.timeline-panel {
-     padding: 0 100px 20px 20px;
+   .timeline>li.timeline-inverted>.timeline-panel {
+       padding: 0 100px 20px 20px;
+   }
  }
- 
+
  @media (min-width: 992px) {
- .timeline>li .timeline-panel, .timeline>li.timeline-inverted>.timeline-panel {
-     padding: 0 20px 20px;
+   .timeline>li .timeline-panel, .timeline>li.timeline-inverted>.timeline-panel {
+       padding: 0 20px 20px;
+   }
  }
 
  @media (min-width: 768px) {
@@ -3630,7 +3639,7 @@ figure.snip0058.hover:after {
     .navbar-default .navbar-toggle .icon-bar {
         background-color: #474747;
     }
-    .navbar-default .navbar-toggle:focus, 
+    .navbar-default .navbar-toggle:focus,
     .navbar-default .navbar-toggle:hover {
         background-color: transparent;
         border-color: transparent;
@@ -3737,7 +3746,7 @@ figure.snip0058.hover:after {
         transform: rotate(45deg);
         left: 31px;
     }
-    .menu-wrapper .navbar-toggle:after, 
+    .menu-wrapper .navbar-toggle:after,
     .menu-wrapper .navbar-toggle:before {
         display: block;
         content: '';
@@ -3817,7 +3826,7 @@ figure.snip0058.hover:after {
     #carousel-top-transparent .carousel-control, #carousel-top-image .carousel-control { width:50px }
     .top-content-carousel { padding: 0 40px; border-left: 0; }
     .navbar-spacing-top-static { padding-bottom: 0; }
-    .menu-wrapper { 
+    .menu-wrapper {
         top: -1px;
     }
     .industry-news .subscribe {

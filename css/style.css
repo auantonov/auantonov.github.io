@@ -3317,7 +3317,7 @@ figure.snip0058.hover:after {
      content: attr(data-text);
      position: absolute;
      width: 100%;
-     height: 50%;
+     height: 51%;
      left: 0;
      font-weight: 700;
      background: #fff;

@@ -2572,7 +2572,8 @@ figure.snip0016:hover figcaption::before {
     margin-top: 15px;
 }
 .blockchain-slider .slick-dots {
-    bottom: 187px;
+    bottom: auto;
+    top: 480px;
     z-index: 111111;
 }
 .blockchain-slider .slick-dots li.slick-active button:before {

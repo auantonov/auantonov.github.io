@@ -188,6 +188,14 @@
     background-image: url("../images/btf/14.png");
 }
 
+.token table th {
+    white-space: nowrap;
+}
+
+.slick-prev, .slick-next {
+    top: 250px;
+}
+
 
 @media (max-width: 1200px) {
     .inv-our-company {

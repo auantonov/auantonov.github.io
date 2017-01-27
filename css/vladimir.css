@@ -221,6 +221,18 @@
     .blockchain-comments {
         width: 100%;
     }
+    .graphic {
+        margin-bottom: 40px;
+    }
+    ul.language-switch-footer, .b-footer__copyright {
+        display: block;
+        text-align: right;
+        margin-bottom: 0;
+    }
+    .b-footer__bottom ul li {
+        margin-right: 0;
+        margin-left: 10px;
+    }
 }
 
 @media (max-width:768px) {
@@ -272,6 +284,16 @@
     .slide-descr {
         margin-top: 15px;
     }
+    .b-footer ul {
+        margin-bottom: 35px;
+        text-align: center;
+    }
+    .b-footer__bottom ul li {
+        margin: 0 10px;
+    }
+    .b-footer__copyright {
+        text-align: center;
+    }
 }
 
 @media (max-width:600px) {
@@ -280,10 +302,6 @@
     }
     .language-switch-footer {
         display: block;
-    }
-    .b-footer__bottom ul li, .language-switch-footer li, .b-footer__copyright {
-        display: block;
-        margin: 0 0 5px 0;
     }
     .video-more {
         font-size: 15px;

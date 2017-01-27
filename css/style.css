@@ -2356,24 +2356,31 @@ input[type=checkbox] + label:before {
 }
 .project-1 img {
     transform: scale(0.8);
+    margin-top: 105px;
 }
 .project-2 img {
     transform: scale(1.3);
+    margin-top: 57px;
 }
 .project-4 img{
     transform: scale(0.8);
+    margin-top: 85px;
 }
 .project-3 img{
     transform: scale(0.66);
+    margin-top: 90px;
 }
 .project-5 img {
     transform: scale(0.5);
+
 }
 .project-6 img {
     transform: scale(0.64);
+    margin-top: 37px;
 }
 .project-7 img {
     transform: scale(0.5);
+    margin-top: 65px;
 }
 
 .project-8 img {
@@ -2381,32 +2388,53 @@ input[type=checkbox] + label:before {
 }
 .project-9 img {
     transform: scale(1);
+    margin-top: 28px;
 }
 .project-10 img {
     transform: scale(0.8);
+    margin-top: 85px;
 }
 .project-11 img {
-
+    margin-top: 35px;
 }
 .project-12 img {
     transform: scale(0.8);
+    margin-top: 58px;
+}
+/*figure {*/
+    /*background: #fff;*/
+    /*display: flex;*/
+    /*height: 272px;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*width: 272px;*/
+/*}*/
+/*figure.snip0016 {*/
+  /*color: #fff;*/
+  /*border: 3px solid #474747;*/
+  /*position: relative;*/
+  /*float: left;*/
+  /*overflow: hidden;*/
+  /*margin: 10px 10px;*/
+  /*text-align: left;*/
+/*}*/
+.b-logo-partners {
+    font-size: 0;
 }
 figure {
     background: #fff;
-    display: flex;
     height: 272px;
-    align-items: center;
-    justify-content: center;
     width: 272px;
+    display: inline-block;
+    justify-content: center;
 }
 figure.snip0016 {
-  color: #fff;
-  border: 3px solid #474747;
-  position: relative;
-  float: left;
-  overflow: hidden;
-  margin: 10px 10px;
-  text-align: left;
+    overflow: hidden;
+    text-align: left;
+    margin: 10px;
+    position: relative;
+    color: #fff;
+    border: 3px solid #474747;
 }
 figure h2 {
     color: white;
@@ -2427,7 +2455,7 @@ figure.snip0016 figcaption {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 30px 3em;
+  padding: 30px;
   width: 100%;
   height: 100%;
 }
@@ -2496,6 +2524,7 @@ figure.snip0016 figcaption p {
 }
 figure.snip0016:hover figcaption p {
     opacity: 0.9;
+    color: #fff;
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     font-size: 15px;

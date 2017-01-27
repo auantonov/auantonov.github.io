@@ -875,17 +875,6 @@
 				    obj.classList.add( state + class_suffix );
 				};
 
-				// bind events
-				_nodes.forEach(function (el) {
-				    el.addEventListener('mouseover', function (ev) {
-				        addClass( ev, this, 'in' );
-				    }, false);
-
-				    el.addEventListener('mouseout', function (ev) {
-				        addClass( ev, this, 'out' );
-				    }, false);
-				});
-
 	    		$(document).ready(function() {
 
 

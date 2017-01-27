@@ -1282,7 +1282,7 @@ blockquote .small, blockquote footer, blockquote small {
 }
 
 #contact-information {
-    padding: 100px 0 0;
+	margin-top: 70px;
 }
 
 #contact-information h5 {
@@ -1328,10 +1328,10 @@ blockquote .small, blockquote footer, blockquote small {
 }
 
 .intro {
-    padding-top: 100px;
-    background: #fff;
-    color: #474747;
-    margin-bottom: -25px;
+	 padding-top: 70px;
+	 background: #fff;
+	 color: #474747;
+	 padding-bottom: 90px;
 }
 
 .mt130 {
@@ -1462,6 +1462,10 @@ h4.spaced+p {
     padding-bottom: 0;
 }
 
+#team {
+	margin-top: 90px;
+}
+
 .map {
     width: 100%;
     height: 440px;
@@ -1477,7 +1481,7 @@ h4.spaced+p {
 
 .contact-info {
     background: #fff;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
 }
 
 .partners {
@@ -1499,25 +1503,29 @@ h4.spaced+p {
 }
 
 .vacancy {
-    margin-top: 80px;
-    margin-bottom: 60px;
+    margin-top: 60px;
+    margin-bottom: 90px;
 }
 
 .vacancy-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    height: 140px;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 30px;
+		height: 165px;
 }
 
 .vacancy-item h6 {
-    font-size: 17px;
-    letter-spacing: 0.7px;
+		font-size: 18px;
+		font-family: 'Open Sans', sans-serif;
+		line-height: 1.5;
+		font-weight: 600;
 }
 
 .vacancy-item p {
-    color: #474747;
+		color: #474747;
+		line-height: 1.5;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
 }
 
 .SMI {
@@ -3251,10 +3259,15 @@ figure.snip0016:hover figcaption::before {
 }
 
 .map-content h2 {
-    font-size: 16px;
-    margin-top: -20px;
-    line-height: 1.5;
-    text-transform: initial;
+		font-size: 20px;
+		margin-top: -20px;
+		font-weight: bold;
+		line-height: 1.5;
+		text-transform: initial;
+}
+.map-content span {
+		font-weight: 300;
+		color: #474747;
 }
 
 .promo {

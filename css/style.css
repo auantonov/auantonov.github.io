@@ -620,7 +620,7 @@ h2 {
 }
 
 .dropdown-menu {
-    background-color: #3C3C3C;
+    background-color: #1C1B17;
     border: 1px solid rgba(66, 67, 66, 1);
     border-radius: 0;
     min-width: 150px;
@@ -634,9 +634,9 @@ h2 {
     right: 14px;
     display: inline-block;
     border-right: 7px solid transparent;
-    border-bottom: 7px solid #3c3c3c;
+    border-bottom: 7px solid #1C1B17;
     border-left: 7px solid transparent;
-    border-bottom-color: #3c3c3c;
+    border-bottom-color: #1C1B17;
     content: '';
 }
 
@@ -3674,18 +3674,14 @@ figure.snip0016:hover figcaption::before {
     position: relative;
 }
 
-.menu-wrapper:before {
+.navbar-header:after {
     content: '';
     position: absolute;
     background: #1c1b17;
     top: 26px;
-    left: 210px;
-    width: 100%;
+    left: 223px;
+    width: calc(100% - 240px);
     height: 49px;
-}
-
-.navbar .container {
-    overflow: hidden;
 }
 
 

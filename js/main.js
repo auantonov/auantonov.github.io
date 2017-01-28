@@ -164,11 +164,11 @@ function triggerReveals() {
 }
 
 /* ---- close mobile nav on click ---- */
-$(document).on('click','.navbar-collapse.in',function(e) {
-    if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
-        $(this).collapse('hide');
-    }
-});
+// $(document).on('click','.navbar-collapse.in',function(e) {
+//     if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+//         $(this).collapse('hide');
+//     }
+// });
 
 /* ---- rotater text ---- */
 var current = 1; 
@@ -185,8 +185,8 @@ setInterval(function() {
 }, 2500);
 
 /* ---- nav main link hover dropdown ---- */
-if ( $(window).width() >= 767) {      
-    $('.dropdown').hover(function(){ 
-        $('.dropdown-toggle', this).trigger('click'); 
-    });
-} 
+// if ( $(window).width() >= 767) {
+//     $('.dropdown').hover(function(){
+//         $('.dropdown-toggle', this).trigger('click');
+//     });
+// }

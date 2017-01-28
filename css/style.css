@@ -542,6 +542,10 @@ h2 {
     padding-right: 0;
 }
 
+.nav>li:hover > ul {
+    display: block;
+}
+
 .navbar-default .navbar-nav>li>a:hover:before {
     width: 100%;
 }

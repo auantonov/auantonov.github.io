@@ -248,7 +248,7 @@
     }
     .video-wrapper {
         padding: 30px 15px;
-        height: auto;
+        height: 203px;
         width: 100%;
     }
     .type-wrap {
@@ -338,5 +338,9 @@
     }
     .intro-font p {
         font-size: 16px;
+    }
+    .video-wrapper {
+        padding: 30px 15px;
+        height: 315px;
     }
 }

@@ -323,6 +323,17 @@
     .slide-comment-descr {
         font-size: 14px;
     }
+    .timeline > li .timeline-image {
+        width: 30px;
+        height: 30px;
+        border: 4px solid #f1f1f1;
+    }
+    .timeline > li .timeline-panel {
+        padding-left: 45px;
+    }
+    .timeline:before {
+        left: 16px;
+    }
 }
 
 @media (max-width:500px) {

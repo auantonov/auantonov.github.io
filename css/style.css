@@ -4250,7 +4250,6 @@ a.button {
 .timeline>li.timeline-inverted>.timeline-panel {
     float: right;
     text-align: left;
-    padding: 0 20px 0 100px;
 }
 
 @media (min-width: 1200px) {

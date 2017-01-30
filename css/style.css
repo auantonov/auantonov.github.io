@@ -1489,21 +1489,19 @@ h4.spaced+p {
 }
 
 .partners {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 0;
+    text-align: center;
 }
 
 .partners a {
-    margin-right: 40px;
-    margin-bottom: 40px;
+    margin: 0 20px 40px;
     background: #fff;
-    width: 440px;
+    width: 252px;
     height: 252px;
+    line-height: 252px;
     box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.05);
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    display: inline-block;
+    text-align: center;
 }
 
 .vacancy {
@@ -1512,10 +1510,17 @@ h4.spaced+p {
 }
 
 .vacancy-item {
-		display: flex;
-		justify-content: center;
 		margin-bottom: 30px;
-		height: 165px;
+}
+
+.vacancy-item-img {
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+.vacancy-item-info {
+    padding-left: 90px;
 }
 
 .vacancy-item h6 {

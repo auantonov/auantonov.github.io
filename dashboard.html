@@ -131,15 +131,12 @@
 			<button type="button" onclick='window.localStorage.removeItem("isuser");window.localStorage.removeItem("myprivate");window.localStorage.removeItem("myethaddress");window.location.reload();' class="bexit exitb btn btn-primary btn-lg" style='display:none;float:right'>
 			Выход
 			</button>
-<<<<<<< HEAD
 			
 			<button type="button" class="regb btn btn-primary btn-lg" style='display:none;float:right' data-toggle="modal" data-target="#myModallogin">
 			Вход
 			</button>
 			
-=======
 
->>>>>>> origin/master
                <h4>Паи которыми вы владеете</h4>
 				Ваш публичный ключ: <span id='myeth'>loading</span>
 					  <table class="table table-striped table-borderless">
@@ -598,7 +595,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Регистрация</h4>
+        <h4 class="modal-title" id="myModalLabel">Вход</h4>
       </div>
       <div class="modal-body">
 
@@ -608,8 +605,8 @@
             <input class="form-control" type='email' required id='loginemail' name="email">
           </div>
 		  
-		<input type='hidden' name='openkey' class='form-control' value=''>
-		<input type='hidden' name='privkey' class='form-control' value=''>
+		
+		<input type='hidden' name='login' class='form-control' value='1'>
 
 		  <div class="form-group">
             <label for="email" class="control-label">Пароль*:</label>
@@ -620,21 +617,28 @@
 
          
 		  <input type='hidden' name='firstpage' class='form-control' id='firstpage' value='?'>
-		  <button type="submit" onclick='login();' class="regb btn btn-primary">Вход</button> <a href='#' onclick='alert("Позвоните +7957448298")'>Забыли пароль?</a>
+		  <button type="submit" onclick='login1();' class="regb btn btn-primary">Вход</button> <a href='#' onclick='alert("Позвоните +7957448298")'>Забыли пароль?</a>
 		  <script>
 
-			 function login() {
+			 function login1() {
 			 
 					$.post("https://reg.bigtime.fund/",$("#loginform").serialize(),function(d){
 						//alert(d);
-						localStorage.setItem("isuser",1);
-						//$('#myModallogin').modal('toggle');
+						var obj = $.parseJSON(d);
 						
-						$("#ulogin").html($("#email1").val().replace(/<\/?[^>]+>/gi, ''));
-						$("#upass").html($("#pass1").val().replace(/<\/?[^>]+>/gi, ''));
-
-						$("#xpub").html(localStorage.getItem("myethaddress"));
-						$("#xpriv").html(localStorage.getItem("myprivate"));
+						if (obj.fio) {
+							localStorage.setItem("isuser",1);
+							//$('#myModallogin').modal('toggle');
+							
+							localStorage.setItem("myethaddress",obj.openkey);
+							localStorage.setItem("myprivate",obj.privkey);
+							
+							$("#xpub").html(localStorage.getItem("myethaddress"));
+							$("#xpriv").html(localStorage.getItem("myprivate"));
+							window.location.reload();
+						} else {
+							alert("Пользователь не найден");
+						}
 					});
 					
 					
@@ -674,8 +678,8 @@
 					$.post("https://reg.bigtime.fund/",$("#regform").serialize(),function(d){
 						//alert(d);
 						localStorage.setItem("isuser",1);
-						$('#mymodal').modal('toggle');
-						window.location.reload();
+						//$('#mymodal').modal('toggle');
+						//window.location.reload();
 					});
 					
 					

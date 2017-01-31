@@ -9,6 +9,24 @@
 //     }
 // });
 
+$('.navbar-toggle').unbind('click');
+$('.collapse').unbind('click');
+
+$('.menu-icon').click(function() {
+  $('.overlay').addClass('visible');
+  $('.menu-wrapper').addClass('transform');
+});
+
+$('.closed').click(function() {
+  $('.overlay').removeClass('visible');
+  $('.menu-wrapper').removeClass('transform');
+});
+
+$('.overlay').click(function() {
+  $('.overlay').removeClass('visible');
+  $('.menu-wrapper').removeClass('transform');
+});
+
 function submitForm() {
     var name = $("#name").val();
     var email = $("#email").val();
@@ -171,10 +189,10 @@ function triggerReveals() {
 // });
 
 /* ---- rotater text ---- */
-var current = 1; 
-var height = jQuery('.ticker').height(); 
-var numberDivs = jQuery('.ticker').children().length; 
-var first = jQuery('.ticker h2:nth-child(1)'); 
+var current = 1;
+var height = jQuery('.ticker').height();
+var numberDivs = jQuery('.ticker').children().length;
+var first = jQuery('.ticker h2:nth-child(1)');
 setInterval(function() {
     var number = current * -height;
     first.css('margin-top', number + 'px');

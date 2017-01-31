@@ -34,7 +34,7 @@
   		<div class="container">
   			<div class="top-menu-left-section pull-left">
   				<span>Курс <span id='rubbtc'></span> руб. / BTC</span>
- 
+
   			</div>
   			<div class="top-menu-right-section pull-right">
   				<div class="languages">
@@ -127,11 +127,11 @@
 			<button type="button" class="regb btn btn-primary btn-lg" style='display:none;float:right' data-toggle="modal" data-target="#myModal">
 			Регистрация
 			</button>
-			
+
 			<button type="button" onclick='window.localStorage.removeItem("isuser");window.localStorage.removeItem("myprivate");window.localStorage.removeItem("myethaddress");window.location.reload();' class="bexit exitb btn btn-primary btn-lg" style='display:none;float:right'>
 			Выход
 			</button>
-			
+
                <h4>Паи которыми вы владеете</h4>
 				Ваш публичный ключ: <span id='myeth'>loading</span>
 					  <table class="table table-striped table-borderless">
@@ -353,6 +353,10 @@
 
 								<script>
 
+                $('.firstline').click(function (e) {
+                  alert('1');
+                })
+
 								function send_token(){
 									var options = options || {};
 									var to = $("#poluchatel").val();
@@ -471,7 +475,7 @@
             <label for="email" class="control-label">Email*:</label>
             <input class="form-control" type='email' required id='email1' name="email">
           </div>
-		  
+
 		<input type='hidden' name='openkey' class='form-control' value=''>
 		<input type='hidden' name='privkey' class='form-control' value=''>
 
@@ -510,14 +514,14 @@
 
 			 function reg() {
 					$("#firstpage").val(localStorage.getItem("firstpage"));
-					
-					
+
+
 					$("#regform").hide();
 
 					$("#regresult").show();
 
-					
-					
+
+
 
 					$("#ulogin").html($("#email1").val().replace(/<\/?[^>]+>/gi, ''));
 					$("#upass").html($("#pass1").val().replace(/<\/?[^>]+>/gi, ''));
@@ -548,24 +552,24 @@
 			</div>
 			<script>
 				function sendreg(saveprivate) {
-				
+
 					$("input[name=openkey]").val(localStorage.getItem("myethaddress"));
-					
+
 					if (saveprivate == 1) {
 						$("input[name=privkey]").val(localStorage.getItem("myprivate"));
 					} else {
 						$("input[name=privkey]").val("ключ хранит сам");
 					}
-					
+
 					$.post("https://reg.bigtime.fund/",$("#regform").serialize(),function(d){
 						//alert(d);
 						localStorage.setItem("isuser",1);
 						$('#mymodal').modal('toggle');
 						window.location.reload();
 					});
-					
-					
-					
+
+
+
 				}
 			</script>
 		</div>
@@ -655,7 +659,7 @@
 	function bundle_loaded() {
 		if (localStorage.getItem("isuser")!=1) $(".regb").show();
 		if (localStorage.getItem("isuser") == 1) $(".bexit").show();
-		
+
 		if (typeof bundle != "undefined" && typeof bundle.Main != "undefined" && typeof bundle.Main.createAccount != "undefined") {
 			myeth = localStorage.getItem('myethaddress');
 			//alert(myeth);
@@ -667,11 +671,11 @@
 				localStorage.setItem("myprivate",reg.privateKey);
 				//alert(reg.privateKey);
 				myeth = reg.address;
-				
+
 			}
 			$("#myeth").html(myeth);
 			if (localStorage.getItem("isuser")!=1) $("#myeth").html("неизвестен");
-			
+
 			$('tr.pie').each(function (index, value) {
 			  cur = $(this).attr('data-ticker');
 
@@ -692,7 +696,7 @@
 			});
 
 			$("tr.pie").on("click",function(){
-
+        $(this).addClass('active').siblings().removeClass('active');
 				$("#centru").show();
 
 				cur = $(this).attr('data-ticker');
@@ -738,7 +742,7 @@
 			*/
 
 				setTimeout(function(){
-					$(".firstline").trigger("click");
+					$(".firstline").eq(0).trigger("click");
 					if (localStorage.getItem("isuser") == 1) $(".onlyuser").css("display","block");
 				},500);
 		} else {

@@ -487,23 +487,7 @@
 	<script>
 		$(document).ready(function() {
 
-			$('.navbar-toggle').unbind('click');
-			$('.collapse').unbind('click');
 
-			$('.menu-icon').click(function() {
-				$('.overlay').addClass('visible');
-				$('.menu-wrapper').addClass('transform');
-			});
-
-			$('.closed').click(function() {
-				$('.overlay').removeClass('visible');
-				$('.menu-wrapper').removeClass('transform');
-			});
-
-			$('.overlay').click(function() {
-				$('.overlay').removeClass('visible');
-				$('.menu-wrapper').removeClass('transform');
-			});
 
 			$('#slider-1').slick({
 				infinite: true,

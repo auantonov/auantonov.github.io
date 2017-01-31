@@ -677,7 +677,7 @@
 					
 					$.post("https://reg.bigtime.fund/",$("#regform").serialize(),function(d){
 						//alert(d);
-						localStorage.setItem("isuser",1);
+						localStorage.setItem("isuser",1); //
 						$('#mymodal').modal('toggle');
 						window.location.reload();
 					});

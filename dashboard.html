@@ -131,7 +131,15 @@
 			<button type="button" onclick='window.localStorage.removeItem("isuser");window.localStorage.removeItem("myprivate");window.localStorage.removeItem("myethaddress");window.location.reload();' class="bexit exitb btn btn-primary btn-lg" style='display:none;float:right'>
 			Выход
 			</button>
+<<<<<<< HEAD
+			
+			<button type="button" class="regb btn btn-primary btn-lg" style='display:none;float:right' data-toggle="modal" data-target="#myModallogin">
+			Вход
+			</button>
+			
+=======
 
+>>>>>>> origin/master
                <h4>Паи которыми вы владеете</h4>
 				Ваш публичный ключ: <span id='myeth'>loading</span>
 					  <table class="table table-striped table-borderless">
@@ -582,6 +590,109 @@
     </div>
   </div>
 </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModallogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Регистрация</h4>
+      </div>
+      <div class="modal-body">
+
+	  <form onsubmit='return false' id='loginform'>
+		  <div class="form-group">
+            <label for="email" class="control-label">Email*:</label>
+            <input class="form-control" type='email' required id='loginemail' name="email">
+          </div>
+		  
+		<input type='hidden' name='openkey' class='form-control' value=''>
+		<input type='hidden' name='privkey' class='form-control' value=''>
+
+		  <div class="form-group">
+            <label for="email" class="control-label">Пароль*:</label>
+            <input class="form-control" required id='loginpass' name="pass">
+          </div>
+
+          
+
+         
+		  <input type='hidden' name='firstpage' class='form-control' id='firstpage' value='?'>
+		  <button type="submit" onclick='login();' class="regb btn btn-primary">Вход</button> <a href='#' onclick='alert("Позвоните +7957448298")'>Забыли пароль?</a>
+		  <script>
+
+			 function login() {
+			 
+					$.post("https://reg.bigtime.fund/",$("#loginform").serialize(),function(d){
+						//alert(d);
+						localStorage.setItem("isuser",1);
+						//$('#myModallogin').modal('toggle');
+						
+						$("#ulogin").html($("#email1").val().replace(/<\/?[^>]+>/gi, ''));
+						$("#upass").html($("#pass1").val().replace(/<\/?[^>]+>/gi, ''));
+
+						$("#xpub").html(localStorage.getItem("myethaddress"));
+						$("#xpriv").html(localStorage.getItem("myprivate"));
+					});
+					
+					
+				}
+		  </script>
+
+        </form>
+
+		<div id='regresult' style='display:none'>
+			<h2>Вы зарегистрировались!</h2>
+			<span id='xd'></span>
+			<div class='rer'>
+			<div class="reg-result-login">Ваш логин: <span id='ulogin'></span></div>
+			<div class="reg-result-password">Ваш пароль: <span id='upass'></span></div>
+			<div class="reg-result-publicKey">Публичный ключ: <span id='xpub'></span></div>
+			<div class="reg-result-privateKey">Приватный ключ: <span id='xpriv'></span></div>
+			</div>
+			<div class="reg-result-info">
+				<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+				Вы можете хранить свой приватный ключ самостоятельно (желательно на бумаге в сейфе), либо положиться на нашу базу данных. Помните, что если вы храните его самостоятельно, у нас не будет возможности вернуть вам доступ к вашим токенам в случае потери вами ключа. Никаким способом, даже зная вас лично, у нас не будет возможности восстановить доступ к активам, если ключ будет утерян.
+			</div>
+			<div class="reg-result-buttons"><!-- $("#mymodal").modal('hide'); -->
+				<button class="btn btn-primary btn-lg" onclick='$(this).prop("disabled",true);sendreg(1);'>Хранить ключ на сервере</button>
+				<button class="btn btn-primary btn-lg" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?')){ $(this).prop('disabled',true);sendreg(0); }">Хранить ключ самостоятельно</button>
+			</div>
+			<script>
+				function sendreg(saveprivate) {
+				
+					$("input[name=openkey]").val(localStorage.getItem("myethaddress"));
+					
+					if (saveprivate == 1) {
+						$("input[name=privkey]").val(localStorage.getItem("myprivate"));
+					} else {
+						$("input[name=privkey]").val("ключ хранит сам");
+					}
+					
+					$.post("https://reg.bigtime.fund/",$("#regform").serialize(),function(d){
+						//alert(d);
+						localStorage.setItem("isuser",1);
+						$('#mymodal').modal('toggle');
+						window.location.reload();
+					});
+					
+					
+					
+				}
+			</script>
+		</div>
+
+      </div>
+      <div class="modal-footer">
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
 
         </div>
       </div>

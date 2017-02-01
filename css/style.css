@@ -1490,25 +1490,18 @@ h4.spaced+p {
 }
 
 .partners a {
-
-    margin: 0 20px 40px;
-    background: #fff;
-    width: 252px;
-    height: 252px;
-    line-height: 252px;
-    box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.05);
+    float: left;
     display: inline-block;
     text-align: center;
-
-	margin-right: 27px;
-	margin-bottom: 27px;
-	background: #fff;
-	width: 272px;
-	height: 272px;
-	box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.05);
-	align-items: center;
-	display: flex;
-	justify-content: center;
+    margin-right: 27px;
+    margin-bottom: 27px;
+    background: #fff;
+    width: 272px;
+    height: 272px;
+    box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.05);
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 .partners a:nth-child(4n) {
 	margin-right: 0;
@@ -2903,10 +2896,14 @@ figure {
 figure.snip0016 {
     overflow: hidden;
     text-align: left;
-    margin: 10px;
+    margin-bottom: 27px;
+    margin-right: 27px;
     position: relative;
     color: #fff;
     border: 3px solid #474747;
+}
+figure.snip0016:nth-child(4n) {
+    margin-right: 0;
 }
 
 figure h2 {
@@ -3335,8 +3332,11 @@ figure.snip0016:hover figcaption::before {
     margin-bottom: 35px;
 }
 .pie.firstline.active td {
-		background: #1c1b17;
-		color: #fff;
+    background: #55caf5;
+    color: #ffffff;
+}
+.pie.firstline.active tr:hover {
+    cursor:  pointer;
 }
 .blockchain-reg {
     margin-top: -70px;
@@ -3664,7 +3664,8 @@ figure.snip0016:hover figcaption::before {
     margin-top: 10px;
 }
 
-.token table {
+.token table,
+.be-content table {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -3673,7 +3674,7 @@ figure.snip0016:hover figcaption::before {
 }
 
 .table-striped>tbody>tr:hover {
-    background: #ddd;
+    background: rgba(239, 239, 239, 0.72);
 }
 
 .token .col-md-12 {
@@ -3686,15 +3687,64 @@ figure.snip0016:hover figcaption::before {
     font-size: 15px;
 }
 
-.token table tbody {
+.token table tbody,
+.be-content table {
     color: #474747;
     font-size: 13px;
 }
-
-.token .table>tbody>tr>td, .token .table>tbody>tr>th, .token .table>tfoot>tr>td, .token .table>tfoot>tr>th {
-    border: none;
+.be-content table {
+   margin-bottom: 50px;
 }
-
+.token .table>tbody>tr>td, .token .table>tbody>tr>th, .token .table>tfoot>tr>td, .token .table>tfoot>tr>th {
+   border: none;
+}
+.nav-tabs li a {
+    border-radius: 0;
+}
+.chart-info {
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.main-content h4 {
+    text-transform: none;
+    font-weight: bold;
+    font-size: 22px;
+}
+.main-content.graphic-buttons .btn-1 {
+    border: 3px solid #55caf5;
+    color: #55caf5;
+    font-size: 16px;
+    width: 230px;
+    margin-right: 0;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 15px;
+    padding: 10px 10px;
+    margin-bottom: 0px;
+}
+.main-content.graphic-buttons .btn-1.in-button {
+    border-color: #1c1b17;
+    color: #1c1b17;
+}
+.main-content.graphic-buttons .btn-1.in-button:hover {
+    background: #1c1b17;
+    color: #fff;
+}
+.main-content.graphic-buttons .btn-1:hover {
+    color: #fff;
+    background: #55caf5;
+}
+.main-content .our-key {
+    font-size: 16px;
+    color: #474747;
+    margin-top: -3px;
+    margin-bottom: 40px;
+}
+.main-content .our-key span {
+    font-weight: bold;
+    font-style: italic;
+}
 .menu-wrapper {
     position: relative;
 }
@@ -4304,6 +4354,12 @@ a.button {
     }
 }
 
+@media (max-width: 993px){
+  .graphic {
+      margin-bottom: 60px!important;
+  }
+}
+
 
 /* =Media Queries
 
@@ -4533,8 +4589,8 @@ a.button {
         left: 21px;
         border-right: 1px solid #fff!important;
         width: 43px;
-        height: 100px;
-        top: -42px;
+        height: 64px;
+        top: -23px;
     }
     .navbar {
         border-radius: 0;

@@ -255,6 +255,12 @@
     .subscribe-input {
         font-size: 14px;
     }
+    .partners a {
+        margin: 0 10px 20px;
+    }
+    #team {
+        margin-top: 60px;
+    }
 }
 
 @media (max-width:768px) {
@@ -324,6 +330,19 @@
     }
     .inv-products .products-item h2 {
         font-size: 20px;
+    }
+    .links-item {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    .intro {
+        padding: 30px 0 0;
+    }
+    .vacancy-item h6 {
+        font-size: 16px;
+    }
+    .vacancy-item {
+        margin-bottom: 50px;
     }
 }
 

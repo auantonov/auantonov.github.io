@@ -1490,21 +1490,14 @@ h4.spaced+p {
 }
 
 .partners a {
-    float: left;
     display: inline-block;
     text-align: center;
-    margin-right: 27px;
-    margin-bottom: 27px;
+    margin: 0 10px 20px;
     background: #fff;
     width: 272px;
     height: 272px;
+    line-height: 272px;
     box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.05);
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-.partners a:nth-child(4n) {
-	margin-right: 0;
 }
 
 .vacancy {
@@ -3340,6 +3333,7 @@ figure.snip0016:hover figcaption::before {
 }
 .blockchain-reg {
     margin-top: -70px;
+    margin-bottom: 60px;
 }
 .be-content .table-striped>tbody>tr {
 	 font-weight: 500;

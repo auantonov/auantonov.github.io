@@ -204,6 +204,9 @@
     figure.snip0016, figure.snip0016:nth-child(4n) {
         margin: 0 14px 28px;
     }
+    .subscribe-input {
+        font-size: 10px;
+    }
 }
 
 @media (max-width:993px) {
@@ -248,6 +251,9 @@
     }
     .intro-font p {
         font-size: 20px;
+    }
+    .subscribe-input {
+        font-size: 14px;
     }
 }
 
@@ -316,6 +322,9 @@
     .intro-font p {
         font-size: 18px;
     }
+    .inv-products .products-item h2 {
+        font-size: 20px;
+    }
 }
 
 @media (max-width:600px) {
@@ -330,7 +339,6 @@
     }
     .slide-descr {
         font-size: 16px;
-        font-weight: 400;
     }
     .slide-comment-descr {
         font-size: 14px;
@@ -346,6 +354,12 @@
     .timeline:before {
         left: 16px;
     }
+    .blockchain-info p, .blockchain-forecast p, body, .inv-our-company p, .inv-products p, .inv-p {
+        font-size: 14px;
+    }
+    .blockchain-stories-item-descr {
+        padding: 15px 0;
+    }
 }
 
 @media (max-width:500px) {
@@ -355,6 +369,9 @@
     }
     .slide-comment-item {
         padding-bottom: 50px;
+    }
+    .slide-comment-descr {
+        padding-left: 0;
     }
     .leftReveal h3 {
         font-size: 22px;

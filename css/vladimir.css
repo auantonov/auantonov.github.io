@@ -201,9 +201,18 @@
     .inv-our-company {
         text-align: center;
     }
+    figure.snip0016, figure.snip0016:nth-child(4n) {
+        margin: 0 14px 28px;
+    }
 }
 
 @media (max-width:993px) {
+    .nav > li:hover > ul {
+        display: none;
+    }
+    .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+        color: rgb(85, 202, 245);
+    }
     .b-footer__logo-cont {
         display: none;
     }

@@ -132,23 +132,25 @@
         <div class="be-content">
             <div class="main-content container graphic-buttons">
                 <div class="row">
-                    <div class="col-xs-12">
-                        <button type="button" class="regb btn btn-1 btn-1a" style='display:none;float:right' data-toggle="modal" data-target="#myModal">
-			Регистрация
-			</button>
-
-                        <button type="button" class="btn btn-1 btn-1a" onclick='window.localStorage.removeItem("isuser");window.localStorage.removeItem("myprivate");window.localStorage.removeItem("myethaddress");window.location.reload();' class="bexit exitb btn btn-primary btn-lg"
-                            style='display:none;float:right'>
+                    <div class="col-md-push-6 col-sm-push-6 col-md-6 col-sm-6 dashboard-reg">
+                        <button type="button" class="regb btn btn-1 btn-1a in-button" style='display:none;' data-toggle="modal" data-target="#myModallogin">
+                            Вход
+                        </button>
+                        <button type="button" class="btn btn-1 btn-1a" onclick='window.localStorage.removeItem("isuser");window.localStorage.removeItem("myprivate");window.localStorage.removeItem("myethaddress");window.location.reload();' class="bexit exitb btn btn-primary btn-lg" style='display:none;'>
                             Выход
-                            </button>
+                        </button>
+                        <button type="button" class="regb btn btn-1 btn-1a" style='display:none;' data-toggle="modal" data-target="#myModal">
+                            Регистрация
+                        </button>
+                    </div>
 
-                            <button type="button" class="regb btn btn-1 btn-1a in-button" style='display:none;float:right' data-toggle="modal" data-target="#myModallogin">
-			Вход
-			</button>
+                    <div class="col-md-pull-6 col-sm-pull-6 col-md-6 col-sm-6">
+                        <h4>Паи которыми вы владеете</h4>
+                        <p class="our-key">Ваш публичный ключ: <span id='myeth'>loading</span></p>
+                    </div>
 
-
-                            <h4>Паи которыми вы владеете</h4>
-                            <p class="our-key">Ваш публичный ключ: <span id='myeth'>loading</span></p>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="table-container mb50">
                             <table class="table table-striped table-borderless">
                                 <thead>
                                     <tr>
@@ -221,11 +223,9 @@
                                     </tr>
                                 </tbody>
                             </table>
-
-
-
+                        </div>
                     </div>
-                </div>
+                </div><!-- .row -->
 
                 <div class="row" style='display:none' id='centru'>
                     <div class="col-xs-12">

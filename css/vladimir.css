@@ -188,12 +188,16 @@
     background-image: url("../images/btf/14.png");
 }
 
-.token table th {
+.table-container table th {
     white-space: nowrap;
 }
 
 .slick-prev, .slick-next {
     top: 250px;
+}
+
+.dashboard-reg {
+    text-align: right;
 }
 
 
@@ -275,6 +279,16 @@
     }
     .type-wrap br {
         display: none;
+    }
+    h4.spaced {
+        justify-content: flex-start;
+    }
+    #other h2 {
+        font-size: 30px;
+    }
+    .main-content.graphic-buttons .btn-1 {
+        width: auto;
+        margin-left: 20px;
     }
 }
 
@@ -364,6 +378,9 @@
     .timeline-panel h4 {
         margin: 0;
     }
+    #other h2 {
+        font-size: 25px;
+    }
 }
 
 @media (max-width:600px) {
@@ -424,5 +441,8 @@
     }
     .promo h1, #typed {
         font-size: 16px;
+    }
+    #other h2 {
+        font-size: 20px;
     }
 }

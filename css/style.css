@@ -3724,9 +3724,6 @@ figure.snip0016:hover figcaption::before {
     color: #474747;
     font-size: 13px;
 }
-.be-content table {
-   margin-bottom: 50px;
-}
 .token .table>tbody>tr>td, .token .table>tbody>tr>th, .token .table>tfoot>tr>td, .token .table>tfoot>tr>th {
    border: none;
 }

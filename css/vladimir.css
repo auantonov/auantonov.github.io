@@ -273,6 +273,9 @@
     .inv-products .products-item h2 {
         font-size: 23px;
     }
+    .type-wrap br {
+        display: none;
+    }
 }
 
 @media (max-width:768px) {

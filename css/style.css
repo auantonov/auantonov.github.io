@@ -598,7 +598,7 @@ h2 {
     line-height: 45px;
 }
 .dropdown-menu {
-	top:83px;
+	top: 75px;
 }
 .dropdown-menu>li>a {
     display: block;
@@ -2016,7 +2016,7 @@ h4.spaced+p {
 }
 
 .graphic {
-    margin-bottom: 60px;
+    margin-bottom: 90px;
 }
 
 .graphic img {

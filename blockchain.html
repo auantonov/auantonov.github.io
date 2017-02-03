@@ -366,23 +366,23 @@
 			<div class="row">
 				<div class="col-md-4 col-sm-6">
 					<div class="links">
-						<a href="#" class="links-item">Официальный сайт биткойн</a>
-						<a href="#" class="links-item">Официальный сайт РБК</a>
-						<a href="#" class="links-item">Официальный сайт Дождь</a>
+						<a href="https://bitcoin.org/ru/" class="links-item">Официальный сайт биткойн</a>
+						<a href="https://coinmarketcap.com/" class="links-item">Капитализация блокчейн-проектов <br>и изменение их стоимости </a>
+						<a href="https://coinmap.org/" class="links-item">Карта мира с точками приема <br>биткйона в качестве платежного средства</a>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6">
 					<div class="links">
-						<a href="#" class="links-item">Официальный сайт биткойн</a>
-						<a href="#" class="links-item">Официальный сайт РБК</a>
-						<a href="#" class="links-item">Официальный сайт Дождь</a>
+						<a href="https://bitcointalk.org/index.php" class="links-item">Крупнейший международный <br>форум о биткойн</a>
+						<a href="https://piazza.com/princeton/spring2015/btctech/resources" class="links-item">Курс лекций о технологии <br>биткойн на русском</a>
+						<a href="http://bits.media/news/pyat-neobkhodimykh-knig-o-bitkoine-i-blokcheyne/" class="links-item">Пять необходимых книг <br>о биткойне и блокчейне</a>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6">
 					<div class="links">
-						<a href="#" class="links-item">Официальный сайт биткойн</a>
-						<a href="#" class="links-item">Официальный сайт РБК</a>
-						<a href="#" class="links-item">Официальный сайт Дождь</a>
+						<a href="https://icotracker.net/" class="links-item">Ближайшие ICO и их оценка</a>
+						<a href="http://www.bestchange.ru/" class="links-item">Сайт для мониторинга обменников <br>биткойна на классические валюты</a>
+						<a href="https://exchangewar.info/" class="links-item">Список крупнейший бирж <br>криптовалютных активов</a>
 					</div>
 				</div>
 			</div>
@@ -766,17 +766,17 @@
 				},
 
 				title: {
-					text: 'Инвестиции в блокчейн проекты, источник - CoinDesk'
+					text: 'Инвестиции в блокчейн-проекты в 2016 году поквартально'
 				},
 				subtitle: {
-					text: 'Click the columns to view versions. Source: <a href="http://netmarketshare.com">netmarketshare.com</a>.'
+					text: ''
 				},
 				xAxis: {
 					type: 'category'
 				},
 				yAxis: {
 					title: {
-						text: 'Total percent market share'
+						text: 'Total investment'
 					}
 
 				},
@@ -796,7 +796,7 @@
 
 				tooltip: {
 					headerFormat: '<span style="font-size:13px">{series.name}</span><br>',
-					pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b><br/>'
+					pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f} mln $</b><br/>'
 				},
 
 				series: [{
@@ -818,6 +818,10 @@
 					}, {
 						name: 'Q3 2016',
 						y: 114,
+						drilldown: ''
+					},{
+						name: 'Q4 2016',
+						y: 192,
 						drilldown: ''
 					}]
 				}],

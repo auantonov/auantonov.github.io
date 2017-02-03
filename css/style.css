@@ -3324,9 +3324,44 @@ figure.snip0016:hover figcaption::before {
     margin-top: 0;
     margin-bottom: 35px;
 }
+
+.io {
+  float: left;
+}
+
+#piechart {
+  float: left;
+  width: 60%;
+  margin-left: 100px;
+}
+#other {
+  clear: both;
+  display: block;
+  padding-top: 60px;
+}
+#other h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+#other p {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+#other h1 {
+  text-align: center;
+  margin-top: 70px;
+  font-weight: 600;
+  margin-bottom: -7px;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
 .pie.firstline.active td {
     background: #55caf5;
     color: #ffffff;
+}
+.be-content #other table {
+    font-family: 'Roboto', sans-serif;
 }
 .pie.firstline.active tr:hover {
     cursor:  pointer;
@@ -3337,6 +3372,9 @@ figure.snip0016:hover figcaption::before {
 }
 .be-content .table-striped>tbody>tr {
 	 font-weight: 500;
+}
+.be-content .tab-content {
+  padding-top: 50px;
 }
 .blurred-bg {
     background-image: url("../img/main.jpg");
@@ -3733,7 +3771,7 @@ figure.snip0016:hover figcaption::before {
     font-size: 16px;
     color: #474747;
     margin-top: -3px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 .main-content .our-key span {
     font-weight: bold;
@@ -4284,6 +4322,19 @@ a.button {
     position: relative;
     text-align: left;
 }
+.text-muted {
+    color: #474747;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    margin-top: 20px;
+    font-size: 15px;
+}
+.timeline-panel h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: none;
+}
 
 @media (min-width: 768px) {
     .timeline>li .timeline-panel {
@@ -4337,6 +4388,7 @@ a.button {
     position: absolute;
     content: "";
     width: 2px;
+    height: 2610px;
     background-color: #f1f1f1;
     left: 40px;
     margin-left: -1.5px;

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,882 +10,908 @@
     <link rel="shortcut icon" href="assets/img/logo-fav.png">
     <title>Управление</title>
 
-<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-	<link href="css/ionicons.min.css" rel="stylesheet">
-	<link href="css/pe-icon-7-stroke.css" rel="stylesheet">
-	<link href="css/magnific-popup.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet" title="main-css">
-	<link href="https://etherdelta.github.io/css/alertify-bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
-	<link rel="stylesheet" type="text/css" href="css/vladimir.css"/>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&amp;subset=cyrillic" rel="stylesheet">
-	<style>
-	.nav-tabs .onlyuser {
-		display:none;
-	}
-	</style>
-  </head>
-  <body class="body-static-navbar">
+    <link href="css/ionicons.min.css" rel="stylesheet">
+    <link href="css/pe-icon-7-stroke.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" title="main-css">
+    <link href="https://etherdelta.github.io/css/alertify-bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/vladimir.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <style>
+        .nav-tabs .onlyuser {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="body-static-navbar">
     <div class="overlay"></div>
-  <!-- Begin Header -->
-  <header>
-  	<div class="top-menu">
-  		<div class="container">
-  			<div class="top-menu-left-section pull-left">
-  				<span>Курс <span id='rubbtc'></span> руб. / BTC</span>
+    <!-- Begin Header -->
+    <header>
+        <div class="top-menu">
+            <div class="container">
+                <div class="top-menu-left-section pull-left">
+                    <span>Курс <span id='rubbtc'></span> руб. / BTC</span>
 
-  			</div>
-  			<div class="top-menu-right-section pull-right">
-  				<div class="languages">
-  					<span><img src="images/btf/russia_fluttering_flag_256.png" alt=""></span>
-  					<span><img src="images/btf/united_states_of_america_fluttering_flag_256.png" alt="" ></span>
-  					<span><img src="images/btf/china_fluttering_flag_256.png" alt="" class="united-lang"></span>
-  				</div>
-  				<span class="phone">8-800-1234567</span>
-  				<span class="pe-7s-mail"></span>
-  			</div>
-  		</div>
-  	</div>
-  	<!-- Begin Navigation -->
-  	<nav class="navbar navbar-default navbar-spacing-top-static">
-  		<div class="container">
-  			<!-- Brand and toggle get grouped for better mobile display -->
-  			<div class="navbar-header">
-  				<button class="navbar-toggle collapsed menu-icon">
+                </div>
+                <div class="top-menu-right-section pull-right">
+                    <div class="languages">
+                        <span><img src="images/btf/russia_fluttering_flag_256.png" alt=""></span>
+                        <span><img src="images/btf/united_states_of_america_fluttering_flag_256.png" alt="" ></span>
+                        <span><img src="images/btf/china_fluttering_flag_256.png" alt="" class="united-lang"></span>
+                    </div>
+                    <span class="phone">8-800-1234567</span>
+                    <span class="pe-7s-mail"></span>
+                </div>
+            </div>
+        </div>
+        <!-- Begin Navigation -->
+        <nav class="navbar navbar-default navbar-spacing-top-static">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed menu-icon">
   					<span class="sr-only">Toggle navigation</span>
   					<span class="icon-bar"></span>
   					<span class="icon-bar"></span>
   					<span class="icon-bar"></span>
   				</button>
-  				<a class="navbar-brand scroll-top" href="#"><img src="images/logo.png" alt=""></a>
-  			</div>
+                    <a class="navbar-brand scroll-top" href="#"><img src="images/logo.png" alt=""></a>
+                </div>
 
-  			<!-- Collect the nav links, forms, and other content for toggling -->
-  			<div class="menu-wrapper">
-  				<div class="collapse navbar-collapse menu-cont">
-  					<a class="navbar-toggle collapsed menu-toggle-js closed">
-  				        <span class="sr-only">Toggle navigation</span>
-  				    </a>
-  					<ul class="nav navbar-nav navbar-right">
-  						<li class="dropdown">
-  							<a href="index2.html" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Главная</a>
-  							<ul class="dropdown-menu dropdown-menu-first">
-  								<li><a href="multipage-top-default.html">Default</a></li>
-  								<li><a href="multipage-top-slider-image.html">Image Slider</a></li>
-  								<li><a href="multipage-top-text-rotater.html">Rotate</a></li>
-  								<li><a href="multipage-top-slider-transparent.html">No BG Slider</a></li>
-  							</ul><!-- /.dropdown items -->
-  						</li><!-- /.dropdown -->
-  						<li><a href="investment.html">Инвестиции</a></li>
-  						<li><a href="blockchain.html">Блокчейн</a></li>
-  						<li class="dropdown">
-  							<a href="fond.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Фонд</a>
-  							<ul class="dropdown-menu dropdown-menu-first">
-  								<li class="dropdown-submenu">
-  									<a tabindex="-1" href="#">Masonry &nbsp;<span class="ion-ios-arrow-right"></span></a>
-  									<ul class="dropdown-menu">
-  										<li><a tabindex="-1" href="multipage-portfolio-masonry-2col.html">2 Columns</a></li>
-  										<li><a tabindex="-1" href="multipage-portfolio-masonry-3col.html">3 Columns</a></li>
-  										<li><a tabindex="-1" href="multipage-portfolio-masonry-4col.html">4 Columns</a></li>
-  									</ul><!-- /.dropdown sub items -->
-  								</li><!-- /.dropdown sub -->
-  								<li class="dropdown-submenu">
-  									<a href="#">Regular &nbsp;<span class="ion-ios-arrow-right"></span></a>
-  									<ul class="dropdown-menu">
-  										<li><a tabindex="-1" href="multipage-portfolio-aligned-2col.html">2 Columns</a></li>
-  										<li><a tabindex="-1" href="multipage-portfolio-aligned-3col.html">3 Columns</a></li>
-  										<li><a tabindex="-1" href="multipage-portfolio-aligned-4col.html">4 Columns</a></li>
-  									</ul><!-- /.dropdown sub items -->
-  								</li><!-- /.dropdown sub -->
-  							</ul><!-- /.dropdown sub holder -->
-  						</li><!-- /.dropdown -->
-  						<li><a href="/blockchain">Индустрия</a></li>
-  						<li><a href="http://corp.ff.ru/">Холдинг</a></li>
-  						<li><a href="dashboard.html">Управление</a></li>
-  					</ul>
-  					<div class="languages">
-  						<span><img src="images/btf/russia_fluttering_flag_256.png" alt=""></span>
-  						<span><img src="images/btf/united_states_of_america_fluttering_flag_256.png" alt=""></span>
-  						<span><img src="images/btf/china_fluttering_flag_256.png" alt="" class="united-lang"></span>
-  					</div>
-  				</div><!-- /.navbar-collapse -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="menu-wrapper">
+                    <div class="collapse navbar-collapse menu-cont">
+                        <a class="navbar-toggle collapsed menu-toggle-js closed">
+                            <span class="sr-only">Toggle navigation</span>
+                        </a>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="index2.html" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Главная</a>
+                                <ul class="dropdown-menu dropdown-menu-first">
+                                    <li><a href="multipage-top-default.html">Default</a></li>
+                                    <li><a href="multipage-top-slider-image.html">Image Slider</a></li>
+                                    <li><a href="multipage-top-text-rotater.html">Rotate</a></li>
+                                    <li><a href="multipage-top-slider-transparent.html">No BG Slider</a></li>
+                                </ul>
+                                <!-- /.dropdown items -->
+                            </li>
+                            <!-- /.dropdown -->
+                            <li><a href="investment.html">Инвестиции</a></li>
+                            <li><a href="blockchain.html">Блокчейн</a></li>
+                            <li class="dropdown">
+                                <a href="fond.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Фонд</a>
+                                <ul class="dropdown-menu dropdown-menu-first">
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#">Masonry &nbsp;<span class="ion-ios-arrow-right"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a tabindex="-1" href="multipage-portfolio-masonry-2col.html">2 Columns</a></li>
+                                            <li><a tabindex="-1" href="multipage-portfolio-masonry-3col.html">3 Columns</a></li>
+                                            <li><a tabindex="-1" href="multipage-portfolio-masonry-4col.html">4 Columns</a></li>
+                                        </ul>
+                                        <!-- /.dropdown sub items -->
+                                    </li>
+                                    <!-- /.dropdown sub -->
+                                    <li class="dropdown-submenu">
+                                        <a href="#">Regular &nbsp;<span class="ion-ios-arrow-right"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a tabindex="-1" href="multipage-portfolio-aligned-2col.html">2 Columns</a></li>
+                                            <li><a tabindex="-1" href="multipage-portfolio-aligned-3col.html">3 Columns</a></li>
+                                            <li><a tabindex="-1" href="multipage-portfolio-aligned-4col.html">4 Columns</a></li>
+                                        </ul>
+                                        <!-- /.dropdown sub items -->
+                                    </li>
+                                    <!-- /.dropdown sub -->
+                                </ul>
+                                <!-- /.dropdown sub holder -->
+                            </li>
+                            <!-- /.dropdown -->
+                            <li><a href="/blockchain">Индустрия</a></li>
+                            <li><a href="http://corp.ff.ru/">Холдинг</a></li>
+                            <li><a href="dashboard.html">Управление</a></li>
+                        </ul>
+                        <div class="languages">
+                            <span><img src="images/btf/russia_fluttering_flag_256.png" alt=""></span>
+                            <span><img src="images/btf/united_states_of_america_fluttering_flag_256.png" alt=""></span>
+                            <span><img src="images/btf/china_fluttering_flag_256.png" alt="" class="united-lang"></span>
+                        </div>
+                    </div>
+                    <!-- /.navbar-collapse -->
 
-  			</div>
-  		</div><!-- /.container -->
-  	</nav><!-- /.nav -->
-  	<!-- End Navigation -->
+                </div>
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- /.nav -->
+        <!-- End Navigation -->
 
-  </header>
-  <!-- End Header -->
+    </header>
+    <!-- End Header -->
     <div class="be-wrapper be-nosidebar-left">
-      <div class="be-content">
-        <div class="main-content container graphic-buttons">
-          <div class="row">
-            <div class="col-xs-12">
-			<button type="button" class="regb btn btn-1 btn-1a" style='display:none;float:right' data-toggle="modal" data-target="#myModal">
+        <div class="be-content">
+            <div class="main-content container graphic-buttons">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button type="button" class="regb btn btn-1 btn-1a" style='display:none;float:right' data-toggle="modal" data-target="#myModal">
 			Регистрация
 			</button>
 
-			<button type="button" class="btn btn-1 btn-1a" onclick='window.localStorage.removeItem("isuser");window.localStorage.removeItem("myprivate");window.localStorage.removeItem("myethaddress");window.location.reload();' class="bexit exitb btn btn-primary btn-lg" style='display:none;float:right'>
-			Выход
-			</button>
+                        <button type="button" class="btn btn-1 btn-1a" onclick='window.localStorage.removeItem("isuser");window.localStorage.removeItem("myprivate");window.localStorage.removeItem("myethaddress");window.location.reload();' class="bexit exitb btn btn-primary btn-lg"
+                            style='display:none;float:right'>
+                            Выход
+                            </button>
 
-			<button type="button" class="regb btn btn-1 btn-1a in-button" style='display:none;float:right' data-toggle="modal" data-target="#myModallogin">
+                            <button type="button" class="regb btn btn-1 btn-1a in-button" style='display:none;float:right' data-toggle="modal" data-target="#myModallogin">
 			Вход
 			</button>
 
 
-               <h4>Паи которыми вы владеете</h4>
-				<p class="our-key">Ваш публичный ключ: <span id='myeth'>loading</span></p>
-					  <table class="table table-striped table-borderless">
-						<thead>
-						  <tr>
-							<th >Токен</th>
-							<th class="number">Ваша доля</th>
-							<th class="number">Текущая цена за ед.</th>
-							<th class="number">Результат</th>
-							<th class="number">Выпуск</th>
-							<th class="">Тип</th>
-						  <!-- <th class="actions">Действие</th> -->
-						  </tr>
-						</thead>
-						<tbody class="no-border-x">
-						<tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Приватный' data-start='02.11.16' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
-							<td>Приватный 02.11.16</td>
-							<td class="number mytokenbalance" >
-							loading
-							</td>
-							<td class="number"><span class='currentprice'>??</span> р</td> <!-- не менять! считается само-->
-							<td class="number rost">??%</td> <!-- не менять! считается само-->
-							<td class="number start">??</td>
-							<td class='tip'>??</td>
-						<!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
-						  </tr>
+                            <h4>Паи которыми вы владеете</h4>
+                            <p class="our-key">Ваш публичный ключ: <span id='myeth'>loading</span></p>
+                            <table class="table table-striped table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th>Токен</th>
+                                        <th class="number">Ваша доля</th>
+                                        <th class="number">Текущая цена за ед.</th>
+                                        <th class="number">Результат</th>
+                                        <th class="number">Выпуск</th>
+                                        <th class="">Тип</th>
+                                        <!-- <th class="actions">Действие</th> -->
+                                    </tr>
+                                </thead>
+                                <tbody class="no-border-x">
+                                    <tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Приватный' data-start='02.11.16' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
+                                        <td>Приватный 02.11.16</td>
+                                        <td class="number mytokenbalance">
+                                            loading
+                                        </td>
+                                        <td class="number"><span class='currentprice'>??</span> р</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number rost">??%</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number start">??</td>
+                                        <td class='tip'>??</td>
+                                        <!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
+                                    </tr>
 
 
-						  <tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Агресивный' data-start='01.02.17' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
-							<td>AGG010217OPEN</td>
-							<td class="number mytokenbalance" >
-							loading
-							</td>
-							<td class="number"><span class='currentprice'>??</span> р</td> <!-- не менять! считается само-->
-							<td class="number rost">??%</td> <!-- не менять! считается само-->
-							<td class="number start">??</td>
-							<td class='tip'>??</td>
-							<!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
-						  </tr>
+                                    <tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Агресивный' data-start='01.02.17' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
+                                        <td>AGG010217OPEN</td>
+                                        <td class="number mytokenbalance">
+                                            loading
+                                        </td>
+                                        <td class="number"><span class='currentprice'>??</span> р</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number rost">??%</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number start">??</td>
+                                        <td class='tip'>??</td>
+                                        <!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
+                                    </tr>
 
 
-						  <tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Интервальный' data-start='01.02.17' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
-							<td>CON010217INT</td>
-							<td class="number mytokenbalance" >
-							loading
-							</td>
-							<td class="number"><span class='currentprice'>??</span> р</td> <!-- не менять! считается само-->
-							<td class="number rost">??%</td> <!-- не менять! считается само-->
-							<td class="number start">??</td>
-							<td class='tip'>??</td>
-							<!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
-						  </tr>
+                                    <tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Интервальный' data-start='01.02.17' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
+                                        <td>CON010217INT</td>
+                                        <td class="number mytokenbalance">
+                                            loading
+                                        </td>
+                                        <td class="number"><span class='currentprice'>??</span> р</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number rost">??%</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number start">??</td>
+                                        <td class='tip'>??</td>
+                                        <!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
+                                    </tr>
 
-						  <tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Сбалансированный' data-start='01.02.17' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
-							<td>BAL010217INT</td>
-							<td class="number mytokenbalance" >
-							loading
-							</td>
-							<td class="number"><span class='currentprice'>??</span> р</td> <!-- не менять! считается само-->
-							<td class="number rost">??%</td> <!-- не менять! считается само-->
-							<td class="number start">??</td>
-							<td class='tip'>??</td>
-							<!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
-						  </tr>
-						</tbody>
-					  </table>
-
-
-
-            </div>
-          </div>
-
-		  <div class="row" style='display:none' id='centru'>
-            <div class="col-xs-12">
-
-					    <div class="tab-container">
-						  <ul class="nav nav-tabs def-tabs">
-							<li class="active"><a href="#news" data-toggle="tab">Обзор</a></li>
-							<li class='onlyuser'><a href="#buy2" data-toggle="tab">Купить</a></li>
-							<li class='onlyuser'><a href="#sell2" data-toggle="tab">Продать</a></li>
-							<li class='onlyuser'><a href="#send" data-toggle="tab">Перевести</a></li>
-							<li class='onlyuser'><a href="#history" data-toggle="tab">История</a></li>
-							<li class='onlyuser'><a href="#settings" data-toggle="tab">Настройки</a></li>
-						  </ul>
-						  <div class="tab-content">
-							<div id="news" class="tab-pane active cont">
-							  <style>
-								 .io td {padding-right:30px;}
-								 </style>
-							  <div class='io'>
-                  <div class="chart-info">
-                    Выпуск: <span id='x1'></span><br>
-                    Тип: <span id='x2'></span> <br>
-                    Интервал: <span id='x3'></span> <br>
-                    Токенов: <span id='x4'></span> <br>
-                  </div>
-                  <div class="chart-info">
-                    Текущая цена: <span id='x5'></span> <br>
-									  Капитализация: <span id='x6'></span> <br>
-									  Результат всего: <span id='x7'></span> <br>
-									  Результат недели: <span id='x8'></span> <br>
-                  </div>
-
-									<div id='piechart'>
-
-									</div>
-
-							  </div>
+                                    <tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Сбалансированный' data-start='01.02.17' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
+                                        <td>BAL010217INT</td>
+                                        <td class="number mytokenbalance">
+                                            loading
+                                        </td>
+                                        <td class="number"><span class='currentprice'>??</span> р</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number rost">??%</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number start">??</td>
+                                        <td class='tip'>??</td>
+                                        <!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
+                                    </tr>
+                                </tbody>
+                            </table>
 
 
 
+                    </div>
+                </div>
 
-								<div id='other'></div>
-							</div>
-							<div id="buy2" style='color:#474747' class="tab-pane">
-									<div >
-										Цена в btc:
-										<span id='priceinbtc'>??</span> BTC
-									</div>
+                <div class="row" style='display:none' id='centru'>
+                    <div class="col-xs-12">
 
-									<div >
-										Это примерно:
-										<span id='priceinrub'>??</span> руб.
-									</div>
+                        <div class="tab-container">
+                            <ul class="nav nav-tabs def-tabs">
+                                <li class="active"><a href="#news" data-toggle="tab">Обзор</a></li>
+                                <li class='onlyuser'><a href="#buy2" data-toggle="tab">Купить</a></li>
+                                <li class='onlyuser'><a href="#sell2" data-toggle="tab">Продать</a></li>
+                                <li class='onlyuser'><a href="#send" data-toggle="tab">Перевести</a></li>
+                                <li class='onlyuser'><a href="#history" data-toggle="tab">История</a></li>
+                                <li class='onlyuser'><a href="#settings" data-toggle="tab">Настройки</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="news" class="tab-pane active cont">
+                                    <div class='io pull-left'>
+                                        <div class="chart-info">
+                                            Выпуск: <span id='x1'></span><br> Тип: <span id='x2'></span> <br> Интервал: <span id='x3'></span> <br> Токенов: <span id='x4'></span> <br>
+                                        </div>
+                                        <div class="chart-info">
+                                            Текущая цена: <span id='x5'></span> <br> Капитализация: <span id='x6'></span> <br> Результат всего: <span id='x7'></span> <br> Результат недели: <span id='x8'></span> <br>
+                                        </div>
+                                    </div>
+
+                                    <div id='piechart'>
+
+                                    </div>
+
+                                    <div id='other'></div>
+                                </div>
+                                <div id="buy2" style='color:#474747' class="tab-pane">
+                                    <div>
+                                        Цена в btc:
+                                        <span id='priceinbtc'>??</span> BTC
+                                    </div>
+
+                                    <div>
+                                        Это примерно:
+                                        <span id='priceinrub'>??</span> руб.
+                                    </div>
 
 
 
-								<div class="total">
-										<p><Br>Сколько паев купить?</p>
-										<input type="number" onkeyup='recalc_buy();$("#showafterrecalc").show();' class="form-control" placeholder='введите число и ниже покажется расчет в биткоинах и рублях' id='kupit' value=''>
+                                    <div class="total">
+                                        <p>
+                                            <Br>Сколько паев купить?</p>
+                                        <input type="number" onkeyup='recalc_buy();$("#showafterrecalc").show();' class="form-control" placeholder='введите число и ниже покажется расчет в биткоинах и рублях' id='kupit' value=''>
 
-								</div>
-
-
-								<div style='display:none' id='showafterrecalc'>
-
-										<span>Для покупки <b id='sk'>???</b> токенов проекта <span id='pr'>??</span> вам необходимо пересевти <span id='inbtc'></span> BTC (это примерно ~ <b id='inrub'>80 000</b> рублей, переведите биткоины на этот адрес и нажмите кнопку "Перевести")</span>
-
-										<p>Адрес для перечисления биткойнов:</p>
-										<span>14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span>
-										<button type="button" class="btn btn-primary btn-lg">Я перевел</button>
-
-								</div>
+                                    </div>
 
 
-<!-- 							<p><br>
+                                    <div style='display:none' id='showafterrecalc'>
+
+                                        <span>Для покупки <b id='sk'>???</b> токенов проекта <span id='pr'>??</span> вам необходимо пересевти <span id='inbtc'></span> BTC (это примерно ~ <b id='inrub'>80 000</b> рублей, переведите биткоины на этот адрес
+                                        и нажмите кнопку "Перевести")</span>
+
+                                        <p>Адрес для перечисления биткойнов:</p>
+                                        <span>14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span>
+                                        <button type="button" class="btn btn-primary btn-lg">Я перевел</button>
+
+                                    </div>
+
+
+                                    <!-- 							<p><br>
 								Хочу купить <input type='number' name='' onkeyup='recalc_buy()' id='kupit' value='1000'> паев проекта <span id='pr'>??</span>,  это примерно ~<span id='inrub'></span>р, для покупки переведите <span id='inbtc'>1</span>
 								BTC на адрес 14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ
 							</p> -->
 
-							</div>
-							<div id="sell2" class="tab-pane">
-								<div class="line">
-									<div class="line-item">
-										<p>Текущая цена ед:</p>
-										<span>1,477 руб</span>
-									</div>
-									<div class="line-item">
-										<p>Цена в btc:</p>
-										<span>0,002 btc</span>
-									</div>
-								</div>
-								<div class="line">
-									<div class="total">
-										<p>Кол-во</p>
-										<input type="text" onkeyup='recalc_buy()' class="form-control" id='kupit' value='1000'>
-									</div>
-								</div>
-								<div class="line">
-									<div class="line-item">
-										<p>Сумма в руб:</p>
-										<span id='ff'>2140000 руб</span>
-									</div>
-									<div class="line-item">
-										<p>Сумма в btc:</p>
-										<span id='fff'>23,9844 btc</span>
-									</div>
-								</div>
-								<div class="line">
-									<div class="line-address">
-										<p>Адрес для перечисления биткойнов:</p>
-										<span>14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span>
-										<button type="button" class="btn btn-primary btn-lg">Отправить</button>
-									</div>
-								</div>
-							</div>
-							<div id="send" class="tab-pane">
-<!-- 								Получатель <input type='text' name='' placeholder='0x920ef9458B0023f64E16495956F9b9072b0c28d3' id='poluchatel'>
+                                </div>
+                                <div id="sell2" class="tab-pane">
+                                    <div class="line">
+                                        <div class="line-item">
+                                            <p>Текущая цена ед:</p>
+                                            <span>1,477 руб</span>
+                                        </div>
+                                        <div class="line-item">
+                                            <p>Цена в btc:</p>
+                                            <span>0,002 btc</span>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <div class="total">
+                                            <p>Кол-во</p>
+                                            <input type="text" onkeyup='recalc_buy()' class="form-control" id='kupit' value='1000'>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <div class="line-item">
+                                            <p>Сумма в руб:</p>
+                                            <span id='ff'>2140000 руб</span>
+                                        </div>
+                                        <div class="line-item">
+                                            <p>Сумма в btc:</p>
+                                            <span id='fff'>23,9844 btc</span>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <div class="line-address">
+                                            <p>Адрес для перечисления биткойнов:</p>
+                                            <span>14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span>
+                                            <button type="button" class="btn btn-primary btn-lg">Отправить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="send" class="tab-pane">
+                                    <!-- 								Получатель <input type='text' name='' placeholder='0x920ef9458B0023f64E16495956F9b9072b0c28d3' id='poluchatel'>
 								количество <input type='number' name='' class='' value='1000'>
 								<input type='button' name='' onclick='send_token();' class='btn' value='Перевести'> -->
-								<div class="line">
-									<div class="line-item">
-										<p>Текущая цена ед:</p>
-										<span>1,477 руб</span>
-									</div>
-									<div class="line-item">
-										<p>Цена в btc:</p>
-										<span>0,002 btc</span>
-									</div>
-								</div>
-								<div class="line">
-									<div class="total">
-										<p>Кол-во</p>
-										<input type="text" onkeyup='recalc_buy()' class="form-control" id='kupit' value='1000'>
-									</div>
-								</div>
-								<div class="line">
-									<div class="line-address">
-										<p>Адрес для перечисления биткойнов:</p>
-										<span>14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span>
-										<button type="button" class="btn btn-primary btn-lg">Отправить</button>
+                                    <div class="line">
+                                        <div class="line-item">
+                                            <p>Текущая цена ед:</p>
+                                            <span>1,477 руб</span>
+                                        </div>
+                                        <div class="line-item">
+                                            <p>Цена в btc:</p>
+                                            <span>0,002 btc</span>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <div class="total">
+                                            <p>Кол-во</p>
+                                            <input type="text" onkeyup='recalc_buy()' class="form-control" id='kupit' value='1000'>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <div class="line-address">
+                                            <p>Адрес для перечисления биткойнов:</p>
+                                            <span>14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span>
+                                            <button type="button" class="btn btn-primary btn-lg">Отправить</button>
 
 
-					</div>
-								</div>
+                                        </div>
+                                    </div>
 
 
-								<script>
-
-                $('.firstline').click(function (e) {
-                  alert('1');
-                })
-
-								function send_token(){
-									var options = options || {};
-									var to = $("#poluchatel").val();
-									bundle.utility.getNextNonce(web3, myeth, function(err, nextNonce){
-										options.nonce = nextNonce;
-										options.to = curaddr;
-										options.data = '0xa9059cbb000000000000000000000000'+$("#poluchatel").val().replace('0x','')+'00000000000000000000000000000000'+pad("5dc",32); //вставить перевод некой суммы
-										console.log(options.data);
-										var tx = new Tx(options);
-										signTx(web3, myeth, tx, localStorage.getItem('myprivate'), function(err, tx){
-											var serializedTx = tx.serialize().toString('hex');
-											  var url = 'https://'+(config.ethTestnet ? 'testnet' : 'api')+'.etherscan.io/api';
-											  var formData = {module: 'proxy', action: 'eth_sendRawTransaction', hex: serializedTx};
-											  if (config.etherscanAPIKey) formData.apikey = config.etherscanAPIKey;
-											  postURL(url, formData, function(err, body){
-												if (!err) {
-												  try {
-													var result = JSON.parse(body);
-													if (result['result']) {
-													  callback(undefined, {txHash: result['result'], nonce: nonce+1});
-													} else if (result['error']) {
-													  callback(result['error']['message'], {txHash: undefined, nonce: nonce});
-													}
-												  } catch (err) {
-													callback(err, {txHash: undefined, nonce: nonce});
-												  }
-												} else {
-												  callback(err, {txHash: undefined, nonce: nonce});
-												}
-											  });
-										});
-									});
-								}
-								</script>
-
-								<div class="tab-pane-tooltip">
-									<p>Пользователь выбирает один из токенов, которым владеет, вводит количество для перевода и выбирает адрес целевого кошелька. Нажимает кнопку и ему перечисляются соответствующие токены.</p>
-								</div>
-							</div>
-							<div id="history" class="tab-pane">
-								<h1>История</h1>
-								  <table class="table history-table">					<tbody class="no-border-x">
-										  <tr><th rowspan="2">Название операции</th>
-											<th rowspan="2">Откуда</th>
-											<th rowspan="2">Куда</th>
-											<th rowspan="2">Количество</th>
-											<th rowspan="2" class="link-th">Ссылка на транз.</th>
-											<th colspan="2">Стоимость на момент операции</th>
-											<th rowspan="2">Статус</th>
-										  </tr>
-										<tr>
-											<td class="valute">руб</td>
-											<td class="valute">btc</td>
-									  	</tr>
-									  	<tr>
-											<td>Покупка</td>
-									  		<td>1HSj6TW9Lgl</td>
-									  		<td>1HSj6TW9Lgl</td>
-									  		<td>14134</td>
-									  		<td><a href="#">lorem ipsum dolor...</a></td>
-									  		<td>2340999</td>
-									  		<td>23,321</td>
-									  		<td>завершено</td>
-									  	 </tr>
-									  	 <tr>
-									  	 	<td>Продажа</td>
-									  	 	<td>1HSj6TW9Lgl</td>
-									  	 	<td>14134</td>
-									  	 	<td><a href="#">lorem ipsum dolor...</a></td>
-									  	 	<td>2340999</td>
-									  	 	<td>23,321</td>
-									  	 	<td>завершено</td>
-									  	  </tr>
-									  	  <tr>
-									  	  	<td>Перевод</td>
-									  	  	<td>1HSj6TW9Lgl</td>
-									  	  	<td>14134</td>
-									  	  	<td><a href="#">lorem ipsum dolor...</a></td>
-									  	  	<td>2340999</td>
-									  	  	<td>23,321</td>
-									  	  	<td>завершено</td>
-									  	   </tr>
-									</tbody>
-								  </table>
-							</div>
-							<div id="settings" class="tab-pane">
-								Настройки
-							</div>
-						  </div>
-						</div>
+                                    <script>
 
 
+                                        function send_token() {
+                                            var options = options || {};
+                                            var to = $("#poluchatel").val();
+                                            bundle.utility.getNextNonce(web3, myeth, function(err, nextNonce) {
+                                                options.nonce = nextNonce;
+                                                options.to = curaddr;
+                                                options.data = '0xa9059cbb000000000000000000000000' + $("#poluchatel").val().replace('0x', '') + '00000000000000000000000000000000' + pad("5dc", 32); //вставить перевод некой суммы
+                                                console.log(options.data);
+                                                var tx = new Tx(options);
+                                                signTx(web3, myeth, tx, localStorage.getItem('myprivate'), function(err, tx) {
+                                                    var serializedTx = tx.serialize().toString('hex');
+                                                    var url = 'https://' + (config.ethTestnet ? 'testnet' : 'api') + '.etherscan.io/api';
+                                                    var formData = {
+                                                        module: 'proxy',
+                                                        action: 'eth_sendRawTransaction',
+                                                        hex: serializedTx
+                                                    };
+                                                    if (config.etherscanAPIKey) formData.apikey = config.etherscanAPIKey;
+                                                    postURL(url, formData, function(err, body) {
+                                                        if (!err) {
+                                                            try {
+                                                                var result = JSON.parse(body);
+                                                                if (result['result']) {
+                                                                    callback(undefined, {
+                                                                        txHash: result['result'],
+                                                                        nonce: nonce + 1
+                                                                    });
+                                                                } else if (result['error']) {
+                                                                    callback(result['error']['message'], {
+                                                                        txHash: undefined,
+                                                                        nonce: nonce
+                                                                    });
+                                                                }
+                                                            } catch (err) {
+                                                                callback(err, {
+                                                                    txHash: undefined,
+                                                                    nonce: nonce
+                                                                });
+                                                            }
+                                                        } else {
+                                                            callback(err, {
+                                                                txHash: undefined,
+                                                                nonce: nonce
+                                                            });
+                                                        }
+                                                    });
+                                                });
+                                            });
+                                        }
+                                    </script>
+
+                                    <div class="tab-pane-tooltip">
+                                        <p>Пользователь выбирает один из токенов, которым владеет, вводит количество для перевода и выбирает адрес целевого кошелька. Нажимает кнопку и ему перечисляются соответствующие токены.</p>
+                                    </div>
+                                </div>
+                                <div id="history" class="tab-pane">
+                                    <h1>История</h1>
+                                    <table class="table history-table">
+                                        <tbody class="no-border-x">
+                                            <tr>
+                                                <th rowspan="2">Название операции</th>
+                                                <th rowspan="2">Откуда</th>
+                                                <th rowspan="2">Куда</th>
+                                                <th rowspan="2">Количество</th>
+                                                <th rowspan="2" class="link-th">Ссылка на транз.</th>
+                                                <th colspan="2">Стоимость на момент операции</th>
+                                                <th rowspan="2">Статус</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="valute">руб</td>
+                                                <td class="valute">btc</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Покупка</td>
+                                                <td>1HSj6TW9Lgl</td>
+                                                <td>1HSj6TW9Lgl</td>
+                                                <td>14134</td>
+                                                <td><a href="#">lorem ipsum dolor...</a></td>
+                                                <td>2340999</td>
+                                                <td>23,321</td>
+                                                <td>завершено</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Продажа</td>
+                                                <td>1HSj6TW9Lgl</td>
+                                                <td>14134</td>
+                                                <td><a href="#">lorem ipsum dolor...</a></td>
+                                                <td>2340999</td>
+                                                <td>23,321</td>
+                                                <td>завершено</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Перевод</td>
+                                                <td>1HSj6TW9Lgl</td>
+                                                <td>14134</td>
+                                                <td><a href="#">lorem ipsum dolor...</a></td>
+                                                <td>2340999</td>
+                                                <td>23,321</td>
+                                                <td>завершено</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="settings" class="tab-pane">
+                                    Настройки
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <script>
+                </script>
+                <!-- Button trigger modal -->
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Регистрация</h4>
+                            </div>
+                            <div class="modal-body">
+
+                                <form onsubmit='return false' id='regform'>
+                                    <div class="form-group">
+                                        <label for="email" class="control-label">Email*:</label>
+                                        <input class="form-control" type='email' required id='email1' name="email">
+                                    </div>
+
+                                    <input type='hidden' name='openkey' class='form-control' value=''>
+                                    <input type='hidden' name='privkey' class='form-control' value=''>
+
+                                    <div class="form-group">
+                                        <label for="email" class="control-label">Пароль*:</label>
+                                        <input class="form-control" required id='pass1' name="pass">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="name" class="control-label">Имя:</label>
+                                        <input type="text" class="form-control" name="name">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="name" class="control-label">Фамилия:</label>
+                                        <input type="text" class="form-control" name="fname">
+                                        <span class="form-bottom">вы можете оставаться анонимным</span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="phone" class="control-label">Телефон:</label>
+                                        <input class="form-control" name="phone">
+                                        <span class="form-bottom">Телефон используется для дополнительных мер безопасности, мы не разглашаем ваши данные</span>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input id="box1" type="checkbox" />
+                                        <label for="box1" class="label-check">Получать уведомления на почту</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input id="box2" type="checkbox" />
+                                        <label for="box2" class="label-check">Получать новости на почту</label>
+                                    </div>
+                                    <input type='hidden' name='firstpage' class='form-control' id='firstpage' value='?'>
+                                    <button type="submit" onclick='reg();' class="regb btn btn-primary">Регистрация</button>
+                                    <script>
+                                        function reg() {
+                                            $("#firstpage").val(localStorage.getItem("firstpage"));
+
+
+                                            $("#regform").hide();
+
+                                            $("#regresult").show();
+
+
+
+
+                                            $("#ulogin").html($("#email1").val().replace(/<\/?[^>]+>/gi, ''));
+                                            $("#upass").html($("#pass1").val().replace(/<\/?[^>]+>/gi, ''));
+
+                                            $("#xpub").html(localStorage.getItem("myethaddress"));
+                                            $("#xpriv").html(localStorage.getItem("myprivate"));
+                                        }
+                                    </script>
+
+                                </form>
+
+                                <div id='regresult' style='display:none'>
+                                    <h2>Вы зарегистрировались!</h2>
+                                    <span id='xd'></span>
+                                    <div class='rer'>
+                                        <div class="reg-result-login">Ваш логин: <span id='ulogin'></span></div>
+                                        <div class="reg-result-password">Ваш пароль: <span id='upass'></span></div>
+                                        <div class="reg-result-publicKey">Публичный ключ: <span id='xpub'></span></div>
+                                        <div class="reg-result-privateKey">Приватный ключ: <span id='xpriv'></span></div>
+                                    </div>
+                                    <div class="reg-result-info">
+                                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Вы можете хранить свой приватный ключ самостоятельно (желательно на бумаге в сейфе), либо положиться на нашу базу данных. Помните, что если вы храните
+                                        его самостоятельно, у нас не будет возможности вернуть вам доступ к вашим токенам в случае потери вами ключа. Никаким способом, даже зная вас лично, у нас не будет возможности восстановить доступ к активам, если
+                                        ключ будет утерян.
+                                    </div>
+                                    <div class="reg-result-buttons">
+                                        <!-- $("#mymodal").modal('hide'); -->
+                                        <button class="btn btn-primary btn-lg" onclick='$(this).prop("disabled",true);sendreg(1);'>Хранить ключ на сервере</button>
+                                        <button class="btn btn-primary btn-lg" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?')){ $(this).prop('disabled',true);sendreg(0); }">Хранить ключ самостоятельно</button>
+                                    </div>
+                                    <script>
+                                        function sendreg(saveprivate) {
+
+                                            $("input[name=openkey]").val(localStorage.getItem("myethaddress"));
+
+                                            if (saveprivate == 1) {
+                                                $("input[name=privkey]").val(localStorage.getItem("myprivate"));
+                                            } else {
+                                                $("input[name=privkey]").val("ключ хранит сам");
+                                            }
+
+                                            $.post("https://reg.bigtime.fund/", $("#regform").serialize(), function(d) {
+                                                //alert(d);
+                                                localStorage.setItem("isuser", 1);
+                                                $('#mymodal').modal('toggle');
+                                                window.location.reload();
+                                            });
+
+
+
+                                        }
+                                    </script>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModallogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Вход</h4>
+                            </div>
+                            <div class="modal-body">
+
+                                <form onsubmit='return false' id='loginform'>
+                                    <div class="form-group">
+                                        <label for="email" class="control-label">Email*:</label>
+                                        <input class="form-control" type='email' required id='loginemail' name="email">
+                                    </div>
+
+
+                                    <input type='hidden' name='login' class='form-control' value='1'>
+
+                                    <div class="form-group">
+                                        <label for="email" class="control-label">Пароль*:</label>
+                                        <input class="form-control" required id='loginpass' name="pass">
+                                    </div>
+
+
+
+
+                                    <input type='hidden' name='firstpage' class='form-control' id='firstpage' value='?'>
+                                    <button type="submit" onclick='login1();' class="regb btn btn-primary">Вход</button> <a href='#' onclick='alert("Позвоните +7957448298")'>Забыли пароль?</a>
+                                    <script>
+                                        function login1() {
+
+                                            $.post("https://reg.bigtime.fund/", $("#loginform").serialize(), function(d) {
+                                                //alert(d);
+                                                var obj = $.parseJSON(d);
+
+                                                if (obj.fio) {
+                                                    localStorage.setItem("isuser", 1);
+                                                    //$('#myModallogin').modal('toggle');
+
+                                                    localStorage.setItem("myethaddress", obj.openkey);
+                                                    localStorage.setItem("myprivate", obj.privkey);
+
+                                                    $("#xpub").html(localStorage.getItem("myethaddress"));
+                                                    $("#xpriv").html(localStorage.getItem("myprivate"));
+                                                    window.location.reload();
+                                                } else {
+                                                    alert("Пользователь не найден");
+                                                }
+                                            });
+
+
+                                        }
+                                    </script>
+
+                                </form>
+
+                                <div id='regresult' style='display:none'>
+                                    <h2>Вы зарегистрировались!</h2>
+                                    <span id='xd'></span>
+                                    <div class='rer'>
+                                        <div class="reg-result-login">Ваш логин: <span id='ulogin'></span></div>
+                                        <div class="reg-result-password">Ваш пароль: <span id='upass'></span></div>
+                                        <div class="reg-result-publicKey">Публичный ключ: <span id='xpub'></span></div>
+                                        <div class="reg-result-privateKey">Приватный ключ: <span id='xpriv'></span></div>
+                                    </div>
+                                    <div class="reg-result-info">
+                                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Вы можете хранить свой приватный ключ самостоятельно (желательно на бумаге в сейфе), либо положиться на нашу базу данных. Помните, что если вы храните
+                                        его самостоятельно, у нас не будет возможности вернуть вам доступ к вашим токенам в случае потери вами ключа. Никаким способом, даже зная вас лично, у нас не будет возможности восстановить доступ к активам, если
+                                        ключ будет утерян.
+                                    </div>
+                                    <div class="reg-result-buttons">
+                                        <!-- $("#mymodal").modal('hide'); -->
+                                        <button class="btn btn-primary btn-lg" onclick='$(this).prop("disabled",true);sendreg(1);'>Хранить ключ на сервере</button>
+                                        <button class="btn btn-primary btn-lg" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?')){ $(this).prop('disabled',true);sendreg(0); }">Хранить ключ самостоятельно</button>
+                                    </div>
+                                    <script>
+                                        function sendreg(saveprivate) {
+
+                                            $("input[name=openkey]").val(localStorage.getItem("myethaddress"));
+
+                                            if (saveprivate == 1) {
+                                                $("input[name=privkey]").val(localStorage.getItem("myprivate"));
+                                            } else {
+                                                $("input[name=privkey]").val("ключ хранит сам");
+                                            }
+
+                                            $.post("https://reg.bigtime.fund/", $("#regform").serialize(), function(d) {
+                                                //alert(d);
+                                                localStorage.setItem("isuser", 1); //
+                                                $('#mymodal').modal('toggle');
+                                                window.location.reload();
+                                            });
+
+
+
+                                        }
+                                    </script>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
             </div>
-          </div>
-		  <script>
-
-
-		  </script>
-		  <!-- Button trigger modal -->
-
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Регистрация</h4>
-      </div>
-      <div class="modal-body">
-
-	  <form onsubmit='return false' id='regform'>
-		  <div class="form-group">
-            <label for="email" class="control-label">Email*:</label>
-            <input class="form-control" type='email' required id='email1' name="email">
-          </div>
-
-		<input type='hidden' name='openkey' class='form-control' value=''>
-		<input type='hidden' name='privkey' class='form-control' value=''>
-
-		  <div class="form-group">
-            <label for="email" class="control-label">Пароль*:</label>
-            <input class="form-control" required id='pass1' name="pass">
-          </div>
-
-          <div class="form-group">
-            <label for="name" class="control-label">Имя:</label>
-            <input type="text" class="form-control" name="name">
-          </div>
-
-		  <div class="form-group">
-            <label for="name" class="control-label">Фамилия:</label>
-            <input type="text" class="form-control" name="fname">
-			<span class="form-bottom">вы можете оставаться анонимным</span>
-          </div>
-
-          <div class="form-group">
-            <label for="phone" class="control-label">Телефон:</label>
-            <input class="form-control" name="phone">
-			<span class="form-bottom">Телефон используется для дополнительных мер безопасности, мы не разглашаем ваши данные</span>
-          </div>
-          <div class="checkbox">
-          	<input id="box1" type="checkbox" />
-          	<label for="box1" class="label-check">Получать уведомления на почту</label>
-          </div>
-          <div class="checkbox">
-          	<input id="box2" type="checkbox" />
-          	<label for="box2" class="label-check">Получать новости на почту</label>
-          </div>
-		  <input type='hidden' name='firstpage' class='form-control' id='firstpage' value='?'>
-		  <button type="submit" onclick='reg();' class="regb btn btn-primary">Регистрация</button>
-		  <script>
-
-			 function reg() {
-					$("#firstpage").val(localStorage.getItem("firstpage"));
-
-
-					$("#regform").hide();
-
-					$("#regresult").show();
-
-
-
-
-					$("#ulogin").html($("#email1").val().replace(/<\/?[^>]+>/gi, ''));
-					$("#upass").html($("#pass1").val().replace(/<\/?[^>]+>/gi, ''));
-
-					$("#xpub").html(localStorage.getItem("myethaddress"));
-					$("#xpriv").html(localStorage.getItem("myprivate"));
-				}
-		  </script>
-
-        </form>
-
-		<div id='regresult' style='display:none'>
-			<h2>Вы зарегистрировались!</h2>
-			<span id='xd'></span>
-			<div class='rer'>
-			<div class="reg-result-login">Ваш логин: <span id='ulogin'></span></div>
-			<div class="reg-result-password">Ваш пароль: <span id='upass'></span></div>
-			<div class="reg-result-publicKey">Публичный ключ: <span id='xpub'></span></div>
-			<div class="reg-result-privateKey">Приватный ключ: <span id='xpriv'></span></div>
-			</div>
-			<div class="reg-result-info">
-				<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-				Вы можете хранить свой приватный ключ самостоятельно (желательно на бумаге в сейфе), либо положиться на нашу базу данных. Помните, что если вы храните его самостоятельно, у нас не будет возможности вернуть вам доступ к вашим токенам в случае потери вами ключа. Никаким способом, даже зная вас лично, у нас не будет возможности восстановить доступ к активам, если ключ будет утерян.
-			</div>
-			<div class="reg-result-buttons"><!-- $("#mymodal").modal('hide'); -->
-				<button class="btn btn-primary btn-lg" onclick='$(this).prop("disabled",true);sendreg(1);'>Хранить ключ на сервере</button>
-				<button class="btn btn-primary btn-lg" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?')){ $(this).prop('disabled',true);sendreg(0); }">Хранить ключ самостоятельно</button>
-			</div>
-			<script>
-				function sendreg(saveprivate) {
-
-					$("input[name=openkey]").val(localStorage.getItem("myethaddress"));
-
-					if (saveprivate == 1) {
-						$("input[name=privkey]").val(localStorage.getItem("myprivate"));
-					} else {
-						$("input[name=privkey]").val("ключ хранит сам");
-					}
-
-					$.post("https://reg.bigtime.fund/",$("#regform").serialize(),function(d){
-						//alert(d);
-						localStorage.setItem("isuser",1);
-						$('#mymodal').modal('toggle');
-						window.location.reload();
-					});
-
-
-
-				}
-			</script>
-		</div>
-
-      </div>
-      <div class="modal-footer">
-
-
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- Modal -->
-<div class="modal fade" id="myModallogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Вход</h4>
-      </div>
-      <div class="modal-body">
-
-	  <form onsubmit='return false' id='loginform'>
-		  <div class="form-group">
-            <label for="email" class="control-label">Email*:</label>
-            <input class="form-control" type='email' required id='loginemail' name="email">
-          </div>
-
-
-		<input type='hidden' name='login' class='form-control' value='1'>
-
-		  <div class="form-group">
-            <label for="email" class="control-label">Пароль*:</label>
-            <input class="form-control" required id='loginpass' name="pass">
-          </div>
-
-
-
-
-		  <input type='hidden' name='firstpage' class='form-control' id='firstpage' value='?'>
-		  <button type="submit" onclick='login1();' class="regb btn btn-primary">Вход</button> <a href='#' onclick='alert("Позвоните +7957448298")'>Забыли пароль?</a>
-		  <script>
-
-			 function login1() {
-
-					$.post("https://reg.bigtime.fund/",$("#loginform").serialize(),function(d){
-						//alert(d);
-						var obj = $.parseJSON(d);
-
-						if (obj.fio) {
-							localStorage.setItem("isuser",1);
-							//$('#myModallogin').modal('toggle');
-
-							localStorage.setItem("myethaddress",obj.openkey);
-							localStorage.setItem("myprivate",obj.privkey);
-
-							$("#xpub").html(localStorage.getItem("myethaddress"));
-							$("#xpriv").html(localStorage.getItem("myprivate"));
-							window.location.reload();
-						} else {
-							alert("Пользователь не найден");
-						}
-					});
-
-
-				}
-		  </script>
-
-        </form>
-
-		<div id='regresult' style='display:none'>
-			<h2>Вы зарегистрировались!</h2>
-			<span id='xd'></span>
-			<div class='rer'>
-			<div class="reg-result-login">Ваш логин: <span id='ulogin'></span></div>
-			<div class="reg-result-password">Ваш пароль: <span id='upass'></span></div>
-			<div class="reg-result-publicKey">Публичный ключ: <span id='xpub'></span></div>
-			<div class="reg-result-privateKey">Приватный ключ: <span id='xpriv'></span></div>
-			</div>
-			<div class="reg-result-info">
-				<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-				Вы можете хранить свой приватный ключ самостоятельно (желательно на бумаге в сейфе), либо положиться на нашу базу данных. Помните, что если вы храните его самостоятельно, у нас не будет возможности вернуть вам доступ к вашим токенам в случае потери вами ключа. Никаким способом, даже зная вас лично, у нас не будет возможности восстановить доступ к активам, если ключ будет утерян.
-			</div>
-			<div class="reg-result-buttons"><!-- $("#mymodal").modal('hide'); -->
-				<button class="btn btn-primary btn-lg" onclick='$(this).prop("disabled",true);sendreg(1);'>Хранить ключ на сервере</button>
-				<button class="btn btn-primary btn-lg" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?')){ $(this).prop('disabled',true);sendreg(0); }">Хранить ключ самостоятельно</button>
-			</div>
-			<script>
-				function sendreg(saveprivate) {
-
-					$("input[name=openkey]").val(localStorage.getItem("myethaddress"));
-
-					if (saveprivate == 1) {
-						$("input[name=privkey]").val(localStorage.getItem("myprivate"));
-					} else {
-						$("input[name=privkey]").val("ключ хранит сам");
-					}
-
-					$.post("https://reg.bigtime.fund/",$("#regform").serialize(),function(d){
-						//alert(d);
-						localStorage.setItem("isuser",1); //
-						$('#mymodal').modal('toggle');
-						window.location.reload();
-					});
-
-
-
-				}
-			</script>
-		</div>
-
-      </div>
-      <div class="modal-footer">
-
-
-      </div>
-    </div>
-  </div>
-</div>
-
-
         </div>
-      </div>
 
-	</div>
+    </div>
 
-  <div class="b-footer">
-	  <div class="container">
-		  <div class="row b-footer__top">
-			  <div class="col-md-3 col-sm-6 col-xs-12 b-footer__logo-cont">
-				  <a href="#"><img class="b-footer__logo" src="images/logo-footer.png" alt=""></a>
-			  </div>
-			  <div class="col-md-2 col-sm-6 col-xs-12">
-				  <ul>
-					  <li class="header">Фонд</li>
-					  <li><a href="investment.html">Инвестиции</a></li>
-					  <li><a href="fond.html#team-anchor">Команда</a></li>
-					  <li><a href="fond.html#contants-anchor">Контакты</a></li>
-					  <li><a href="fond.html#vacancies-anchor">Вакансии</a></li>
-				  </ul>
-			  </div>
-			  <div class="col-md-2 col-sm-6 col-xs-12">
-				  <ul>
-					  <li class="header">Блокчейн</li>
-					  <li><a href="blockchain.html#technology-anchor">Технология</a></li>
-					  <li><a href="industry.html">Новости</a></li>
-					  <li><a href="industry.html#event-anchor">Мероприятия</a></li>
-					  <li><a href="">Терминология</a></li>
-				  </ul>
-			  </div>
-			  <div class="col-md-2 col-sm-6 col-xs-12">
-				  <ul>
-					  <li class="header">Управление</li>
-					  <li><a href="dashboard.html">Купить паи</a></li>
-					  <li><a href="dashboard.html">Помощь</a></li>
-				  </ul>
-			  </div>
-			  <div class="col-md-3 col-sm-6 col-xs-12">
-				  <ul class="soc-buttons">
-					  <li class="header">Соцсети</li>
-					  <li class="soc-items"><a href="https://blog.xapo.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-					  <li class="soc-items"><a class="fb" href="https://www.facebook.com/xapoapp"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					  <li class="soc-items"><a class="tw" href="https://twitter.com/xapo"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					  <li class="soc-items"><a class="yt" href="https://www.youtube.com/channel/UC4MCNbUPZxhq1p6jZoCeUUA"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-					  <li class="soc-items"><a class="vk" href=""><i class="fa fa-vk" aria-hidden="true"></i></a></li>
-				  </ul>
-				  <input type="text" placeholder="Подписаться на новости" class="subscribe-input">
-				  <button class="subscribe-btn">submit</button>
-			  </div>
-		  </div>
-		  <div class="row b-footer__bottom">
-			  <div class="col-md-3 col-sm-6 col-xs-12">
-				  <ul>
-					  <li><a href="/privacy/">Политика конфиденциальности</a></li>
-				  </ul>
-			  </div>
-			  <div class="col-md-9 col-sm-6 col-xs-12 text-right">
-				  <ul class="language-switch language-switch-footer">
-					  <li class="active"><a class="active" href="/">Русский</a></li>
-					  <li><a class="" href="/es">English</a></li>
-					  <li> <a class="" href="/pt">Chinese</a></li>
-				  </ul>
-				  <span class="b-footer__copyright">&copy; 2017 Federal Finance Fund</span>
-			  </div>
-		  </div>
-	  </div>
-  </div><!-- .b-footer -->
+    <div class="b-footer">
+        <div class="container">
+            <div class="row b-footer__top">
+                <div class="col-md-3 col-sm-6 col-xs-12 b-footer__logo-cont">
+                    <a href="#"><img class="b-footer__logo" src="images/logo-footer.png" alt=""></a>
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <ul>
+                        <li class="header">Фонд</li>
+                        <li><a href="investment.html">Инвестиции</a></li>
+                        <li><a href="fond.html#team-anchor">Команда</a></li>
+                        <li><a href="fond.html#contants-anchor">Контакты</a></li>
+                        <li><a href="fond.html#vacancies-anchor">Вакансии</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <ul>
+                        <li class="header">Блокчейн</li>
+                        <li><a href="blockchain.html#technology-anchor">Технология</a></li>
+                        <li><a href="industry.html">Новости</a></li>
+                        <li><a href="industry.html#event-anchor">Мероприятия</a></li>
+                        <li><a href="">Терминология</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <ul>
+                        <li class="header">Управление</li>
+                        <li><a href="dashboard.html">Купить паи</a></li>
+                        <li><a href="dashboard.html">Помощь</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <ul class="soc-buttons">
+                        <li class="header">Соцсети</li>
+                        <li class="soc-items"><a href="https://blog.xapo.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                        <li class="soc-items"><a class="fb" href="https://www.facebook.com/xapoapp"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li class="soc-items"><a class="tw" href="https://twitter.com/xapo"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li class="soc-items"><a class="yt" href="https://www.youtube.com/channel/UC4MCNbUPZxhq1p6jZoCeUUA"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li class="soc-items"><a class="vk" href=""><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                    </ul>
+                    <input type="text" placeholder="Подписаться на новости" class="subscribe-input">
+                    <button class="subscribe-btn">submit</button>
+                </div>
+            </div>
+            <div class="row b-footer__bottom">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <ul>
+                        <li><a href="/privacy/">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9 col-sm-6 col-xs-12 text-right">
+                    <ul class="language-switch language-switch-footer">
+                        <li class="active"><a class="active" href="/">Русский</a></li>
+                        <li><a class="" href="/es">English</a></li>
+                        <li> <a class="" href="/pt">Chinese</a></li>
+                    </ul>
+                    <span class="b-footer__copyright">&copy; 2017 Federal Finance Fund</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- .b-footer -->
 
-	 <link rel="stylesheet" type="text/css" href="css/alertify.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/alertify.min.css" />
 
-		<script>
+    <script>
+        var myeth;
+        var cur, price;
 
-	var myeth;
-	var cur,price;
-	function bundle_loaded() {
-		if (localStorage.getItem("isuser")!=1) $(".regb").show();
-		if (localStorage.getItem("isuser") == 1) $(".bexit").show();
+        function bundle_loaded() {
+            if (localStorage.getItem("isuser") != 1) $(".regb").show();
+            if (localStorage.getItem("isuser") == 1) $(".bexit").show();
 
-		if (typeof bundle != "undefined" && typeof bundle.Main != "undefined" && typeof bundle.Main.createAccount != "undefined") {
-			myeth = localStorage.getItem('myethaddress');
-			//alert(myeth);
-			if (!myeth || myeth.length<3 || myeth == 'undefined') {
-				console.log("!myeth");
-				var reg = bundle.Main.createAccount(); // return {address: address, privateKey: privateKey};
-				console.log(reg);
-				localStorage.setItem("myethaddress",reg.address);
-				localStorage.setItem("myprivate",reg.privateKey);
-				//alert(reg.privateKey);
-				myeth = reg.address;
+            if (typeof bundle != "undefined" && typeof bundle.Main != "undefined" && typeof bundle.Main.createAccount != "undefined") {
+                myeth = localStorage.getItem('myethaddress');
+                //alert(myeth);
+                if (!myeth || myeth.length < 3 || myeth == 'undefined') {
+                    console.log("!myeth");
+                    var reg = bundle.Main.createAccount(); // return {address: address, privateKey: privateKey};
+                    console.log(reg);
+                    localStorage.setItem("myethaddress", reg.address);
+                    localStorage.setItem("myprivate", reg.privateKey);
+                    //alert(reg.privateKey);
+                    myeth = reg.address;
 
-			}
-			$("#myeth").html(myeth);
-			if (localStorage.getItem("isuser")!=1) $("#myeth").html("неизвестен");
+                }
+                $("#myeth").html(myeth);
+                if (localStorage.getItem("isuser") != 1) $("#myeth").html("неизвестен");
 
-			$('tr.pie').each(function (index, value) {
-			  cur = $(this).attr('data-ticker');
+                $('tr.pie').each(function(index, value) {
+                    cur = $(this).attr('data-ticker');
 
-			  var me = $(this);
+                    var me = $(this);
 
-			  $(me).find(".currentprice").html($(this).attr('data-price'));
-			  $(me).find(".rost").html(Math.round($(this).attr('data-price')/$(this).attr('data-startprice')*1000-1000)/10+"%");
-			  $(me).find(".start").html($(this).attr('data-start'));
-			  $(me).find(".tip").html($(this).attr('data-tip'));
+                    $(me).find(".currentprice").html($(this).attr('data-price'));
+                    $(me).find(".rost").html(Math.round($(this).attr('data-price') / $(this).attr('data-startprice') * 1000 - 1000) / 10 + "%");
+                    $(me).find(".start").html($(this).attr('data-start'));
+                    $(me).find(".tip").html($(this).attr('data-tip'));
 
-			  var url = "https://api.etherscan.io/api?module=proxy&data=0x70a08231000000000000000000000000"+myeth.replace('0x','')+"&to="+$(this).attr('rel')+"&action=eth_call";
-			  console.log(url);
+                    var url = "https://api.etherscan.io/api?module=proxy&data=0x70a08231000000000000000000000000" + myeth.replace('0x', '') + "&to=" + $(this).attr('rel') + "&action=eth_call";
+                    console.log(url);
 
-			  $.getJSON(url,function(d){
-					$(me).find(".mytokenbalance").html(parseInt(d.result, 16));
-				});
+                    $.getJSON(url, function(d) {
+                        $(me).find(".mytokenbalance").html(parseInt(d.result, 16));
+                    });
 
-			});
+                });
 
-			$("tr.pie").on("click",function(){
-        $(this).addClass('active').siblings().removeClass('active');
-				$("#centru").show();
+                $("tr.pie").on("click", function() {
+                    $(this).addClass('active').siblings().removeClass('active');
+                    $("#centru").show();
 
-				cur = $(this).attr('data-ticker');
-				curaddr = $(this).attr('rel');
-				price = $(this).attr('data-price'); //сколько токенов получаем за 1 биткоин
+                    cur = $(this).attr('data-ticker');
+                    curaddr = $(this).attr('rel');
+                    price = $(this).attr('data-price'); //сколько токенов получаем за 1 биткоин
 
-				$("#priceinrub").html(price);
-				$("#priceinbtc").html(price/$("#rubbtc").text());
+                    $("#priceinrub").html(price);
+                    $("#priceinbtc").html(price / $("#rubbtc").text());
 
-				$("#x1").html($(this).attr('data-start'));
-				$("#x2").html($(this).attr('data-tip'));
-				$("#x3").html($(this).attr('data-interval'));
-				$("#x4").html($(this).attr('data-tokensold'));
-				$("#x5").html($(this).attr('data-price'));
-				$("#x6").html($(this).attr('data-price')*$(this).attr('data-tokensold'));
-				$("#x7").html(Math.round($(this).attr('data-price')/$(this).attr('data-startprice')*1000-1000)/10+"%"); //$(this).attr('data-price')/$(this).attr('data-startprice')*100-100+"%"
-				$("#x8").html($(this).attr('data-price')/$(this).attr('data-lastprice')*100-100+"%");
-				$("#kupit").val(); //сколько он хочет купить
+                    $("#x1").html($(this).attr('data-start'));
+                    $("#x2").html($(this).attr('data-tip'));
+                    $("#x3").html($(this).attr('data-interval'));
+                    $("#x4").html($(this).attr('data-tokensold'));
+                    $("#x5").html($(this).attr('data-price'));
+                    $("#x6").html($(this).attr('data-price') * $(this).attr('data-tokensold'));
+                    $("#x7").html(Math.round($(this).attr('data-price') / $(this).attr('data-startprice') * 1000 - 1000) / 10 + "%"); //$(this).attr('data-price')/$(this).attr('data-startprice')*100-100+"%"
+                    $("#x8").html($(this).attr('data-price') / $(this).attr('data-lastprice') * 100 - 100 + "%");
+                    $("#kupit").val(); //сколько он хочет купить
 
-				$.get($(this).attr('data-ticker')+".html",function(d){
-					$("#other").html(d);
-				});
-				$.get($(this).attr('data-ticker')+"pie.html",function(d){
-					$("#piechart").html(d);
-				});
-				recalc_buy();
+                    $.get($(this).attr('data-ticker') + ".html", function(d) {
+                        $("#other").html(d);
+                    });
+                    $.get($(this).attr('data-ticker') + "pie.html", function(d) {
+                        $("#piechart").html(d);
+                    });
+                    recalc_buy();
 
-			});
+                });
 
-			/*	Выпуск: <span id='x1'></span><br>
-					Тип: <span id='x2'></span> <br>
-					Интервал: <span id='x3'></span> <br>
-					Токенов: <span id='x4'></span> <br>
-					Текущая цена: <span id='x5'></span> <br>
-					Капитализация: <span id='x6'></span> <br>
-					Результат: <span id='x7'></span> <br>*/
-			//
-			/*
-			$url = 'https://api.etherscan.io/api?module=proxy&data=0x70a08231000000000000000000000000'.$adres.'&to='.$contr.'&apikey=BJY6AGT4AR8WHE8DRJV3Q549UU16GIMUKB&action=eth_call';
-			//echo $url;
-			$mytok = json_decode(send_post($url));
-			$tok = hexdec($mytok->result);
-			*/
+                /*	Выпуск: <span id='x1'></span><br>
+                		Тип: <span id='x2'></span> <br>
+                		Интервал: <span id='x3'></span> <br>
+                		Токенов: <span id='x4'></span> <br>
+                		Текущая цена: <span id='x5'></span> <br>
+                		Капитализация: <span id='x6'></span> <br>
+                		Результат: <span id='x7'></span> <br>*/
+                //
+                /*
+                $url = 'https://api.etherscan.io/api?module=proxy&data=0x70a08231000000000000000000000000'.$adres.'&to='.$contr.'&apikey=BJY6AGT4AR8WHE8DRJV3Q549UU16GIMUKB&action=eth_call';
+                //echo $url;
+                $mytok = json_decode(send_post($url));
+                $tok = hexdec($mytok->result);
+                */
 
-				setTimeout(function(){
-					$(".firstline").eq(0).trigger("click");
-					if (localStorage.getItem("isuser") == 1) $(".onlyuser").css("display","block");
-				},500);
-		} else {
+                setTimeout(function() {
+                    $(".firstline").eq(0).trigger("click");
+                    if (localStorage.getItem("isuser") == 1) $(".onlyuser").css("display", "block");
+                }, 500);
+            } else {
 
-			setTimeout(bundle_loaded,3000);
-		}
+                setTimeout(bundle_loaded, 3000);
+            }
 
-	}
+        }
 
-	function recalc_buy() {
+        function recalc_buy() {
 
-				$("#kupit").val(); //сколько он хочет купить
-				$("#sk").html($("#kupit").val());
-				$("#pr").html(cur); //тикер проекта
-				$("#inrub").html(Math.round($("#kupit").val()*price)); //в рублях
-				$("#inbtc").html(Math.round($("#kupit").val()*price/$("#rubbtc").html()*100)/100); //в битках
-				// var tx = new Tx(options);
+            $("#kupit").val(); //сколько он хочет купить
+            $("#sk").html($("#kupit").val());
+            $("#pr").html(cur); //тикер проекта
+            $("#inrub").html(Math.round($("#kupit").val() * price)); //в рублях
+            $("#inbtc").html(Math.round($("#kupit").val() * price / $("#rubbtc").html() * 100) / 100); //в битках
+            // var tx = new Tx(options);
 
-			}
+        }
 
-	function pad(num, size) {
-		var s = num+"";
-		while (s.length < size) s = "0" + s;
-		return s;
-	}
-	//function
-	</script>
+        function pad(num, size) {
+            var s = num + "";
+            while (s.length < size) s = "0" + s;
+            return s;
+        }
+        //function
+    </script>
 
-	<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
     <script src="js/jquery.translate.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/alertify.min.js" type="text/javascript"></script>
@@ -901,15 +928,16 @@
     <script type="text/javascript" src="js/main.js"></script>
     <script src="assets/lib/prettify/prettify.js" type="text/javascript"></script>
 
-	<script src="https://localbitcoins.com/bitcoincharts/{currency}/trades.json" type="text/javascript"></script>
+    <script src="https://localbitcoins.com/bitcoincharts/{currency}/trades.json" type="text/javascript"></script>
 
 
-	<script>
-	$.getJSON("https://buygazprom.com/rateslocal.php",function(d){
-		$("#rubbtc").html(d.RUB.avg_1h);
-	});
-	</script>
+    <script>
+        $.getJSON("https://buygazprom.com/rateslocal.php", function(d) {
+            $("#rubbtc").html(d.RUB.avg_1h);
+        });
+    </script>
 
-	<script src='utm_hunter.js'></script>
-  </body>
+    <script src='utm_hunter.js'></script>
+</body>
+
 </html>

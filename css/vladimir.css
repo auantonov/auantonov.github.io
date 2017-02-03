@@ -213,8 +213,8 @@
     .nav > li:hover > ul {
         display: none;
     }
-    .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
-        color: rgb(85, 202, 245);
+    .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+        color: #000;
     }
     .b-footer__logo-cont {
         display: none;
@@ -261,6 +261,18 @@
     .blockchain-reg {
         margin-bottom: 55px;
     }
+    .intro {
+        padding: 50px 0 20px;
+    }
+    .blockchain-links {
+        margin-top: -50px;
+    }
+    .blockchain-slider {
+        margin-top: 50px;
+    }
+    .inv-products .products-item h2 {
+        font-size: 23px;
+    }
 }
 
 @media (max-width:768px) {
@@ -268,16 +280,10 @@
         text-align: left;
     }
     .video-wrapper {
-        padding: 30px 15px;
-        height: 203px;
-        width: 100%;
+        padding: 70px 80px;
     }
     .type-wrap {
-        width: 100%;
-        position: relative;
-        left: 0;
-        top: 0;
-        transform: none;
+        width: 400px;
     }
     .promo h1, #typed {
         font-size: 18px;
@@ -285,9 +291,6 @@
     h2 {
         font-size: 28px;
         line-height: 1.2em;
-    }
-    .video-wrapper {
-        background-image: none;
     }
     .blockchain-slider {
         width: 100%;
@@ -355,6 +358,9 @@
         display: block;
         margin: 0 auto 30px;
     }
+    .timeline-panel h4 {
+        margin: 0;
+    }
 }
 
 @media (max-width:600px) {
@@ -372,17 +378,6 @@
     }
     .slide-comment-descr {
         font-size: 14px;
-    }
-    .timeline > li .timeline-image {
-        width: 30px;
-        height: 30px;
-        border: 4px solid #f1f1f1;
-    }
-    .timeline > li .timeline-panel {
-        padding-left: 45px;
-    }
-    .timeline:before {
-        left: 16px;
     }
     .blockchain-info p, .blockchain-forecast p, body, .inv-our-company p, .inv-products p, .inv-p {
         font-size: 14px;
@@ -409,11 +404,22 @@
     .intro-font p {
         font-size: 16px;
     }
-    .video-wrapper {
-        padding: 30px 15px;
-        height: 315px;
-    }
     figure.snip0058 {
         width: 290px;
+    }
+    .video-wrapper {
+        padding: 30px 15px;
+        height: 280px;
+        width: 100%;
+    }
+    .type-wrap {
+        width: 100%;
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+    }
+    .promo h1, #typed {
+        font-size: 16px;
     }
 }

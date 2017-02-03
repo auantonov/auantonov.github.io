@@ -258,6 +258,9 @@
     #team {
         margin-top: 60px;
     }
+    .blockchain-reg {
+        margin-bottom: 55px;
+    }
 }
 
 @media (max-width:768px) {
@@ -341,6 +344,17 @@
     .vacancy-item {
         margin-bottom: 50px;
     }
+    .lead-rolla, .vacancy-item p {
+        font-size: 14px;
+    }
+    .vacancy {
+        margin-bottom: 15px;
+    }
+    figure.snip0058 {
+        width: 370px;
+        display: block;
+        margin: 0 auto 30px;
+    }
 }
 
 @media (max-width:600px) {
@@ -398,5 +412,8 @@
     .video-wrapper {
         padding: 30px 15px;
         height: 315px;
+    }
+    figure.snip0058 {
+        width: 290px;
     }
 }

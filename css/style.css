@@ -3367,8 +3367,8 @@ figure.snip0016:hover figcaption::before {
     cursor:  pointer;
 }
 .blockchain-reg {
-    margin-top: -70px;
-    margin-bottom: 60px;
+    margin-top: -15px;
+    margin-bottom: 90px;
 }
 .be-content .table-striped>tbody>tr {
 	 font-weight: 500;
@@ -3795,7 +3795,6 @@ figure.snip0058 {
     font-family: 'Open Sans', sans-serif;
     color: #fff;
     position: relative;
-    float: left;
     overflow: hidden;
     width: 100%;
     background: #000000;
@@ -4002,9 +4001,9 @@ figure.snip0058:hover:after, figure.snip0058.hover:after {
     position: relative;
 }
 
-.blockchain-links {
-    margin-bottom: 80px;
-}
+/*.blockchain-links {*/
+    /*margin-bottom: 80px;*/
+/*}*/
 
 .links-item {
     text-align: center;

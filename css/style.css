@@ -1026,11 +1026,26 @@ blockquote .small, blockquote footer, blockquote small {
 .grid-item {
     position: relative;
     margin-bottom: 30px;
-    height: 375px;
+    height: 269px;
     cursor: pointer;
     overflow: hidden;
 }
-
+.grid-item-6 img {
+    max-width: initial;
+    width: 376px;
+}
+.grid-item-5 img {
+    width: 361px;
+    max-width: inherit;
+}
+.grid-item-3 img {
+    width: 403px;
+    max-width: none;
+}
+.grid-item-2 img{
+    top: -9px;
+    position: relative;
+}
 .grid-item:hover .overlay {
     opacity: 1;
     z-index: 1111111;
@@ -1063,7 +1078,7 @@ blockquote .small, blockquote footer, blockquote small {
 
 .grid-item .overlay .inner-overlay {
     width: 100%;
-    text-align: center;
+    text-align: left;
     position: absolute;
     padding: 0 30px;
     top: 50%;
@@ -1082,8 +1097,8 @@ blockquote .small, blockquote footer, blockquote small {
 .grid-item .overlay .inner-overlay span {
     font-size: 16px;
     letter-spacing: 1px;
-    color: #a9a9a9;
-    font-style: italic;
+    color: #474747;
+    text-align: left;
 }
 
 .list-work-filter {
@@ -3294,7 +3309,7 @@ figure.snip0016:hover figcaption::before {
     top: 50%;
     left: 50%;
     width: 800px;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -80%);
 }
 
 .promo h1, #typed {
@@ -3360,12 +3375,14 @@ figure.snip0016:hover figcaption::before {
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
 }
+
 .dashboard-descr {
     clear: both;
     font-weight: 500;
     color: #474747;
     padding-top: 75px;
 }
+
 .pie.firstline.active td {
     background: #55caf5;
     color: #ffffff;

@@ -4578,7 +4578,7 @@ a.button {
         height: 115%!important;
         z-index: 11111111;
     }
-    .navbar-right {
+    .navbar-nav {
         float: none!important;
         padding-top: 113px;
         margin: 0;

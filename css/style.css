@@ -4219,13 +4219,14 @@ a.button {
 
 .soc-buttons .soc-items a {
     font-size: 28px;
+    cursor:  pointer;
     margin-top: -4px;
     display: block;
 }
 
 .soc-items {
     display: inline-block;
-    margin-right: 30px;
+    margin-right: 17px;
 }
 
 .soc-items:last-child {

@@ -3330,31 +3330,41 @@ figure.snip0016:hover figcaption::before {
 }
 
 #piechart {
-  float: left;
-  width: 60%;
-  margin-left: 100px;
+    float: left;
+    width: 60%;
+    margin-left: 100px;
 }
+
 #other {
-  clear: both;
-  display: block;
-  padding-top: 60px;
+    clear: both;
+    display: block;
+    padding-top: 60px;
 }
+
 #other h2 {
-  font-size: 36px;
-  font-weight: 600;
+    font-size: 36px;
+    font-weight: 600;
 }
+
 #other p {
-  margin-top: 10px;
-  font-weight: 500;
-  font-size: 16px;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 16px;
 }
+
 #other h1 {
-  text-align: center;
-  margin-top: 70px;
-  font-weight: 600;
-  margin-bottom: -7px;
-  font-size: 20px;
-  font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-top: 70px;
+    font-weight: 600;
+    margin-bottom: -7px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+.dashboard-descr {
+    clear: both;
+    font-weight: 500;
+    color: #474747;
+    padding-top: 75px;
 }
 .pie.firstline.active td {
     background: #55caf5;

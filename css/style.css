@@ -3599,12 +3599,14 @@ figure.snip0016:hover figcaption::before {
     font-weight: 500;
     margin-top: 0;
     cursor: pointer;
-    display: block;
-    font-family: 'Open Sans', sans-serif;
     text-decoration: underline;
 }
+.in-process {
+  text-decoration: underline;
+}
 
-.about-team:hover {
+.about-team:hover,
+.in-process:hover {
     text-decoration: none;
 }
 

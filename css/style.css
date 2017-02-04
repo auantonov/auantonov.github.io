@@ -597,6 +597,9 @@ h2 {
 .btn-navbar a {
     line-height: 45px;
 }
+html .navbar-nav {
+    float: right;
+}
 .dropdown-menu {
 	top: 75px;
 }

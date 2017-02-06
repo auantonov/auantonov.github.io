@@ -1028,11 +1028,28 @@ blockquote .small, blockquote footer, blockquote small {
 
 .grid-item {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     height: 269px;
     cursor: pointer;
     overflow: hidden;
 }
+
+#team h4.spaced {
+    display: flex;
+    align-items: flex-start;
+    font-size: 20px;
+    justify-content: center;
+    font-weight: 500;
+}
+#team h4.spaced+p {
+    margin-top: 10px;
+    margin-bottom: 60px!important;
+}
+
+#team h4.spaced+p em {
+  font-style: normal;
+}
+
 .grid-item-6 img {
     max-width: initial;
     width: 376px;
@@ -1072,7 +1089,7 @@ blockquote .small, blockquote footer, blockquote small {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, .94);
+    background-color: rgba(0, 0, 0, 0.71);
     opacity: 0;
     -webkit-transition: .3s all;
     -o-transition: .3s all;
@@ -1098,10 +1115,11 @@ blockquote .small, blockquote footer, blockquote small {
 }
 
 .grid-item .overlay .inner-overlay span {
-    font-size: 16px;
+    font-size: 15px;
     letter-spacing: 1px;
-    color: #474747;
+    color: #ffffff;
     text-align: left;
+    font-weight: 400;
 }
 
 .list-work-filter {
@@ -1519,12 +1537,11 @@ h4.spaced+p {
 }
 
 .vacancy {
-    margin-top: 60px;
     margin-bottom: 90px;
 }
 
 .vacancy-item {
-		margin-bottom: 30px;
+		margin-bottom: 40px;
 }
 
 .vacancy-item-img {
@@ -3378,12 +3395,12 @@ figure.snip0016:hover figcaption::before {
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
 }
-
 .dashboard-descr {
     clear: both;
     font-weight: 500;
     color: #474747;
-    padding-top: 75px;
+    padding-top: 15px;
+    padding-bottom: 70px;
 }
 
 .pie.firstline.active td {
@@ -3776,7 +3793,7 @@ figure.snip0016:hover figcaption::before {
     border: 3px solid #55caf5;
     color: #55caf5;
     font-size: 16px;
-    width: 230px;
+    width: 195px;
     margin-right: 0;
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;

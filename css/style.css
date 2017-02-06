@@ -2129,7 +2129,9 @@ h4.spaced+p {
     color: #474747;
 }
 
-#myModal .form-control, .total .form-control {
+#myModal .form-control,
+.total .form-control,
+.line-address .form-control {
     border: 2px solid #474747;
 }
 
@@ -2285,6 +2287,16 @@ input[type=checkbox]+label:before {
     color: #474747;
 }
 
+#send .line-address p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+#send .line-address button {
+    margin-right: 0;
+    float: right;
+    margin-top: 30px;
+}
 #sell2.active, #send.active {
     display: flex;
     align-items: baseline;
@@ -2387,7 +2399,8 @@ input[type=checkbox]+label:before {
     border-bottom: 20px solid rgb(71, 71, 71);
 }
 
-.total .form-control:focus {
+.total .form-control:focus,
+.line-address .form-control:focus {
     border-color: rgb(85, 202, 245);
 }
 

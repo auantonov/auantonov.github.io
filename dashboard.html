@@ -37,7 +37,7 @@
             <div class="container">
                 <div class="top-menu-left-section pull-left">
                     <span>Курс <span id='rubbtc'></span> руб. / BTC</span>
-                    <span>Курс <span>927.57</span> $ / BTC</span>
+                    <span>Курс <span id="usdbtc"></span> $ / BTC</span>
                 </div>
                 <div class="top-menu-right-section pull-right">
                     <div class="languages">
@@ -240,7 +240,7 @@
                                 <li class='onlyuser'><a href="#sell2" data-toggle="tab">Продать</a></li>
                                 <li class='onlyuser'><a href="#send" data-toggle="tab">Перевести</a></li>
                                 <li class='onlyuser'><a href="#history" data-toggle="tab">История</a></li>
-                                <li class='onlyuser'><a href="#settings" data-toggle="tab">Настройки</a></li>
+
                             </ul>
                             <div class="tab-content">
                                 <div id="news" class="tab-pane active cont">
@@ -301,17 +301,17 @@
                                     <div class="line">
                                         <div class="line-item">
                                             <p>Текущая цена ед:</p>
-                                            <span>1,477 руб</span>
+                                            <span class="basicPrice"></span>
                                         </div>
                                         <div class="line-item">
                                             <p>Цена в btc:</p>
-                                            <span>0,002 btc</span>
+                                            <span class="FixedBtcPrice"></span>
                                         </div>
                                     </div>
                                     <div class="line">
                                         <div class="total">
                                             <p>Кол-во</p>
-                                            <input type="text" onkeyup='recalc_buy()' class="form-control" id='kupit' value='1000'>
+                                            <input type="text" onkeyup='recalc_buy()' class="form-control" value='100'>
                                         </div>
                                     </div>
                                     <div class="line">
@@ -339,24 +339,24 @@
                                     <div class="line">
                                         <div class="line-item">
                                             <p>Текущая цена ед:</p>
-                                            <span>1,477 руб</span>
+                                            <span class="basicPrice"></span>
                                         </div>
                                         <div class="line-item">
                                             <p>Цена в btc:</p>
-                                            <span>0,002 btc</span>
+                                            <span class="FixedBtcPrice"></span>
                                         </div>
                                     </div>
                                     <div class="line">
                                         <div class="total">
-                                            <p>Кол-во</p>
-                                            <input type="text" onkeyup='recalc_buy()' class="form-control" id='kupit' value='1000'>
+                                            <p>Сумма</p>
+                                            <input type="text" onkeyup='recalc_buy()' class="form-control" value='1000'>
                                         </div>
                                     </div>
                                     <div class="line">
                                         <div class="line-address">
                                             <p>Адрес для перечисления биткойнов:</p>
-                                            <span>14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span>
-                                            <button type="button" class="btn btn-primary btn-lg">Отправить</button>
+                                            <input type="text" onkeyup='recalc_buy()' class="form-control" placeholder="0x...">
+                                            <button type="button" class="btn btn-1 btn-1a">Отправить</button>
 
 
                                         </div>
@@ -416,6 +416,7 @@
                                             });
                                         }
                                     </script>
+
 
                                     <div class="tab-pane-tooltip">
                                         <p>Пользователь выбирает один из токенов, которым владеет, вводит количество для перевода и выбирает адрес целевого кошелька. Нажимает кнопку и ему перечисляются соответствующие токены.</p>
@@ -930,11 +931,47 @@
     <script src="https://localbitcoins.com/bitcoincharts/{currency}/trades.json" type="text/javascript"></script>
 
 
-    <script>
+    <script type="text/javascript" defer>
+
+        var basicBtcPrice;
+
         $.getJSON("https://buygazprom.com/rateslocal.php", function(d) {
+
             $("#rubbtc").html(d.RUB.avg_1h);
+            $("#usdbtc").html(d.USD.avg_1h);
+            var currestRub = $("#rubbtc").html();
+            var basicRubPrice = $('.pie').attr('data-price');
+            var currestRub = $('#rubbtc').html();
+            basicBtcPrice = basicRubPrice / currestRub;
+            $('.basicPrice').html(basicRubPrice + ' руб');
+
         });
+
+        setTimeout(function(){
+          var FixedBtcPrice = basicBtcPrice.toFixed(7);
+          $('.FixedBtcPrice').html(FixedBtcPrice + ' btc');
+        },2000);
+
+        // var sumInput = $('#kupit').val();
+        // alert(sumInput);
+
     </script>
+
+    <!-- <script type="text/javascript" async>
+
+    </script> -->
+
+
+
+    <!-- <script type="text/javascript" async>
+        var basicRubPrice = $('.pie').attr('data-price');
+        var currestRub = $('#rubbtc').html();
+        var basicBtcPrice = basicRubPrice / currestRub;
+        // console.log(currestRub);
+        // console.log(basicBtcPrice);
+        $('.basicPrice').html(basicRubPrice + ' руб');
+    </script> -->
+
 
     <script src='utm_hunter.js'></script>
 </body>

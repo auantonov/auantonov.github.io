@@ -200,6 +200,15 @@
     text-align: right;
 }
 
+.timeline-panel--last:before {
+    content: '';
+    height: 100%;
+    position: absolute;
+    left: -107px;
+    width: 10px;
+    background: #fff;
+}
+
 
 @media (max-width: 1200px) {
     .inv-our-company {
@@ -210,6 +219,9 @@
     }
     .subscribe-input {
         font-size: 10px;
+    }
+    .timeline-panel--last:before {
+        left: -90px;
     }
 }
 
@@ -292,6 +304,12 @@
     }
     .grid-item {
         margin: 0 auto 20px;
+    }
+    .timeline-panel--last:before {
+        left: -70px;
+    }
+    .timeline > li .timeline-image, .timeline:before {
+        top: 12px;
     }
 }
 
@@ -386,6 +404,15 @@
     }
     .grid-item .overlay .inner-overlay span {
         font-size: 14px;
+    }
+    .links-item br {
+        display: none;
+    }
+    .timeline > li .timeline-image, .timeline:before {
+        top: 4px;
+    }
+    .timeline-panel--last:before {
+        left: 35px;
     }
 }
 

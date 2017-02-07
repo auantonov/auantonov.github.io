@@ -47,7 +47,7 @@
 			<div class="container">
 				<div class="top-menu-left-section pull-left">
 					<span>Курс <span id='rubbtc'></span> руб. / BTC</span>
-					<span>Курс <span>927.57</span> $ / BTC</span>
+					<span>Курс <span id="usdbtc"></span> $ / BTC</span>
 				</div>
 				<div class="top-menu-right-section pull-right">
 					<div class="languages">
@@ -681,9 +681,15 @@
 
 						});
 
-						$.getJSON("https://buygazprom.com/rateslocal.php",function(d){
-							$("#rubbtc").html(d.RUB.avg_1h);
-						});
+						 $.getJSON("https://buygazprom.com/rateslocal.php", function(d) {
+							 $("#rubbtc").html(d.RUB.avg_1h);
+							 $("#usdbtc").html(d.USD.avg_1h);
+							 var currestRub = $("#rubbtc").html();
+							 var basicRubPrice = $('.pie').attr('data-price');
+							 var currestRub = $('#rubbtc').html();
+							 basicBtcPrice = basicRubPrice / currestRub;
+							 $('.basicPrice').html(basicRubPrice + ' руб');
+						 });
 					  </script>
 				</div>
 			</div>

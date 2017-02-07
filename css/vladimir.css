@@ -290,6 +290,9 @@
         width: auto;
         margin-left: 20px;
     }
+    .grid-item {
+        margin: 0 auto 20px;
+    }
 }
 
 @media (max-width:768px) {
@@ -380,6 +383,9 @@
     }
     #other h2 {
         font-size: 25px;
+    }
+    .grid-item .overlay .inner-overlay span {
+        font-size: 14px;
     }
 }
 

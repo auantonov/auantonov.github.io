@@ -1029,7 +1029,8 @@ blockquote .small, blockquote footer, blockquote small {
 .grid-item {
     position: relative;
     margin-bottom: 60px;
-    height: 269px;
+    width: 100%;
+    max-width: 450px;
     cursor: pointer;
     overflow: hidden;
 }
@@ -1049,21 +1050,7 @@ blockquote .small, blockquote footer, blockquote small {
 #team h4.spaced+p em {
   font-style: normal;
 }
-
-.grid-item-6 img {
-    max-width: initial;
-    width: 376px;
-}
-.grid-item-5 img {
-    width: 361px;
-    max-width: inherit;
-}
-.grid-item-3 img {
-    width: 403px;
-    max-width: none;
-}
 .grid-item-2 img{
-    top: -9px;
     position: relative;
 }
 .grid-item:hover .overlay {
@@ -1318,7 +1305,8 @@ blockquote .small, blockquote footer, blockquote small {
 }
 
 #contact-information {
-	margin-top: 70px;
+	margin-top: 30px;
+    margin-bottom: 90px;
 }
 
 #contact-information h5 {

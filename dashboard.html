@@ -302,16 +302,11 @@
                                         и нажмите кнопку "Перевести")</span>
 
                                         <p>Адрес для перечисления биткойнов:</p>
-                                        <span>14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span>
-                                        <button type="button" class="btn btn-primary btn-lg">Я перевел</button>
+                                        <span class="key">14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span>
+                                        <button class="button button--itzel button--text-thick"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Я перевел</span></button>
+                                        <!-- <button type="button" class="btn btn-primary btn-lg">Я перевел</button> -->
 
                                     </div>
-
-
-                                    <!-- 							<p><br>
-								Хочу купить <input type='number' name='' onkeyup='recalc_buy()' id='kupit' value='1000'> паев проекта <span id='pr'>??</span>,  это примерно ~<span id='inrub'></span>р, для покупки переведите <span id='inbtc'>1</span>
-								BTC на адрес 14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ
-							</p> -->
 
                                 </div>
                                 <div id="sell2" class="tab-pane">
@@ -328,31 +323,29 @@
                                     <div class="line">
                                         <div class="total">
                                             <p>Кол-во</p>
-                                            <input type="text" onkeyup='recalc_buy()' class="form-control" value='100'>
+                                            <input type="text" onkeyup='updateSell();' class="form-control" value='100' id="sell-token">
                                         </div>
                                     </div>
                                     <div class="line">
                                         <div class="line-item">
                                             <p>Сумма в руб:</p>
-                                            <span id='ff'>2140000 руб</span>
+                                            <span id='sell-token-rub'></span>
                                         </div>
                                         <div class="line-item">
                                             <p>Сумма в btc:</p>
-                                            <span id='fff'>23,9844 btc</span>
+                                            <span id='sell-token-btc'></span>
                                         </div>
                                     </div>
                                     <div class="line">
-                                        <div class="line-address">
+                                        <div class="line-address bg-1">
                                             <p>Адрес для перечисления биткойнов:</p>
                                             <span>14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span>
-                                            <button type="button" class="btn btn-primary btn-lg">Отправить</button>
+                                            <button class="button button--itzel button--text-thick"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Отправить</span></button>
                                         </div>
                                     </div>
                                 </div>
                                 <div id="send" class="tab-pane">
-                                    <!-- 								Получатель <input type='text' name='' placeholder='0x920ef9458B0023f64E16495956F9b9072b0c28d3' id='poluchatel'>
-								количество <input type='number' name='' class='' value='1000'>
-								<input type='button' name='' onclick='send_token();' class='btn' value='Перевести'> -->
+
                                     <div class="line">
                                         <div class="line-item">
                                             <p>Текущая цена ед:</p>
@@ -373,9 +366,7 @@
                                         <div class="line-address">
                                             <p>Адрес для перечисления биткойнов:</p>
                                             <input type="text" onkeyup='recalc_buy()' class="form-control" placeholder="0x...">
-                                            <button type="button" class="btn btn-1 btn-1a">Отправить</button>
-
-
+                                            <button class="button button--itzel button--text-thick"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Отправить</span></button>
                                         </div>
                                     </div>
 
@@ -883,20 +874,7 @@
 
                 });
 
-                /*	Выпуск: <span id='x1'></span><br>
-                		Тип: <span id='x2'></span> <br>
-                		Интервал: <span id='x3'></span> <br>
-                		Токенов: <span id='x4'></span> <br>
-                		Текущая цена: <span id='x5'></span> <br>
-                		Капитализация: <span id='x6'></span> <br>
-                		Результат: <span id='x7'></span> <br>*/
-                //
-                /*
-                $url = 'https://api.etherscan.io/api?module=proxy&data=0x70a08231000000000000000000000000'.$adres.'&to='.$contr.'&apikey=BJY6AGT4AR8WHE8DRJV3Q549UU16GIMUKB&action=eth_call';
-                //echo $url;
-                $mytok = json_decode(send_post($url));
-                $tok = hexdec($mytok->result);
-                */
+
 
                 setTimeout(function() {
                     $(".firstline").eq(0).trigger("click");
@@ -950,24 +928,37 @@
 
     <script type="text/javascript" defer>
 
-        var basicBtcPrice;
+        var basicBtcPrice,
+            basicRubPrice;
 
         $.getJSON("https://buygazprom.com/rateslocal.php", function(d) {
 
             $("#rubbtc").html(d.RUB.avg_1h);
             $("#usdbtc").html(d.USD.avg_1h);
             var currestRub = $("#rubbtc").html();
-            var basicRubPrice = $('.pie').attr('data-price');
+            basicRubPrice = $('.pie').attr('data-price');
             var currestRub = $('#rubbtc').html();
             basicBtcPrice = basicRubPrice / currestRub;
             $('.basicPrice').html(basicRubPrice + ' руб');
 
         });
 
+        function updateSell() {
+          var inputSellVal = document.getElementById("sell-token").value;
+          var SellRubresult = inputSellVal * basicRubPrice;
+          var SellBtcresult = inputSellVal * basicBtcPrice;
+          document.getElementById('sell-token-rub').innerHTML = SellRubresult.toFixed(2) + ' руб';
+          document.getElementById('sell-token-btc').innerHTML = SellBtcresult.toFixed(7) + ' btc';
+          // alert('1');
+        }
+
         setTimeout(function(){
           var FixedBtcPrice = basicBtcPrice.toFixed(7);
           $('.FixedBtcPrice').html(FixedBtcPrice + ' btc');
+          updateSell();
+
         },2000);
+
 
         // var sumInput = $('#kupit').val();
         // alert(sumInput);

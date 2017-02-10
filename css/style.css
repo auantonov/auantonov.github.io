@@ -3506,6 +3506,7 @@ figure.snip0016:hover figcaption::before {
     overflow: hidden;
     padding: 30px 35px;
     padding-bottom: 45px;
+    text-align: justify;
 }
 
 .blockchain-forecast {

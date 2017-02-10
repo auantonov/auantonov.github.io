@@ -2277,6 +2277,7 @@ input[type=checkbox]+label:before {
 
 #buy2 .total input {
     width: 500px;
+    /*font-weight: bold;*/
 }
 
 #send .line-address p {
@@ -2310,16 +2311,101 @@ input[type=checkbox]+label:before {
     margin-bottom: 8px;
 }
 
+.video-content .button {
+    color: #37474f;
+    border-color: #37474f;
+    padding: 0;
+    width: 320px;
+    margin: auto;
+    /*border-width: 2px solid #000;*/
+}
+
+
+.video-content .button--border-thin {
+    border: 2px solid #55caf5;
+}
+
+
+.video-content .button>span {
+    color: #55caf5;
+}
+
+.button--rayen {
+    overflow: hidden;
+    padding: 0;
+    width: 230px;
+}
+
+.button--text-thick {
+    font-weight: 600;
+}
+.button--text-upper {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.button--size-s {
+    font-size: 14px;
+}
+.button--rayen > span {
+    display: block;
+}
+
+.button--rayen::before, .button--rayen > span {
+    padding: 1em 2em;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.button--rayen:hover > span {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+}
+
+.button--rayen:hover::before {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.button--rayen::before, .button--rayen > span {
+    padding: 1em 2em;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.button--rayen::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #55caf5;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
 .tab-content input {
   font-weight: bold;
 }
+
 #buy2 input {
   font-weight: 300;
 }
+#buy2 {
+  font-weight: 500;
+}
+
 .line-item span {
     color: #474747;
     font-size: 16px;
     font-weight: 800;
+}
+
+#sell2 .line-address p {
+  margin-bottom: 8px;
 }
 
 .line-address p {
@@ -3552,7 +3638,7 @@ figure.snip0016:hover figcaption::before {
 
 .pie.firstline.active td {
     background: #55caf5;
-    color: #ffffff;
+    color: #474747;
 }
 .be-content #other table {
     font-family: 'Roboto', sans-serif;
@@ -4154,7 +4240,25 @@ figure.snip0058:hover figcaption::before, figure.snip0058.hover figcaption::befo
 figure.snip0058:hover:after, figure.snip0058.hover:after {
     bottom: 0;
 }
+#preloader {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 1111111111;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 100%;
+}
 
+#preloader img {
+    transform: scale(0.4);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11111111;
+    width: 700px;
+    top: 50%;
+}
 .wrapper {
     background-color: #fff;
     margin: 0 auto;
@@ -4640,6 +4744,9 @@ a.button {
 	.navbar-default .navbar-nav>li>a {
 		font-size: 14px;
 	}
+  .text-container {
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width:993px) {
@@ -4703,7 +4810,7 @@ a.button {
         margin-bottom: 20px;
     }
     .blockchain-stories-item-descr {
-        margin-bottom: 60px;
+      margin-bottom: 25px;
     }
 		.navbar-default .navbar-toggle .icon-bar {
 		    background-color: #ffffff;

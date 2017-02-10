@@ -307,7 +307,7 @@
 	<section class="blockchain-stories">
 		<div class="container">
 			<div class="row masonry-wrap">
-				<div class="col-md-6 masonry-item">
+				<div class="col-md-12 col-lg-6 masonry-item">
 					<div class="blockchain-stories-item">
 						<div class="blockchain-stories-item-img golem">
 							<img src="images/btf/golem.png" alt="">
@@ -317,7 +317,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 masonry-item">
+				<div class="col-md-12 col-lg-6 masonry-item">
 					<div class="blockchain-stories-item">
 						<div class="blockchain-stories-item-img wings">
 							<img src="images/btf/wings.png" alt="">
@@ -337,7 +337,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 masonry-item">
+				<div class="col-md-12 col-lg-6 masonry-item">
 					<div class="blockchain-stories-item">
 						<div class="blockchain-stories-item-img bitshares">
 							<img src="images/btf/BitShares-Logo.png" alt="">
@@ -349,7 +349,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 masonry-item">
+				<div class="col-md-12 col-lg-6 masonry-item">
 					<div class="blockchain-stories-item">
 						<div class="blockchain-stories-item-img storj">
 							<img src="images/btf/logo-white.svg" alt="">
@@ -523,16 +523,7 @@
 				adaptiveHeight: true
 			});
 
-			// init Masonry
-			var $grid = $('.masonry-wrap').masonry({
-				itemSelector: '.masonry-item',
-				percentPosition: true
-			});
-			// layout Isotope after each image loads
-			$grid.imagesLoaded().progress(function() {
-				$grid.masonry();
-				$(window).resize();
-			});
+
 
 			$('.navbar-toggle').click(function() {
 				$('.collapse').toggle();
@@ -542,13 +533,32 @@
 				$("#rubbtc").html(d.RUB.avg_1h);
 			});
 
-			$('.show-btn').click(function() {
-				$(this).siblings('.text-container').toggleClass("show");
-				$(this).toggleClass("rotate");
-				$(this).parents('.masonry-item').siblings().find('.text-container').removeClass('show');
-				$(this).parents('.masonry-item').siblings().find('.show-btn').removeClass('rotate');
-				$(this).parents('.masonry-item').next().next().toggleClass('move-down');
-			});
+			if( $(window).width() > 1200 ) {
+				$('.show-btn').click(function() {
+					$(this).siblings('.text-container').toggleClass("show");
+					$(this).toggleClass("rotate");
+					$(this).parents('.masonry-item').siblings().find('.text-container').removeClass('show');
+					$(this).parents('.masonry-item').siblings().find('.show-btn').removeClass('rotate');
+					$(this).parents('.masonry-item').next().next().toggleClass('move-down');
+				});
+
+				// init Masonry
+				var $grid = $('.masonry-wrap').masonry({
+					itemSelector: '.masonry-item',
+					percentPosition: true
+				});
+				// layout Isotope after each image loads
+				$grid.imagesLoaded().progress(function() {
+					$grid.masonry();
+					$(window).resize();
+				});
+
+			}
+
+			else {
+				$('.text-container').addClass('show');
+				$('.show-btn').remove();
+			}
 		});
 	</script>
 	<script>

@@ -2413,8 +2413,11 @@ input[type=checkbox]+label:before {
     font-weight: 500;
     margin-bottom: 100px;
 }
-.pai-pai {
-  
+.pai-pai thead {
+    background: #55caf5;
+}
+.pai-pai .table>thead>tr>th{
+    border: none;
 }
 .fa.fa-battery-empty.red {
     color: #F44336;
@@ -3663,9 +3666,11 @@ figure.snip0016:hover figcaption::before {
 }
 
 .pie.firstline.active td {
-    background: #55caf5;
-    color: #474747;
+    background: #777777;
+    color: #ffffff;
 }
+
+
 .be-content #other table {
     font-family: 'Roboto', sans-serif;
 }

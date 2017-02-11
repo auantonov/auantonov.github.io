@@ -2443,19 +2443,21 @@ input[type=checkbox]+label:before {
 .pai-pai .table tr:hover i {
   right: 19px;
 }
-.fa.fa-battery-empty.red {
-    color: #F44336;
-    font-size: 24px;
+
+
+.status-red {
+    color: #F44336!important;
+    font-weight: bold;
 }
 
-.fa.fa-battery-half.yellow {
-    color: #ffd214;
-    font-size: 24px;
+.status-yellow {
+    color: #ffd214!important;
+    font-weight: bold;
 }
 
-.fa.fa-battery-full.green {
-    color: #73f9b0;
-    font-size: 24px;
+.status-green {
+    color: #9ad085!important;
+    font-weight: bold;
 }
 
 .line-address p {

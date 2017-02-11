@@ -150,7 +150,7 @@
                     </div>
 
                     <div class="col-md-12 col-sm-12">
-                        <div class="table-container mb50">
+                        <div class="table-container mb50 pai-pai">
                             <table class="table table-striped table-borderless">
                                 <thead>
                                     <tr>
@@ -160,7 +160,7 @@
                                         <th class="number">Текущая цена за ед.</th>
                                         <th class="number">Результат</th>
                                         <th class="number">Выпуск</th>
-                                        <!-- <th class="actions">Действие</th> -->
+                                        <th class="actions">Действие</th>
                                     </tr>
                                 </thead>
                                 <tbody class="no-border-x">
@@ -175,6 +175,7 @@
                                         <td class="number rost">??%</td>
                                         <!-- не менять! считается само-->
                                         <td class="number start">??</td>
+                                        <td class="pie-link"><a href="#">Подробнее</a></td>
 
                                         <!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
                                     </tr>
@@ -191,6 +192,7 @@
                                         <td class="number rost">??%</td>
                                         <!-- не менять! считается само-->
                                         <td class="number start">??</td>
+                                        <td class="pie-link"><a href="#">Подробнее</a></td>
                                         <!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
                                     </tr>
 
@@ -206,6 +208,7 @@
                                         <td class="number rost">??%</td>
                                         <!-- не менять! считается само-->
                                         <td class="number start">??</td>
+                                        <td class="pie-link"><a href="#">Подробнее</a></td>
 
                                         <!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
                                     </tr>
@@ -221,6 +224,7 @@
                                         <td class="number rost">??%</td>
                                         <!-- не менять! считается само-->
                                         <td class="number start">??</td>
+                                        <td class="pie-link"><a href="#">Подробнее</a></td>
 
                                         <!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
                                     </tr>
@@ -237,7 +241,7 @@
                                         <td class="number rost">??%</td>
                                         <!-- не менять! считается само-->
                                         <td class="number start">??</td>
-
+                                        <td class="pie-link"><a href="#">Подробнее</a></td>
                                         <!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
                                     </tr>
 
@@ -429,10 +433,10 @@
                                     </div>
                                 </div>
                                 <div id="history" class="tab-pane">
-                                    <h1>История</h1>
+
                                     <table class="table history-table">
                                         <tbody class="no-border-x">
-                                            <tr>
+                                            <tr class="history-table-header">
                                                 <th rowspan="2">Название операции</th>
                                                 <th rowspan="2">Откуда</th>
                                                 <th rowspan="2">Куда</th>
@@ -441,38 +445,70 @@
                                                 <th colspan="2">Стоимость на момент операции</th>
                                                 <th rowspan="2">Статус</th>
                                             </tr>
-                                            <tr>
+                                            <tr class="history-table-header">
                                                 <td class="valute">руб</td>
                                                 <td class="valute">btc</td>
                                             </tr>
                                             <tr>
                                                 <td>Покупка</td>
                                                 <td>1HSj6TW9Lgl</td>
-                                                <td>1HSj6TW9Lgl</td>
+                                                <td>14134</td>
                                                 <td>14134</td>
                                                 <td><a href="#">lorem ipsum dolor...</a></td>
                                                 <td>2340999</td>
                                                 <td>23,321</td>
-                                                <td>завершено</td>
+                                                <td><i class="fa fa-battery-empty red" aria-hidden="true"></i></td>
                                             </tr>
                                             <tr>
                                                 <td>Продажа</td>
                                                 <td>1HSj6TW9Lgl</td>
                                                 <td>14134</td>
+                                                <td>14134</td>
                                                 <td><a href="#">lorem ipsum dolor...</a></td>
                                                 <td>2340999</td>
                                                 <td>23,321</td>
-                                                <td>завершено</td>
+                                                <td><i class="fa fa-battery-half yellow" aria-hidden="true"></i></td>
                                             </tr>
                                             <tr>
                                                 <td>Перевод</td>
                                                 <td>1HSj6TW9Lgl</td>
                                                 <td>14134</td>
+                                                <td>14134</td>
                                                 <td><a href="#">lorem ipsum dolor...</a></td>
                                                 <td>2340999</td>
                                                 <td>23,321</td>
-                                                <td>завершено</td>
+                                                <td><i class="fa fa-battery-full green" aria-hidden="true"></i></td>
                                             </tr>
+                                            <tr>
+                                                <td>Продажа</td>
+                                                <td>1HSj6TW9Lgl</td>
+                                                <td>14134</td>
+                                                <td>14134</td>
+                                                <td><a href="#">lorem ipsum dolor...</a></td>
+                                                <td>2340999</td>
+                                                <td>23,321</td>
+                                                <td><i class="fa fa-battery-half yellow" aria-hidden="true"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Перевод</td>
+                                                <td>1HSj6TW9Lgl</td>
+                                                <td>14134</td>
+                                                <td>14134</td>
+                                                <td><a href="#">lorem ipsum dolor...</a></td>
+                                                <td>2340999</td>
+                                                <td>23,321</td>
+                                                <td><i class="fa fa-battery-full green" aria-hidden="true"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Покупка</td>
+                                                <td>1HSj6TW9Lgl</td>
+                                                <td>14134</td>
+                                                <td>14134</td>
+                                                <td><a href="#">lorem ipsum dolor...</a></td>
+                                                <td>2340999</td>
+                                                <td>23,321</td>
+                                                <td><i class="fa fa-battery-empty red" aria-hidden="true"></i></td>
+                                            </trs
                                         </tbody>
                                     </table>
                                 </div>

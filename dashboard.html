@@ -521,14 +521,13 @@
                                         <label for="box2" class="label-check">Получать новости на почту</label>
                                     </div>
                                     <input type='hidden' name='firstpage' class='form-control' id='firstpage' value='?'>
-                                    <button type="submit" onclick='reg();' class="regb btn btn-primary">Регистрация</button>
                                     <script>
                                         function reg() {
                                             $("#firstpage").val(localStorage.getItem("firstpage"));
 
 
                                             $("#regform").hide();
-
+                                            $(".modal-reg-footer").hide();
                                             $("#regresult").show();
 
 
@@ -558,10 +557,10 @@
                                         его самостоятельно, у нас не будет возможности вернуть вам доступ к вашим токенам в случае потери вами ключа. Никаким способом, даже зная вас лично, у нас не будет возможности восстановить доступ к активам, если
                                         ключ будет утерян.
                                     </div>
-                                    <div class="reg-result-buttons">
+                                    <div class="reg-result-buttons clearfix">
                                         <!-- $("#mymodal").modal('hide'); -->
-                                        <button class="btn btn-primary btn-lg" onclick='$(this).prop("disabled",true);sendreg(1);'>Хранить ключ на сервере</button>
-                                        <button class="btn btn-primary btn-lg" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?')){ $(this).prop('disabled',true);sendreg(0); }">Хранить ключ самостоятельно</button>
+                                        <button class="btn btn-primary btn-1 in-button" onclick='$(this).prop("disabled",true);sendreg(1);'>Хранить ключ на сервере</button>
+                                        <button class="btn btn-primary btn-1 in-button" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?')){ $(this).prop('disabled',true);sendreg(0); }">Хранить ключ самостоятельно</button>
                                     </div>
                                     <script>
                                         function sendreg(saveprivate) {
@@ -588,9 +587,8 @@
                                 </div>
 
                             </div>
-                            <div class="modal-footer">
-
-
+                            <div class="modal-footer modal-reg-footer">
+                                <button type="submit" onclick='reg();' class="regb btn btn-1 in-button btn-primary">Регистрация</button>
                             </div>
                         </div>
                     </div>
@@ -621,11 +619,8 @@
                                         <input class="form-control" required id='loginpass' name="pass">
                                     </div>
 
-
-
-
                                     <input type='hidden' name='firstpage' class='form-control' id='firstpage' value='?'>
-                                    <button type="submit" onclick='login1();' class="regb btn btn-primary">Вход</button> <a href='#' onclick='alert("Позвоните +7957448298")'>Забыли пароль?</a>
+
                                     <script>
                                         function login1() {
 
@@ -668,10 +663,10 @@
                                         его самостоятельно, у нас не будет возможности вернуть вам доступ к вашим токенам в случае потери вами ключа. Никаким способом, даже зная вас лично, у нас не будет возможности восстановить доступ к активам, если
                                         ключ будет утерян.
                                     </div>
-                                    <div class="reg-result-buttons">
+                                    <div class="reg-result-buttons clearfix">
                                         <!-- $("#mymodal").modal('hide'); -->
-                                        <button class="btn btn-primary btn-lg" onclick='$(this).prop("disabled",true);sendreg(1);'>Хранить ключ на сервере</button>
-                                        <button class="btn btn-primary btn-lg" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?')){ $(this).prop('disabled',true);sendreg(0); }">Хранить ключ самостоятельно</button>
+                                        <button class="btn btn-1 in-button btn-primary" onclick='$(this).prop("disabled",true);sendreg(1);'>Хранить ключ на сервере</button>
+                                        <button class="btn btn-1 in-button btn-primary" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?')){ $(this).prop('disabled',true);sendreg(0); }">Хранить ключ самостоятельно</button>
                                     </div>
                                     <script>
                                         function sendreg(saveprivate) {
@@ -699,8 +694,8 @@
 
                             </div>
                             <div class="modal-footer">
-
-
+                                <button type="submit" onclick='login1();' class="regb btn btn-1 in-button btn-primary">Вход</button>
+                                <a href='#' class="forgot-pass" onclick='alert("Позвоните +7957448298")'>Забыли пароль?</a>
                             </div>
                         </div>
                     </div>

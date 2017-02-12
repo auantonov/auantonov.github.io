@@ -2413,22 +2413,51 @@ input[type=checkbox]+label:before {
     font-weight: 500;
     margin-bottom: 100px;
 }
-.pai-pai {
-  
+.pai-pai thead {
+    background: #55caf5;
 }
-.fa.fa-battery-empty.red {
-    color: #F44336;
-    font-size: 24px;
+.pai-pai .table>thead>tr>th {
+    border: none;
+    height: 50px;
+    font-size: 15px;
+    vertical-align: middle;
+}
+.pai-pai .table>tbody>tr>td {
+    border: none;
+    position: relative;
+}
+.pai-pai .table tr td a:hover,
+.pai-pai .table tr td a:active,
+.pai-pai .table tr td a {
+  text-decoration: none;
+
+}
+.pai-pai .table tr td a i {
+    right: 24px;
+    top: 11px;
+    position: absolute;
+    -webkit-transition: right 0.3s ease;
+    -o-transition: right 0.3ss ease;
+    transition: right 0.3s ease;
+}
+.pai-pai .table tr:hover i {
+  right: 19px;
 }
 
-.fa.fa-battery-half.yellow {
-    color: #ffd214;
-    font-size: 24px;
+
+.status-red {
+    color: #F44336!important;
+    font-weight: bold;
 }
 
-.fa.fa-battery-full.green {
-    color: #73f9b0;
-    font-size: 24px;
+.status-yellow {
+    color: #ffd214!important;
+    font-weight: bold;
+}
+
+.status-green {
+    color: #9ad085!important;
+    font-weight: bold;
 }
 
 .line-address p {
@@ -3663,9 +3692,16 @@ figure.snip0016:hover figcaption::before {
 }
 
 .pie.firstline.active td {
-    background: #55caf5;
-    color: #474747;
+    background: #6b6b6b;
+    color: #ffffff;
 }
+.pie.firstline.active td i {
+  color: #fff;
+}
+.pie.firstline.active td a {
+    color:#fff;
+}
+
 .be-content #other table {
     font-family: 'Roboto', sans-serif;
 }
@@ -4004,8 +4040,7 @@ figure.snip0016:hover figcaption::before {
     margin-top: 10px;
 }
 
-.token table,
-.be-content table {
+.token table {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -4030,7 +4065,7 @@ figure.snip0016:hover figcaption::before {
 .token table tbody,
 .be-content table {
     color: #474747;
-    font-size: 13px;
+    font-size: 14px;
 }
 .token .table>tbody>tr>td, .token .table>tbody>tr>th, .token .table>tfoot>tr>td, .token .table>tfoot>tr>th {
    border: none;

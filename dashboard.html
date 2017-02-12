@@ -867,7 +867,7 @@
 			//грузим все
 			$.get("//reg.bigtime.fund/exp.php",function(d){
 			for(var k in d) {
-				item = d[k];
+				item = d[k]; //f
 				add_token(item.sold,item.inteval,item.tip,item.start,item.price,item.lastprice,item.startprice,item.ticker,item.rel)
             }
 			},"json");

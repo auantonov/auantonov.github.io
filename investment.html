@@ -1368,33 +1368,23 @@
 		  });
 		});
 		$(function() {
+				setTimeout(function(){
+						$("#typed").typed({
 
-			$("#typed").typed({
-
-				strings: ["Финансовые инструменты будущего уже сейчас используют открытые блокчейн-сети,<br> собственность имеет надежное цифровое воплощение, а все операции полностью<br> прозрачны для инвестора."],
-				// stringsElement: $('#typed-strings'),
-				typeSpeed: 3,
-				backDelay: 0,
-				loop: false,
-				// contentType: 'html', // or text
-				// defaults to false for infinite loop
-				loopCount: false
-				// callback: function(){ foo(); },
-				// resetCallback: function() { newTyped(); }
-			});
-
-			// $(".reset").click(function(){
-			//     $("#typed").typed('reset');
-			// });
+							strings: ["Финансовые инструменты будущего уже сейчас используют открытые блокчейн-сети,<br> собственность имеет надежное цифровое воплощение, а все операции полностью<br> прозрачны для инвестора."],
+							// stringsElement: $('#typed-strings'),
+							typeSpeed: 3,
+							backDelay: 0,
+							loop: false,
+							// contentType: 'html', // or text
+							// defaults to false for infinite loop
+							loopCount: false
+							// callback: function(){ foo(); },
+							// resetCallback: function() { newTyped(); }
+						});
+				},3000);
 
 		});
-
-		function newTyped() { /* A new typed object */ }
-
-		function foo() {
-			console.log("Callback");
-		}
-
 
 
 		// - Noel Delgado | @pixelia_me

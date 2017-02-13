@@ -8,7 +8,7 @@
 //         submitForm();
 //     }
 // });
-// 
+//
 // alert(window.localStorage.myethaddress);
 
 
@@ -75,35 +75,41 @@ function submitMSG(valid, msg) {
 }
 
 /* ---- our work gallery ---- */
-$('#work').magnificPopup({
-    delegate: 'a.zoom',
-    type: 'image',
-    fixedContentPos: false,
-    removalDelay: 300,
-    mainClass: 'mfp-fade',
-    gallery: {
-        enabled: true,
-        preload: [0,2]
-    }
-});
+// $('#work').magnificPopup({
+//     delegate: 'a.zoom',
+//     type: 'image',
+//     fixedContentPos: false,
+//     removalDelay: 300,
+//     mainClass: 'mfp-fade',
+//     gallery: {
+//         enabled: true,
+//         preload: [0,2]
+//     }
+// });
 
 /* ---- popup image ---- */
-$('.popup-img').magnificPopup({
-    type: 'image',
-    removalDelay: 300,
-    mainClass: 'mfp-fade'
-});
+// $('.popup-img').magnificPopup({
+//     type: 'image',
+//     removalDelay: 300,
+//     mainClass: 'mfp-fade'
+// });
 
 /* ---- popup video ---- */
 $(document).ready(function() {
-    $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-        disableOn: 700,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false
-    });
+
+  setTimeout(function(){
+      $('#preloader').fadeOut(500);
+      $('.preloader-content img').fadeOut(100);
+  },3000);
+
+    // $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+    //     disableOn: 700,
+    //     type: 'iframe',
+    //     mainClass: 'mfp-fade',
+    //     removalDelay: 160,
+    //     preloader: false,
+    //     fixedContentPos: false
+    // });
 });
 
 /* ---- nav smooth scroll ---- */
@@ -148,11 +154,12 @@ if (typeof sr == 'undefined') {
         delay: 50
     });
 }
-Royal_Preloader.config({
-    onComplete: function () {
-        triggerReveals();
-    }
-});
+// window.onload(function () {
+//   alert('1');
+// })
+
+
+
 function triggerReveals() {
     sr.reveal('.bottomReveal', {
         origin: 'bottom'

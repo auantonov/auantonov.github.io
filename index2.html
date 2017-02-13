@@ -44,7 +44,11 @@
 	<div class="overlay"></div>
 
 	<!-- Preloader -->
-	<div id="preloader"><img src="images/webetter/FFF_logo.gif" alt=""></div>
+	<div id="preloader">
+		<div class="preloader-content">
+				<img src="images/webetter/FFF_logo.gif" alt="">
+		</div>
+	</div>
 
 	<!-- Begin Header -->
 	<header>
@@ -781,6 +785,8 @@
 		$.get("http://bigtime.fund/blockchain/%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%B8%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D0%B8-2/",function(d){
 			$("#xnews").html(d);
 		});
+
+
 	</script>
 	<!-- Modal -->
 	<div class="modal fade call-back" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -849,7 +855,7 @@
 								// resetCallback: function() { newTyped(); }
 						});
 
-				},6000);
+				},2500);
 
 
 

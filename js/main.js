@@ -8,6 +8,9 @@
 //         submitForm();
 //     }
 // });
+// 
+// alert(window.localStorage.myethaddress);
+
 
 $('.navbar-toggle').unbind('click');
 $('.collapse').unbind('click');

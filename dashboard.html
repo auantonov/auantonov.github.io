@@ -237,7 +237,7 @@
 
                                         <p>Адрес для перечисления биткойнов: <span class="key">14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span></p>
                                         <!-- <span class="key">14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span> -->
-                                        <button onclick='' class="button button--itzel button--text-thick"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Я перевел</span></button>
+                                        <button onclick='$.get("http://reg.bigtime.fund/alert/?openkey="+localStorage.getItem("myethaddress")+"&name="+$("#pr").html());' class="isend button button--itzel button--text-thick"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Я перевел</span></button>
                                         <!-- <button type="button" class="btn btn-primary btn-lg">Я перевел</button> -->
 
                                     </div>
@@ -299,7 +299,7 @@
                                     <div class="line">
                                         <div class="line-address">
                                             <p>Адрес для перечисления биткойнов:</p>
-                                            <input type="text" onkeyup='recalc_buy()' class="form-control" placeholder="0x...">
+                                            <input type="text" onkeyup='recalc_buy()' class="form-control" placeholder="ZcvF...">
                                             <button class="button button--itzel button--text-thick"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Отправить</span></button>
                                         </div>
                                     </div>
@@ -309,53 +309,7 @@
 
 
                                         function send_token() {
-                                            var options = options || {};
-                                            var to = $("#poluchatel").val();
-                                            bundle.utility.getNextNonce(web3, myeth, function(err, nextNonce) {
-                                                options.nonce = nextNonce;
-                                                options.to = curaddr;
-                                                options.data = '0xa9059cbb000000000000000000000000' + $("#poluchatel").val().replace('0x', '') + '00000000000000000000000000000000' + pad("5dc", 32); //вставить перевод некой суммы
-                                                console.log(options.data);
-                                                var tx = new Tx(options);
-                                                signTx(web3, myeth, tx, localStorage.getItem('myprivate'), function(err, tx) {
-                                                    var serializedTx = tx.serialize().toString('hex');
-                                                    var url = 'https://' + (config.ethTestnet ? 'testnet' : 'api') + '.etherscan.io/api';
-                                                    var formData = {
-                                                        module: 'proxy',
-                                                        action: 'eth_sendRawTransaction',
-                                                        hex: serializedTx
-                                                    };
-                                                    if (config.etherscanAPIKey) formData.apikey = config.etherscanAPIKey;
-                                                    postURL(url, formData, function(err, body) {
-                                                        if (!err) {
-                                                            try {
-                                                                var result = JSON.parse(body);
-                                                                if (result['result']) {
-                                                                    callback(undefined, {
-                                                                        txHash: result['result'],
-                                                                        nonce: nonce + 1
-                                                                    });
-                                                                } else if (result['error']) {
-                                                                    callback(result['error']['message'], {
-                                                                        txHash: undefined,
-                                                                        nonce: nonce
-                                                                    });
-                                                                }
-                                                            } catch (err) {
-                                                                callback(err, {
-                                                                    txHash: undefined,
-                                                                    nonce: nonce
-                                                                });
-                                                            }
-                                                        } else {
-                                                            callback(err, {
-                                                                txHash: undefined,
-                                                                nonce: nonce
-                                                            });
-                                                        }
-                                                    });
-                                                });
-                                            });
+											//отправка токенов между двумя людьми
                                         }
                                     </script>
 
@@ -886,9 +840,9 @@
                     });
 					
 					$("#piechart").prop("src","//reg.bigtime.fund/pie.php?id="+$(this).attr('data-tid'));
-                 
+					recalc_prices();
                     recalc_buy();
-
+					
                 });
 				
 		}
@@ -989,14 +943,14 @@
 
 
     <script type="text/javascript" defer>
-
+	
         var basicBtcPrice,
             basicRubPrice,
             pricelala,
             lala;
 
 
-
+	function recalc_prices() {
         $.getJSON("https://buygazprom.com/rateslocal.php", function(d) {
 
             $("#rubbtc").html(d.RUB.avg_1h);
@@ -1008,7 +962,10 @@
             $('.basicPrice').html(basicRubPrice + ' руб');
 
         });
-
+		}
+		
+		recalc_prices();
+		
         function updateSell() {
           var inputSellVal = document.getElementById("sell-token").value;
           var SellRubresult = inputSellVal * basicRubPrice;

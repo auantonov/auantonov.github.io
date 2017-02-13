@@ -12,14 +12,13 @@ body {
     background-color: #fff;
     font-size: 16px;
     color: #8e8e8e;
-    height: 100%;
+    position: relative;
     padding-top: 80px;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 300;
-    min-height: 100% !important;
 }
 
 body.body-spacing-top {
@@ -1320,6 +1319,7 @@ blockquote .small, blockquote footer, blockquote small {
 .video-wrapper {
     padding-top: 80px;
     padding-bottom: 100px;
+
 }
 
 .video-container {
@@ -1637,7 +1637,7 @@ h4.spaced+p {
     background-size: cover;
     background-position: center;
     position: relative;
-    height: 100%;
+    height: 926px;
 }
 
 .video-wrapper:before {
@@ -2104,12 +2104,12 @@ h4.spaced+p {
     margin-top: 10px;
 }
 
-#myModal .modal-body {
+.modal .modal-body {
     position: relative;
     padding: 30px;
 }
 
-#myModal label {
+.modal label {
     display: inline-block;
     max-width: 100%;
     margin-bottom: 10px;
@@ -2117,18 +2117,18 @@ h4.spaced+p {
     color: #474747;
 }
 
-#myModal .form-control,
+.modal .form-control,
 .total .form-control,
 .line-address .form-control {
     border: 2px solid #474747;
 }
 
-#myModal .modal-title {
+.modal .modal-title {
     font-weight: 600;
     text-transform: none;
 }
 
-#myModal .form-bottom {
+.modal .form-bottom {
     font-size: 12px;
     margin-top: 5px;
     font-style: normal;
@@ -2202,16 +2202,16 @@ input[type=checkbox]+label:before {
     margin-bottom: 2px;
 }
 
-#myModal .btn-primary {
-    margin: 20px auto 20px;
-    display: block;
-    font-size: 17px;
-    padding: 15px 30px;
-}
+/*#myModal .btn-primary {*/
+    /*margin: 20px auto 20px;*/
+    /*display: block;*/
+    /*font-size: 17px;*/
+    /*padding: 15px 30px;*/
+/*}*/
 
-#myModal .modal-footer {
-    display: none;
-}
+/*#myModal .modal-footer {*/
+    /*display: none;*/
+/*}*/
 
 #myModal .modal-dialog {
     width: 600px;
@@ -2225,6 +2225,7 @@ input[type=checkbox]+label:before {
     text-transform: none;
     text-align: center;
     margin-bottom: 20px;
+    font-size: 25px;
 }
 
 .reg-result-login, .reg-result-password, .reg-result-publicKey, .reg-result-privateKey {
@@ -2240,11 +2241,11 @@ input[type=checkbox]+label:before {
 }
 
 .reg-result-info {
-    font-size: 15px;
+    font-size: 14px;
     margin-top: 20px;
     color: black;
     font-weight: bold;
-    line-height: 25px;
+    line-height: 23px;
     margin-bottom: 30px;
 }
 
@@ -2256,12 +2257,12 @@ input[type=checkbox]+label:before {
 #myModal .reg-result-buttons button {
     margin: 0px auto 20px;
     display: block;
-    font-size: 16px;
-    padding: 15px 30px;
-}
-
-.reg-result-buttons {
-    display: flex;
+    font-size: 14px;
+    padding: 10px 20px;
+    width: auto;
+    font-family: "Open Sans";
+    font-weight: 600;
+    float: right;
 }
 
 
@@ -2408,7 +2409,16 @@ input[type=checkbox]+label:before {
   margin-bottom: 8px;
 }
 
-#history table {
+.blockchain-table-link {
+  color: #55caf5;
+}
+
+.blockchain-table-link:hover {
+  color: #55caf5;
+}
+
+#history table,
+#blockchain table {
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 100px;
@@ -4310,14 +4320,18 @@ figure.snip0058:hover:after, figure.snip0058.hover:after {
     left: 0;
     height: 100%;
 }
-
+.preloader-content {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
 #preloader img {
     transform: scale(0.4);
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 11111111;
-    width: 700px;
+    width: 500px;
     top: 50%;
 }
 .wrapper {

@@ -34,7 +34,12 @@
 <body class="body-static-navbar">
 
 	<!-- Preloader -->
-	<!-- <div id="royal_preloader"></div> -->
+	<div id="preloader">
+		<div class="preloader-content">
+				<img src="images/webetter/FFF_logo.gif" alt="">
+		</div>
+	</div>
+
 
 	<!-- Begin Header -->
 	<header>
@@ -306,7 +311,7 @@
 			</div><!-- /.container -->
 		</section>
 	<!-- Begin Quotes -->
-	
+
 	<!-- Begin Map -->
 	<section class="contact-info">
 		<div class="container">
@@ -364,7 +369,7 @@
 						</div>
 						<div class="vacancy-item-info">
 							<h6>Front-End Developer at Envato</h6>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, hic corrupti nobis consequuntur nam praesentium dolorem quo accusamus laborum ab.</p>				
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, hic corrupti nobis consequuntur nam praesentium dolorem quo accusamus laborum ab.</p>
 						</div>
 					</div>
 				</div>
@@ -377,7 +382,7 @@
 						</div>
 						<div class="vacancy-item-info">
 							<h6>Front-End Developer at Envato</h6>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, hic corrupti nobis consequuntur nam praesentium dolorem quo accusamus laborum ab.</p>				
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, hic corrupti nobis consequuntur nam praesentium dolorem quo accusamus laborum ab.</p>
 						</div>
 					</div>
 				</div>
@@ -390,7 +395,7 @@
 						</div>
 						<div class="vacancy-item-info">
 							<h6>Front-End Developer at Envato</h6>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, hic corrupti nobis consequuntur nam praesentium dolorem quo accusamus laborum ab.</p>				
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, hic corrupti nobis consequuntur nam praesentium dolorem quo accusamus laborum ab.</p>
 						</div>
 					</div>
 				</div>
@@ -403,7 +408,7 @@
 						</div>
 						<div class="vacancy-item-info">
 							<h6>Front-End Developer at Envato</h6>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, hic corrupti nobis consequuntur nam praesentium dolorem quo accusamus laborum ab.</p>				
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, hic corrupti nobis consequuntur nam praesentium dolorem quo accusamus laborum ab.</p>
 						</div>
 					</div>
 				</div>
@@ -462,10 +467,10 @@
 	<script type="text/javascript" src="js/main.js"></script>
 	    <script type="text/javascript">
 	    		$(document).ready(function() {
-	    		 
+
 	    		    var pos1 = new google.maps.LatLng(18.520266, 73.856406),
 	    		        pos2 = new google.maps.LatLng(28.579943, 77.330006),
-	    		        
+
 	    		        option1 = {
 	    		            zoom: 17,
 	    		            center: pos1,
@@ -479,7 +484,7 @@
 	    		            mapTypeId: google.maps.MapTypeId.ROADMAP,
 	    		            styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
 	    		        },
-	    		        
+
 	    		        map1 = new google.maps.Map(document.getElementById("map1"), option1),
 	    		        map2 = new google.maps.Map(document.getElementById("map2"), option2),
 
@@ -494,6 +499,10 @@
 	    		            map: map2,
 	    		            title: "Noida"
 	    		        });
+
+									setTimeout(function(){
+											$('#preloader').fadeOut('slow');
+									},3000);
 
 	    		});
 	    </script>

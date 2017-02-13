@@ -213,6 +213,17 @@
     clear: both;
 }
 
+.main-content.graphic-buttons .modal-footer .btn {
+    margin: 0;
+    float: right;
+}
+
+.forgot-pass {
+    margin-top: 15px;
+    float: right;
+    clear: both;
+}
+
 
 @media (max-width: 1200px) {
     .inv-our-company {

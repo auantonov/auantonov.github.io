@@ -2409,7 +2409,16 @@ input[type=checkbox]+label:before {
   margin-bottom: 8px;
 }
 
-#history table {
+.blockchain-table-link {
+  color: #55caf5;
+}
+
+.blockchain-table-link:hover {
+  color: #55caf5;
+}
+
+#history table,
+#blockchain table {
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 100px;
@@ -4318,7 +4327,7 @@ figure.snip0058:hover:after, figure.snip0058.hover:after {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 11111111;
-    width: 700px;
+    width: 500px;
     top: 50%;
 }
 .wrapper {

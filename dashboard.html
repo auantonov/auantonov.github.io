@@ -136,7 +136,7 @@
                         <button type="button" class="regb btn btn-1 btn-1a in-button" style='display:none;' data-toggle="modal" data-target="#myModallogin">
                             Вход
                         </button>
-                        <button type="button" onclick='window.localStorage.removeItem("isuser");window.localStorage.removeItem("myprivate");window.localStorage.removeItem("myethaddress");window.location.reload();' class="bexit exitb btn btn-primary btn-lg btn btn-1 btn-1a" style='display:none;'>
+                        <button type="button" class="btn btn-1 btn-1a" onclick='window.localStorage.removeItem("isuser");window.localStorage.removeItem("myprivate");window.localStorage.removeItem("myethaddress");window.location.reload();' class="bexit exitb btn btn-primary btn-lg" style='display:none;'>
                             Выход
                         </button>
                         <button type="button" class="regb btn btn-1 btn-1a" style='display:none;' data-toggle="modal" data-target="#myModal">
@@ -163,39 +163,95 @@
                                         <th class="actions">Действие</th>
                                     </tr>
                                 </thead>
-                                <tbody class="no-border-x" id='tokens'>
-								
-                                   
+                                <tbody class="no-border-x">
+                                    <tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Приватный' data-start='02.11.16' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
+                                        <td>Приватный 02.11.16</td>
+                                        <td class='tip'>??</td>
+                                        <td class="number mytokenbalance">
+                                            loading
+                                        </td>
+                                        <td class="number"><span class='currentprice'>??</span> р</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number rost">??%</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number start">??</td>
+                                        <td class="pie-link"><a href="#">Подробнее <i class="fa fa-hand-o-right" aria-hidden="true"></i></a></td>
+
+                                        <!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
+                                    </tr>
+
+
+                                    <tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Агресивный' data-start='01.02.17' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
+                                        <td>AGG010217OPEN</td>
+                                        <td class='tip'>??</td>
+                                        <td class="number mytokenbalance">
+                                            loading
+                                        </td>
+                                        <td class="number"><span class='currentprice'>??</span> р</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number rost">??%</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number start">??</td>
+                                        <td class="pie-link"><a href="#">Подробнее <i class="fa fa-hand-o-right" aria-hidden="true"></i></a></td>
+                                        <!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
+                                    </tr>
+
+
+                                    <tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Интервальный' data-start='01.02.17' data-price='1.384' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
+                                        <td>CON010217INT</td>
+                                        <td class='tip'>??</td>
+                                        <td class="number mytokenbalance">
+                                            loading
+                                        </td>
+                                        <td class="number"><span class='currentprice'>??</span> р</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number rost">??%</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number start">??</td>
+                                        <td class="pie-link"><a href="#">Подробнее <i class="fa fa-hand-o-right" aria-hidden="true"></i></a></td>
+
+                                        <!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
+                                    </tr>
+
+                                    <tr class='pie firstline' data-tokensold='724286' data-interval='3 месяца' data-tip='Сбалансированный' data-start='01.02.17' data-price='1' data-lastprice='1.259' data-startprice='1' data-ticker='TST' rel='0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d'>
+                                        <td>BAL010217INT</td>
+                                        <td class='tip'>??</td>
+                                        <td class="number mytokenbalance">
+                                            loading
+                                        </td>
+                                        <td class="number"><span class='currentprice'>??</span> р</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number rost">??%</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number start">??</td>
+                                        <td class="pie-link"><a href="#">Подробнее <i class="fa fa-hand-o-right" aria-hidden="true"></i></a></td>
+
+                                        <!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
+                                    </tr>
+
+
+									<tr class='pie firstline' data-tokensold='50000' data-interval='3 месяца' data-tip='Консервативный' data-start='07.02.17' data-price='1' data-lastprice='1' data-startprice='1' data-ticker='CON' rel='0xadaa8c29ab35c5bf74af37aa799904c7b283f11d'>
+                                        <td>CON0217</td>
+                                        <td class='tip'>??</td>
+                                        <td class="number mytokenbalance">
+                                            loading
+                                        </td>
+                                        <td class="number"><span class='currentprice'>??</span> р</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number rost">??%</td>
+                                        <!-- не менять! считается само-->
+                                        <td class="number start">??</td>
+                                        <td class="pie-link"><a href="#">Подробнее <i class="fa fa-hand-o-right" aria-hidden="true"></i></a></td>
+                                        <!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
+                                    </tr>
 
                                 </tbody>
                             </table>
-							
-							<Script>
-								function add_token(sold,inteval,tip,start,price,lastprice,startprice,ticker,rel) {
-									 var line;
-									   line = "<tr class='pie firstline' data-tokensold='"+sold+"' data-interval='"+inteval+"' data-tip='"+inteval+"' data-start='"+start+"' data-price='"+price+"' data-lastprice='"+lastprice+"' data-startprice='"+startprice+"' data-ticker='"+ticker+"' rel='"+rel+"'>";
-                                        line = "<td>Приватный 02.11.16</td>";
-                                        line = "<td class='tip'>??</td>";
-										line = "<td class=number mytokenbalance>loading</td>";
-										line = "<td class=number><span class='currentprice'>??</span> р</td>";
-                                        <!-- не менять! считается само-->
-										line = "<td class=number rost>??%</td>";
-                                        <!-- не менять! считается само-->
-                                        line = "<td class=number start>??</td>";
-										line = "<td class=pie-link><a href=# onclick='$(\"#moreinfo\").show();return false'>Подробнее <i class='fa fa-hand-o-right' aria-hidden='true'></i></a></td>";
-
-									    line ='</tr>';
-										
-										return line;
-								}
-								
-								
-							</script>
                         </div>
                     </div>
                 </div><!-- .row -->
 
-                <div class="row" style='display:none' id='centru'>
+                <div class="row" id='centru'>
                     <div class="col-xs-12">
 
                         <div class="tab-container">
@@ -204,6 +260,7 @@
                                 <li class='onlyuser'><a href="#buy2" data-toggle="tab">Купить</a></li>
                                 <li class='onlyuser'><a href="#sell2" data-toggle="tab">Продать</a></li>
                                 <li class='onlyuser'><a href="#send" data-toggle="tab">Перевести</a></li>
+                                <li class='onlyuser'><a href="#blockchain" data-toggle="tab">Блокчейн</a></li>
                                 <li class='onlyuser'><a href="#history" data-toggle="tab">История</a></li>
 
                             </ul>
@@ -376,6 +433,76 @@
                                         <p>Пользователь выбирает один из токенов, которым владеет, вводит количество для перевода и выбирает адрес целевого кошелька. Нажимает кнопку и ему перечисляются соответствующие токены.</p>
                                     </div>
                                 </div>
+                                <div id="blockchain" class="tab-pane">
+                                  <table class="table history-table">
+                                      <tbody class="no-border-x">
+                                          <tr class="history-table-header">
+                                              <th>Дата</th>
+                                              <th>Имя актива</th>
+                                              <th>Событие</th>
+                                              <th>Источник</th>
+                                              <th class="link-th">Назначение</th>
+                                              <th>Сколько бабок</th>
+                                              <th>Ссылка на транз.</th>
+                                          </tr>
+                                          <tr>
+                                              <td>17.02.17</td>
+                                              <td>MaidSafe</td>
+                                              <td>Перевод</td>
+                                              <td>16rMXuGwmokzJT4cU4i9MMXqDdekPR6qjY</td>
+                                              <td>16rMXuGwmokzJT4cU4i9MMXqDdekPR6qjY</td>
+                                              <td>34.2300233</td>
+                                              <td><a href="#" class="blockchain-table-link">bitpay.com</a></td>
+
+                                          </tr>
+                                          <tr>
+                                              <td>13.02.17</td>
+                                              <td>Wings</td>
+                                              <td>Перевод</td>
+                                              <td>16rMXuGwmokzJT4cU4i9MMXqDdekPR6qjY</td>
+                                              <td>16rMXuGwmokzJT4cU4i9MMXqDdekPR6qjY</td>
+                                              <td>39.2300233</td>
+                                              <td><a href="#" class="blockchain-table-link">bitpay.com</a></td>
+                                          </tr>
+                                          <tr>
+                                              <td>10.05.17</td>
+                                              <td>Bitcoin</td>
+                                              <td>Перевод</td>
+                                              <td>16rMXuGwmokzJT4cU4i9MMXqDdekPR6qjY</td>
+                                              <td>16rMXuGwmokzJT4cU4i9MMXqDdekPR6qjY</td>
+                                              <td>20.2300233</td>
+                                              <td><a href="#" class="blockchain-table-link">bitpay.com</a></td>
+                                          </tr>
+                                          <tr>
+                                              <td>11.03.17</td>
+                                              <td>MaidSafe</td>
+                                              <td>Перевод</td>
+                                              <td>16rMXuGwmokzJT4cU4i9MMXqDdekPR6qjY</td>
+                                              <td>16rMXuGwmokzJT4cU4i9MMXqDdekPR6qjY</td>
+                                              <td>50.2300233</td>
+                                              <td><a href="#" class="blockchain-table-link">bitpay.com</a></td>
+                                          </tr>
+                                          <tr>
+                                              <td>09.07.17</td>
+                                              <td>Factom</td>
+                                              <td>Перевод</td>
+                                              <td>16rMXuGwmokzJT4cU4i9MMXqDdekPR6qjY</td>
+                                              <td>16rMXuGwmokzJT4cU4i9MMXqDdekPR6qjY</td>
+                                              <td>74.2300233</td>
+                                              <td><a href="#" class="blockchain-table-link">bitpay.com</a></td>
+                                          </tr>
+                                          <tr>
+                                              <td>01.07.17</td>
+                                              <td>Augur</td>
+                                              <td>Перевод</td>
+                                              <td>16rMXuGwmokzJT4cU4i9MMXqDdekPR6qjY</td>
+                                              <td>16rMXuGwmokzJT4cU4i9MMXqDdekPR6qjY</td>
+                                              <td>21.2300233</td>
+                                              <td><a href="#" class="blockchain-table-link">bitpay.com</a></td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                                </div>
                                 <div id="history" class="tab-pane">
 
                                     <table class="table history-table">
@@ -452,7 +579,7 @@
                                                 <td>2340999</td>
                                                 <td>23,321</td>
                                                 <td class="status-green">Завершено</td>
-                                            </trs
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -521,13 +648,14 @@
                                         <label for="box2" class="label-check">Получать новости на почту</label>
                                     </div>
                                     <input type='hidden' name='firstpage' class='form-control' id='firstpage' value='?'>
+                                    <button type="submit" onclick='reg();' class="regb btn btn-primary">Регистрация</button>
                                     <script>
                                         function reg() {
                                             $("#firstpage").val(localStorage.getItem("firstpage"));
 
 
                                             $("#regform").hide();
-                                            $(".modal-reg-footer").hide();
+
                                             $("#regresult").show();
 
 
@@ -557,10 +685,10 @@
                                         его самостоятельно, у нас не будет возможности вернуть вам доступ к вашим токенам в случае потери вами ключа. Никаким способом, даже зная вас лично, у нас не будет возможности восстановить доступ к активам, если
                                         ключ будет утерян.
                                     </div>
-                                    <div class="reg-result-buttons clearfix">
+                                    <div class="reg-result-buttons">
                                         <!-- $("#mymodal").modal('hide'); -->
-                                        <button class="btn btn-primary btn-1 in-button" onclick='$(this).prop("disabled",true);sendreg(1);'>Хранить ключ на сервере</button>
-                                        <button class="btn btn-primary btn-1 in-button" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?')){ $(this).prop('disabled',true);sendreg(0); }">Хранить ключ самостоятельно</button>
+                                        <button class="btn btn-primary btn-lg" onclick='$(this).prop("disabled",true);sendreg(1);'>Хранить ключ на сервере</button>
+                                        <button class="btn btn-primary btn-lg" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?')){ $(this).prop('disabled',true);sendreg(0); }">Хранить ключ самостоятельно</button>
                                     </div>
                                     <script>
                                         function sendreg(saveprivate) {
@@ -587,8 +715,9 @@
                                 </div>
 
                             </div>
-                            <div class="modal-footer modal-reg-footer">
-                                <button type="submit" onclick='reg();' class="regb btn btn-1 in-button btn-primary">Регистрация</button>
+                            <div class="modal-footer">
+
+
                             </div>
                         </div>
                     </div>
@@ -619,8 +748,11 @@
                                         <input class="form-control" required id='loginpass' name="pass">
                                     </div>
 
-                                    <input type='hidden' name='firstpage' class='form-control' id='firstpage' value='?'>
 
+
+
+                                    <input type='hidden' name='firstpage' class='form-control' id='firstpage' value='?'>
+                                    <button type="submit" onclick='login1();' class="regb btn btn-primary">Вход</button> <a href='#' onclick='alert("Позвоните +7957448298")'>Забыли пароль?</a>
                                     <script>
                                         function login1() {
 
@@ -663,10 +795,10 @@
                                         его самостоятельно, у нас не будет возможности вернуть вам доступ к вашим токенам в случае потери вами ключа. Никаким способом, даже зная вас лично, у нас не будет возможности восстановить доступ к активам, если
                                         ключ будет утерян.
                                     </div>
-                                    <div class="reg-result-buttons clearfix">
+                                    <div class="reg-result-buttons">
                                         <!-- $("#mymodal").modal('hide'); -->
-                                        <button class="btn btn-1 in-button btn-primary" onclick='$(this).prop("disabled",true);sendreg(1);'>Хранить ключ на сервере</button>
-                                        <button class="btn btn-1 in-button btn-primary" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?')){ $(this).prop('disabled',true);sendreg(0); }">Хранить ключ самостоятельно</button>
+                                        <button class="btn btn-primary btn-lg" onclick='$(this).prop("disabled",true);sendreg(1);'>Хранить ключ на сервере</button>
+                                        <button class="btn btn-primary btn-lg" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?')){ $(this).prop('disabled',true);sendreg(0); }">Хранить ключ самостоятельно</button>
                                     </div>
                                     <script>
                                         function sendreg(saveprivate) {
@@ -694,8 +826,8 @@
 
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" onclick='login1();' class="regb btn btn-1 in-button btn-primary">Вход</button>
-                                <a href='#' class="forgot-pass" onclick='alert("Позвоните +7957448298")'>Забыли пароль?</a>
+
+
                             </div>
                         </div>
                     </div>
@@ -858,14 +990,6 @@
                 setTimeout(bundle_loaded, 3000);
             }
 
-			
-			//грузим все
-			$.get("//reg.bigtime.fund/exp.php",function(d){
-			for(var k in d) {
-				item = d[k]; //f
-				add_token(item.sold,item.inteval,item.tip,item.start,item.price,item.lastprice,item.startprice,item.ticker,item.rel)
-            }
-			},"json");
         }
 
         function recalc_buy() {

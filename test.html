@@ -1,0 +1,43 @@
+<script>
+    var url = "https://testnet.etherscan.io/api?module=proxy&data=0x70a08231000000000000000000000000" + localStorage.getItem("openkey").replace('0x', '') + "&to=0xc98f5c1b3B783794e646A8a29e2916668B7D9606&action=eth_call";
+                    console.log(url);
+                    $.getJSON(url, function(d) {
+                    $(".t183__title").html(parseInt(d.result, 16)+" xUSD");
+        });
+    $(".t183__uptitle").html("0x"+localStorage.getItem("openkey"));
+    
+    function pad(num, size) {
+    var s = num+"";
+    while (s.length < size) s = "0" + s;
+    return s;
+}
+
+function send(amount,to) {
+	$.get("http://testnet.etherscan.io/api?module=proxy&action=eth_getTransactionCount&address="+localStorage.getItem("openkey")+"&tag=latest&apikey=YourApiKeyToken",function(d){
+		
+		var options = {};
+		options.nonce = d.result; //nonce 
+		options.data = '0xa9059cbb000000000000000000000000'+to+''+pad(amount.toString(16),64);
+		options.to = '0xc98f5c1b3b783794e646a8a29e2916668b7d9606'; //адрес нашего смарт контракта
+		options.gasPrice="0x737be7600";//web3.toHex('31000000000');
+		options.gasLimit=0x927c0; //web3.toHex('600000');
+		options.value = 0; //  //ставка 0.2 эфира
+
+
+			
+				var tx = new EthJS.Tx(options);
+				tx.sign(new Buffer(localStorage.get("privkey"), 'hex')); //приватный ключ игрока, подписываем транзакцию
+
+				var serializedTx = tx.serialize().toString('hex');
+				
+				console.log("Транзакция подписана: "+serializedTx);
+				/* $.getJSON("http://testnet.etherscan.io/api?module=proxy&action=eth_sendRawTransaction&hex="+serializedTx+"&apikey=YourApiKeyToken",function(d){
+					//здесь будет ethereum txid по которому мы позже сможем вытащить результат.
+					obj_game["game"].response("idGame", d.result) 
+					console.log("Транзакция отправлена в сеть");
+				}); */
+			
+		
+	}, "json");
+}
+</script>

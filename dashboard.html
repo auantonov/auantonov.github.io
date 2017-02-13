@@ -134,7 +134,7 @@
 
     </header>
     <!-- End Header -->
-    <div class="be-wrapper be-nosidebar-left">
+    <div class="be-wrapper be-nosidebar-left" style='min-height:1000px'>
         <div class="be-content">
             <div class="main-content container graphic-buttons">
                 <div class="row dashboard-reg-cont">
@@ -143,7 +143,7 @@
                         <button type="button" class="regb btn btn-1 btn-1a in-button" style='display:none;' data-toggle="modal" data-target="#myModallogin">
                             Вход
                         </button>
-                        <button type="button" class="btn btn-1 btn-1a" onclick='window.localStorage.removeItem("isuser");window.localStorage.removeItem("myprivate");window.localStorage.removeItem("myethaddress");window.location.reload();' class="bexit exitb btn btn-primary btn-lg" style='display:none;'>
+                        <button type="button" onclick='window.localStorage.removeItem("isuser");window.localStorage.removeItem("myprivate");window.localStorage.removeItem("myethaddress");window.location.reload();' class="btn btn-1 btn-1a bexit exitb btn btn-primary btn-lg" style='display:none;'>
                             Выход
                         </button>
                         <button type="button" class="regb btn btn-1 btn-1a" style='display:none;' data-toggle="modal" data-target="#myModal">
@@ -182,7 +182,7 @@
                     </div>
                 </div><!-- .row -->
 
-                <div class="row" id='centru'>
+                <div class="row" id='centru' style='display:none'> 
                     <div class="col-xs-12">
 
                         <div class="tab-container">
@@ -206,10 +206,10 @@
                                         </div>
                                     </div>
 
-                                    <div id='piechart'>
-fff
-                                    </div>
-                                    <div id='other'>sdfsdf</div>
+                                    <iframe id='piechart' scrolling=no style='border:0;height:400px;'>
+										Loadnig...
+                                    </iframe>
+                                    <div id='other'>Loading....</div>
                                 </div>
                                 <div id="buy2" style='color:#474747' class="tab-pane">
                                     <div>
@@ -235,9 +235,9 @@ fff
                                         <span>Для покупки <b id='sk'>???</b> токенов проекта <span id='pr'>??</span> вам необходимо пересевти <span id='inbtc'></span> BTC (это примерно ~ <b id='inrub'>80 000</b> рублей, переведите биткоины на этот адрес
                                         и нажмите кнопку "Перевести")</span>
 
-                                        <p>Адрес для перечисления биткойнов:</p>
+                                        <p>Адрес для перечисления биткойнов: <span class="key">14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span></p>
                                         <!-- <span class="key">14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span> -->
-                                        <button class="button button--itzel button--text-thick"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Я перевел</span></button>
+                                        <button onclick='' class="button button--itzel button--text-thick"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Я перевел</span></button>
                                         <!-- <button type="button" class="btn btn-primary btn-lg">Я перевел</button> -->
 
                                     </div>
@@ -867,7 +867,7 @@ fff
                     cur = $(this).attr('data-ticker');
                     curaddr = $(this).attr('rel');
                     price = $(this).attr('data-price'); //сколько токенов получаем за 1 биткоин
-
+					
                     $("#priceinrub").html(price);
                     $("#priceinbtc").html(price / $("#rubbtc").text());
 
@@ -884,9 +884,9 @@ fff
                     $.get("//reg.bigtime.fund/more.php?id="+$(this).attr('data-tid'), function(d) {
                         $("#other").html(d);
                     });
-                    $.get("//reg.bigtime.fund/pie.php?id="+$(this).attr('data-tid'), function(d) {
-                        $("#piechart").html(d);
-                    });
+					
+					$("#piechart").prop("src","//reg.bigtime.fund/pie.php?id="+$(this).attr('data-tid'));
+                 
                     recalc_buy();
 
                 });
@@ -946,7 +946,7 @@ fff
 
 
                 setTimeout(function() {
-                    $(".firstline").eq(0).trigger("click");
+                    //$(".firstline").eq(0).trigger("click");
                     if (localStorage.getItem("isuser") == 1) $(".onlyuser").css("display", "block");
                 }, 500);
             } else {
@@ -978,9 +978,7 @@ fff
     <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
     <script src="js/jquery.translate.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/alertify.min.js" type="text/javascript"></script>
-    <script src="js/ejs_production.js" type="text/javascript"></script>
-    <script src="https://use.fontawesome.com/6c7c72716c.js"></script>
+
     <script src="js/translations.js" type="text/javascript"></script>
     <script src="js/bundle.js" type="text/javascript"></script>
  

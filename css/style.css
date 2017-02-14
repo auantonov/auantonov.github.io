@@ -1637,7 +1637,7 @@ h4.spaced+p {
     background-size: cover;
     background-position: center;
     position: relative;
-    height: 926px;
+    height: calc(100vh - 150px);
 }
 
 .video-wrapper:before {
@@ -2039,7 +2039,7 @@ h4.spaced+p {
 }
 
 .graphic {
-    margin-bottom: 90px;
+     margin-bottom: 90px;
 }
 
 .graphic img {
@@ -2425,6 +2425,17 @@ input[type=checkbox]+label:before {
 }
 .pai-pai thead {
     background: #55caf5;
+    height: 29px;
+    color: #fff;
+}
+.pai-pai.index-pai .table>tbody>tr>td {
+    border: none;
+    position: relative;
+    color: #474747;
+    font-weight: 500;
+}
+.pai-pai.index-pai {
+  margin-bottom: 78px!important;
 }
 .pai-pai .table>thead>tr>th {
     border: none;
@@ -3627,7 +3638,7 @@ figure.snip0016:hover figcaption::before {
     top: 50%;
     left: 50%;
     width: 800px;
-    transform: translate(-50%, -80%);
+    transform: translate(-50%, -50%);
 }
 
 .promo h1, #typed {
@@ -4317,6 +4328,7 @@ figure.snip0058:hover:after, figure.snip0058.hover:after {
     z-index: 1111111111;
     top: 0;
     width: 100%;
+    display: none!important;
     left: 0;
     height: 100%;
 }
@@ -4325,6 +4337,11 @@ figure.snip0058:hover:after, figure.snip0058.hover:after {
     width: 100%;
     height: 100vh;
 }
+
+/*.chart2 {
+  margin-bottom: 90px;
+}*/
+
 #preloader img {
     transform: scale(0.4);
     position: absolute;

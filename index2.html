@@ -352,6 +352,35 @@
 		</div>
 	</section>
 
+	<section class="">
+		<div class="container">
+			<div class="row mb50">
+				<div class="col-xs-12 text-center">
+					<h2 class="pl30 pr30">Список паев</h2>
+					<span class="divider divider-center divider-dark no-margin-bottom"></span>
+				</div><!-- /.column -->
+			</div>
+				<div class="table-container mb50 pai-pai index-pai">
+					<table class="table table-striped table-borderless">
+						<thead>
+							<tr>
+								<th>Токен:</th>
+								<th>Текущая цена:</th>
+								<th>Капитализация:</th>
+								<th>Результат:</th>
+								<th>Выпуск:</th>
+								<th>Тип:</th>
+								<th>Действие:</th>
+							</tr>
+						</thead>
+						<tbody class="" id="tokenstable"></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
 	<section class="graphic">
 		<div class="row mb50">
 			<div class="col-xs-12 text-center">
@@ -703,6 +732,40 @@
 					  </script>
 				</div>
 			</div>
+
+
+			<script type="text/javascript">
+
+			$.get("//reg.bigtime.fund/exp.php",function(d){
+
+							jQuery.each(d, function(i, item) {
+								console.log(item);
+								// console.log(item.title);
+
+								//add_token(item.inteval,item.tip,item.start,item.price,item.lastprice,item.startprice,item.ticker,item.rel,item.title);
+								var line;
+									line += "<tr class='pie firstline' data-tid='"+item.id+"' data-tokensold='"+item.mint+"' data-interval='"+item.interv+"' data-tip='"+item.tip+"' data-start='"+item.start+"' data-price='"+item.price+"' data-lastprice='"+item.price+"' data-startprice='"+item.lastprice+"' data-ticker='"+item.ticker+"' rel='"+item.rel+"'>";
+									line += "<td>"+item.title+"</td>";
+									line += "<td class='tip'>"+item.price+"</td>";
+									line += "<td class='number mytokenbalance'>"+item.mint+"</td>";
+									line += "<td class='number'><span class='currentprice'>"+(Math.round(item.price / item.start * 1000 - 1000) / 10 + '%')+"</span> р</td>";
+															// <!-- не менять! считается само-->(Math.round($(this).attr('data-price') / $(this).attr('data-startprice') * 1000 - 1000) / 10 + "%")
+									line += "<td class='number rost'>"+item.rost+"</td>";
+															 <!-- не менять! считается само-->
+															line += "<td class='number start'>"+item.tip+"</td>";
+									line += "<td class=pie-link><a href=# onclick='$(\"#moreinfo\").show();return false'>Подробнее <i class='fa fa-hand-o-right' aria-hidden='true'></i></a></td>";
+
+									line +='</tr>';
+									// console.log(line);
+									$("#tokenstable").append(line);
+
+								//
+							});
+
+							},"json");
+			</script>
+
+
 			<div class="row graphic-buttons">
 				<div class="graphic-buttons-item col-md-6">
 					<a href="/fond.html" class="btn btn-1 btn-1a">Связаться с нами</a>
@@ -715,6 +778,7 @@
 			</div>
 		</div>
 	</section>
+
 
 	<div id='xnews'></div>
 
@@ -837,7 +901,7 @@
 	<script src="js/parallax.min.js"></script>
 	<script type="text/javascript">
 
-				setTimeout(function(){
+				// setTimeout(function(){
 
 						$("#typed").typed({
 
@@ -853,7 +917,9 @@
 								// resetCallback: function() { newTyped(); }
 						});
 
-				},3000);
+				// },3000);
+
+
 
 
 

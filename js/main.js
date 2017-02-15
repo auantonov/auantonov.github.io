@@ -99,8 +99,7 @@ $(document).ready(function() {
 
   setTimeout(function(){
       $('#preloader').fadeOut(500);
-      $('.preloader-content img').fadeOut(100);
-  },3000);
+  },2000);
 
     // $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
     //     disableOn: 700,

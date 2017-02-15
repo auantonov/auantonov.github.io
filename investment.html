@@ -41,13 +41,12 @@
 
 	<!-- Preloader -->
 	<div id="preloader">
-	<div class="wrap">
-		<div class="pie-wrap">
-			<div class="slice1 slice-wrap"> </div>
-			<div class="slice2 slice-wrap"> </div>
+		<div class="preloader-content">
+				<img src="images/webetter/FFF_logo.gif" alt="">
 		</div>
 	</div>
-</div>
+
+<script type="text/javascript" src="js/preloader.js"></script>
 
 	<!-- Begin Header -->
 	<header>
@@ -1368,24 +1367,41 @@
 		    }
 		  });
 		});
-		$(function() {
-				setTimeout(function(){
-						$("#typed").typed({
 
-							strings: ["Финансовые инструменты будущего уже сейчас используют открытые блокчейн-сети,<br> собственность имеет надежное цифровое воплощение, а все операции полностью<br> прозрачны для инвестора."],
-							// stringsElement: $('#typed-strings'),
-							typeSpeed: 3,
-							backDelay: 0,
-							loop: false,
-							// contentType: 'html', // or text
-							// defaults to false for infinite loop
-							loopCount: false
-							// callback: function(){ foo(); },
-							// resetCallback: function() { newTyped(); }
-						});
-				},2000);
+		var getCockieIndex = getCockie();
 
-		});
+		if (getCockieIndex === "") {
+			setTimeout(function () {
+				typeJs();
+			},2000)
+		}
+
+		else {
+			typeJs();
+		}
+
+
+		function typeJs() {
+
+			$("#typed").typed({
+
+				strings: ["Финансовые инструменты будущего уже сейчас используют открытые блокчейн-сети,<br> собственность имеет надежное цифровое воплощение, а все операции полностью<br> прозрачны для инвестора."],
+				// stringsElement: $('#typed-strings'),
+				typeSpeed: 3,
+				backDelay: 0,
+				loop: false,
+				// contentType: 'html', // or text
+				// defaults to false for infinite loop
+				loopCount: false
+				// callback: function(){ foo(); },
+				// resetCallback: function() { newTyped(); }
+			});
+
+		}
+
+
+
+
 
 
 		// - Noel Delgado | @pixelia_me

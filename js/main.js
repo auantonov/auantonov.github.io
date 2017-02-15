@@ -76,84 +76,11 @@ function submitMSG(valid, msg) {
     $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
 }
 
-/* ---- our work gallery ---- */
-// $('#work').magnificPopup({
-//     delegate: 'a.zoom',
-//     type: 'image',
-//     fixedContentPos: false,
-//     removalDelay: 300,
-//     mainClass: 'mfp-fade',
-//     gallery: {
-//         enabled: true,
-//         preload: [0,2]
-//     }
-// });
-
-  // var date = new Date(new Date().getTime() + 60 * 1000);
-  // alert(date);
-  // document.cookie = "logged_in=yes";
-  // alert(document.cookie);
-
-  // var date = new Date(new Date().getTime() + 60 * 1000);
-  // document.cookie = "logged_in=no;" + date.toUTCString();
-  // alert(document.cookie);
-  // setTimeout(function(){
-  //   alert(document.cookie);
-  // },62000)
-
-  // var date = new Date(new Date().getTime() + 60 * 1000);
-  // document.cookie = "name=value; path=/; expires=" + date.toUTCString();
-  // alert(document.cookie);
-  // var date = new Date(new Date().getTime() + 60 * 1000);
-  // document.cookie = "name=; path=/; expires=" + date.toUTCString();
-  // alert(document.cookie);
-
-// $(window).on('load', function(){
-//
-// });
-/* ---- popup image ---- */
-// $('.popup-img').magnificPopup({
-//     type: 'image',
-//     removalDelay: 300,
-//     mainClass: 'mfp-fade'
-// });
-
-function setCockie () {
-  document.cookie = "logged_in=yes";
-}
-var getCockie = function () {
-  return document.cookie;
-}
-
-/* ---- popup video ---- */
-$(document).ready(function() {
-
-  if (getCockie() === "") {
-      document.getElementById("preloader").style.display = "block";
-  }
-
-  else {
-      document.getElementById("preloader").style.display = "none";
-  }
-
-
-  setTimeout(function(){
-      $('#preloader').fadeOut(500);
-      setCockie();
-  },2000);
-
-    // $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    //     disableOn: 700,
-    //     type: 'iframe',
-    //     mainClass: 'mfp-fade',
-    //     removalDelay: 160,
-    //     preloader: false,
-    //     fixedContentPos: false
-    // });
-});
-
 /* ---- nav smooth scroll ---- */
 $(document).ready(function() {
+
+    $('body').addClass('opacity-in');
+
     $('.scroll-link').on('click', function(event) {
         event.preventDefault();
         var sectionID = $(this).attr("data-id");

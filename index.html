@@ -13,18 +13,9 @@
 
 	<!-- Royal Preloader -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
- 	<script type="text/javascript" src="js/royal_preloader.min.js"></script>
- 	<script type="text/javascript">
-		// Royal_Preloader.config({
-		//     // mode:           'number',
-		//     showProgress:   false,
-		//     background:     '#fff'
-		// });
-	</script>
+
 
 	<!-- Stylesheets -->
-
-
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	<link rel="apple-touch-icon" size="180x180" href="images/favicon-180.png">
 
@@ -44,14 +35,14 @@
 	<div class="overlay"></div>
 
 	<!-- Preloader -->
-	<div id="preloader">
-	<div class="wrap">
-		<div class="pie-wrap">
-			<div class="slice1 slice-wrap"> </div>
-			<div class="slice2 slice-wrap"> </div>
-		</div>
+<div id="preloader">
+	<div class="preloader-content">
+			<img src="images/webetter/FFF_logo.gif" alt="">
 	</div>
 </div>
+
+<script type="text/javascript" src="js/preloader.js"></script>
+
 
 	<!-- Begin Header -->
 	<header>
@@ -840,25 +831,35 @@
 	<script src="js/parallax.min.js"></script>
 	<script type="text/javascript">
 
-				setTimeout(function(){
+		var getCockieIndex = getCockie();
 
-						$("#typed").typed({
+		if (getCockieIndex === "") {
+			setTimeout(function () {
+				typeJs();
+			},2000)
+		}
 
-								strings: ["Мы - команда блокчейн-энтузиастов из России которая прямо сейчас создает инвестиционный фонд в высокотехнологичные проекты на основе<br> цифровой собственности и прозрачности всех операций."],
-								// stringsElement: $('#typed-strings'),
-								typeSpeed: 5,
-								backDelay: 0,
-								loop: false,
-								// contentType: 'html', // or text
-								// defaults to false for infinite loop
-								loopCount: false
-								// callback: function(){ foo(); },
-								// resetCallback: function() { newTyped(); }
-						});
-
-				},2000);
+		else {
+			typeJs();
+		}
 
 
+		function typeJs() {
+
+				$("#typed").typed({
+
+						strings: ["Мы - команда блокчейн-энтузиастов из России которая прямо сейчас создает инвестиционный фонд в высокотехнологичные проекты на основе<br> цифровой собственности и прозрачности всех операций."],
+						// stringsElement: $('#typed-strings'),
+						typeSpeed: 5,
+						backDelay: 0,
+						loop: false,
+						// contentType: 'html', // or text
+						// defaults to false for infinite loop
+						loopCount: false
+						// callback: function(){ foo(); },
+						// resetCallback: function() { newTyped(); }
+				});
+		}
 
 	 </script>
 

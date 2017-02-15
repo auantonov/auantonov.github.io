@@ -1,3 +1,5 @@
+
+
 /* ---- contact form ---- */
 // $("#contactForm").validator().on("submit", function(event) {
 //     if (event.isDefaultPrevented()) {
@@ -87,6 +89,28 @@ function submitMSG(valid, msg) {
 //     }
 // });
 
+  // var date = new Date(new Date().getTime() + 60 * 1000);
+  // alert(date);
+  // document.cookie = "logged_in=yes";
+  // alert(document.cookie);
+
+  // var date = new Date(new Date().getTime() + 60 * 1000);
+  // document.cookie = "logged_in=no;" + date.toUTCString();
+  // alert(document.cookie);
+  // setTimeout(function(){
+  //   alert(document.cookie);
+  // },62000)
+
+  // var date = new Date(new Date().getTime() + 60 * 1000);
+  // document.cookie = "name=value; path=/; expires=" + date.toUTCString();
+  // alert(document.cookie);
+  // var date = new Date(new Date().getTime() + 60 * 1000);
+  // document.cookie = "name=; path=/; expires=" + date.toUTCString();
+  // alert(document.cookie);
+
+// $(window).on('load', function(){
+//
+// });
 /* ---- popup image ---- */
 // $('.popup-img').magnificPopup({
 //     type: 'image',
@@ -94,11 +118,28 @@ function submitMSG(valid, msg) {
 //     mainClass: 'mfp-fade'
 // });
 
+function setCockie () {
+  document.cookie = "logged_in=yes";
+}
+var getCockie = function () {
+  return document.cookie;
+}
+
 /* ---- popup video ---- */
 $(document).ready(function() {
 
+  if (getCockie() === "") {
+      document.getElementById("preloader").style.display = "block";
+  }
+
+  else {
+      document.getElementById("preloader").style.display = "none";
+  }
+
+
   setTimeout(function(){
       $('#preloader').fadeOut(500);
+      setCockie();
   },2000);
 
     // $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({

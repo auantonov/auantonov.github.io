@@ -2476,6 +2476,15 @@ input[type=checkbox]+label:before {
 .pai-pai .table>tbody>tr>td {
     border: none;
     position: relative;
+    color: #474747;
+    font-size: 14px;
+    font-weight: 500;
+}
+.table-pai .pai-pai .table tr td a i {
+    right: 55px;
+}
+.table-pai .pai-pai .table tr:hover i {
+    right: 50px;
 }
 .pai-pai .table tr td a:hover,
 .pai-pai .table tr td a:active,

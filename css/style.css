@@ -2484,6 +2484,10 @@ input[type=checkbox]+label:before {
     display: none;
 }
 
+.table-pai {
+  margin-bottom: 10px;
+}
+
 .table-pai .pai-pai .table tr td a i {
     right: 55px;
 }
@@ -4097,7 +4101,7 @@ figure.snip0016:hover figcaption::before {
 }
 
 .inv-our-company {
-    margin-bottom: 90px;
+    margin-bottom: 60px;
 }
 
 .inv-products .products-item {

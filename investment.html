@@ -728,78 +728,58 @@
 		</div>
 	</div>
 
-	<section class="token">
+	<section class="table-pai">
 		<div class="container">
-			<div class="col-md-12">
-				<div class="table-container">
+			<div class="row">
+				<div class="col-md-12 table-container mb50 pai-pai">
 					<table class="table table-striped table-borderless">
 						<thead>
 							<tr>
 								<th>Токен</th>
-								<th class="number">Ваша доля</th>
+								<th class="">Тип</th>
 								<th class="number">Текущая цена за ед.</th>
 								<th class="number">Результат</th>
 								<th class="number">Выпуск</th>
-								<th class="">Тип</th>
-								<!-- <th class="actions">Действие</th> -->
+								<th class="actions">Действие</th>
 							</tr>
 						</thead>
-						<tbody class="no-border-x">
-							<tr class="pie firstline" data-tokensold="724286" data-interval="3 месяца" data-tip="Приватный" data-start="02.11.16" data-price="1.384" data-lastprice="1.259" data-startprice="1" data-ticker="TST" rel="0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d">
-								<td>Приватный 02.11.16</td>
-								<td class="number mytokenbalance">0</td>
-								<td class="number"><span class="currentprice">1.384</span> р</td>
-								<!-- не менять! считается само-->
-								<td class="number rost">38.4%</td>
-								<!-- не менять! считается само-->
-								<td class="number start">02.11.16</td>
-								<td class="tip">Приватный</td>
-								<!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
-							</tr>
+						<tbody id="tokenstable">
 
-
-							<tr class="pie firstline" data-tokensold="724286" data-interval="3 месяца" data-tip="Агресивный" data-start="01.02.17" data-price="1.384" data-lastprice="1.259" data-startprice="1" data-ticker="TST" rel="0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d">
-								<td>AGG010217OPEN</td>
-								<td class="number mytokenbalance">0</td>
-								<td class="number"><span class="currentprice">1.384</span> р</td>
-								<!-- не менять! считается само-->
-								<td class="number rost">38.4%</td>
-								<!-- не менять! считается само-->
-								<td class="number start">01.02.17</td>
-								<td class="tip">Агресивный</td>
-								<!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
-							</tr>
-
-
-							<tr class="pie firstline" data-tokensold="724286" data-interval="3 месяца" data-tip="Интервальный" data-start="01.02.17" data-price="1.384" data-lastprice="1.259" data-startprice="1" data-ticker="TST" rel="0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d">
-								<td>CON010217INT</td>
-								<td class="number mytokenbalance">0</td>
-								<td class="number"><span class="currentprice">1.384</span> р</td>
-								<!-- не менять! считается само-->
-								<td class="number rost">38.4%</td>
-								<!-- не менять! считается само-->
-								<td class="number start">01.02.17</td>
-								<td class="tip">Интервальный</td>
-								<!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
-							</tr>
-
-							<tr class="pie firstline" data-tokensold="724286" data-interval="3 месяца" data-tip="Сбалансированный" data-start="01.02.17" data-price="1.384" data-lastprice="1.259" data-startprice="1" data-ticker="TST" rel="0x8a70cf25cf32e728be9e30c20b2781f60cb0ed6d">
-								<td>BAL010217INT</td>
-								<td class="number mytokenbalance">0</td>
-								<td class="number"><span class="currentprice">1.384</span> р</td>
-								<!-- не менять! считается само-->
-								<td class="number rost">38.4%</td>
-								<!-- не менять! считается само-->
-								<td class="number start">01.02.17</td>
-								<td class="tip">Сбалансированный</td>
-								<!-- <td class="action"><a href="#" onclick='$("#moreinfo").show();return false' class=" more icon"><i class="mdi mdi-plus"></i>Подробнее</a></td> -->
-							</tr>
 						</tbody>
 					</table>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<script>
+	//грузим все
+			$.get("//reg.bigtime.fund/exp.php",function(d){
+
+			jQuery.each(d, function(i, item) {
+				// console.log(item);
+				// console.log(item.title);
+
+				//add_token(item.inteval,item.tip,item.start,item.price,item.lastprice,item.startprice,item.ticker,item.rel,item.title);
+				var line;
+					line += "<tr class='pie firstline' data-tid='"+item.id+"' data-tokensold='"+item.mint+"' data-interval='"+item.interv+"' data-tip='"+item.tip+"' data-start='"+item.start+"' data-price='"+item.price+"' data-lastprice='"+item.price+"' data-startprice='"+item.lastprice+"' data-ticker='"+item.ticker+"' rel='"+item.rel+"'>";
+					line += "<td>"+item.title+"</td>";
+					line += "<td class='tip'>"+item.tip+"</td>";
+					line += "<td class='number'><span class='currentprice'>"+ item.startprice+"</span> р</td>";
+					line += "<td class='number mytokenbalance'>"+ item.price +"</td>";
+											<!-- не менять! считается само-->
+					line += "<td class='number rost'>"+item.start+"</td>";
+					line += "<td class=pie-link><a href=# onclick='$(\"#moreinfo\").show();return false'>Подробнее <i class='fa fa-hand-o-right' aria-hidden='true'></i></a></td>";
+
+					line +='</tr>';
+					// console.log(line);
+					$("#tokenstable").append(line);
+
+				//
+			});
+			fill_table();
+			},"json");
+	</script>
 
 	<div class="container">
 		<div class="row">

@@ -2480,6 +2480,10 @@ input[type=checkbox]+label:before {
     font-size: 14px;
     font-weight: 500;
 }
+#xnews {
+    display: none;
+}
+
 .table-pai .pai-pai .table tr td a i {
     right: 55px;
 }

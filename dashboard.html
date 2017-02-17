@@ -799,6 +799,9 @@
     <link rel="stylesheet" type="text/css" href="css/alertify.min.css" />
 
     <script>
+
+    var saveCookie = document.cookie;
+
         var myeth;
         var cur, price;
 		function fill_table() {
@@ -875,6 +878,10 @@
                 if (localStorage.getItem("isuser") != 1) $("#myeth").html("неизвестен");
 
 				//грузим все
+
+
+
+
 				$.get("//reg.bigtime.fund/exp.php",function(d){
 
 				jQuery.each(d, function(i, item) {
@@ -883,8 +890,8 @@
 
 				  //add_token(item.inteval,item.tip,item.start,item.price,item.lastprice,item.startprice,item.ticker,item.rel,item.title);
 				  var line;
-						line += "<tr class='pie firstline' data-tid='"+item.id+"' data-tokensold='"+item.mint+"' data-interval='"+item.interv+"' data-tip='"+item.tip+"' data-start='"+item.start+"' data-price='"+item.price+"' data-lastprice='"+item.price+"' data-startprice='"+item.lastprice+"' data-ticker='"+item.ticker+"' rel='"+item.rel+"'>";
-						line += "<td>"+item.title+"</td>";
+						line += "<tr class='pie firstline' data-token='"+ item.title +"' data-tid='"+item.id+"' data-tokensold='"+item.mint+"' data-interval='"+item.interv+"' data-tip='"+item.tip+"' data-start='"+item.start+"' data-price='"+item.price+"' data-lastprice='"+item.price+"' data-startprice='"+item.lastprice+"' data-ticker='"+item.ticker+"' rel='"+item.rel+"'>";
+						line += "<td class='pai-title'>"+item.title+"</td>";
 						line += "<td class='tip'>"+item.tip+"</td>";
 						line += "<td class='number mytokenbalance'>loading</td>";
 						line += "<td class='number'><span class='currentprice'>??</span> р</td>";
@@ -907,8 +914,31 @@
 
 
 
+
+
+
                 setTimeout(function() {
-                    //$(".firstline").eq(0).trigger("click");
+
+
+                    var pieArray = document.querySelectorAll('.firstline');
+
+                    var element;
+
+                    pieArray.forEach(function(d){
+                      if(saveCookie === d.dataset.token) {
+                          element = d;
+                      }
+                    });
+
+                    $(element).trigger('click');
+
+
+                    $(".firstline").click(function () {
+                        $(this).addClass('active');
+
+                    })
+
+
                     if (localStorage.getItem("isuser") == 1) $(".onlyuser").css("display", "block");
                 }, 500);
             } else {

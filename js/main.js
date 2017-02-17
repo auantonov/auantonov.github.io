@@ -115,12 +115,12 @@ $(window).scroll(function() {
 
 
 /* ---- animations ---- */
-if (typeof sr == 'undefined') {
-    window.sr = ScrollReveal({
-        duration: 1600,
-        delay: 50
-    });
-}
+// if (typeof sr == 'undefined') {
+//     window.sr = ScrollReveal({
+//         duration: 1600,
+//         delay: 50
+//     });
+// }
 // window.onload(function () {
 //   alert('1');
 // })

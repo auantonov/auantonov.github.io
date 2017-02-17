@@ -501,14 +501,15 @@
                             </div>
                             <div class="modal-body">
 
-                                <form onsubmit='return false' id='regform'>
+                                <form id='regform'>
                                     <div class="form-group">
                                         <label for="email" class="control-label">Email*:</label>
-                                        <input class="form-control" type='email' required id='email1' name="email">
+                                        <input class="form-control validate" type='email'  name="email" id="email">
+                                        <!-- <span id="validEmail"></span> -->
                                     </div>
 
-                                    <input type='hidden' name='openkey' class='form-control' value=''>
-                                    <input type='hidden' name='privkey' class='form-control' value=''>
+                                    <!-- <input type='hidden' name='openkey' class='form-control' value=''>
+                                    <input type='hidden' name='privkey' class='form-control' value=''> -->
 
                                     <div class="form-group">
                                         <label for="email" class="control-label">Пароль*:</label>
@@ -516,19 +517,19 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="name" class="control-label">Имя:</label>
-                                        <input type="text" class="form-control" name="name">
+                                        <label for="name" class="control-label" >Имя:</label>
+                                        <input type="text" class="form-control" name="name" id="in-name">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="name" class="control-label">Фамилия:</label>
-                                        <input type="text" class="form-control" name="fname">
+                                        <label for="name" class="control-label" >Фамилия:</label>
+                                        <input type="text" class="form-control" name="fname" id="in-lastname">
                                         <span class="form-bottom">вы можете оставаться анонимным</span>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="phone" class="control-label">Телефон:</label>
-                                        <input class="form-control" name="phone">
+                                        <input class="form-control" name="phone" id="telefon">
                                         <span class="form-bottom">Телефон используется для дополнительных мер безопасности, мы не разглашаем ваши данные</span>
                                     </div>
                                     <div class="checkbox">
@@ -539,9 +540,12 @@
                                         <input id="box2" type="checkbox" />
                                         <label for="box2" class="label-check">Получать новости на почту</label>
                                     </div>
-                                    <input type='hidden' name='firstpage' class='form-control' id='firstpage' value='?'>
+
                                     <button type="submit" onclick='reg();' class="regb btn btn-1 btn-1a in-button" id="reg-sumbit">Регистрация</button>
                                     <script>
+
+
+
                                         function reg() {
 
                                             $("#firstpage").val(localStorage.getItem("firstpage"));
@@ -909,11 +913,6 @@
 				});
 				fill_table();
 				},"json");
-
-
-
-
-
 
 
 

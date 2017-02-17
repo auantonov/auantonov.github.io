@@ -793,10 +793,13 @@
 						  cookie_date.setTime ( cookie_date.getTime() - 1 );
 						  document.cookie = cookie_name += "=; expires=" + cookie_date.toGMTString();
 						}
+
 						delete_cookie(' logged_in=yes');
+
 						function setCockie () {
 						  document.cookie = tokenVal;
 						}
+
 						var getCockie = function () {
 						  return document.cookie;
 						}

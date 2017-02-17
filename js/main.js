@@ -92,7 +92,132 @@ $(document).ready(function() {
             scrollTop: 0
         }, 1200);
     });
+
+$(document).ready(function(){
+
+
+
+    $("#email").focusout(function() {
+
+        var email = $("#email").val();
+
+        if (email != 0) {
+            if (isValidEmailAddress(email)) {
+                $("#email").css({"border": "2px solid #9ad085"});
+                $('#email').addClass('validate-data');
+            } else {
+                $("#email").css({"border": "2px solid #F44336"});
+            }
+        } else {
+            $("#email").css({"border": "2px solid #474747"});
+        }
+
+    });
+
+    $("#telefon").focusout(function() {
+      var telefon = $('#telefon').val();
+
+      if (telefon != 0) {
+          if (isValidTelefon(telefon)) {
+              $("#telefon").css({"border": "2px solid #9ad085"});
+              $("#telefon").addClass('validate-data');
+          } else {
+              $("#telefon").css({"border": "2px solid #F44336"});
+          }
+      } else {
+          $("#telefon").css({"border": "2px solid #474747"});
+      }
+    });
+
+    $("#in-name").focusout(function() {
+
+      var name = $('#in-name').val();
+      if (name != 0) {
+          if (isValidName(name)) {
+              $("#in-name").css({"border": "2px solid #9ad085"});
+              $("#in-name").addClass('validate-data');
+          } else {
+              $("#in-name").css({"border": "2px solid #F44336"});
+          }
+      } else {
+          $("#in-name").css({"border": "2px solid #474747"});
+      }
+    });
+
+    $("#in-lastname").focusout(function() {
+
+      var name = $('#in-lastname').val();
+      if (name != 0) {
+          if (isValidName(name)) {
+              $("#in-lastname").css({"border": "2px solid #9ad085"});
+              $("#in-lastname").addClass('validate-data');
+          } else {
+              $("#in-lastname").css({"border": "2px solid #F44336"});
+          }
+      } else {
+          $("#in-lastname").css({"border": "2px solid #474747"});
+      }
+    });
+
+
+    $("#pass1").focusout(function() {
+
+      var pass = $('#pass1').val();
+
+      if (pass != 0) {
+          if (isValidPassword(pass)) {
+              $("#pass1").css({"border": "2px solid #9ad085"});
+              $("#pass1").addClass('validate-data');
+          } else {
+              $("#pass1").css({"border": "2px solid #F44336"});
+          }
+      } else {
+          $("#pass1").css({"border": "2px solid #474747"});
+      }
+    });
+
+
+
+    // $("#in-lastname").focusout(function() {
+    //   var telefon = $('#telefon').val();
+    //
+    //   if (telefon != 0) {
+    //       if (isValidTelefon(telefon)) {
+    //           $("#telefon").css({"border": "2px solid #9ad085"});
+    //       } else {
+    //           $("#telefon").css({"border": "2px solid #F44336"});
+    //       }
+    //   } else {
+    //       $("#telefon").css({"border": "2px solid #474747"});
+    //   }
+    // });
+
 });
+
+function isValidEmailAddress(emailAddress) {
+    var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+    return pattern.test(emailAddress);
+}
+
+function isValidTelefon(telefon) {
+    var pattern = new RegExp(/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/);
+    return pattern.test(telefon);
+}
+
+function isValidName(name) {
+    var pattern = new RegExp(/^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$/);
+    return pattern.test(name);
+}
+
+function isValidPassword(pass) {
+    var pattern = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/);
+    return pattern.test(pass);
+}
+
+
+
+});
+
 
 /* ---- navbar offset ---- */
 function scrollToID(id, speed) {

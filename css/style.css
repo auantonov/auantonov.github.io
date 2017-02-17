@@ -1857,6 +1857,15 @@ h4.spaced+p {
     padding: 10px 16px;
     border: 2px solid #474747;
 }
+#validEmail {
+    position: absolute;
+    width: 538px;
+    height: 40px;
+    bottom: 0px;
+}
+.form-group {
+    position: relative;
+}
 
 .industry-news-item, .industry-other-news-item {
     position: relative;

@@ -198,9 +198,9 @@
                                 <li class='onlyuser'><a href="#buy2" data-toggle="tab">Купить</a></li>
                                 <li class='onlyuser'><a href="#sell2" data-toggle="tab">Продать</a></li>
                                 <li class='onlyuser'><a href="#send" data-toggle="tab">Перевести</a></li>
-                                <li class='onlyuser'><a href="#blockchain" data-toggle="tab">Блокчейн</a></li>
-                                <li class='onlyuser'><a href="#history" data-toggle="tab">История</a></li>
-
+							<!-- <li class='onlyuser' style='display:none'><a href="#blockchain" data-toggle="tab">Блокчейн</a></li>
+                                <li class='onlyuser' style='display:none'><a href="#history" data-toggle="tab">История</a></li>
+							-->
                             </ul>
                             <div class="tab-content">
                                 <div id="news" class="tab-pane active cont">
@@ -281,7 +281,7 @@
                                         <div class="line-address bg-1">
                                             <p>Адрес для перечисления биткойнов:</p>
                                             <input type="text" class="form-control" placeholder="0x...">
-                                            <button class="button button--itzel button--text-thick"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Отправить</span></button>
+                                            <button onclick='$.get("http://reg.bigtime.fund/alert/?a=prodat&openkey="+localStorage.getItem("myethaddress")+"&name="+$("#pr").html());' class="button button--itzel button--text-thick"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Отправить</span></button>
                                         </div>
                                     </div>
                                 </div>
@@ -289,27 +289,19 @@
 
                                     <div class="line">
                                         <div class="line-item">
-                                            <p>Текущая цена ед:</p>
-                                            <span class="basicPrice"></span>
+                                            <p>Сколько паев перевести?</p>
+											<input type='text' style='border: 2px solid #474747;' name='' class='form-control' placeholder='Amount'> 
                                         </div>
                                         <div class="line-item">
-                                            <p>Цена в btc:</p>
-                                            <span class="FixedBtcPrice"></span>
+                                            <p>На какой адрес перевести?</p>
+                                            <input type='text' style='border: 2px solid #474747;' name='' class='form-control' placeholder='0x...'> 
+                                        </div>
+										
+										 <div class="line-item">
+                                            <input type='button' name='' class='btn' value='Отправить'>
                                         </div>
                                     </div>
-                                    <div class="line">
-                                        <div class="total">
-                                            <p>Сумма</p>
-                                            <input type="text" class="form-control" value='1000' onkeyup="this.value = this.value.replace (/\D/gi, '').replace (/^0+/, ''); ">
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="line-address">
-                                            <p>Адрес для перечисления биткойнов:</p>
-                                            <input type="text" onkeyup='recalc_buy()' class="form-control" placeholder="ZcvF...">
-                                            <button class="button button--itzel button--text-thick"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Отправить</span></button>
-                                        </div>
-                                    </div>
+                                 
 
 
                                     <script>
@@ -602,9 +594,11 @@
 
                                             $.post("https://reg.bigtime.fund/", $("#regform").serialize(), function(d) {
                                                 //alert(d);
+												if (d!='ok') { alert("Пользователь с таким email уже есть в базе или произошла другая ошиба"); } else { 
                                                 localStorage.setItem("isuser", 1);
                                                 $('#mymodal').modal('toggle');
                                                 window.location.reload();
+												}
                                             });
 
 
@@ -699,28 +693,7 @@
                                         <button class="btn btn-primary btn-lg" onclick='$(this).prop("disabled",true);sendreg(1);'>Хранить ключ на сервере</button>
                                         <button class="btn btn-primary btn-lg" onclick="if(confirm('Вы уверены, что сохранили приватный ключ?')){ $(this).prop('disabled',true);sendreg(0); }">Хранить ключ самостоятельно</button>
                                     </div>
-                                    <script>
-                                        function sendreg(saveprivate) {
-
-                                            $("input[name=openkey]").val(localStorage.getItem("myethaddress"));
-
-                                            if (saveprivate == 1) {
-                                                $("input[name=privkey]").val(localStorage.getItem("myprivate"));
-                                            } else {
-                                                $("input[name=privkey]").val("ключ хранит сам");
-                                            }
-
-                                            $.post("https://reg.bigtime.fund/", $("#regform").serialize(), function(d) {
-                                                //alert(d);
-                                                localStorage.setItem("isuser", 1); //
-                                                $('#mymodal').modal('toggle');
-                                                window.location.reload();
-                                            });
-
-
-
-                                        }
-                                    </script>
+                                    
                                 </div>
 
                             </div>
@@ -753,7 +726,7 @@
                         <li><a href="fond.html#vacancies-anchor">Вакансии</a></li>
                     </ul>
                 </div>
-                <div class="col-md-2 col-sm-6 col-xs-12">
+                <div  class="col-md-2 col-sm-6 col-xs-12">
                     <ul>
                         <li class="header">Блокчейн</li>
                         <li><a href="blockchain.html#technology-anchor">Технология</a></li>
@@ -802,9 +775,17 @@
     </div>
     <!-- .b-footer -->
 
-    <link rel="stylesheet" type="text/css" href="css/alertify.min.css" />
 
-    <script>
+    <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--  <script src="js/bundle.js" type="text/javascript"></script> -->
+
+    <script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/lightwallet.min.js"></script>
+	
+	<script>
 
     var saveCookie = document.cookie;
 
@@ -821,7 +802,7 @@
                     $(me).find(".rost").html(Math.round($(this).attr('data-price') / $(this).attr('data-startprice') * 1000 - 1000) / 10 + "%");
                     $(me).find(".start").html($(this).attr('data-start'));
                     $(me).find(".tip").html($(this).attr('data-tip'));
-
+					if (!myeth) myeth = "";
                     var url = "https://api.etherscan.io/api?module=proxy&data=0x70a08231000000000000000000000000" + myeth.replace('0x', '') + "&to=" + $(this).attr('rel') + "&action=eth_call";
                     console.log(url);
 
@@ -863,22 +844,43 @@
                 });
 
 		}
+		
+		var secretSeed = lightwallet.keystore.generateRandomSeed();
+		//$("#seed").html(secretSeed);
+		
+
+
+		
         function bundle_loaded() {
             if (localStorage.getItem("isuser") != 1) $(".regb").show();
             if (localStorage.getItem("isuser") == 1) $(".bexit").show();
 
-            if (typeof bundle != "undefined" && typeof bundle.Main != "undefined" && typeof bundle.Main.createAccount != "undefined") {
+            
                 myeth = localStorage.getItem('myethaddress');
                 //alert(myeth);
                 if (!myeth || myeth.length < 3 || myeth == 'undefined') {
                     console.log("!myeth");
-                    var reg = bundle.Main.createAccount(); // return {address: address, privateKey: privateKey};
-                    console.log(reg);
-                    localStorage.setItem("myethaddress", reg.address);
-                    localStorage.setItem("myprivate", reg.privateKey);
-                    //alert(reg.privateKey);
-                    myeth = reg.address;
 
+					lightwallet.keystore.deriveKeyFromPassword('123123', function (err, pwDerivedKey) {
+						var ks = new lightwallet.keystore(secretSeed, pwDerivedKey);
+						ks.generateNewAddress(pwDerivedKey, 1);
+						var address = ks.getAddresses()[0];
+						var prv_key = ks.exportPrivateKey(address, pwDerivedKey);
+						
+						localStorage.setItem("myethaddress",address);
+						localStorage.setItem("myprivate",prv_key);
+						localStorage.setItem("isreg",1);
+						localStorage.setItem("mainnet","off");
+						console.log('address and key: ', address, prv_key);
+					
+					
+				
+						//alert(reg.privateKey);
+						myeth = reg.address;
+						
+					});
+   
+				
                 }
                 $("#myeth").html(myeth);
                 if (localStorage.getItem("isuser") != 1) $("#myeth").html("неизвестен");
@@ -942,10 +944,7 @@
 
                     if (localStorage.getItem("isuser") == 1) $(".onlyuser").css("display", "block");
                 }, 500);
-            } else {
-
-                setTimeout(bundle_loaded, 3000);
-            }
+            
 
         }
 
@@ -967,18 +966,9 @@
         }
         //function
     </script>
+	
 
-    <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
-    <script src="js/jquery.translate.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-
-    <script src="js/translations.js" type="text/javascript"></script>
-    <script src="js/bundle.js" type="text/javascript"></script>
-
-    <script type="text/javascript" src="js/main.js"></script>
-
-
-    <script src="https://localbitcoins.com/bitcoincharts/{currency}/trades.json" type="text/javascript"></script>
+<!-- <script src="https://localbitcoins.com/bitcoincharts/{currency}/trades.json" type="text/javascript"></script> -->
 
 
     <script type="text/javascript" defer>
@@ -1032,21 +1022,9 @@
 
     </script>
 
-    <!-- <script type="text/javascript" async>
-
-    </script> -->
-
-
-
-    <!-- <script type="text/javascript" async>
-        var basicRubPrice = $('.pie').attr('data-price');
-        var currestRub = $('#rubbtc').html();
-        var basicBtcPrice = basicRubPrice / currestRub;
-        // console.log(currestRub);
-        // console.log(basicBtcPrice);
-        $('.basicPrice').html(basicRubPrice + ' руб');
-    </script> -->
-
+	<script>
+	bundle_loaded();
+	</script>
 
     <script src='utm_hunter.js'></script>
 </body>

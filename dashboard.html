@@ -123,7 +123,7 @@
                                     <li class="dropdown-submenu"><a href="fond.html#contacts-anchor">Контакты</a></li>
                                 </ul><!-- /.dropdown sub holder -->
                             </li><!-- /.dropdown -->
-                            <li><a href="/blockchain">Индустрия</a></li>
+
                             <li><a href="http://corp.ff.ru/">Холдинг</a></li>
                             <li><a href="dashboard.html" class="active">Управление</a></li>
                         </ul>
@@ -501,7 +501,7 @@
                             </div>
                             <div class="modal-body">
 
-                                <form id='regform'>
+                                <form id='regform' onsubmit="return false;">
                                     <div class="form-group">
                                         <label for="email" class="control-label">Email*:</label>
                                         <input class="form-control validate" type='email'  name="email" id="email">
@@ -541,24 +541,26 @@
                                         <label for="box2" class="label-check">Получать новости на почту</label>
                                     </div>
 
-                                    <button type="submit" onclick='reg();' class="regb btn btn-1 btn-1a in-button" id="reg-sumbit">Регистрация</button>
+                                    <button type="submit" onclick='check();' class="regb btn btn-1 btn-1a in-button" id="reg-sumbit">Регистрация</button>
                                     <script>
 
+                                    function check() {
+                                      var a = $('.validate-data').length;
+                                      if (a == 5) {
+                                        reg();
+                                      }
+                                    }
 
 
                                         function reg() {
 
                                             $("#firstpage").val(localStorage.getItem("firstpage"));
 
-
                                             $("#regform").hide();
 
                                             $("#regresult").show();
 
-
-
-
-                                            $("#ulogin").html($("#email1").val().replace(/<\/?[^>]+>/gi, ''));
+                                            $("#ulogin").html($("#email").val().replace(/<\/?[^>]+>/gi, ''));
                                             $("#upass").html($("#pass1").val().replace(/<\/?[^>]+>/gi, ''));
 
                                             $("#xpub").html(localStorage.getItem("myethaddress"));

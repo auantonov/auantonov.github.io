@@ -176,22 +176,6 @@ $(document).ready(function(){
       }
     });
 
-
-
-    // $("#in-lastname").focusout(function() {
-    //   var telefon = $('#telefon').val();
-    //
-    //   if (telefon != 0) {
-    //       if (isValidTelefon(telefon)) {
-    //           $("#telefon").css({"border": "2px solid #9ad085"});
-    //       } else {
-    //           $("#telefon").css({"border": "2px solid #F44336"});
-    //       }
-    //   } else {
-    //       $("#telefon").css({"border": "2px solid #474747"});
-    //   }
-    // });
-
 });
 
 function isValidEmailAddress(emailAddress) {
@@ -210,7 +194,7 @@ function isValidName(name) {
 }
 
 function isValidPassword(pass) {
-    var pattern = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/);
+    var pattern = new RegExp(/^[0-9a-zA-Z\-\_]+$/);
     return pattern.test(pass);
 }
 

@@ -690,7 +690,8 @@
 
 	    		$(document).ready(function() {
 
-					$.getJSON("https://buygazprom.com/rateslocal.php", function(d) {
+					/* $.getJSON("https://buygazprom.com/rateslocal.php", function(d) {
+						console.log(d);
 						$("#rubbtc").html(d.RUB.avg_1h);
 						$("#usdbtc").html(d.USD.avg_1h);
 						var currestRub = $("#rubbtc").html();
@@ -698,7 +699,7 @@
 						var currestRub = $('#rubbtc').html();
 						basicBtcPrice = basicRubPrice / currestRub;
 						$('.basicPrice').html(basicRubPrice + ' руб');
-					});
+					}); */
 
 	    			$('.map').click(function(){
 	    				$('.map div').css("pointer-events", "auto");
@@ -716,8 +717,8 @@
 	    			//     percentPosition: true
 	    			// });
 
-	    		    var pos1 = new google.maps.LatLng(58.005821, 56.264887),
-	    		        pos2 = new google.maps.LatLng(55.728011, 37.6337323),
+	    		    var pos1 = new google.maps.LatLng(58.015650, 56.233170),
+	    		        pos2 = new google.maps.LatLng(55.728050, 37.635929),
 
 	    		        option1 = {
 	    		            zoom: 17,

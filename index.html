@@ -681,15 +681,7 @@
 
 						});
 
-						 $.getJSON("https://buygazprom.com/rateslocal.php", function(d) {
-							 $("#rubbtc").html(d.RUB.avg_1h);
-							 $("#usdbtc").html(d.USD.avg_1h);
-							 var currestRub = $("#rubbtc").html();
-							 var basicRubPrice = $('.pie').attr('data-price');
-							 var currestRub = $('#rubbtc').html();
-							 basicBtcPrice = basicRubPrice / currestRub;
-							 $('.basicPrice').html(basicRubPrice + ' руб');
-						 });
+						 
 					  </script>
 				</div>
 			</div>

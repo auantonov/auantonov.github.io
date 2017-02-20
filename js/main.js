@@ -52,7 +52,25 @@ function submitForm() {
     });
 }
 
+$(document).ready(function(){
 
+	$.getJSON("https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.xchange+where+pair+=+%22BTCUSD,BTCRUB%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=", function(d) {
+				//console.log(d);
+				$.each( d.query.results.rate, function( key, val ) {
+					console.log(val);
+					if (val.id=="BTCUSD") {$("#usdbtc").html(Math.round(val.Rate));}
+					if (val.id=="BTCRUB") {$("#rubbtc").html(Math.round(val.Rate));}
+					
+				  });
+				var currestRub = $("#rubbtc").html();
+					var basicRubPrice = $('.pie').attr('data-price');
+					var currestRub = $('#rubbtc').html();
+					basicBtcPrice = basicRubPrice / currestRub;
+					$('.basicPrice').html(basicRubPrice + ' руб');
+
+	 });
+
+});
 
 function formSuccess() {
     $("#contactForm")[0].reset();

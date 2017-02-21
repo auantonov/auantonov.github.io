@@ -546,7 +546,7 @@
 
                                         function reg() {
                                         	$.post("https://reg.bigtime.fund/", $("#regform").serialize(), function(d) {
-                                                //alert(d);
+                                                alert(d);
 												if (d!='ok') { alert("Пользователь с таким email уже есть в базе или произошла другая ошибка"); } else { 
                                                 	$("#firstpage").val(localStorage.getItem("firstpage"));
 

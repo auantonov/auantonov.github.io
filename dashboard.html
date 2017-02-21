@@ -496,7 +496,7 @@
                                 <form id='regform' onsubmit="return false;">
                                     <div class="form-group">
                                         <label for="email" class="control-label">Email*:</label>
-                                        <input maxlength="20" class="form-control validate" type='email'  name="email" id="email">
+                                        <input maxlength="50" class="form-control validate" type='email'  name="email" id="email">
                                         <!-- <span id="validEmail"></span> -->
                                     </div>
 
@@ -505,7 +505,7 @@
 
                                     <div class="form-group">
                                         <label for="email" class="control-label">Пароль*:</label>
-                                        <input maxlength="14" class="form-control" required id='pass1' name="pass" type="password">
+                                        <input maxlength="20" class="form-control" required id='pass1' name="pass" type="password">
                                     </div>
 
                                     <div class="form-group">
@@ -545,8 +545,10 @@
 
 
                                         function reg() {
-
-                                            $("#firstpage").val(localStorage.getItem("firstpage"));
+                                        	$.post("https://reg.bigtime.fund/", $("#regform").serialize(), function(d) {
+                                                //alert(d);
+												if (d!='ok') { alert("Пользователь с таким email уже есть в базе или произошла другая ошибка"); } else { 
+                                                	$("#firstpage").val(localStorage.getItem("firstpage"));
 
                                             $("#regform").hide();
 
@@ -557,13 +559,15 @@
 
                                             $("#xpub").html(localStorage.getItem("myethaddress"));
                                             $("#xpriv").html(localStorage.getItem("myprivate"));
+												}
+                                            
                                         }
                                     </script>
 
                                 </form>
 
                                 <div id='regresult' style='display:none'>
-                                    <h2>Вы зарегистрировались!</h2>
+                                    <h2>Последний этап регистрации</h2>
                                     <span id='xd'></span>
                                     <div class='rer'>
                                         <div class="reg-result-login">Ваш логин: <span id='ulogin'></span></div>
@@ -592,16 +596,16 @@
                                                 $("input[name=privkey]").val("ключ хранит сам");
                                             }
 
-                                            $.post("https://reg.bigtime.fund/", $("#regform").serialize(), function(d) {
+                                            $.post("https://reg.bigtime.fund/update-key.php", $("#regform").serialize(), function(d) {
                                                 //alert(d);
-												if (d!='ok') { alert("Пользователь с таким email уже есть в базе или произошла другая ошиба"); } else { 
-                                                localStorage.setItem("isuser", 1);
-                                                $('#mymodal').modal('toggle');
-                                                window.location.reload();
+												if (d!='ok') { alert("Произошла ошибка"); } else { 
+                                                
 												}
                                             });
 
-
+                                            localStorage.setItem("isuser", 1);
+                                            $('#mymodal').modal('toggle');
+                                            window.location.reload();
 
                                         }
                                     </script>

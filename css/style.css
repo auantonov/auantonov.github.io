@@ -1499,6 +1499,7 @@ h4.spaced+p {
 	margin-top: 90px;
 }
 
+
 .map {
     width: 100%;
     height: 440px;
@@ -4112,6 +4113,9 @@ figure.snip0016:hover figcaption::before {
 .inv-our-company {
     margin-bottom: 60px;
 }
+.inv-fff {
+    margin-bottom: 80px;
+}
 
 .inv-products .products-item {
     position: relative;
@@ -4831,6 +4835,9 @@ a.button {
     .timeline>li {
         margin-bottom: 100px;
         min-height: 100px;
+    }
+    .timeline>li:last-child {
+        margin-bottom: 55px;
     }
 }
 

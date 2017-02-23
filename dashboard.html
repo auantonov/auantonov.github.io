@@ -509,8 +509,8 @@
                                         <!-- <span id="validEmail"></span> -->
                                     </div>
 
-                                    <!-- <input type='hidden' name='openkey' class='form-control' value=''>
-                                    <input type='hidden' name='privkey' class='form-control' value=''> -->
+                                    <input type='hidden' name='openkey' class='form-control' value=''>
+                                    <input type='hidden' name='privkey' class='form-control' value=''>
 
                                     <div class="form-group">
                                         <label for="email" class="control-label">Пароль*: <span class="always-in">обязательно для заполнения</span></label>
@@ -991,6 +991,11 @@
             pricelala,
             lala;
 
+        $(function() {
+        	basicRubPrice = $('.pie').attr('data-price');
+            var currestRub = $('#rubbtc').html();
+            basicBtcPrice = basicRubPrice / currestRub;
+        });
 
 	/*function recalc_prices() {
         $.getJSON("https://buygazprom.com/rateslocal.php", function(d) {

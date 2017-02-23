@@ -991,17 +991,12 @@
             pricelala,
             lala;
 
-        $(function() {
-        	basicRubPrice = $('.pie').attr('data-price');
-            var currestRub = $('#rubbtc').html();
-            basicBtcPrice = basicRubPrice / currestRub;
-        });
 
-	/*function recalc_prices() {
+		function recalc_prices() {
         $.getJSON("https://buygazprom.com/rateslocal.php", function(d) {
 
-            $("#rubbtc").html(d.RUB.avg_1h);
-            $("#usdbtc").html(d.USD.avg_1h);
+            //$("#rubbtc").html(d.RUB.avg_1h);
+            //$("#usdbtc").html(d.USD.avg_1h);
             var currestRub = $("#rubbtc").html();
             basicRubPrice = $('.pie').attr('data-price');
             var currestRub = $('#rubbtc').html();
@@ -1009,9 +1004,9 @@
             $('.basicPrice').html(basicRubPrice + ' руб');
 
         });
-		}
+	}
 
-		recalc_prices();*/
+		recalc_prices();
 
         function updateSell() {
           var inputSellVal = document.getElementById("sell-token").value;

@@ -328,43 +328,6 @@ $(document).ready(function() {
 
         }
 
-        setTimeout(function() {
-            $("tr.pie").on("click", function() {
-                $(this).addClass('active').siblings().removeClass('active');
-                var tokenVal = $(this).children('td')[0].innerHTML;
-                // document.cookie = "";
-                function delete_cookie(cookie_name) {
-                    var cookie_date = new Date(); // Текущая дата и время
-                    cookie_date.setTime(cookie_date.getTime() - 1);
-                    document.cookie = cookie_name += "=; expires=" + cookie_date.toGMTString();
-                }
-
-                delete_cookie(' logged_in=yes');
-
-                function setCockie() {
-                    document.cookie = tokenVal;
-                }
-
-                var getCockie = function() {
-                    return document.cookie;
-                }
-
-                setCockie();
-
-                getCockie()
-
-                var a = document.cookie;
-
-                function goJs() {
-                    window.location = "dashboard.html"
-                }
-
-                goJs();
-
-            });
-
-        }, 200);
-
     }
 
     if ($('body').hasClass('home-page')) {
@@ -747,44 +710,6 @@ $(document).ready(function() {
             });
             // fill_table();
         }, "json");
-
-        setTimeout(function() {
-            $("tr.pie").live("click", function() {
-                // alert('1');
-                $(this).addClass('active').siblings().removeClass('active');
-                var tokenVal = $(this).children('td')[0].innerHTML;
-                // document.cookie = "";
-                function delete_cookie(cookie_name) {
-                    var cookie_date = new Date(); // Текущая дата и время
-                    cookie_date.setTime(cookie_date.getTime() - 1);
-                    document.cookie = cookie_name += "=; expires=" + cookie_date.toGMTString();
-                }
-
-                delete_cookie(' logged_in=yes');
-
-                function setCockie() {
-                    document.cookie = tokenVal;
-                }
-
-                var getCockie = function() {
-                    return document.cookie;
-                }
-
-                setCockie();
-
-                getCockie()
-
-                var a = document.cookie;
-
-                function goJs() {
-                    window.location = "dashboard.html"
-                }
-
-                goJs();
-
-            });
-
-        }, 2000);
 
         function typeJs() {
 
@@ -1279,6 +1204,40 @@ $(document).ready(function() {
 
             myMarker2 = new google.maps.Marker({position: pos2, map: map2, title: "Noida"});
     }
+
+    $(".table-pai-table").on("click", 'tr', function() {
+        $(this).addClass('active').siblings().removeClass('active');
+        var tokenVal = $(this).children('td')[0].innerHTML;
+        // document.cookie = "";
+        function delete_cookie(cookie_name) {
+            var cookie_date = new Date(); // Текущая дата и время
+            cookie_date.setTime(cookie_date.getTime() - 1);
+            document.cookie = cookie_name += "=; expires=" + cookie_date.toGMTString();
+        }
+
+        delete_cookie(' logged_in=yes');
+
+        function setCockie() {
+            document.cookie = tokenVal;
+        }
+
+        var getCockie = function() {
+            return document.cookie;
+        }
+
+        setCockie();
+
+        getCockie()
+
+        var a = document.cookie;
+
+        function goJs() {
+            window.location = "dashboard.html"
+        }
+
+        goJs();
+
+    });
 
 });
 

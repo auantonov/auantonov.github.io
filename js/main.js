@@ -1205,7 +1205,7 @@ $(document).ready(function() {
             myMarker2 = new google.maps.Marker({position: pos2, map: map2, title: "Noida"});
     }
 
-    $(".table-pai-table").on("click", 'tr', function() {
+    $(".table-pai-table").on("click", 'tr.pie', function() {
         $(this).addClass('active').siblings().removeClass('active');
         var tokenVal = $(this).children('td')[0].innerHTML;
         // document.cookie = "";

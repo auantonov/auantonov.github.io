@@ -21,15 +21,19 @@
 		    background:     '#fff'
 		});
 	</script> -->
-
 	<!-- Stylesheets -->
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<link rel="apple-touch-icon" size="180x180" href="images/favicon-180.png">
+
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/ionicons.min.css" rel="stylesheet">
 	<link href="css/pe-icon-7-stroke.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" title="main-css">
-	<link rel="stylesheet" type="text/css" href="css/vladimir.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="css/vladimir.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body class="body-static-navbar">
 
@@ -41,16 +45,16 @@
 		<div class="top-menu">
 			<div class="container">
 				<div class="top-menu-left-section pull-left">
-					<span>Курс BTC/$</span>
-					<span>Курс BTF/$</span>
+					<span>Курс <span id='rubbtc'></span> руб. / BTC</span>
+					<span>Курс <span id="usdbtc"></span> $ / BTC</span>
 				</div>
 				<div class="top-menu-right-section pull-right">
-				<div class="languages">
-					<span><img src="images/btf/russia_fluttering_flag_256.png" alt=""></span>
-					<span><img src="images/btf/united_states_of_america_fluttering_flag_256.png" alt="" ></span>
-					<span><img src="images/btf/china_fluttering_flag_256.png" alt="" class="united-lang"></span>
-				</div>
-					<span class="phone">8-800-1234567</span>
+					<div class="languages">
+						<span><img src="images/btf/russia_fluttering_flag_256.png" alt=""></span>
+						<span><img src="images/btf/united_states_of_america_fluttering_flag_256.png" alt="" ></span>
+						<span><img src="images/btf/china_fluttering_flag_256.png" alt="" class="united-lang"></span>
+					</div>
+					<span class="phone">8-800-700-24-93</span>
 					<span class="pe-7s-mail"></span>
 				</div>
 			</div>
@@ -60,7 +64,7 @@
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<button class="navbar-toggle collapsed menu-icon">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -70,21 +74,62 @@
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-							<a href="index.html">Главная</a>
-						</li><!-- /.dropdown -->
-						<li><a href="investment.html">Инвестиции</a></li>
-						<li><a href="blockchain.html">Блокчейн</a></li>
-						<li class="dropdown">
-							<a href="fond.html">Фонд</a>
-						</li><!-- /.dropdown -->
-						<li><a href="/blockchain" class="active">Индустрия</a></li>
-						<li><a href="http://corp.ff.ru/">Холдинг</a></li>
-						<li><a href="dashboard.html">Управление</a></li>
-					</ul>
-				</div><!-- /.navbar-collapse -->
+				<div class="menu-wrapper">
+					<div class="collapse navbar-collapse menu-cont">
+						<a class="navbar-toggle collapsed menu-toggle-js closed">
+					        <span class="sr-only">Toggle navigation</span>
+					    </a>
+						<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="index2.html" class="active">Главная</a>
+								<!-- <ul class="dropdown-menu dropdown-menu-first">
+									<li><a href="multipage-top-default.html">Default</a></li>
+									<li><a href="multipage-top-slider-image.html">Image Slider</a></li>
+									<li><a href="multipage-top-text-rotater.html">Rotate</a></li>
+									<li><a href="multipage-top-slider-transparent.html">No BG Slider</a></li>
+								</ul></.dropdown items -->
+							</li><!-- /.dropdown -->
+							<li><a href="investment.html">Инвестиции</a></li>
+							<li><a href="blockchain.html">Блокчейн</a></li>
+							<li class="dropdown">
+								<a href="fond.html" class="dropdown-toggle" role="button">Фонд</a>
+								<ul class="dropdown-menu dropdown-menu-first">
+									<li class="dropdown-submenu">
+										<!--<ul class="dropdown-menu">-->
+											<!--<li><a tabindex="-1" href="">Фонд</a></li>-->
+											<!--<li><a tabindex="-1" href="">Ценности</a></li>-->
+											<!--<li><a tabindex="-1" href="">Команда</a></li>-->
+											<!--<li><a tabindex="-1" href="">Партнеры</a></li>-->
+											<!--<li><a tabindex="-1" href="">Вакансии</a></li>-->
+											<!--<li><a tabindex="-1" href="">Контакты</a></li>-->
+										<!--</ul>&lt;!&ndash; /.dropdown sub items &ndash;&gt;-->
+									</li><!-- /.dropdown sub -->
+									<li class="dropdown-submenu">
+										<a href="fond.html#values-anchor">Ценности</a>
+										<!--<ul class="dropdown-menu">-->
+											<!--<li><a tabindex="-1" href="multipage-portfolio-aligned-2col.html">2 Columns</a></li>-->
+											<!--<li><a tabindex="-1" href="multipage-portfolio-aligned-3col.html">3 Columns</a></li>-->
+											<!--<li><a tabindex="-1" href="multipage-portfolio-aligned-4col.html">4 Columns</a></li>-->
+										<!--</ul>&lt;!&ndash; /.dropdown sub items &ndash;&gt;-->
+									</li><!-- /.dropdown sub -->
+									<li class="dropdown-submenu"><a href="fond.html#team-anchor">Команда</a></li>
+									<li class="dropdown-submenu"><a href="fond.html#partners-anchor">Партнеры</a></li>
+									<li class="dropdown-submenu"><a href="fond.html#vacancies-anchor">Вакансии</a></li>
+									<li class="dropdown-submenu"><a href="fond.html#contacts-anchor">Контакты</a></li>
+								</ul><!-- /.dropdown sub holder -->
+							</li><!-- /.dropdown -->
+
+							<li><a href="http://corp.ff.ru/">Холдинг</a></li>
+							<li><a href="dashboard.html">Управление</a></li>
+						</ul>
+						<div class="languages">
+							<span><img src="images/btf/russia_fluttering_flag_256.png" alt=""></span>
+							<span><img src="images/btf/united_states_of_america_fluttering_flag_256.png" alt=""></span>
+							<span><img src="images/btf/china_fluttering_flag_256.png" alt="" class="united-lang"></span>
+						</div>
+					</div><!-- /.navbar-collapse -->
+
+				</div>
 			</div><!-- /.container -->
 		</nav><!-- /.nav -->
 		<!-- End Navigation -->
@@ -105,8 +150,8 @@
 					</div>
 					<div class="col-md-8 news">
 						<div class="single-news-item industry-news-item">
-							<h1><a href="#" class='news_link news_title'>Проект Bletchley: Microsoft и смарт-контракты</a></h1>
-							<div class="single-news-item-img"><img class='news_image' src="images/btf/industry-promo.jpg" alt=""></div>
+							<h1><a href="#" class='news_link'>Проект Bletchley: Microsoft и смарт-контракты</a></h1>
+							<div class="single-news-item-img"><img src="images/btf/industry-promo.jpg" alt=""></div>
 						</div>
 					</div>
 					<div class="col-md-4">
@@ -117,64 +162,63 @@
 						<div class="events">
 							<span>Мероприятия</span>
 							<div class="events-item">
-								<img src="images/btf/events-1.jpg" alt="">
+								<a href="news.html"><img src="images/btf/events-1.jpg" alt=""></a>
 								<div class="events-item-info">
-									<a href="#">Обзор KeepKey - аппаратного кошелька для криптовалют</a>
+									<a href="news.html">Обзор KeepKey - аппаратного кошелька для криптовалют</a>
 									<span>Апрель 23, 2017</span>
 								</div>
 							</div>
 							<div class="events-item">
-								<img src="images/btf/events-2.jpg" alt="">
+								<a href="news.html"><img src="images/btf/events-2.jpg" alt=""></a>
 								<div class="events-item-info">
-									<a href="#">Отчет о конференции Ethereum Russia 2016</a>
+									<a href="news.html">Отчет о конференции Ethereum Russia 2016</a>
 									<span>Май 25, 2017</span>
 								</div>
 							</div>
 							<div class="events-item">
-								<img src="images/btf/events-3.jpg" alt="">
+								<a href="news.html"><img src="images/btf/events-3.jpg" alt=""></a>
 								<div class="events-item-info">
-									<a href="#">Интервью с основателем Cryptsy - Полем Верноном</a>
+									<a href="news.html">Интервью с основателем Cryptsy - Полем Верноном</a>
 									<span>Июль 27, 2017</span>
 								</div>
 							</div>
-<!-- 							<div class="events-item">
-								<img src="images/btf/events-4.jpg" alt="">
-								<div class="events-item-info">
-									<a href="#">Как не нужно обращаться со своими биткойнами</a>
-									<span>Август 20, 2017</span>
-								</div>
-							</div> -->
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		
+
 		<section class="industry-other-news">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
 						<div class="industry-other-news-item">
-							<img src="images/btf/industry-post-1.jpg" alt="">
+							<div class="industry-other-news-item-img">
+								<a href="news.html"><img src="images/btf/industry-post-1.jpg" alt=""></a>
+							</div>
 							<h1><a href="news.html">Что инвесторам следует знать о Zcash</a><a href="#"><span class="news-category">Финансы</span></a></h1>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="industry-other-news-item">
-							<img src="images/btf/industry-post-2.jpg" alt="">
+							<div class="industry-other-news-item-img">
+								<a href="news.html"><img src="images/btf/industry-post-2.jpg" alt=""></a>
+							</div>
 							<h1><a href="news.html">У истоков Биткоина: как был создан Proof-of-work</a><a href="#"><span class="news-category">Бизнес</span></a></h1>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="industry-other-news-item">
-							<img src="images/btf/industry-post-3.jpg" alt="">
+							<div class="industry-other-news-item-img">
+								<a href="news.html"><img src="images/btf/industry-post-3.jpg" alt=""></a>
+							</div>
 							<h1><a href="news.html">Производные финансовые инструменты на основе Bitcoin</a><a href="#"><span class="news-category">Биткоин</span></a></h1>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		
+
 		<section class="industry-list-news">
 			<div class="container">
 				<div class="row masonry-wrap">
@@ -297,44 +341,8 @@
 	    		    // use element for option
 	    		    percentPosition: true
 	    		});
-
-	    		$(document).ready(function() {
-	    		 
-	    		    var pos1 = new google.maps.LatLng(18.520266, 73.856406),
-	    		        pos2 = new google.maps.LatLng(28.579943, 77.330006),
-	    		        
-	    		        option1 = {
-	    		            zoom: 17,
-	    		            center: pos1,
-	    		            mapTypeId: google.maps.MapTypeId.ROADMAP,
-	    		            styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
-	    		        },
-
-	    		        option2 = {
-	    		            zoom: 16,
-	    		            center: pos2,
-	    		            mapTypeId: google.maps.MapTypeId.ROADMAP,
-	    		            styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
-	    		        },
-	    		        
-	    		        map1 = new google.maps.Map(document.getElementById("map1"), option1),
-	    		        map2 = new google.maps.Map(document.getElementById("map2"), option2),
-
-	    		        myMarker = new google.maps.Marker({
-	    		            position: pos1,
-	    		            map: map1,
-	    		            title: "Pune"
-	    		        }),
-
-	    		        myMarker2 = new google.maps.Marker({
-	    		            position: pos2,
-	    		            map: map2,
-	    		            title: "Noida"
-	    		        });
-
-	    		});
 	    </script>
-		
+
 		<script>
 		$(document).ready(function(){
 
@@ -343,13 +351,13 @@
 				 url: 'https://noxonfund.com/btnews.php',
 				 dataType: 'xml'
 			}).done(function (xmlDoc) {
-			
+
 				console.log(xmlDoc);
-			
+
 				$(xmlDoc).find('item').each(function(index){
-				
+
 						console.log($(this).find('thumbnail'));
-						
+
 						$(".news:first .news_title").html($(this).find('title').text());
 						$(".news:first .news_image").attr("src",$(this).find('thumbnail').attr("url"));
 						//v$(".news:first .news_title").html($(this).find('title').text());ar channel = $(this).find('encoded').html();
@@ -358,10 +366,10 @@
 					});
 				// do stuff
 			});
-			
-		
+
+
 		});
-		
+
 		</script>
 </body>
 </html>

@@ -141,7 +141,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="tags-cont" itemprop="keywords">
+						<div class="tags-cont clearfix" itemprop="keywords">
 							<h5 class="heading-1 mb20">Финансы</h5>
 							<h5 class="heading-1 mb20">Бизнес</h5>
 							<h5 class="heading-1 mb20">Биткоин</h5>
@@ -158,6 +158,7 @@
 						<div class="subscribe">
 							<span>Получать новости по e-mail</span>
 							<input class="form-control" data-error="This section is required." id="msg_subject" placeholder="Введите e-mail и нажмите Enter" required="" type="text">
+							<button class="button button--rayen button--border-thin button--text-thick button--text-upper button--size-s" data-text="Подписаться"><span>Подписаться</span></button>
 						</div>
 						<div class="events">
 							<span>Мероприятия</span>
@@ -196,7 +197,7 @@
 							<div class="industry-other-news-item-img">
 								<a href="news.html"><img src="images/btf/industry-post-1.jpg" alt=""></a>
 							</div>
-							<h1><a href="news.html">Что инвесторам следует знать о Zcash</a><a href="#"><span class="news-category">Финансы</span></a></h1>
+							<h1><a href="news.html">Что инвесторам следует знать о Zcash</a><a href="#" class="industry-other-news-item-tag"><span class="news-category">Финансы</span></a></h1>
 						</div>
 					</div>
 					<div class="col-md-4">
@@ -204,7 +205,7 @@
 							<div class="industry-other-news-item-img">
 								<a href="news.html"><img src="images/btf/industry-post-2.jpg" alt=""></a>
 							</div>
-							<h1><a href="news.html">У истоков Биткоина: как был создан Proof-of-work</a><a href="#"><span class="news-category">Бизнес</span></a></h1>
+							<h1><a href="news.html">У истоков Биткоина: как был создан Proof-of-work</a><a href="#" class="industry-other-news-item-tag"><span class="news-category">Бизнес</span></a></h1>
 						</div>
 					</div>
 					<div class="col-md-4">
@@ -212,7 +213,7 @@
 							<div class="industry-other-news-item-img">
 								<a href="news.html"><img src="images/btf/industry-post-3.jpg" alt=""></a>
 							</div>
-							<h1><a href="news.html">Производные финансовые инструменты на основе Bitcoin</a><a href="#"><span class="news-category">Биткоин</span></a></h1>
+							<h1><a href="news.html">Производные финансовые инструменты на основе Bitcoin</a><a href="#" class="industry-other-news-item-tag"><span class="news-category">Биткоин</span></a></h1>
 						</div>
 					</div>
 				</div>
@@ -330,46 +331,50 @@
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 	<script type="text/javascript" src="js/scrollreveal.min.js"></script>
 	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	    <script type="text/javascript">
+	<script>
+	$(document).ready(function() {
+		//
+		// $('.masonry-wrap').masonry({
+		// 	// options
+		// 	// set itemSelector so .grid-sizer is not used in layout
+		// 	itemSelector: '.masonry-item',
+		// 	// use element for option
+		// 	percentPosition: true
+		// });
 
-
-	    		$('.masonry-wrap').masonry({
-	    		    // options
-	    		    // set itemSelector so .grid-sizer is not used in layout
-	    		    itemSelector: '.masonry-item',
-	    		    // use element for option
-	    		    percentPosition: true
-	    		});
-	    </script>
-
-		<script>
-		$(document).ready(function(){
-
-
-			$.ajax({
-				 url: 'https://noxonfund.com/btnews.php',
-				 dataType: 'xml'
-			}).done(function (xmlDoc) {
-
-				console.log(xmlDoc);
-
-				$(xmlDoc).find('item').each(function(index){
-
-						console.log($(this).find('thumbnail'));
-
-						$(".news:first .news_title").html($(this).find('title').text());
-						$(".news:first .news_image").attr("src",$(this).find('thumbnail').attr("url"));
-						//v$(".news:first .news_title").html($(this).find('title').text());ar channel = $(this).find('encoded').html();
-						//var hd = $(this).find('FeedIsHD').text();
-						//$('.box ul').append('<li>'+channel+'</li>');
-					});
-				// do stuff
-			});
-
-
+		// init Masonry
+		var $grid = $('.masonry-wrap').masonry({itemSelector: '.masonry-item', percentPosition: true});
+		// layout Isotope after each image loads
+		$grid.imagesLoaded().progress(function() {
+				$grid.masonry();
+				$(window).resize();
 		});
 
-		</script>
+
+		$.ajax({
+			url: 'https://noxonfund.com/btnews.php',
+			dataType: 'xml'
+		}).done(function(xmlDoc) {
+
+			console.log(xmlDoc);
+
+			$(xmlDoc).find('item').each(function(index) {
+
+				console.log($(this).find('thumbnail'));
+
+				$(".news:first .news_title").html($(this).find('title').text());
+				$(".news:first .news_image").attr("src", $(this).find('thumbnail').attr("url"));
+				//v$(".news:first .news_title").html($(this).find('title').text());ar channel = $(this).find('encoded').html();
+				//var hd = $(this).find('FeedIsHD').text();
+				//$('.box ul').append('<li>'+channel+'</li>');
+			});
+			// do stuff
+		});
+
+
+	});
+</script>
 </body>
 </html>

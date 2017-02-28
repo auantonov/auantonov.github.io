@@ -1832,6 +1832,26 @@ h4.spaced+p {
     position: absolute;
 }
 
+.industry-list-news .button-more {
+    border: 2px solid #474747;
+    margin: auto;
+    text-transform: uppercase;
+    height: 60px;
+    font-size: 12px;
+    padding: 0;
+    margin-top: 60px;
+    width: 280px;
+    margin-bottom: -20px;
+}
+.industry-list-news .button-more>span {
+   color: #474747;
+}
+.industry-list-news .button--rayen::before {
+    padding: 20px;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+}
+
 .tags-cont a {
     background: #fff;
     display: inline-block;

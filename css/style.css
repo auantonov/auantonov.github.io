@@ -1688,11 +1688,11 @@ h4.spaced+p {
     opacity: 1;
 }
 
-
 /* news page */
 .single-news-item-img {
     height: 595px;
     overflow: hidden;
+    display: block;
 }
 .single-news-item-img img {
     max-width: 100%;
@@ -1921,7 +1921,7 @@ h4.spaced+p {
     display: block;
     margin-bottom: 30px;
 }
-.industry-list-news-item a {
+.industry-list-news-item > a {
     display: block;
     overflow: hidden;
     position: relative;
@@ -1941,6 +1941,7 @@ h4.spaced+p {
     background: rgba(0, 0, 0, 0.0);
 }*/
 
+
 /*.industry-other-news-item-img {
     overflow: hidden;
 }
@@ -1952,13 +1953,15 @@ h4.spaced+p {
     transition: transform 0.6s ease 0s;
 }*/
 
+
+/*
 .industry-other-news .industry-other-news-item:hover img {
     transform: scale(1.25);
 }
 
 .industry-other-news .industry-other-news-item img {
     transition: transform 0.6s ease 0s;
-}
+}*/
 
 .industry-other-news .industry-other-news-item-img {
     cursor: pointer;
@@ -1983,7 +1986,7 @@ h4.spaced+p {
 .industry-news-item h1 {
     bottom: 0px;
     color: white;
-    left: 30px;
+    left: 20px;
     font-size: 33px;
     font-family: "Open Sans";
     z-index: 111;
@@ -1992,6 +1995,148 @@ h4.spaced+p {
     margin-right: 30px;
 }
 
+
+/* Common style */
+
+.grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    min-width: 100%;
+    height: auto;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grid figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+}
+
+.grid figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.grid figure figcaption::before, .grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid figure figcaption, .grid figure figcaption>a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Anchor will cover the whole item by default */
+
+
+/* For some effects it will show as a button */
+
+.grid figure figcaption>a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+.grid figure h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+}
+
+.grid figure h2 span {
+    font-weight: 800;
+}
+
+.grid figure h2, .grid figure p {
+    margin: 0;
+}
+
+.grid figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+
+
+/* Individual effects */
+
+
+/*---------------*/
+
+
+/***** Julia *****/
+
+
+/*---------------*/
+
+figure.effect-julia {
+    background: rgb(21, 21, 21);
+}
+
+figure.effect-julia img {
+    opacity: 0.6;
+    max-width: none;
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s;
+    transition: opacity 1s, transform 0.5s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+figure.effect-julia figcaption {
+    text-align: left;
+}
+
+figure.effect-julia h2 {
+    position: relative;
+    padding: 0.5em 0;
+}
+
+figure.effect-julia:hover img {
+    opacity: 0.9;
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+}
+
+.single-news-item figure.effect-julia img {
+    max-width: 100%;
+}
+
+.single-news-item .news-category {
+    font-size: 14px;
+    padding: 4px 12px;
+    font-weight: 600;
+    z-index: 11111;
+    left: 20px;
+    top: 20px;
+}
+
+.single-news-item .post-data,
+.industry-other-news .post-data,
+.industry-list-news-info .post-data {
+    font-size: 13px;
+    position: absolute;
+    bottom: -35px;
+    left: 4px;
+}
+.industry-other-news .post-data {
+    font-size: 11px;
+}
+.single-news-item.industry-news-item h1 {
+    bottom: 30px;
+}
 
 .industry-news-item h1 a {
     color: inherit;
@@ -2034,15 +2179,10 @@ h4.spaced+p {
     z-index: 11111;
     font-family: "Open Sans";
     font-weight: 600;
-    bottom: 20px;
+    bottom: 55px;
     padding-right: 19px;
     line-height: 1.4;
     left: 20px;
-}
-.industry-other-news-item-tag {
-    position: absolute;
-    top: -20px;
-    left: -24px;
 }
 
 .industry-other-news-item h1 a {
@@ -2061,6 +2201,7 @@ h4.spaced+p {
 
 .industry-list-news-item {
     margin-bottom: 30px;
+    position: relative;
 }
 
 .industry-list-news-item img {
@@ -2101,6 +2242,32 @@ h4.spaced+p {
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15), inset 0 -1px 0 0 rgba(0,0,0,0.2);
 }
 
+.industry-list-news-info .industry-other-news-item-tag {
+    position: absolute;
+    z-index: 1111;
+}
+
+.industry-other-news .industry-other-news-item-tag {
+    position: absolute;
+    z-index: 1111;
+    font-weight: 600;
+}
+
+.industry-list-news-info .industry-other-news-item-tag span {
+    font-weight: 600;
+}
+.industry-list-news-info .post-data {
+    bottom: auto;
+    top: 243px;
+    /* right: 17px; */
+    left: 20px;
+    color: #fff;
+    font-size: 11px;
+    font-family: "Open Sans";
+    font-weight: 600;
+    /* left: auto; */
+    z-index: 1111;
+}
 .index-wrapper {
     margin-bottom: 90px;
 }
@@ -2226,6 +2393,16 @@ h4.spaced+p {
     height: 61px;
     overflow: hidden;
     font-weight: 400;
+}
+
+.industry-list-news-item h2 {
+    position: absolute;
+    top: 193px;
+    z-index: 11111111;
+    color: #fff;
+}
+.industry-list-news-item h2 a {
+    color: #fff;
 }
 
 .index-news .industry-list-news-item-info {
@@ -3957,16 +4134,17 @@ figure.snip0016:hover figcaption::before {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     margin-top: 15px;
-    /*    margin-bottom: 50px;*/
 }
 
 .news-category {
     position: absolute;
     left: 0;
     border-radius: 5px;
-    top: -12px;
+    top: 20px;
+    color: #474747;
+    background: #fff;
     font-size: 11px;
-    left: 24px;
+    left: 20px;
     border: 1px solid #fff;
     padding: 4px 9px;
 }

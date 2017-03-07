@@ -1,15 +1,3 @@
-/* ---- contact form ---- */
-// $("#contactForm").validator().on("submit", function(event) {
-//     if (event.isDefaultPrevented()) {
-//         formError();
-//         submitMSG(false, "Did you fill in the form properly?");
-//     } else {
-//         event.preventDefault();
-//         submitForm();
-//     }
-// });
-//
-// alert(window.localStorage.myethaddress);
 
 $('.navbar-toggle').unbind('click');
 $('.collapse').unbind('click');
@@ -327,6 +315,38 @@ $(document).ready(function() {
             });
 
         }
+
+    }
+
+    if ($('body').hasClass('industry')) {
+      // init Masonry
+      var $grid = $('.masonry-wrap').masonry({itemSelector: '.masonry-item', percentPosition: true});
+      // layout Isotope after each image loads
+      $grid.imagesLoaded().progress(function() {
+          $grid.masonry();
+          $(window).resize();
+      });
+
+
+      // $.ajax({
+      //   url: 'https://noxonfund.com/btnews.php',
+      //   dataType: 'xml'
+      // }).done(function(xmlDoc) {
+      //
+      //   console.log(xmlDoc);
+      //
+      //   $(xmlDoc).find('item').each(function(index) {
+      //
+      //     console.log($(this).find('thumbnail'));
+      //
+      //     $(".news:first .news_title").html($(this).find('title').text());
+      //     $(".news:first .news_image").attr("src", $(this).find('thumbnail').attr("url"));
+      //     //v$(".news:first .news_title").html($(this).find('title').text());ar channel = $(this).find('encoded').html();
+      //     //var hd = $(this).find('FeedIsHD').text();
+      //     //$('.box ul').append('<li>'+channel+'</li>');
+      //   });
+      //   // do stuff
+      // });
 
     }
 
@@ -1432,12 +1452,6 @@ function triggerReveals() {
     });
 }
 
-/* ---- close mobile nav on click ---- */
-// $(document).on('click','.navbar-collapse.in',function(e) {
-//     if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
-//         $(this).collapse('hide');
-//     }
-// });
 
 /* ---- rotater text ---- */
 var current = 1;
@@ -1454,10 +1468,3 @@ setInterval(function() {
         current++;
     }
 , 2500);
-
-/* ---- nav main link hover dropdown ---- */
-// if ( $(window).width() >= 767) {
-//     $('.dropdown').hover(function(){
-//         $('.dropdown-toggle', this).trigger('click');
-//     });
-// }

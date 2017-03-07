@@ -9,18 +9,6 @@
 	<!-- Royal Preloader CSS -->
 	<link href="css/royal_preloader.css" rel="stylesheet">
 
-	<!-- jQuery Files -->
-<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
-
-	<!-- Royal Preloader -->
-<!-- 	<script type="text/javascript" src="js/royal_preloader.min.js"></script> -->
-<!-- 	<script type="text/javascript">
-		Royal_Preloader.config({
-		    mode:           'number',
-		    showProgress:   false,
-		    background:     '#fff'
-		});
-	</script> -->
 	<!-- Stylesheets -->
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	<link rel="apple-touch-icon" size="180x180" href="images/favicon-180.png">
@@ -35,7 +23,7 @@
 	<link rel="stylesheet" type="text/css" href="css/vladimir.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
-<body class="body-static-navbar">
+<body class="body-static-navbar industry">
 
 	<!-- Preloader -->
 	<!-- <div id="royal_preloader"></div> -->
@@ -82,12 +70,6 @@
 						<ul class="nav navbar-nav">
 							<li class="dropdown">
 								<a href="index.html">Главная</a>
-								<!-- <ul class="dropdown-menu dropdown-menu-first">
-									<li><a href="multipage-top-default.html">Default</a></li>
-									<li><a href="multipage-top-slider-image.html">Image Slider</a></li>
-									<li><a href="multipage-top-text-rotater.html">Rotate</a></li>
-									<li><a href="multipage-top-slider-transparent.html">No BG Slider</a></li>
-								</ul></.dropdown items -->
 							</li><!-- /.dropdown -->
 							<li><a href="investment.html">Инвестиции</a></li>
 							<li><a href="blockchain.html">Блокчейн</a></li>
@@ -95,22 +77,9 @@
 								<a href="fond.html" class="dropdown-toggle" role="button">Фонд</a>
 								<ul class="dropdown-menu dropdown-menu-first">
 									<li class="dropdown-submenu">
-										<!--<ul class="dropdown-menu">-->
-											<!--<li><a tabindex="-1" href="">Фонд</a></li>-->
-											<!--<li><a tabindex="-1" href="">Ценности</a></li>-->
-											<!--<li><a tabindex="-1" href="">Команда</a></li>-->
-											<!--<li><a tabindex="-1" href="">Партнеры</a></li>-->
-											<!--<li><a tabindex="-1" href="">Вакансии</a></li>-->
-											<!--<li><a tabindex="-1" href="">Контакты</a></li>-->
-										<!--</ul>&lt;!&ndash; /.dropdown sub items &ndash;&gt;-->
 									</li><!-- /.dropdown sub -->
 									<li class="dropdown-submenu">
 										<a href="fond.html#values-anchor">Ценности</a>
-										<!--<ul class="dropdown-menu">-->
-											<!--<li><a tabindex="-1" href="multipage-portfolio-aligned-2col.html">2 Columns</a></li>-->
-											<!--<li><a tabindex="-1" href="multipage-portfolio-aligned-3col.html">3 Columns</a></li>-->
-											<!--<li><a tabindex="-1" href="multipage-portfolio-aligned-4col.html">4 Columns</a></li>-->
-										<!--</ul>&lt;!&ndash; /.dropdown sub items &ndash;&gt;-->
 									</li><!-- /.dropdown sub -->
 									<li class="dropdown-submenu"><a href="fond.html#team-anchor">Команда</a></li>
 									<li class="dropdown-submenu"><a href="fond.html#partners-anchor">Партнеры</a></li>
@@ -146,7 +115,7 @@
 							<h1><a href="#" class='news_link'>Проект Bletchley: Microsoft и смарт-контракты</a><span class="post-data">5 дней назад</span></h1>
 							<a href="news.html" class="grid single-news-item-img">
 								<figure class="effect-julia">
-									<img src="https://birdinflight.imgix.net/wp-content/uploads/2017/02/04_vik-laschenov_hello-I-slept-with-your-woman-lets-take-a-photo.jpg" alt="img21" />
+									<img src="images/btf/industry-promo.jpg" alt="img21" />
 								</figure>
 							</a>
 						</div>
@@ -245,7 +214,6 @@
 						<div class="industry-list-news-item">
 							<div class="industry-list-news-info"><a href="#" class="industry-other-news-item-tag"><span class="news-category">Биткоин</span></a><span class="post-data">3 дня назад</span></a></div>
 							<a href="news.html" class="grid">
-								<!-- <h1><a href="#" class="industry-other-news-item-tag"><span class="news-category">Биткоин</span></a><span class="post-data">3 дня назад</span></a></h1> -->
 								<figure class="effect-julia">
 									<img src="images/btf/list-news-item-1.jpg" alt="img21" />
 								</figure>
@@ -373,48 +341,5 @@
 	<script src="js/masonry.pkgd.min.js"></script>
 	<script src="js/imagesloaded.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	<script>
-	$(document).ready(function() {
-		//
-		// $('.masonry-wrap').masonry({
-		// 	// options
-		// 	// set itemSelector so .grid-sizer is not used in layout
-		// 	itemSelector: '.masonry-item',
-		// 	// use element for option
-		// 	percentPosition: true
-		// });
-
-		// init Masonry
-		var $grid = $('.masonry-wrap').masonry({itemSelector: '.masonry-item', percentPosition: true});
-		// layout Isotope after each image loads
-		$grid.imagesLoaded().progress(function() {
-				$grid.masonry();
-				$(window).resize();
-		});
-
-
-		$.ajax({
-			url: 'https://noxonfund.com/btnews.php',
-			dataType: 'xml'
-		}).done(function(xmlDoc) {
-
-			console.log(xmlDoc);
-
-			$(xmlDoc).find('item').each(function(index) {
-
-				console.log($(this).find('thumbnail'));
-
-				$(".news:first .news_title").html($(this).find('title').text());
-				$(".news:first .news_image").attr("src", $(this).find('thumbnail').attr("url"));
-				//v$(".news:first .news_title").html($(this).find('title').text());ar channel = $(this).find('encoded').html();
-				//var hd = $(this).find('FeedIsHD').text();
-				//$('.box ul').append('<li>'+channel+'</li>');
-			});
-			// do stuff
-		});
-
-
-	});
-</script>
 </body>
 </html>

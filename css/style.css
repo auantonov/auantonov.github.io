@@ -4814,10 +4814,16 @@ figure.snip0058:hover:after, figure.snip0058.hover:after {
 	100% { transform: rotate(360deg)}
 }
 
-
-/*.chart2 {
-  margin-bottom: 90px;
-}*/
+.nav-tabs .onlyuser {
+    display: none;
+}
+.always-in {
+    font-size: 11px;
+    position: absolute;
+    font-style: italic;
+    top: 12px;
+    right: 0;
+}
 
 #preloader img {
     transform: scale(0.4);

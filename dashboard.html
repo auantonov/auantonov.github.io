@@ -135,7 +135,9 @@
                         <h4>Паи которыми вы владеете</h4>
                         <p class="our-key">Ваш публичный ключ: <span id='myeth'>loading</span></p>
                     </div>
-
+                    <div class="col-md-12 col-sm-12 metamask-block">
+                        <p>Для удобства и безопасности транзакций установите <a href="https://chrome.google.com/webstore/detail/nkbihfbeogaeaoehlefnkodbefgpgknn" target="_blank">MetaMask Pugin</a> в браузер Google Chrome</p>
+                    </div>
                     <div class="col-md-12 col-sm-12">
                         <div class="table-container mb50 pai-pai">
                             <table class="table table-striped table-borderless">
@@ -215,7 +217,9 @@
 
                                         <p>Адрес для перечисления биткойнов: <span class="key">14oegN5FBq335sy2GPyFnD84r4QLRGNhNQ</span></p>
 
-                                        <button onclick='$.get("http://reg.bigtime.fund/alert/?openkey="+localStorage.getItem("myethaddress")+"&name="+$("#pr").html());' class="isend button button--itzel button--text-thick"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Я перевел</span></button>
+                                        <button class="js-send-bitcoin isend button button--itzel button--text-thick"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Я перевел</span></button>
+
+                                        <p class="thank-text"></p>
 
                                     </div>
 
@@ -260,15 +264,18 @@
                                     <div class="line">
                                         <div class="line-item">
                                             <p>Сколько паев перевести?</p>
-											<input type='text' style='border: 2px solid #474747;' name='' class='form-control' placeholder='Amount'>
+											<input type='text' style='border: 2px solid #474747;' name='' class='form-control' id="js-send-count" placeholder='Amount'>
                                         </div>
                                         <div class="line-item">
                                             <p>На какой адрес перевести?</p>
-                                            <input type='text' style='border: 2px solid #474747;' name='' class='form-control' placeholder='0x...'>
+                                            <input type='text' style='border: 2px solid #474747;' name='' class='form-control' id="js-send-who" placeholder='0x...'>
                                         </div>
 
 										 <div class="line-item">
-                                            <input type='button' name='' class='btn' value='Отправить'>
+                                            <input type='button' onclick="App.sendToken()" name='' class='btn' value='Отправить'>
+                                        </div>
+                                        <div class="line-item">
+                                            <p id="js-send-status">Статус отправки</p>
                                         </div>
                                     </div>
 
@@ -651,6 +658,7 @@
 	  <script type="text/javascript" src="js/lightwallet.min.js"></script>
     <!-- <script src="https://localbitcoins.com/bitcoincharts/{currency}/trades.json" type="text/javascript"></script> -->
     <script type="text/javascript" src="js/dashboard.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
     <script src='utm_hunter.js'></script>
 </body>
 

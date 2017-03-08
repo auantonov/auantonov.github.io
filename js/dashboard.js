@@ -284,3 +284,13 @@ setTimeout(function() {
 // alert(sumInput);
 
 bundle_loaded();
+
+$( document ).ready(function(){
+    $('.js-send-bitcoin').click(function(){
+        var count = $('#showafterrecalc #inbtc').val();
+        var pie = $(".pie.active").attr('data-token');
+        $.get("http://reg.bigtime.fund/alert/?openkey="+localStorage.getItem("myethaddress")+"&count="+count+"&pie="+pie);
+        $('#kupit').val("");
+        $('.thank-text').html("Спасибо! Ожидайте токены в ближайшее время.");
+    });
+});

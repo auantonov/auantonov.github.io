@@ -185,6 +185,7 @@ function bundle_loaded() {
             line += "<td class='number rost'>??%</td>";
             <!-- не менять! считается само-->
             line += "<td class='number start'>??</td>";
+            line += "<td class='number end'>" + item.end + "</td>";
             line += "<td class=pie-link><a href=# onclick='$(\"#moreinfo\").show();return false'>Подробнее <i class='fa fa-hand-o-right' aria-hidden='true'></i></a></td>";
 
             line += '</tr>';

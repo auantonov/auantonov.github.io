@@ -29,9 +29,10 @@
 	<link href="css/pe-icon-7-stroke.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" title="main-css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
-<body class="body-static-navbar">
+<body class="body-static-navbar single-news-page">
 	<div id="scrollbar"></div>
 
 	<!-- Preloader -->
@@ -42,15 +43,16 @@
 		<div class="top-menu">
 			<div class="container">
 				<div class="top-menu-left-section pull-left">
-					<span>Курс BTC/$</span>
-					<span>Курс BTF/$</span>
+					<span>Курс <span id='rubbtc'></span> руб. / BTC</span>
+					<span>Курс <span id="usdbtc"></span> $ / BTC</span>
 				</div>
 				<div class="top-menu-right-section pull-right">
 					<div class="languages">
-						<span>EN</span>
-						<span>RU</span>
+						<span><img src="images/btf/russia_fluttering_flag_256.png" alt=""></span>
+						<span><img src="images/btf/united_states_of_america_fluttering_flag_256.png" alt="" ></span>
+						<span><img src="images/btf/china_fluttering_flag_256.png" alt="" class="united-lang"></span>
 					</div>
-					<span class="phone">8-800-1234567</span>
+					<span class="phone">8-800-700-24-93</span>
 					<span class="pe-7s-mail"></span>
 				</div>
 			</div>
@@ -60,54 +62,53 @@
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<button class="navbar-toggle collapsed menu-icon">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand scroll-top" href="#"><img src="images/btf/BigTime_Fund_logo_full_version_black_01.png" alt=""></a>
+					<a class="navbar-brand scroll-top" href="#"><img src="images/logo.png" alt=""></a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Главная</a>
-							<ul class="dropdown-menu dropdown-menu-first">
-								<li><a href="multipage-top-default.html">Default</a></li>
-								<li><a href="multipage-top-slider-image.html">Image Slider</a></li>
-								<li><a href="multipage-top-text-rotater.html">Rotate</a></li>
-								<li><a href="multipage-top-slider-transparent.html">No BG Slider</a></li>
-							</ul><!-- /.dropdown items -->
-						</li><!-- /.dropdown -->
-						<li><a href="multipage-services.html">Инвестиции</a></li>
-						<li><a href="multipage-team.html">Блокчейн</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Фонд</a>
-							<ul class="dropdown-menu dropdown-menu-first">
-								<li class="dropdown-submenu">
-									<a tabindex="-1" href="#">Masonry &nbsp;<span class="ion-ios-arrow-right"></span></a>
-									<ul class="dropdown-menu">
-										<li><a tabindex="-1" href="multipage-portfolio-masonry-2col.html">2 Columns</a></li>
-										<li><a tabindex="-1" href="multipage-portfolio-masonry-3col.html">3 Columns</a></li>
-										<li><a tabindex="-1" href="multipage-portfolio-masonry-4col.html">4 Columns</a></li>
-									</ul><!-- /.dropdown sub items -->
-								</li><!-- /.dropdown sub -->
-								<li class="dropdown-submenu">
-									<a href="#">Regular &nbsp;<span class="ion-ios-arrow-right"></span></a>
-									<ul class="dropdown-menu">
-										<li><a tabindex="-1" href="multipage-portfolio-aligned-2col.html">2 Columns</a></li>
-										<li><a tabindex="-1" href="multipage-portfolio-aligned-3col.html">3 Columns</a></li>
-										<li><a tabindex="-1" href="multipage-portfolio-aligned-4col.html">4 Columns</a></li>
-									</ul><!-- /.dropdown sub items -->
-								</li><!-- /.dropdown sub -->
-							</ul><!-- /.dropdown sub holder -->
-						</li><!-- /.dropdown -->
-						<li><a href="/blockchain">Индустрия</a></li>
-						<li><a href="multipage-contact.html">Управление</a></li>
-					</ul>
-				</div><!-- /.navbar-collapse -->
+				<div class="menu-wrapper">
+					<div class="collapse navbar-collapse menu-cont">
+						<a class="navbar-toggle collapsed menu-toggle-js closed">
+					        <span class="sr-only">Toggle navigation</span>
+					    </a>
+						<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="index.html">Главная</a>
+							</li><!-- /.dropdown -->
+							<li><a href="investment.html">Инвестиции</a></li>
+							<li><a href="blockchain.html">Блокчейн</a></li>
+							<li class="dropdown">
+								<a href="fond.html" class="dropdown-toggle" role="button">Фонд</a>
+								<ul class="dropdown-menu dropdown-menu-first">
+									<li class="dropdown-submenu">
+									</li><!-- /.dropdown sub -->
+									<li class="dropdown-submenu">
+										<a href="fond.html#values-anchor">Ценности</a>
+									</li><!-- /.dropdown sub -->
+									<li class="dropdown-submenu"><a href="fond.html#team-anchor">Команда</a></li>
+									<li class="dropdown-submenu"><a href="fond.html#partners-anchor">Партнеры</a></li>
+									<li class="dropdown-submenu"><a href="fond.html#vacancies-anchor">Вакансии</a></li>
+									<li class="dropdown-submenu"><a href="fond.html#contacts-anchor">Контакты</a></li>
+								</ul><!-- /.dropdown sub holder -->
+							</li><!-- /.dropdown -->
+							<li><a href="industry.html"  class="active">Индустрия</a></li>
+							<li><a href="http://corp.ff.ru/">Холдинг</a></li>
+							<li><a href="dashboard.html">Управление</a></li>
+						</ul>
+						<div class="languages">
+							<span><img src="images/btf/russia_fluttering_flag_256.png" alt=""></span>
+							<span><img src="images/btf/united_states_of_america_fluttering_flag_256.png" alt=""></span>
+							<span><img src="images/btf/china_fluttering_flag_256.png" alt="" class="united-lang"></span>
+						</div>
+					</div><!-- /.navbar-collapse -->
+
+				</div>
 			</div><!-- /.container -->
 		</nav><!-- /.nav -->
 		<!-- End Navigation -->
@@ -120,7 +121,9 @@
 			<div class="row">
 				<div class="col-md-8">
 					<div class="single-news-item">
+						<a href="#" class="industry-other-news-item-tag"><span class="news-category">Финансы</span></a>
 						<h1>Проект Bletchley: Microsoft и смарт-контракты</h1>
+						<p class="single-news-data"><i class="fa fa-clock-o" aria-hidden="true"></i><span>12:03, 7 марта 2017</span></p>
 						<div class="single-news-item-img"><img src="images/btf/single-news2.jpg" alt=""></div>
 						<p class="single-news-item-descr">Одним из основных направлений деятельности Microsoft становится платформа облачных вычислений Azure. Сегодня Azure занимает второе место на рынке облачных услуг и конкурирует с лидером – Amazon Web Service (AWS). По уровню прорывных технологий, AWS – несомненный лидер отрасли, достаточно упомянуть Lambda. Однако, похоже, Microsoft нашла территорию на рынке, за которую можно конкурировать на равных – это блокчейн.
 </p>
@@ -130,31 +133,43 @@
 					<div class="subscribe">
 						<span>Получать новости по e-mail</span>
 						<input class="form-control" data-error="This section is required." id="msg_subject" placeholder="Введите e-mail и нажмите Enter" required="" type="text">
+						<button class="button button--rayen button--border-thin button--text-thick button--text-upper button--size-s" data-text="Подписаться"><span>Подписаться</span></button>
+					</div>
+					<div class="tags-cont clearfix" itemprop="keywords">
+						<span>Теги</span>
+						<div class="tags-cont-items">
+							<a href="#" class="heading-1 mb20">Финансы</a>
+							<a href="#" class="heading-1 mb20">Бизнес</a>
+							<a href="#" class="heading-1 mb20">Биткоин</a>
+							<a href="#" class="heading-1 mb20">Криптовалюта</a>
+							<a href="#" class="heading-1 mb20">Блокчейн</a>
+							<a href="#" class="heading-1 mb20">Интервью</a>
+							<a href="#" class="heading-1 mb20">Инвестиции</a>
+						</div>
 					</div>
 					<div class="events">
 						<span>Мероприятия</span>
 						<div class="events-item">
-							<img src="images/btf/events-1.jpg" alt="">
+							<a href="news.html"><img src="images/btf/events-1.jpg" alt=""></a>
 							<div class="events-item-info">
-								<a href="#">Обзор KeepKey - аппаратного кошелька для криптовалют</a>
+								<a href="news.html">Обзор KeepKey - аппаратного кошелька для криптовалют</a>
 								<span>Апрель 23, 2017</span>
 							</div>
 						</div>
 						<div class="events-item">
-							<img src="images/btf/events-2.jpg" alt="">
+							<a href="news.html"><img src="images/btf/events-2.jpg" alt=""></a>
 							<div class="events-item-info">
-								<a href="#">Отчет о конференции Ethereum Russia 2016</a>
+								<a href="news.html">Отчет о конференции Ethereum Russia 2016</a>
 								<span>Май 25, 2017</span>
 							</div>
 						</div>
 						<div class="events-item">
-							<img src="images/btf/events-3.jpg" alt="">
+							<a href="news.html"><img src="images/btf/events-3.jpg" alt=""></a>
 							<div class="events-item-info">
-								<a href="#">Интервью с основателем Cryptsy - Полем Верноном</a>
+								<a href="news.html">Интервью с основателем Cryptsy - Полем Верноном</a>
 								<span>Июль 27, 2017</span>
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
@@ -168,60 +183,83 @@
 					<div class="other-news-item">
 						<div class="other-news-item-img"><img src="images/btf/other-news-img2.jpg" alt=""></div>
 						<div class="other-news-item-content">
-							<p>Первые два компонента представляют собой достаточно отработанную технологию, а криптлеты до недавних пор существовали только в виде общей концепции. Microsoft заполняет этот пробел с новой версией Белой Книги, в которой основное место занимают криптлеты. Их описание демонстрирует, насколько серьезно Microsoft относится к проблемам, связанным со смарт-контрактами.
-Microsoft определяет два типа криптлетов: утилиты и контракты, они различаются областями применения.</p>
+							<p class="other-news-bottom-descr">Одно общее свойство смарт-контрактов - это сложные структуры. Задача перевода юридических соглашений в компьютерную форму сложна сама по себе, а кроме того, контракты должны взаимодействовать с другими структурами, не говоря уже об операционной безопасности контракта и всех его участников.
+		Microsoft предлагает разработчикам комплект средств разработки (SDK). Это платформа, обеспечивающая управление событиями, безопасные коммуникации, шаблоны контрактов, управление парами ключей, и регистрация криптлетов. Другими словами, SDK берет на себя всю рутинную работу, оставляя разработчикам самое главное: логику контракта.
+		Платформа упрощает работу программистов и дает сильный сетевой эффект – по мере того, как все больше разработчиков получают опыт работы с SDK, платформа становится де-факто стандартом, что в свою очередь, заставляет предприятия включать ее в свои стандарты. Здесь уместно напомнить историю Java Enterprise Edition, и конечно, собственно Framework.NET от корпорации Microsoft.</p>
 						</div>
 					</div>
-					<p class="other-news-bottom-descr">Одно общее свойство смарт-контрактов - это сложные структуры. Задача перевода юридических соглашений в компьютерную форму сложна сама по себе, а кроме того, контракты должны взаимодействовать с другими структурами, не говоря уже об операционной безопасности контракта и всех его участников.
-Microsoft предлагает разработчикам комплект средств разработки (SDK). Это платформа, обеспечивающая управление событиями, безопасные коммуникации, шаблоны контрактов, управление парами ключей, и регистрация криптлетов. Другими словами, SDK берет на себя всю рутинную работу, оставляя разработчикам самое главное: логику контракта.
-Платформа упрощает работу программистов и дает сильный сетевой эффект – по мере того, как все больше разработчиков получают опыт работы с SDK, платформа становится де-факто стандартом, что в свою очередь, заставляет предприятия включать ее в свои стандарты. Здесь уместно напомнить историю Java Enterprise Edition, и конечно, собственно Framework.NET от корпорации Microsoft.</p>
-					<div class="tags-cont" itemprop="keywords">
-						<a href="https://birdinflight.com/ru/tag/pornhub" rel="tag">Финансы</a> 
+
+					<div class="tags-cont metki" itemprop="keywords">
+						<span>Метки</span>
+						<a href="https://birdinflight.com/ru/tag/pornhub" rel="tag">Финансы</a>
 						<a href="https://birdinflight.com/ru/tag/illyustratsiya" rel="tag">Бизнес</a>
-						<a href="https://birdinflight.com/tag/porno-2" rel="tag">Биткоин</a> 
+						<a href="https://birdinflight.com/tag/porno-2" rel="tag">Биткоин</a>
 						<a href="https://birdinflight.com/ru/tag/raskraska" rel="tag">Криптовалюта</a>
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</section>
 
-	<section class="related-posts">
-		<div class="row mb40">
-			<div class="col-xs-12 text-center">
-				<h2>Похожие материалы</h2>
-				<span class="divider divider-center divider-dark no-margin-bottom"></span>
-			</div><!-- /.column -->
-		</div>
-
+	<section class="industry-list-news">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="related-posts-item">
-						<img src="images/btf/related-post-1.jpg" alt="">
-						<h2>Эволюция кошельков Эфириума</h2>
+			<h1>Похожие материалы</h1>
+			<div class="row masonry-wrap">
+				<div class="col-md-6 masonry-item">
+					<div class="industry-list-news-item">
+						<div class="industry-list-news-info"><a href="#" class="industry-other-news-item-tag"><span class="news-category">Биткоин</span></a><span class="post-data">3 дня назад</span></a></div>
+						<a href="news.html" class="grid">
+							<figure class="effect-julia">
+								<img src="images/btf/related-post-1.jpg" alt="img21" />
+							</figure>
+						</a>
+						<div class="industry-list-news-item-info">
+							<h2><a href="news.html">Интервью c менеджером биржи</a></h2>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<div class="related-posts-item">
-						<img src="images/btf/related-post-2.jpg" alt="">
-						<h2>Битва за Эфириум приобретает позиционный характер</h2>
+				<div class="col-md-6 masonry-item">
+					<div class="industry-list-news-item">
+						<div class="industry-list-news-info"><a href="#" class="industry-other-news-item-tag"><span class="news-category">Бизнес</span></a><span class="post-data">2 дня назад</span></a></div>
+						<a href="news.html" class="grid">
+							<figure class="effect-julia">
+								<img src="images/btf/related-post-2.jpg" alt="img21" />
+							</figure>
+						</a>
+						<div class="industry-list-news-item-info">
+							<h2><a href="news.html">Кто уронил Биткоин 19 августа</a></h2>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<div class="related-posts-item">
-						<img src="images/btf/related-post-3.jpg" alt="">
-						<h2>Приватность дебетовых Bitcoin карт - миф или реальность?</h2>
+				<div class="col-md-6 masonry-item">
+					<div class="industry-list-news-item">
+						<div class="industry-list-news-info"><a href="#" class="industry-other-news-item-tag"><span class="news-category">Блокчейн</span></a><span class="post-data">4 дня назад</span></a></div>
+						<a href="news.html" class="grid">
+							<figure class="effect-julia">
+								<img src="images/btf/related-post-3.jpg" alt="img21" />
+							</figure>
+						</a>
+						<div class="industry-list-news-item-info">
+							<h2><a href="news.html">Статистика и мониторинг</a></h2>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<div class="related-posts-item">
-						<img src="images/btf/related-post-4.jpg" alt="">
-						<h2>Что инвесторам следует знать о Zcash</h2>
+				<div class="col-md-6 masonry-item">
+					<div class="industry-list-news-item">
+						<div class="industry-list-news-info"><a href="#" class="industry-other-news-item-tag"><span class="news-category">Криптовалюта</span></a><span class="post-data">6 дней назад</span></a></div>
+						<a href="news.html" class="grid">
+							<figure class="effect-julia">
+								<img src="images/btf/list-news-item-4.jpg" alt="img21" />
+							</figure>
+						</a>
+						<div class="industry-list-news-item-info">
+							<h2><a href="news.html">Доказательство с нулевым разглашением</a></h2>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<button class="button button--rayen button--border-thin button--text-thick button--text-upper button--size-s button-more" data-text="Больше материалов"><span>Больше материалов</span></button>
 	</section>
 	<!-- End Map -->
 	<!-- End Quotes -->
@@ -247,10 +285,10 @@ Microsoft предлагает разработчикам комплект ср�
 	    			  var percentage = document.body.scrollTop / ($(document).height() - window.innerHeight );
 	    			  $("#scrollbar").width(percentage*100 + "%");
 	    			});
-	    		 
+
 	    		    var pos1 = new google.maps.LatLng(18.520266, 73.856406),
 	    		        pos2 = new google.maps.LatLng(28.579943, 77.330006),
-	    		        
+
 	    		        option1 = {
 	    		            zoom: 17,
 	    		            center: pos1,
@@ -264,7 +302,7 @@ Microsoft предлагает разработчикам комплект ср�
 	    		            mapTypeId: google.maps.MapTypeId.ROADMAP,
 	    		            styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
 	    		        },
-	    		        
+
 	    		        map1 = new google.maps.Map(document.getElementById("map1"), option1),
 	    		        map2 = new google.maps.Map(document.getElementById("map2"), option2),
 

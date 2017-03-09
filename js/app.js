@@ -22009,7 +22009,7 @@ window.App = {
     // Get the initial account balance so it can be displayed.
     web3.eth.getAccounts(function(err, accs) {
       if (err != null) {
-        alert("There was an error fetching your accounts.");
+       // alert("There was an error fetching your accounts.");
         return;
       }
 
@@ -25957,7 +25957,7 @@ exports = module.exports = __webpack_require__(79)();
 
 
 // module
-exports.push([module.i, "body {\r\n  margin-left: 25%;\r\n  margin-right: 25%;\r\n  margin-top: 10%;\r\n  font-family: \"Open Sans\", sans-serif;\r\n}\r\n\r\nlabel {\r\n  display: inline-block;\r\n  width: 100px;\r\n}\r\n\r\ninput {\r\n  width: 500px;\r\n  padding: 5px;\r\n  font-size: 16px;\r\n}\r\n\r\nbutton {\r\n  font-size: 16px;\r\n  padding: 5px;\r\n}\r\n\r\nh1, h2 {\r\n  display: inline-block;\r\n  vertical-align: middle;\r\n  margin-top: 0px;\r\n  margin-bottom: 10px;\r\n}\r\n\r\nh2 {\r\n  color: #AAA;\r\n  font-size: 32px;\r\n}\r\n\r\nh3 {\r\n  font-weight: normal;\r\n  color: #AAA;\r\n  font-size: 24px;\r\n}\r\n\r\n.black {\r\n  color: black;\r\n}\r\n\r\n#balance {\r\n  color: black;\r\n}\r\n\r\n.hint {\r\n  color: #666;\r\n}\r\n", ""]);
+//exports.push([module.i, "body {\r\n  margin-left: 25%;\r\n  margin-right: 25%;\r\n  margin-top: 10%;\r\n  font-family: \"Open Sans\", sans-serif;\r\n}\r\n\r\nlabel {\r\n  display: inline-block;\r\n  width: 100px;\r\n}\r\n\r\ninput {\r\n  width: 500px;\r\n  padding: 5px;\r\n  font-size: 16px;\r\n}\r\n\r\nbutton {\r\n  font-size: 16px;\r\n  padding: 5px;\r\n}\r\n\r\nh1, h2 {\r\n  display: inline-block;\r\n  vertical-align: middle;\r\n  margin-top: 0px;\r\n  margin-bottom: 10px;\r\n}\r\n\r\nh2 {\r\n  color: #AAA;\r\n  font-size: 32px;\r\n}\r\n\r\nh3 {\r\n  font-weight: normal;\r\n  color: #AAA;\r\n  font-size: 24px;\r\n}\r\n\r\n.black {\r\n  color: black;\r\n}\r\n\r\n#balance {\r\n  color: black;\r\n}\r\n\r\n.hint {\r\n  color: #666;\r\n}\r\n", ""]);
 
 // exports
 

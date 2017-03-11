@@ -1,6 +1,10 @@
 function check() {
-    var a = $('.validate-data').length;
-    if (a == 5) {
+	var check = 0;
+	if ($('#regform input[name=email]').length == 0)
+		{check=1;}
+	if ($('#regform input[name=pass]').length == 0)
+		{check=1;}
+    if (check == 0) {
         reg();
     }
 }
@@ -280,6 +284,14 @@ $( document ).ready(function(){
     	$('#js-send-status').html('Токен в пути');
     });
 
+    
+    $('#js-sell-my-token').click(function(){
 
-
+    	var who = $('.pai-pai table tr.active').attr('data-masterkey');
+    	var count = $('#sell-token').val();
+    	var tok = $('.pai-pai table tr.active').attr('data-token');
+    	var adr = $('.pai-pai table tr.active').attr('data-conadr');
+    	App.sendTokVal(who,count,tok,adr);
+    	//Напиши тут штуку уведомление на почту
+    });
 });

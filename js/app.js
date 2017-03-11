@@ -39294,7 +39294,7 @@ var contract = (function(module) {
       var self = this;
 
       if (address == null || typeof address != "string" || address.length != 42) {
-        throw new Error("Invalid address passed to " + this._json.contract_name + ".at(): " + address);
+        // throw new Error("Invalid address passed to " + this._json.contract_name + ".at(): " + address);
       }
 
       var contract = new this(address);

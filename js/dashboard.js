@@ -19,8 +19,8 @@ function reg() {
             $("#upass").html($("#pass1").val().replace(/<\/?[^>]+>/gi, ''));
 
             localStorage.setItem("isuser", 1);
-            setTimeout(
-            	window.location.reload();
+            setTimeout(function(){
+            	window.location.reload();}
             , 3000);
         }
     });

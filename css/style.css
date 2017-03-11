@@ -5331,6 +5331,15 @@ a.button {
   .graphic {
       margin-bottom: 60px!important;
   }
+  .news-right-content {
+    display: none;
+  }
+  .single-news {
+    padding-top: 60px;
+  }
+  .industry .industry-other-news {
+    margin-top: 0;
+  }
 }
 
 

@@ -49,7 +49,7 @@ var myeth;
 var cur,
     price;
 function fill_table() {
-	/*
+	
     $('tr.pie').each(function(index, value) {
         cur = $(this).attr('data-ticker');
 
@@ -59,17 +59,17 @@ function fill_table() {
         $(me).find(".rost").html(Math.round($(this).attr('data-price') / $(this).attr('data-startprice') * 1000 - 1000) / 10 + "%");
         $(me).find(".start").html($(this).attr('data-start'));
         $(me).find(".tip").html($(this).attr('data-tip'));
+        /*
         if (!myeth)
             myeth = "";
         var url = "https://api.etherscan.io/api?module=proxy&data=0x70a08231000000000000000000000000" + myeth.replace('0x', '') + "&to=" + $(this).attr('rel') + "&action=eth_call";
         console.log(url);
-
+		
         $.getJSON(url, function(d) {
             $(me).find(".mytokenbalance").html(parseInt(d.result, 16));
         });
-
+		*/
     });
-	*/
     $("tr.pie").on("click", function() {
         $(this).addClass('active').siblings().removeClass('active');
         $("#centru").show();
@@ -107,12 +107,12 @@ function fill_table() {
 //$("#seed").html(secretSeed);
 
 function bundle_loaded() {
-	/* 
+	
     if (localStorage.getItem("isuser") != 1)
         $(".regb").show();
     if (localStorage.getItem("isuser") == 1)
         $(".bexit").show();
-
+    /* 
     myeth = localStorage.getItem('myethaddress');
     //alert(myeth);
     if (!myeth || myeth.length < 3 || myeth == 'undefined') {

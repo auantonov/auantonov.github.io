@@ -1,8 +1,10 @@
 function check() {
 	var check = 0;
-	if ($('#regform input[name=email]').length == 0)
-		{check=1;}
-	if ($('#regform input[name=pass]').length == 0)
+	if ($('#regform input[name=email]').val().length > 5)
+		{var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+		if(pattern.test($('#regform input[name=email]').val())) {
+			} else {check=1;} }
+	if ($('#regform input[name=pass]').val().length < 5)
 		{check=1;}
     if (check == 0) {
         reg();

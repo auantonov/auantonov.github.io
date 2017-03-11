@@ -22104,12 +22104,12 @@ refreshAddress: function () {
   },
 
 
-hubBalance: function () {
+hubBalance: function (address) {
   var self=this;
-  var pos="#balance";
+  var pos="#js-balans-status";
   var instance;
   var msg;
-  var tok="OKC";
+  var tok;
   Token.at(address).then(function(instance){
     tok=instance;
     msg="Wait..";
@@ -22121,6 +22121,7 @@ hubBalance: function () {
         console.log(tx);
       // Should I use msg=ts.valueOf(); ?
         msg=tx.valueOf();
+        $('#js-balans-status').html(msg);
       //  msg=web3.fromWei(msg);
       //  self.setStatusPos(pos,msg);
   });

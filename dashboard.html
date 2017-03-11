@@ -173,6 +173,7 @@
                                 <li class='onlyuser'><a href="#buy2" data-toggle="tab">Купить</a></li>
                                 <li class='onlyuser'><a href="#sell2" data-toggle="tab">Продать</a></li>
                                 <li class='onlyuser'><a href="#send" data-toggle="tab">Перевести</a></li>
+                                <li class='onlyuser'><a href="#balans" data-toggle="tab">Баланс</a></li>
                             </ul>
                             <div class="tab-content">
                                 <div id="news" class="tab-pane active cont">
@@ -275,6 +276,25 @@
                                         </div>
                                         <div class="line-item">
                                             <p id="js-send-status">Статус отправки</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane-tooltip">
+                                        <p>Пользователь выбирает один из токенов, которым владеет, вводит количество для перевода и выбирает адрес целевого кошелька. Нажимает кнопку и ему перечисляются соответствующие токены.</p>
+                                    </div>
+                                </div>
+                                <div id="balans" class="tab-pane">
+
+                                    <div class="line">
+                                        <div class="line-item">
+                                            <p>Адрес кошелька</p>
+                                            <input type='text' style='border: 2px solid #474747;' name='' class='form-control' id="js-balans-adress" placeholder='Amount'>
+                                        </div>
+                                        <div class="line-item">
+                                            <input type='button' name='' class='btn js-balans-click' value='Узнать баланс токенов'>
+                                        </div>
+                                        <div class="line-item">
+                                            <p id="js-balans-status">Статус</p>
                                         </div>
                                     </div>
 

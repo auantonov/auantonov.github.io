@@ -296,4 +296,19 @@ $( document ).ready(function(){
     	App.sendTokVal(who,count,tok,adr);
     	//Напиши тут штуку уведомление на почту
     });
+
+    $('#js-sell-my-token').click(function(){
+
+    	var who = $('.pai-pai table tr.active').attr('data-masterkey');
+    	var count = $('#sell-token').val();
+    	var tok = $('.pai-pai table tr.active').attr('data-token');
+    	var adr = $('.pai-pai table tr.active').attr('rel');
+    	App.sendTokVal(who,count,tok,adr);
+    	//Напиши тут штуку уведомление на почту
+    });
+
+    $('.js-balans-click').click(function(){
+    	var adr = $('.pai-pai table tr.active').attr('rel');
+    	App.hubBalance(adr);
+    });
 });

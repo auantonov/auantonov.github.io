@@ -103,7 +103,7 @@ function fill_table() {
 
 }
 
-var secretSeed = lightwallet.keystore.generateRandomSeed();
+//var secretSeed = lightwallet.keystore.generateRandomSeed();
 //$("#seed").html(secretSeed);
 
 function bundle_loaded() {

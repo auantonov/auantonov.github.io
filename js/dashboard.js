@@ -51,13 +51,14 @@ function login1() {
 
 }
 
+
 var saveCookie = document.cookie;
 
 var myeth;
 var cur,
     price;
 function fill_table() {
-	
+
     $('tr.pie').each(function(index, value) {
         cur = $(this).attr('data-ticker');
 
@@ -72,13 +73,105 @@ function fill_table() {
             myeth = "";
         var url = "https://api.etherscan.io/api?module=proxy&data=0x70a08231000000000000000000000000" + myeth.replace('0x', '') + "&to=" + $(this).attr('rel') + "&action=eth_call";
         console.log(url);
-		
+
         $.getJSON(url, function(d) {
             $(me).find(".mytokenbalance").html(parseInt(d.result, 16));
         });
 		*/
     });
+
     $("tr.pie").on("click", function() {
+
+				var self = $(this);
+
+				var dataStartInterval = $(this).attr('data-start');
+				var dataEndInterval = $(this).find('.end').html();
+
+				var arrStart = dataStartInterval.split('.');
+
+				tokenDayStart = arrStart[0];
+				tokenMonthStart = arrStart[1] - 1;
+				tokenYearStart = arrStart[2];
+
+				var dateTwoStart = new Date(tokenYearStart, tokenMonthStart, tokenDayStart);
+
+				var arrEnd = dataEndInterval.split('.');
+
+				tokenDayEnd = arrEnd[0];
+				tokenMonthEnd = arrEnd[1] - 1;
+				tokenYearEnd = arrEnd[2];
+
+				var dateTwoEnd = new Date(tokenYearEnd, tokenMonthEnd, tokenDayEnd);
+
+				function CompareDateStart() {
+
+				    var now = new Date();
+
+				    if (now > dateTwoStart) {
+				        return 1;
+				    } else {
+				        return 0;
+				    }
+				}
+
+				function CompareDateEnd() {
+
+						var now = new Date();
+
+						if (now > dateTwoEnd) {
+								return 1;
+						} else {
+								return 0;
+						}
+				}
+
+				CompareDateStart();
+				CompareDateEnd();
+
+				function BuyCheck() {
+
+					if (CompareDateStart() === 1) {
+							self.parents('.dashboard-reg-cont').siblings('#centru').find('.nav-tabs li').eq(1).css('display','none');
+					}
+
+					else {
+							self.parents('.dashboard-reg-cont').siblings('#centru').find('.nav-tabs li').eq(1).css('display','block');
+					}
+
+				}
+
+				function SellCheck() {
+
+					if (CompareDateEnd() === 1) {
+							self.parents('.dashboard-reg-cont').siblings('#centru').find('.nav-tabs li').eq(2).css('display','none');
+					}
+
+					else {
+							self.parents('.dashboard-reg-cont').siblings('#centru').find('.nav-tabs li').eq(2).css('display','block');
+					}
+
+				}
+
+				var dataTip = $(this).attr('data-tip');
+
+				if(dataTip === "Приватный") {
+					 $(this).parents('.dashboard-reg-cont').siblings('#centru').find('.nav-tabs li').eq(1).css('display','none');
+				}
+
+				else if (dataTip === "Интервальный") {
+						BuyCheck();
+						SellCheck();
+				}
+
+				else if (dataTip === "Открытый") {
+						$(this).parents('.dashboard-reg-cont').siblings('#centru').find('.nav-tabs li').eq(1).css('display','block');
+				}
+
+				else {
+						$(this).parents('.dashboard-reg-cont').siblings('#centru').find('.nav-tabs li').eq(1).css('display','block');
+				}
+
+
         $(this).addClass('active').siblings().removeClass('active');
         $("#centru").show();
 
@@ -115,12 +208,12 @@ function fill_table() {
 //$("#seed").html(secretSeed);
 
 function bundle_loaded() {
-	
+
     if (localStorage.getItem("isuser") != 1)
         $(".regb").show();
     if (localStorage.getItem("isuser") == 1)
         $(".bexit").show();
-    /* 
+    /*
     myeth = localStorage.getItem('myethaddress');
     //alert(myeth);
     if (!myeth || myeth.length < 3 || myeth == 'undefined') {
@@ -161,7 +254,6 @@ function bundle_loaded() {
             line += "<tr class='pie firstline' data-token='" + item.title + "' data-tid='" + item.id + "' data-tokensold='" + item.mint + "' data-interval='" + item.interv + "' data-tip='" + item.tip + "' data-start='" + item.start + "' data-price='" + item.price + "' data-lastprice='" + item.price + "' data-startprice='" + item.lastprice + "' data-ticker='" + item.ticker + "' rel='" + item.rel + "' data-token='"+ item.token +"' data-masterkey='"+ item.masterkey +"'>";
             line += "<td class='pai-title'>" + item.title + "</td>";
             line += "<td class='tip'>" + item.tip + "</td>";
-            line += "<td class='number mytokenbalance'>loading</td>";
             line += "<td class='number'><span class='currentprice'>??</span> р</td>";
             <!-- не менять! считается само-->
             line += "<td class='number rost'>??%</td>";
@@ -286,16 +378,6 @@ $( document ).ready(function(){
     	$('#js-send-status').html('Токен в пути');
     });
 
-    
-    $('#js-sell-my-token').click(function(){
-
-    	var who = $('.pai-pai table tr.active').attr('data-masterkey');
-    	var count = $('#sell-token').val();
-    	var tok = $('.pai-pai table tr.active').attr('data-token');
-    	var adr = $('.pai-pai table tr.active').attr('rel');
-    	App.sendTokVal(who,count,tok,adr);
-    	//Напиши тут штуку уведомление на почту
-    });
 
     $('#js-sell-my-token').click(function(){
 
@@ -306,6 +388,8 @@ $( document ).ready(function(){
     	App.sendTokVal(who,count,tok,adr);
     	//Напиши тут штуку уведомление на почту
     });
+
+
 
     $('.js-balans-click').click(function(){
     	var adr = $('.pai-pai table tr.active').attr('rel');

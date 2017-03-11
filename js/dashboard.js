@@ -10,7 +10,6 @@ function reg() {
         if (d != 'ok') {
             alert("Пользователь с таким email уже есть в базе или произошла другая ошибка");
         } else {
-            $("#firstpage").val(localStorage.getItem("firstpage"));
 
             $("#regform").hide();
 
@@ -19,33 +18,13 @@ function reg() {
             $("#ulogin").html($("#email").val().replace(/<\/?[^>]+>/gi, ''));
             $("#upass").html($("#pass1").val().replace(/<\/?[^>]+>/gi, ''));
 
-            $("#xpub").html(localStorage.getItem("myethaddress"));
-            $("#xpriv").html(localStorage.getItem("myprivate"));
+            localStorage.setItem("isuser", 1);
+            window.location.reload();
         }
     });
 }
 
-function sendreg(saveprivate) {
 
-    $("input[name=openkey]").val(localStorage.getItem("myethaddress"));
-
-    if (saveprivate == 1) {
-        $("input[name=privkey]").val(localStorage.getItem("myprivate"));
-    } else {
-        $("input[name=privkey]").val("ключ хранит сам");
-    }
-
-    $.post("https://reg.bigtime.fund/update-key.php", $("#regform").serialize(), function(d) {
-        if (d != 'ok') {
-            alert("Произошла ошибка");
-        } else {}
-    });
-
-    localStorage.setItem("isuser", 1);
-    $('#mymodal').modal('toggle');
-    window.location.reload();
-
-}
 
 function login1() {
 
@@ -56,12 +35,6 @@ function login1() {
         if (obj.fio) {
             localStorage.setItem("isuser", 1);
             //$('#myModallogin').modal('toggle');
-
-            localStorage.setItem("myethaddress", obj.openkey);
-            localStorage.setItem("myprivate", obj.privkey);
-
-            $("#xpub").html(localStorage.getItem("myethaddress"));
-            $("#xpriv").html(localStorage.getItem("myprivate"));
             window.location.reload();
         } else {
             alert("Пользователь не найден");
@@ -76,7 +49,7 @@ var myeth;
 var cur,
     price;
 function fill_table() {
-
+	/*
     $('tr.pie').each(function(index, value) {
         cur = $(this).attr('data-ticker');
 
@@ -96,7 +69,7 @@ function fill_table() {
         });
 
     });
-
+	*/
     $("tr.pie").on("click", function() {
         $(this).addClass('active').siblings().removeClass('active');
         $("#centru").show();
@@ -134,6 +107,7 @@ var secretSeed = lightwallet.keystore.generateRandomSeed();
 //$("#seed").html(secretSeed);
 
 function bundle_loaded() {
+	/* 
     if (localStorage.getItem("isuser") != 1)
         $(".regb").show();
     if (localStorage.getItem("isuser") == 1)
@@ -161,10 +135,10 @@ function bundle_loaded() {
 
         });
 
-    }
-    $("#myeth").html(myeth);
-    if (localStorage.getItem("isuser") != 1)
-        $("#myeth").html("неизвестен");
+    } */
+    //$("#myeth").html(myeth);
+    //if (localStorage.getItem("isuser") != 1)
+    //    $("#myeth").html("неизвестен");
 
     //грузим все
 
@@ -287,7 +261,7 @@ bundle_loaded();
 
 $( document ).ready(function(){
     $('.js-send-bitcoin').click(function(){
-        var count = $('#showafterrecalc #inbtc').val();
+        var count = $('#showafterrecalc #inbtc').html();
         var pie = $(".pie.active").attr('data-token');
         $.get("http://reg.bigtime.fund/alert/?openkey="+localStorage.getItem("myethaddress")+"&count="+count+"&pie="+pie);
         $('#kupit').val("");

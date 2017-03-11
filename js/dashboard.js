@@ -156,7 +156,7 @@ function bundle_loaded() {
 
             //add_token(item.inteval,item.tip,item.start,item.price,item.lastprice,item.startprice,item.ticker,item.rel,item.title);
             var line;
-            line += "<tr class='pie firstline' data-token='" + item.title + "' data-tid='" + item.id + "' data-tokensold='" + item.mint + "' data-interval='" + item.interv + "' data-tip='" + item.tip + "' data-start='" + item.start + "' data-price='" + item.price + "' data-lastprice='" + item.price + "' data-startprice='" + item.lastprice + "' data-ticker='" + item.ticker + "' rel='" + item.rel + "' data-token='"+ item.token +"' data-masterkey='"+ item.masterkey +"' data-conadr='"+ item.contractadrr +"'>";
+            line += "<tr class='pie firstline' data-token='" + item.title + "' data-tid='" + item.id + "' data-tokensold='" + item.mint + "' data-interval='" + item.interv + "' data-tip='" + item.tip + "' data-start='" + item.start + "' data-price='" + item.price + "' data-lastprice='" + item.price + "' data-startprice='" + item.lastprice + "' data-ticker='" + item.ticker + "' rel='" + item.rel + "' data-token='"+ item.token +"' data-masterkey='"+ item.masterkey +"'>";
             line += "<td class='pai-title'>" + item.title + "</td>";
             line += "<td class='tip'>" + item.tip + "</td>";
             line += "<td class='number mytokenbalance'>loading</td>";
@@ -279,7 +279,7 @@ $( document ).ready(function(){
     	var who = $('#js-send-who').val();
     	var count = $('#js-send-count').val();
     	var tok = $('.pai-pai table tr.active').attr('data-token');
-    	var adr = $('.pai-pai table tr.active').attr('data-conadr');
+    	var adr = $('.pai-pai table tr.active').attr('rel');
     	App.sendTokVal(who,count,tok,adr);
     	$('#js-send-status').html('Токен в пути');
     });
@@ -290,7 +290,7 @@ $( document ).ready(function(){
     	var who = $('.pai-pai table tr.active').attr('data-masterkey');
     	var count = $('#sell-token').val();
     	var tok = $('.pai-pai table tr.active').attr('data-token');
-    	var adr = $('.pai-pai table tr.active').attr('data-conadr');
+    	var adr = $('.pai-pai table tr.active').attr('rel');
     	App.sendTokVal(who,count,tok,adr);
     	//Напиши тут штуку уведомление на почту
     });

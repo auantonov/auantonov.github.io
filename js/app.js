@@ -22178,7 +22178,7 @@ sendTokVal: function (to,val,tok) {
 //  val=web3.toWei(val);
 //  to=web3.toWei(val);
 
-
+	address = "0x8f5e5f53f64cbd073ef6ffdd8464ce2e260053d4";
   Token.at(address).then(function(instance){
     tok=instance;
 //    msg="Wait..";

@@ -22121,20 +22121,20 @@ hubBalance: function () {
         console.log(tx);
       // Should I use msg=ts.valueOf(); ?
         msg=tx.valueOf();
-        msg=web3.fromWei(msg);
-        self.setStatusPos(pos,msg);
+      //  msg=web3.fromWei(msg);
+      //  self.setStatusPos(pos,msg);
   });
 
 },
 
-sendToken: function () {
+sendToken: function (tok) {
   var self=this;
   var pos="#transfer_result";
   var instance;
   var msg;
   // какая валюта??
-  var tok="OKC";
   //какой токен??
+  var tok;
   address = "0x8f5e5f53f64cbd073ef6ffdd8464ce2e260053d4";
   var val = $("#js-send-count").val();
   var to = $("#js-send-who").val();
@@ -22169,12 +22169,11 @@ sendToken: function () {
 
 
 // Send to,val. Be aware of number type in "to".
-sendTokVal: function (to,val) {
+sendTokVal: function (to,val,tok) {
   var self=this;
 //  var pos="#transfer_result";
   var instance;
   var msg;
-  var tok;
 //  var amnt;
 //  val=web3.toWei(val);
 //  to=web3.toWei(val);

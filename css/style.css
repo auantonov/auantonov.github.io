@@ -1519,14 +1519,13 @@ h4.spaced+p {
     height: 440px;
 }
 
-.map-content {
-    margin-top: 30px;
-}
-
 .map-content h2 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
+.map-content {
+    margin-bottom: 22px;
+}
 .contact-info {
     background: #fff;
     padding-bottom: 50px;
@@ -1535,6 +1534,22 @@ h4.spaced+p {
 .partners {
     font-size: 0;
     text-align: center;
+}
+.button.more-partners {
+    background: #fff;
+    width: 344px;
+    border: 2px solid #55caf5;
+    padding: 0 10px;
+    margin: auto;
+    margin-top: 30px;
+}
+.button.more-partners>span {
+    vertical-align: middle;
+    color: #55caf5;
+    font-weight: 700;
+}
+.button.more-partners.button--rayen:before {
+    padding: 14px 38px;
 }
 
 .partners a {
@@ -4016,15 +4031,15 @@ figure.snip0016:hover figcaption::before {
 }
 
 .map-content h2 {
-		font-size: 20px;
-		margin-top: -20px;
+		font-size: 22px;
 		font-weight: bold;
 		line-height: 1.5;
 		text-transform: initial;
 }
 .map-content span {
-		font-weight: 400;
-		color: #474747;
+    font-weight: 400;
+    color: #474747;
+    font-size: 15px;
 }
 
 .promo {

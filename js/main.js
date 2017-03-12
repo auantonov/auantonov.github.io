@@ -320,12 +320,12 @@ $(document).ready(function() {
 
     if ($('body').hasClass('industry')) {
       // init Masonry
-      var $grid = $('.masonry-wrap').masonry({itemSelector: '.masonry-item', percentPosition: true});
-      // layout Isotope after each image loads
-      $grid.imagesLoaded().progress(function() {
-          $grid.masonry();
-          $(window).resize();
-      });
+      // var $grid = $('.masonry-wrap').masonry({itemSelector: '.masonry-item', percentPosition: true});
+      // // layout Isotope after each image loads
+      // $grid.imagesLoaded().progress(function() {
+      //     $grid.masonry();
+      //     $(window).resize();
+      // });
 
 
       // $.ajax({

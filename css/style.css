@@ -5653,9 +5653,9 @@ a.button {
         top: 90px;
         font-size: 14px;
     }
-    .industry figure.effect-julia img {
+    /*.industry figure.effect-julia img {
         min-height: auto;
-    }
+    }*/
     .industry .industry-list-news-info .post-data {
         top: 121px;
         font-size: 8px;

@@ -319,14 +319,14 @@ $(document).ready(function() {
     }
 
     if ($('body').hasClass('industry')) {
-      // init Masonry
-      // var $grid = $('.masonry-wrap').masonry({itemSelector: '.masonry-item', percentPosition: true});
-      // // layout Isotope after each image loads
-      // $grid.imagesLoaded().progress(function() {
-      //     $grid.masonry();
-      //     $(window).resize();
-      // });
-
+      if ($(window).width() > 992) {
+        var $grid = $('.masonry-wrap').masonry({itemSelector: '.masonry-item', percentPosition: true});
+        // layout Isotope after each image loads
+        $grid.imagesLoaded().progress(function() {
+            $grid.masonry();
+            $(window).resize();
+        });
+      }
 
       // $.ajax({
       //   url: 'https://noxonfund.com/btnews.php',

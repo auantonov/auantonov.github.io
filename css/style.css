@@ -5649,21 +5649,31 @@ a.button {
 }
 
 @media (max-width:767px) {
+    .industry .single-news {
+        padding-top: 30px;
+    }
+    .industry .industry-list-news {
+
+    }
     .industry .industry-list-news-item h2 {
         top: 90px;
         font-size: 14px;
         height: 26px;
         overflow: hidden;
     }
-    .single-news-item-img,
-    .single-news-item figure.effect-julia {
+    .industry .single-news-item-img,
+    .industry .single-news-item figure.effect-julia {
       height: auto;
     }
-    .single-news-item.industry-news-item h1,
-    .industry-other-news-item h1 {
+    .industry .single-news-item .news-category {
+        font-size: 11px;
+        padding: 4px 9px;
+    }
+    .industry .single-news-item.industry-news-item h1,
+    .industry .industry-other-news-item h1 {
       font-size: 17px;
     }
-    .single-news-item .post-data {
+    .industry .single-news-item .post-data {
       font-size: 10px;
     }
     .industry .industry-list-news-info .post-data {

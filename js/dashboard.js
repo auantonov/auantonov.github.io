@@ -385,8 +385,26 @@ $( document ).ready(function(){
     	var count = $('#sell-token').val();
     	var tok = $('.pai-pai table tr.active').attr('data-token');
     	var adr = $('.pai-pai table tr.active').attr('rel');
+        var bit = $('#where-go-bit').val();
     	App.sendTokVal(who,count,tok,adr);
     	//Напиши тут штуку уведомление на почту
+        var obj = {
+            count: count,
+            adress: adr,
+            tok: tok,
+            bit: bit,
+        };
+        $.ajax({
+            type: "POST",
+            url: "//reg.bigtime.fund/mail/give-bitcoin.php",
+            data: obj,
+            contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+            beforeSend: function(){
+            },
+            success: function(html){
+                console.log(html);
+            },
+        });
     });
 
 

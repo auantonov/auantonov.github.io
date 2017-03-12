@@ -362,9 +362,28 @@ bundle_loaded();
 $( document ).ready(function(){
     $('.js-send-bitcoin').click(function(){
         var count = $('#showafterrecalc #inbtc').html();
-        var pie = $(".pie.active").attr('data-token');
-        $.get("http://reg.bigtime.fund/alert/?count="+count+"&pie="+pie);
+        var tok = $('.pai-pai table tr.active').attr('data-token');
+        var adr = $('.pai-pai table tr.active').attr('rel');
+        var eth = $('#eth-adr').val();
+        var obj = {
+            count: count,
+            adress: adr,
+            tok: tok,
+            eth: eth,
+        };
+        $.ajax({
+            type: "POST",
+            url: "//reg.bigtime.fund/mail/give-token.php",
+            data: obj,
+            contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+            beforeSend: function(){
+            },
+            success: function(html){
+                console.log(html);
+            },
+        });
         $('#kupit').val("");
+        $('#eth-adr').val("");
         $('.thank-text').html("Спасибо! Ожидайте токены в ближайшее время.");
     });
 

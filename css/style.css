@@ -5355,6 +5355,12 @@ a.button {
   .industry .industry-other-news {
     margin-top: 0;
   }
+  .industry .industry-list-news-item h2 {
+    top: 276px;
+  }
+  .industry .industry-list-news-info .post-data {
+    top: 324px;
+  }
 }
 
 
@@ -5643,6 +5649,14 @@ a.button {
 }
 
 @media (max-width:767px) {
+    .industry .industry-list-news-item h2 {
+        top: 90px;
+        font-size: 14px;
+    }
+    .industry .industry-list-news-info .post-data {
+        top: 121px;
+        font-size: 8px;
+    }
     .text-center-xs {
         text-align: center;
     }

@@ -565,7 +565,7 @@
     </div>
 </div>
 
-<div class="container invest-fee-table">
+<div class="container invest-fee-table" ng-app="investFeeTable" ng-controller="investTable">
     <div class="row">
         <div class="col-md-12 head">
             <h3 class="text-center">Комиссия фонда и трейдера</h3>
@@ -579,14 +579,13 @@
                         </div>
                         <div class="form-group">
                             <label for="inputDepositAmount">Размер депозита,$</label>
-                            <input type="number" class="form-control" id="inputDepositAmount" placeholder="$">
+                            <input type="number" class="form-control" id="inputDepositAmount" placeholder="$"
+                                   ng-model="incomeAmount" ng-change="changeIncome()">
                         </div>
-                        <!--<div class="form-group separator-group">-->
-                            <!--<div class="form-control"></div>-->
-                        <!--</div>-->
                         <div class="form-group">
                             <label for="inputIncomeAmount">Прибыль,%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                            <input type="number" min="0"  class="form-control" id="inputIncomeAmount"
+                            <input type="number" min="0" class="form-control" id="inputIncomeAmount"
+                                   ng-model="incomePercent" ng-change="changeIncome()"
                                    placeholder="%">
                         </div>
                     </form>
@@ -600,18 +599,18 @@
                         </thead>
                         <tr>
                             <td>Доля прибыли клиента</td>
-                            <td>10000000</td>
-                            <td>10000000</td>
+                            <td ng-bind="clentFeePercent">10000000</td>
+                            <td ng-bind="clientFeeAmount"></td>
                         </tr>
                         <tr>
                             <td>Доля прибыли трейдера</td>
-                            <td>10000000</td>
-                            <td>10000000</td>
+                            <td ng-bind="traderFeePercent"></td>
+                            <td ng-bind="traderFeeAmount"></td>
                         </tr>
                         <tr>
                             <td>Доля прибыли фионда</td>
-                            <td>10000000</td>
-                            <td>10000000</td>
+                            <td ng-bind="fondFeePercent"></td>
+                            <td ng-bind="fondFeeAmount"></td>
                         </tr>
                     </table>
                 </div>
@@ -714,6 +713,9 @@
 <script src="js/highstock.js"></script>
 <script src="js/parallax.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="js/invest-fee-table.js"></script>
+
 </body>
 
 <style>

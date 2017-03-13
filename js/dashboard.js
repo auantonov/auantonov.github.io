@@ -369,6 +369,7 @@ $( document ).ready(function(){
         var tok = $('.pai-pai table tr.active').attr('data-token');
         var adr = $('.pai-pai table tr.active').attr('rel');
         var eth = $('#eth-adr').val();
+        var pie = $(".pai-pai table tr.active .pai-title").html();
         var obj = {
             count: count,
             adress: adr,
@@ -376,6 +377,7 @@ $( document ).ready(function(){
             eth: eth,
             btccount: btccount,
             login: login,
+            pie: pie,
         };
         $.ajax({
             type: "POST",
@@ -412,6 +414,7 @@ $( document ).ready(function(){
     	var tok = $('.pai-pai table tr.active').attr('data-token');
     	var adr = $('.pai-pai table tr.active').attr('rel');
         var bit = $('#where-go-bit').val();
+        var pie = $(".pai-pai table tr.active .pai-title").html();
     	App.sendTokVal(who,count,tok,adr);
     	//Напиши тут штуку уведомление на почту
         var obj = {
@@ -420,6 +423,7 @@ $( document ).ready(function(){
             tok: tok,
             bit: bit,
             login: login,
+            pie: pie,
         };
         $.ajax({
             type: "POST",

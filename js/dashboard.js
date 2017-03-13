@@ -363,7 +363,7 @@ bundle_loaded();
 
 $( document ).ready(function(){
     $('.js-send-bitcoin').click(function(){
-        var count = $('#kupit').html();
+        var count = $('#kupit').val();
         var login = localStorage.getItem("login");
         var btccount = $('#showafterrecalc #inbtc').html();
         var tok = $('.pai-pai table tr.active').attr('data-token');

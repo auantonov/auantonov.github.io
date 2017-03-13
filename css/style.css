@@ -4612,6 +4612,10 @@ figure.snip0016:hover figcaption::before {
     font-style: italic;
 }
 
+.Safari .navbar-header:after {
+   width: calc(100% - 210px);
+}
+
 .menu-wrapper {
     position: relative;
 }

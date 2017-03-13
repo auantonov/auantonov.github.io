@@ -115,20 +115,20 @@ function fill_table() {
 				        return 0;
 				    }
 				}
-
-				function CompareDateEnd() {
-
-						var now = new Date();
-
-						if (now > dateTwoEnd) {
-								return 1;
-						} else {
-								return 0;
-						}
-				}
+				//
+				// function CompareDateEnd() {
+				//
+				// 		var now = new Date();
+				//
+				// 		if (now > dateTwoEnd) {
+				// 				return 1;
+				// 		} else {
+				// 				return 0;
+				// 		}
+				// }
 
 				CompareDateStart();
-				CompareDateEnd();
+				// CompareDateEnd();
 
 				function BuyCheck() {
 
@@ -142,17 +142,17 @@ function fill_table() {
 
 				}
 
-				function SellCheck() {
-
-					if (CompareDateEnd() === 1) {
-							self.parents('.dashboard-reg-cont').siblings('#centru').find('.nav-tabs li').eq(2).css('display','none');
-					}
-
-					else {
-							self.parents('.dashboard-reg-cont').siblings('#centru').find('.nav-tabs li').eq(2).css('display','block');
-					}
-
-				}
+				// function SellCheck() {
+				//
+				// 	if (CompareDateEnd() === 1) {
+				// 			self.parents('.dashboard-reg-cont').siblings('#centru').find('.nav-tabs li').eq(2).css('display','none');
+				// 	}
+				//
+				// 	else {
+				// 			self.parents('.dashboard-reg-cont').siblings('#centru').find('.nav-tabs li').eq(2).css('display','block');
+				// 	}
+				//
+				// }
 
 				var dataTip = $(this).attr('data-tip');
 
@@ -162,7 +162,7 @@ function fill_table() {
 
 				else if (dataTip === "Интервальный") {
 						BuyCheck();
-						SellCheck();
+						// SellCheck();
 				}
 
 				else if (dataTip === "Открытый") {

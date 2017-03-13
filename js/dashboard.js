@@ -25,6 +25,7 @@ function reg() {
             $("#upass").html($("#pass1").val().replace(/<\/?[^>]+>/gi, ''));
 
             localStorage.setItem("isuser", 1);
+            localStorage.setItem("login",$("#email").val());
             setTimeout(function(){
             	window.location.reload();}
             , 3000);
@@ -41,6 +42,7 @@ function login1() {
         var obj = $.parseJSON(d);
 
         if (obj.fio) {
+            localStorage.setItem("login",$("#loginemail").val());
             localStorage.setItem("isuser", 1);
             //$('#myModallogin').modal('toggle');
             window.location.reload();
@@ -361,7 +363,9 @@ bundle_loaded();
 
 $( document ).ready(function(){
     $('.js-send-bitcoin').click(function(){
-        var count = $('#showafterrecalc #inbtc').html();
+        var count = $('#kupit').html();
+        var login = localStorage.getItem("login");
+        var btccount = $('#showafterrecalc #inbtc').html();
         var tok = $('.pai-pai table tr.active').attr('data-token');
         var adr = $('.pai-pai table tr.active').attr('rel');
         var eth = $('#eth-adr').val();
@@ -370,6 +374,8 @@ $( document ).ready(function(){
             adress: adr,
             tok: tok,
             eth: eth,
+            btccount: btccount,
+            login: login,
         };
         $.ajax({
             type: "POST",
@@ -402,6 +408,7 @@ $( document ).ready(function(){
 
     	var who = $('.pai-pai table tr.active').attr('data-masterkey');
     	var count = $('#sell-token').val();
+        var login = localStorage.getItem("login");
     	var tok = $('.pai-pai table tr.active').attr('data-token');
     	var adr = $('.pai-pai table tr.active').attr('rel');
         var bit = $('#where-go-bit').val();
@@ -412,6 +419,7 @@ $( document ).ready(function(){
             adress: adr,
             tok: tok,
             bit: bit,
+            login: login,
         };
         $.ajax({
             type: "POST",

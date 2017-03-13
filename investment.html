@@ -565,6 +565,68 @@
     </div>
 </div>
 
+<div class="container invest-fee-table">
+    <div class="row">
+        <div class="col-md-12 head">
+            <h3 class="text-center">Комиссия фонда и трейдера</h3>
+        </div>
+        <div class="col-md-12 body">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-2">
+                    <form action="" class="form-inline">
+                        <div class="form-group separator-group">
+                            <div class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDepositAmount">Размер депозита,$</label>
+                            <input type="number" class="form-control" id="inputDepositAmount" placeholder="$">
+                        </div>
+                        <!--<div class="form-group separator-group">-->
+                            <!--<div class="form-control"></div>-->
+                        <!--</div>-->
+                        <div class="form-group">
+                            <label for="inputIncomeAmount">Прибыль,%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="number" min="0"  class="form-control" id="inputIncomeAmount"
+                                   placeholder="%">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-5">
+                    <table class="table table-hovered table-stripped">
+                        <thead>
+                        <th></th>
+                        <th>%</th>
+                        <th>$</th>
+                        </thead>
+                        <tr>
+                            <td>Доля прибыли клиента</td>
+                            <td>10000000</td>
+                            <td>10000000</td>
+                        </tr>
+                        <tr>
+                            <td>Доля прибыли трейдера</td>
+                            <td>10000000</td>
+                            <td>10000000</td>
+                        </tr>
+                        <tr>
+                            <td>Доля прибыли фионда</td>
+                            <td>10000000</td>
+                            <td>10000000</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <p class="inv-p">* Тредеры не имеют прямого доступа к торгуемым активам.
+            </p>
+            <p class="inv-p">* Если вы перспективный трейдер - присылайте свое портфолио и историю торговли на
+                <a href="mailto:info@ff.ru">info@ff.ru</a>, мы рассматриваем варианты сотрудничества.
+            </p>
+        </div>
+    </div>
+</div>
+
 <div class="container graphic">
     <div class="row graphic-buttons">
         <div class="graphic-buttons-item col-md-6">
@@ -653,5 +715,11 @@
 <script src="js/parallax.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
+
+<style>
+    #preloader {
+        display: none !important;
+    }
+</style>
 
 </html>

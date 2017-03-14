@@ -1050,6 +1050,7 @@ blockquote .small, blockquote footer, blockquote small {
     position: relative;
     margin-bottom: 60px;
     width: 100%;
+    height: 270px;
     max-width: 450px;
     cursor: pointer;
     overflow: hidden;
@@ -1074,6 +1075,9 @@ blockquote .small, blockquote footer, blockquote small {
 
 .grid-item-2 img {
     position: relative;
+}
+.grid-item-2 img {
+  transform: scale(1.18);
 }
 
 .grid-item:hover .overlay {
@@ -1451,10 +1455,10 @@ blockquote .small, blockquote footer, blockquote small {
 }
 
 .pe-7s-mail {
-    font-size: 31px;
+    font-size: 21px;
     color: #474747;
-    padding-top: 10px;
-    margin-right: 12px;
+    padding-top: 14px;
+    margin-right: 13px;
 }
 
 .languages span {
@@ -1945,7 +1949,7 @@ h4.spaced + p {
 
 .metki {
     font-family: "Open Sans";
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .related-posts {
@@ -2898,6 +2902,19 @@ input[type=checkbox] + label:before {
 
 .dashboard-reg-cont .pai-pai .table tr td a i {
     right: 10px;
+}
+
+.metamask-block {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    color: #474747;
+    font-weight: 200;
+}
+.main-content h4 {
+    margin-top: 27px;
+}
+.metamask-block a {
+    font-weight: bold;
 }
 
 .dashboard-reg-cont .pai-pai .table tr:hover i {
@@ -4356,20 +4373,14 @@ figure.snip0016:hover figcaption::before {
 .navbar .container {
     position: relative;
 }
+.pe-7s-mail:before {
+    display: none;
+}
 
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
     color: #fff;
     background-color: transparent;
 }
-
-/*.black-line {
-    background: #1c1b17;
-    height: 49px;
-    position: absolute;
-    width: 930px;
-    left: 225px;
-    top: 26px;
-}*/
 
 .navbar-brand {
     z-index: 1111111;
@@ -4619,6 +4630,7 @@ figure.snip0016:hover figcaption::before {
 .menu-wrapper {
     position: relative;
 }
+
 
 .navbar-header:after {
     content: '';
@@ -5482,6 +5494,21 @@ a.button {
     .navbar-default .navbar-nav > li > a {
         font-size: 14px;
     }
+    .single-news-page .industry-list-news-item h2 {
+        top: 148px;
+        height: 37px;
+        overflow: hidden;
+    }
+    .single-news-page .industry-list-news-info .post-data {
+      top: 194px;
+      left: 22px;
+    }
+    .single-news-page .single-news-item-img {
+      overflow: hidden;
+    }
+    .single-news-page .single-news-item-img img {
+        transform: scale(1.18);
+    }
 
     .text-container {
         margin-bottom: 0;
@@ -5500,6 +5527,36 @@ a.button {
 }
 
 @media (max-width: 993px) {
+    .single-news-page .single-news-item-img img {
+        transform: scale(1);
+    }
+
+    .single-news-page .industry-list-news-item h2 {
+        top: 280px;
+    }
+
+    .single-news-page .industry-list-news-info .post-data {
+        top: 327px;
+        left: 22px;
+    }
+    .single-news-page .metki {
+      margin-bottom: 60px;
+    }
+    .single-news-page .single-news-item-img {
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    .single-news-page .industry-list-news h1 {
+      text-align: left;
+    }
+    .other-news-item-img {
+        margin-right: 30px;
+        float: none;
+        max-width: 100%;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 29px;
+    }
     .navbar {
         background: #1c1b17;
     }
@@ -5775,6 +5832,60 @@ a.button {
 }
 
 @media (max-width: 767px) {
+    .single-news-page .single-news {
+        padding-top: 30px;
+    }
+    .single-news-page .single-news-item-img {
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .single-news-page .other-news-item-img {
+      margin-bottom: 15px;
+    }
+    .single-news-page .single-news-item-descr,
+    .single-news-page .other-news-bottom-descr {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+    .single-news-page .industry-list-news-item h2 {
+        top: 90px;
+        font-size: 14px;
+        height: 26px;
+    }
+    .single-news-page .industry-list-news-info .post-data {
+        top: 121px;
+        font-size: 8px;
+    }
+    .single-news-page .industry-list-news {
+      margin-bottom: 120px;
+    }
+    .single-news-page .industry-list-news h1 {
+        text-align: left;
+        font-size: 21px;
+        margin-bottom: 20px;
+    }
+    .single-news-page .metki {
+        margin-top: -12px;
+        margin-bottom: 35px;
+    }
+    .single-news-page .tags-cont a {
+        margin-bottom: 10px;
+        margin-top: 0;
+        font-size: 14px;
+        margin-bottom: 2px;
+        display: block;
+    }
+    .single-news-page .single-news-item h1 {
+       font-size: 21px;
+    }
+    .single-news-page .single-news-item .news-category {
+      font-size: 11px;
+    }
+    .single-news-page .single-news-data {
+      font-size: 12px;
+    }
+
     .industry .single-news {
         padding-top: 30px;
     }

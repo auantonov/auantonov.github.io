@@ -301,37 +301,39 @@
 
                                 </div>
                                 <div id="sell2" class="tab-pane">
-                                    <div class="line">
-                                        <div class="line-item">
-                                            <p>Текущая цена ед:</p>
-                                            <span class="basicPrice"></span>
+                                    <div class="row">
+                                        <div class="line">
+                                            <div class="line-item">
+                                                <p>Текущая цена ед:</p>
+                                                <span class="basicPrice"></span>
+                                            </div>
+                                            <div class="line-item">
+                                                <p>Цена в btc:</p>
+                                                <span class="FixedBtcPrice"></span>
+                                            </div>
                                         </div>
-                                        <div class="line-item">
-                                            <p>Цена в btc:</p>
-                                            <span class="FixedBtcPrice"></span>
+                                        <div class="line">
+                                            <div class="total">
+                                                <p>Кол-во</p>
+                                                <input type="text" class="form-control" value='100' id="sell-token" onkeyup="this.value = this.value.replace (/\D/gi, '').replace (/^0+/, ''); updateSell(); ">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="total">
-                                            <p>Кол-во</p>
-                                            <input type="text" class="form-control" value='100' id="sell-token" onkeyup="this.value = this.value.replace (/\D/gi, '').replace (/^0+/, ''); updateSell(); ">
+                                        <div class="line">
+                                            <div class="line-item">
+                                                <p>Сумма в руб:</p>
+                                                <span id='sell-token-rub'></span>
+                                            </div>
+                                            <div class="line-item">
+                                                <p>Сумма в btc:</p>
+                                                <span id='sell-token-btc'></span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="line-item">
-                                            <p>Сумма в руб:</p>
-                                            <span id='sell-token-rub'></span>
-                                        </div>
-                                        <div class="line-item">
-                                            <p>Сумма в btc:</p>
-                                            <span id='sell-token-btc'></span>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="line-address bg-1">
-                                            <p>Адрес для перечисления биткойнов:</p>
-                                            <input type="text" id="where-go-bit" class="form-control" placeholder="0x...">
-                                            <button class="button button--itzel button--text-thick" id="js-sell-my-token"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Отправить</span></button>
+                                        <div class="line">
+                                            <div class="line-address bg-1">
+                                                <p>Адрес для перечисления биткойнов:</p>
+                                                <input type="text" id="where-go-bit" class="form-control" placeholder="0x...">
+                                                <button class="button button--itzel button--text-thick" id="js-sell-my-token"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Отправить</span></button>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="container invest-fee-table" ng-app="investFeeTable" ng-controller="investTable">

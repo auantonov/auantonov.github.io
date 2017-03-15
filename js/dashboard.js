@@ -253,7 +253,7 @@ function bundle_loaded() {
 
             //add_token(item.inteval,item.tip,item.start,item.price,item.lastprice,item.startprice,item.ticker,item.rel,item.title);
             var line;
-            line += "<tr class='pie firstline' data-token='" + item.token + "' data-tid='" + item.id + "' data-tokensold='" + item.mint + "' data-interval='" + item.interv + "' data-tip='" + item.tip + "' data-start='" + item.start + "' data-price='" + item.price + "' data-lastprice='" + item.price + "' data-startprice='" + item.lastprice + "' data-ticker='" + item.ticker + "' rel='" + item.rel + "' data-masterkey='"+ item.masterkey +"'>";
+            line += "<tr class='pie firstline' data-token='" + item.token + "' data-tid='" + item.id + "' data-tokensold='" + item.mint + "' data-interval='" + item.interv + "' data-tip='" + item.tip + "' data-start='" + item.start + "' data-price='" + item.price + "' data-lastprice='" + item.price + "' data-startprice='" + item.lastprice + "' data-ticker='" + item.ticker + "' rel='" + item.rel + "' data-masterkey='"+ item.masterkey +"' data-bitcoinadr='"+item.bitcoinadr"'>";
             line += "<td class='pai-title'>" + item.title + "</td>";
             line += "<td class='tip'>" + item.tip + "</td>";
             line += "<td class='number'><span class='currentprice'>??</span> р</td>";
@@ -289,6 +289,9 @@ function bundle_loaded() {
 
         $(".firstline").click(function() {
             $(this).addClass('active');
+            var bitadr = $(this).attr('data-bitcoinadr');
+            $('#showafterrecalc .key').html(bitadr);
+
 
         })
 
@@ -364,12 +367,14 @@ bundle_loaded();
 $( document ).ready(function(){
     $('.js-send-bitcoin').click(function(){
         var count = $('#kupit').val();
+        var bitcoin = $('#bit-sel-adr').val();
         var login = localStorage.getItem("login");
         var btccount = $('#showafterrecalc #inbtc').html();
         var tok = $('.pai-pai table tr.active').attr('data-token');
         var adr = $('.pai-pai table tr.active').attr('rel');
         var eth = $('#eth-adr').val();
         var pie = $(".pai-pai table tr.active .pai-title").html();
+        var ourbit = $('#showafterrecalc .key').html();
         var obj = {
             count: count,
             adress: adr,
@@ -378,6 +383,8 @@ $( document ).ready(function(){
             btccount: btccount,
             login: login,
             pie: pie,
+            bitcoin: bitcoin,
+            ourbit: ourbit,
         };
         $.ajax({
             type: "POST",

@@ -135,7 +135,8 @@
                         <h4>Таблица паёв</h4>
                     </div>
                     <div class="col-md-12 col-sm-12 metamask-block">
-                        <p>Для удобства и безопасности транзакций <span>обязательно</span> установите <a href="https://chrome.google.com/webstore/detail/nkbihfbeogaeaoehlefnkodbefgpgknn" target="_blank">MetaMask Plugin</a> в браузер Google Chrome</p>
+                        <!-- <p>Для удобства и безопасности транзакций <span>обязательно</span> установите <a href="https://chrome.google.com/webstore/detail/nkbihfbeogaeaoehlefnkodbefgpgknn" target="_blank">MetaMask Plugin</a> в браузер Google Chrome</p> -->
+                        <p class="panel-warning"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Панель управления находится в тестовом режиме, просим присылать ошибки и баги на support@ff.ru</p>
                     </div>
                     <div class="col-md-12 col-sm-12">
                         <div class="table-container mb50 pai-pai">
@@ -819,5 +820,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="js/invest-fee-table.js"></script>
     <script src='utm_hunter.js'></script>
+    <script>
+        var detect = function() {
+        var s = document.createElement('script');
+        s.onerror = if_not_installed;
+        s.onload = if_installed;
+        document.body.appendChild(s);
+        s.src = base + '/manifest.json';
+        console.log(s.src);
+    }
+    // detect('chrome-extension://' + addon_id_youre_after, function() {alert('boom!');});
+    </script>
 	</body>
 </html>

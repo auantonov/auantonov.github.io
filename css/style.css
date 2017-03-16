@@ -4156,6 +4156,15 @@ figure.snip0016:hover figcaption::before {
     padding-top: 15px;
     padding-bottom: 70px;
 }
+.panel-warning {
+    font-weight: 800;
+    font-style: italic;
+}
+.panel-warning i {
+    margin-right: 8px;
+    color: red;
+    font-size: 22px;
+}
 
 .pie.firstline.active td {
     background: #6b6b6b;

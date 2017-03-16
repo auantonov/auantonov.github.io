@@ -6071,3 +6071,6 @@ a.button {
     margin-bottom: 10px;
     border-bottom: 1px solid rgb(71, 71, 71);
 }
+
+.go-to-calc {width:100%;text-align:center;color: #474747;font-size: 18px;font-weight: 800;margin:20px 0;}
+.go-to-calc:hover {color:#55caf5;text-decoration:none;}

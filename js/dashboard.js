@@ -253,7 +253,7 @@ function bundle_loaded() {
 
             //add_token(item.inteval,item.tip,item.start,item.price,item.lastprice,item.startprice,item.ticker,item.rel,item.title);
             var line;
-            line += "<tr class='pie firstline' data-token='" + item.token + "' data-tid='" + item.id + "' data-tokensold='" + item.mint + "' data-interval='" + item.interv + "' data-tip='" + item.tip + "' data-start='" + item.start + "' data-price='" + item.price + "' data-lastprice='" + item.price + "' data-startprice='" + item.lastprice + "' data-ticker='" + item.ticker + "' rel='" + item.rel + "' data-masterkey='"+ item.masterkey +"' data-bitcoinadr='"+item.bitcoinadr"'>";
+            line += "<tr class='pie firstline' data-token='" + item.token + "' data-tid='" + item.id + "' data-tokensold='" + item.mint + "' data-interval='" + item.interv + "' data-tip='" + item.tip + "' data-start='" + item.start + "' data-price='" + item.price + "' data-lastprice='" + item.price + "' data-startprice='" + item.lastprice + "' data-ticker='" + item.ticker + "' rel='" + item.rel + "' data-masterkey='"+ item.masterkey +"' data-bitcoinadr='"+item.bitcoinadr+"'>";
             line += "<td class='pai-title'>" + item.title + "</td>";
             line += "<td class='tip'>" + item.tip + "</td>";
             line += "<td class='number'><span class='currentprice'>??</span> р</td>";

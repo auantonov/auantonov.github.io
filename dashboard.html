@@ -232,7 +232,7 @@
 
                                         <button class="js-send-bitcoin isend button button--itzel button--text-thick"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Я перевел</span></button>
 
-                                        
+
                                     </div>
                                     	<a href="/investment.html?#investfee"  class="go-to-calc" target="_blank">Калькулятор нашей комиссии</a>
                                     <p class="thank-text"></p>
@@ -682,16 +682,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="js/invest-fee-table.js"></script>
     <script src='utm_hunter.js'></script>
-    <script>
-        var detect = function() {
-        var s = document.createElement('script');
-        s.onerror = if_not_installed;
-        s.onload = if_installed;
-        document.body.appendChild(s);
-        s.src = base + '/manifest.json';
-        console.log(s.src);
-    }
-    // detect('chrome-extension://' + addon_id_youre_after, function() {alert('boom!');});
-    </script>
+
 	</body>
 </html>

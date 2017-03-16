@@ -490,8 +490,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <p class="inv-p">* Точная информация об изменении стоимости конкретного пая, о составляющих его инвестиционных инструментах и динамике их изменения на сайте может отображаться с задержкой до одной недели. Эта мера принята преднамеренно. Для актуальной информации на
-                текущую минуту воспользуйтесь <a href="http://bigtime.fund/dashboard.html" class="about-team">панелью управления</a> и соответствующим блокчейн-эксплорером.</p>
+            <p class="inv-p">* Точная информация об изменении стоимости конкретного пая, о составляющих его инвестиционных инструментах и динамике их изменения на сайте может отображаться с задержкой до одной недели. Эта мера принята преднамеренно. Для актуальной информации на текущую минуту воспользуйтесь <a href="http://bigtime.fund/dashboard.html" class="about-team">панелью управления</a> и соответствующим блокчейн-эксплорером.</p>
         </div>
     </div>
 </div>
@@ -643,10 +642,6 @@
     </div>
 </div><!-- .b-footer -->
 
-<p id="demo"></p>
-
-<!-- <a href="chrome-extension://ofdgfpchbidcgncgfpdlpclnpaemakoj/manifest.json">lalal</a> -->
-
 <script src="https://use.fontawesome.com/6c7c72716c.js"></script>
 <script src="js/typed.js"></script>
 <script src="js/highstock.js"></script>
@@ -655,46 +650,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 <script src="js/invest-fee-table.js"></script>
 
-<script>
-
-var detect = function(base, if_installed, if_not_installed) {
-    var s = document.createElement('script');
-    s.onerror = if_not_installed;
-    s.onload = if_installed;
-    document.body.appendChild(s);
-    s.src = base + '/manifest.json';
-  }
-
-  detect('chrome-extension://' + 'cfhdojbkjhnklbpkdaibdccddilifddb', function() {alert('boom!');});
-
-  // var log = function(msg) {
-  //   document.getElementById('log').value += '[*] ' + msg + '\n';
-  // }
-  //
-  // function logme(i, id) {
-  //   return function() {
-  //     log('Detected addon: ' + i + ' (' + id + ')');
-  // }
+<!-- <script>
+        chrome.management.launchApp(cfhdojbkjhnklbpkdaibdccddilifddb, function(){
+        if(chrome.runtime.lastError) console.error(chrome.runtime.lastError);
+        else console.log("App launched");
+      });
 
 
-// window.onload = function() {
-// var xhr = new XMLHttpRequest();
-// xhr.open('GET', 'addons.json', false);
-// xhr.onreadystatechange = function() {
-//   if (xhr.readyState == 4) {
-//      var addons = JSON.parse(xhr.responseText);
-//      for (var i in addons) {
-//         if (addons.hasOwnProperty(i)) {
-//             detect('chrome-extension://' + i,logme(addons[i], i));
-//         }
-//      }
-//
-//   }
-// }
-//   xhr.send(null);
-// }
-
-</script>
+</script> -->
 
 
 </body>

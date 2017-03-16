@@ -56,6 +56,13 @@ if(browser === 'Safari') {
   $('body').addClass('Safari');
 }
 
+if(browser === 'Google Chrome') {
+  $('.not-google-chrome').hide();
+}
+else {
+  $('.not-google-chrome').show();
+}
+
 function submitForm() {
     var name = $("#name").val();
     var email = $("#email").val();

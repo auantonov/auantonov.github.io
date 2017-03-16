@@ -4158,7 +4158,8 @@ figure.snip0016:hover figcaption::before {
 }
 .panel-warning {
     font-weight: 800;
-    font-style: italic;
+    color: #ff0000;
+    margin: 10px 0px 27px;
 }
 .panel-warning i {
     margin-right: 8px;

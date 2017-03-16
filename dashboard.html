@@ -154,13 +154,6 @@
                                 </thead>
 
                                 <tbody class="no-border-x" id='tokenstable'>
-                                    <tr class="pie firstline" data-token="Интервал2" data-tid="12" data-tokensold="0" data-interval="" data-tip="Интервальный" data-start="13.03.2017" data-price="0" data-end="10.05.2017" data-lastprice="0" data-startprice="0" data-ticker="" rel="" data-masterkey="" data-conadr=""><td class="pai-title">Интервал2</td>
-                                      <td class="tip">Интервальный</td>
-                                      <td class="number"><span class="currentprice">0</span> р</td>
-                                      <td class="number rost">NaN%</td><td class="number start">12.03.2017</td>
-                                      <td class="number end">10.05.2017</td>
-                                      <td class="pie-link"><a href="#" onclick="$(&quot;#moreinfo&quot;).show();return false">Подробнее <i class="fa fa-hand-o-right" aria-hidden="true"></i></a></td>
-                                  </tr>
 
 
                                 </tbody>
@@ -239,74 +232,10 @@
 
                                         <button class="js-send-bitcoin isend button button--itzel button--text-thick"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Я перевел</span></button>
 
-                                        <p class="thank-text"></p>
-
+                                        
                                     </div>
-                                    <div class="container invest-fee-table" ng-app="investFeeTable" ng-controller="investTable">
-                                        <div class="row">
-                                            <div class="col-md-12 head">
-                                                <h3 class="text-center">Комиссия фонда и трейдера</h3>
-                                            </div>
-                                                    <div class="col-md-12">
-                                                            <p class="inv-p">Фонд зарабатывает на комиссии с прибыли. Чем лучше результаты работы трейдера, тем больше комиссия. Посчитать точный размер комиссии поможет этот калькулятор:
-                                                            </p>
-                                                    </div>
-                                            <div class="col-md-12 body">
-                                                <div class="row">
-                                                    <div class="col-md-4 col-md-offset-2">
-                                                        <form action="" class="form-inline">
-                                                            <div class="form-group separator-group">
-                                                                <div class="form-control"></div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="inputDepositAmount">Размер депозита, $</label>
-                                                                <input type="number" class="form-control" id="inputDepositAmount" placeholder="$"
-                                                                       ng-model="incomeAmount" ng-change="changeIncome()">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="inputIncomeAmount">Прибыль, %&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                                                                <input type="number" min="0" class="form-control" id="inputIncomeAmount"
-                                                                       ng-model="incomePercent" ng-change="changeIncome()"
-                                                                       placeholder="%">
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                    <div class="col-md-5">
-                                                        <table class="table table-hovered table-stripped">
-                                                            <thead>
-                                                            <th></th>
-                                                            <th>%</th>
-                                                            <th>$</th>
-                                                            </thead>
-                                                            <tr>
-                                                                <td>Доля прибыли клиента</td>
-                                                                <td ng-bind="clentFeePercent">10000000</td>
-                                                                <td ng-bind="clientFeeAmount"></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Доля прибыли трейдера</td>
-                                                                <td ng-bind="traderFeePercent"></td>
-                                                                <td ng-bind="traderFeeAmount"></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Доля прибыли фонда</td>
-                                                                <td ng-bind="fondFeePercent"></td>
-                                                                <td ng-bind="fondFeeAmount"></td>
-                                                            </tr>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <p class="inv-p">* Тредеры не имеют прямого доступа к торгуемым активам.
-                                                </p>
-                                                <p class="inv-p">* Если вы перспективный трейдер - присылайте свое портфолио и историю торговли на
-                                                    <a href="mailto:info@ff.ru">info@ff.ru</a>, мы рассматриваем варианты сотрудничества.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                    	<a href="/investment.html?#investfee" target="_blank">Калькулятор нашей комиссии</a>
+                                    <p class="thank-text"></p>
                                 </div>
                                 <div id="sell2" class="tab-pane">
                                     <div class="container">
@@ -344,70 +273,7 @@
                                                     <button class="button button--itzel button--text-thick" id="js-sell-my-token"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Отправить</span></button>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="container invest-fee-table" ng-app="investFeeTable" ng-controller="investTable">
-                                        <div class="row">
-                                            <div class="col-md-12 head">
-                                                <h3 class="text-center">Комиссия фонда и трейдера</h3>
-                                            </div>
-                                                    <div class="col-md-12">
-                                                            <p class="inv-p">Фонд зарабатывает на комиссии с прибыли. Чем лучше результаты работы трейдера, тем больше комиссия. Посчитать точный размер комиссии поможет этот калькулятор:
-                                                            </p>
-                                                    </div>
-                                            <div class="col-md-12 body">
-                                                <div class="row">
-                                                    <div class="col-md-4 col-md-offset-2">
-                                                        <form action="" class="form-inline">
-                                                            <div class="form-group separator-group">
-                                                                <div class="form-control"></div>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="inputDepositAmount">Размер депозита, $</label>
-                                                                <input type="number" class="form-control" id="inputDepositAmount" placeholder="$"
-                                                                       ng-model="incomeAmount" ng-change="changeIncome()">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="inputIncomeAmount">Прибыль, %&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                                                                <input type="number" min="0" class="form-control" id="inputIncomeAmount"
-                                                                       ng-model="incomePercent" ng-change="changeIncome()"
-                                                                       placeholder="%">
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                    <div class="col-md-5">
-                                                        <table class="table table-hovered table-stripped">
-                                                            <thead>
-                                                            <th></th>
-                                                            <th>%</th>
-                                                            <th>$</th>
-                                                            </thead>
-                                                            <tr>
-                                                                <td>Доля прибыли клиента</td>
-                                                                <td ng-bind="clentFeePercent">10000000</td>
-                                                                <td ng-bind="clientFeeAmount"></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Доля прибыли трейдера</td>
-                                                                <td ng-bind="traderFeePercent"></td>
-                                                                <td ng-bind="traderFeeAmount"></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Доля прибыли фонда</td>
-                                                                <td ng-bind="fondFeePercent"></td>
-                                                                <td ng-bind="fondFeeAmount"></td>
-                                                            </tr>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <p class="inv-p">* Тредеры не имеют прямого доступа к торгуемым активам.
-                                                </p>
-                                                <p class="inv-p">* Если вы перспективный трейдер - присылайте свое портфолио и историю торговли на
-                                                    <a href="mailto:info@ff.ru">info@ff.ru</a>, мы рассматриваем варианты сотрудничества.
-                                                </p>
-                                            </div>
+                                            <a href="/investment.html?#investfee" target="_blank">Калькулятор нашей комиссии</a>
                                         </div>
                                     </div>
                                 </div>

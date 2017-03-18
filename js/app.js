@@ -22023,10 +22023,12 @@ window.App = {
 
 
         //Need(!!) to remove it when deploying live
-        $("#transfer_to").val(accounts[1]);
-        $("#mint_to").val(accounts[0]);
-        console.log("accounts1");
-        console.log(accounts[1]);
+        $("#js-balans-adress").val(accounts[0]);
+        $("#eth-adr").val(accounts[0]);
+
+        //$("#mint_to").val(accounts[0]);
+        //console.log("accounts1");
+        //console.log(accounts[1]);
 
 
 

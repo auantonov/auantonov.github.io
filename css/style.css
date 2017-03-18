@@ -2704,6 +2704,9 @@ input[type=checkbox] + label:before {
     display: block;
     width: 500px;
 }
+#send button {
+    margin: 25px 10px 40px 0px!important;
+}
 
 #send.active .line-item {
     text-align: left;

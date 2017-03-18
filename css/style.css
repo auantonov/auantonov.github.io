@@ -2682,7 +2682,6 @@ input[type=checkbox] + label:before {
 
 #buy2 .total input {
     width: 500px;
-    /*font-weight: bold;*/
 }
 
 #send .line-address p {
@@ -2701,6 +2700,17 @@ input[type=checkbox] + label:before {
     align-items: baseline;
 }
 
+#send.active {
+    display: block;
+    width: 500px;
+}
+
+#send.active .line-item {
+    text-align: left;
+}
+#send.active .line-item p {
+    margin-bottom: 8px;
+}
 .line-item {
     text-align: center;
     margin-bottom: 12px;
@@ -6073,5 +6083,21 @@ a.button {
     border-bottom: 1px solid rgb(71, 71, 71);
 }
 
-.go-to-calc {width:100%;text-align:center;color: #474747;font-size: 18px;font-weight: 800;margin:20px 0;}
-.go-to-calc:hover {color:#55caf5;text-decoration:none;}
+.go-to-calc {
+    color: #474747;
+    right: 35px;
+    text-decoration: underline;
+    top: 46px;
+    font-size: 18px;
+    position: absolute;
+    font-weight: 800;
+    margin: 20px 0;
+}
+.go-to-calc i {
+    margin-right: 5px;
+}
+
+.go-to-calc:hover {
+    color: #55caf5;
+    text-decoration: none;
+}

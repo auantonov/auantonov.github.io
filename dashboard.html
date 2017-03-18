@@ -23,10 +23,13 @@
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="css/vladimir.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/ofdgfpchbidcgncgfpdlpclnpaemakoj">
 
 </head>
 
+
 <body class="body-static-navbar">
+  <p id="click_btn_id" style="cursor: pointer; margin: 120px 0 0 580px;"><img/>выаыавыыаа</p>
     <div class="overlay"></div>
     <div id="preloader">
     <div class="wrap">
@@ -134,6 +137,8 @@
                         </button>
                     </div>
 
+
+
                     <div class="col-md-6 col-md-pull-6 col-sm-6 col-sm-pull-6">
                         <h4>Таблица паёв</h4>
                     </div>
@@ -236,7 +241,7 @@
 
 
                                     </div>
-                                    	<a href="/investment.html?#investfee"  class="go-to-calc" target="_blank">Калькулятор нашей комиссии</a>
+                                    	<a href="/investment.html?#investfee"  class="go-to-calc" target="_blank"><i class="fa fa-calculator" aria-hidden="true"></i>Калькулятор нашей комиссии</a>
                                     <p class="thank-text"></p>
                                 </div>
                                 <div id="sell2" class="tab-pane">
@@ -273,7 +278,7 @@
                                                     <button class="button button--itzel button--text-thick" id="js-sell-my-token"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Отправить</span></button>
                                                 </div>
                                             </div>
-                                            <a href="/investment.html?#investfee" class="go-to-calc" target="_blank">Калькулятор нашей комиссии</a>
+                                            <a href="/investment.html?#investfee" class="go-to-calc" target="_blank"><i class="fa fa-calculator" aria-hidden="true"></i>Калькулятор нашей комиссии</a>
                                 </div>
                                 <div id="send" class="tab-pane">
 
@@ -288,7 +293,7 @@
                                         </div>
 
 										 <div class="line-item">
-                                            <input type='button' name='' class='btn js-send-another-token' value='Отправить'>
+                                            <button class="button button--itzel button--text-thick" id="js-sell-my-token"><i class="button__icon icon icon-trash fa fa-arrow-circle-right"></i><span>Отправить</span></button>
                                         </div>
                                         <div class="line-item">
                                             <p id="js-send-status">Статус отправки</p>
@@ -476,6 +481,13 @@
 
                     </div>
                 </div>
+
+                <button onclick="chrome.webstore.install()" id="install-button">Add to Chrome</button>
+<script>
+if (chrome.app.isInstalled) {
+  document.getElementById('install-button').style.display = 'none';
+}
+</script>
 
                 <!-- Modal -->
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -684,6 +696,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="js/invest-fee-table.js"></script>
     <script src='utm_hunter.js'></script>
+    <script type="text/javascript">
+        $("#click_btn_id").click(function(e) {
+          // alert('1');
+          e.preventDefault();
+
+          chrome.webstore.install('https://chrome.google.com/webstore/detail/ofdgfpchbidcgncgfpdlpclnpaemakoj',
+                            function(){ alert("Sucess");},
+                            function(detail){ alert("Failure:"+detail);});
+        });
+
+    </script>
 
 	</body>
 </html>

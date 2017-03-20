@@ -2672,12 +2672,23 @@ input[type=checkbox] + label:before {
 
 /* buy */
 
-#news, #buy2, #sell2, #send {
+#news, #buy2, #sell2, #send, #balans {
     align-items: center;
     justify-content: space-around;
     padding-top: 20px;
     padding-bottom: 40px;
     color: #474747;
+}
+#balans button span {
+    color: #474747;
+}
+#balans button span:hover {
+    color: #474747;
+}
+
+#balans button {
+  margin: 25px 0px 40px 0px!important;
+  padding: 10px 10px;
 }
 
 #buy2 .total input {
@@ -2700,7 +2711,8 @@ input[type=checkbox] + label:before {
     align-items: baseline;
 }
 
-#send.active {
+#send.active,
+#balans.active {
     display: block;
     width: 500px;
 }
@@ -2708,10 +2720,12 @@ input[type=checkbox] + label:before {
     margin: 25px 10px 40px 0px!important;
 }
 
-#send.active .line-item {
+#send.active .line-item,
+#balans.active .line-item {
     text-align: left;
 }
-#send.active .line-item p {
+#send.active .line-item p,
+#balans.active .line-item p  {
     margin-bottom: 8px;
 }
 .line-item {
@@ -4980,9 +4994,10 @@ figure.snip0058:hover:after, figure.snip0058.hover:after {
     }
 }
 
+/*
 .nav-tabs .onlyuser {
     display: none;
-}
+}*/
 
 .always-in {
     font-size: 11px;

@@ -23,7 +23,6 @@
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="css/vladimir.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/ofdgfpchbidcgncgfpdlpclnpaemakoj">
 
 </head>
 
@@ -311,7 +310,7 @@
                                             <input type='text' style='border: 2px solid #474747;' name='' class='form-control' id="js-balans-adress" placeholder='Amount'>
                                         </div>
                                         <div class="line-item">
-                                            <input type='button' name='' class='btn js-balans-click' value='Узнать баланс токенов'>
+                                            <button class="button button--itzel button--text-thick" id="js-sell-my-token"><i class="button__icon icon icon-trash fa fa-money" aria-hidden="true"></i><span>Узнать баланс токенов</span></button>
                                         </div>
                                         <div class="line-item">
                                             <p id="js-balans-status">Статус</p>
@@ -480,9 +479,6 @@
 
                     </div>
                 </div>
-
-                <button id="click_btn_id">Add to Chrome</button>
-
 
                 <!-- Modal -->
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -691,17 +687,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="js/invest-fee-table.js"></script>
     <script src='utm_hunter.js'></script>
-    <script type="text/javascript">
-        $("#click_btn_id").click(function(e) {
-          // alert('1');
-          e.preventDefault();
-
-          chrome.webstore.install('https://chrome.google.com/webstore/detail/ofdgfpchbidcgncgfpdlpclnpaemakoj',
-                            function(){ alert("Sucess");},
-                            function(detail){ alert("Failure:"+detail);});
-        });
-
-    </script>
 
 	</body>
 </html>

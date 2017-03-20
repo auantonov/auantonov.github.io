@@ -68,7 +68,7 @@ function fill_table() {
 
         //$(me).find(".currentprice").html($(this).attr('data-price'));
         //$(me).find(".rost").html(Math.round($(this).attr('data-price') / $(this).attr('data-startprice') * 1000 - 1000) / 10 + "%");
-        //$(me).find(".start").html($(this).attr('data-start'));
+        $(me).find(".start").html($(this).attr('data-start'));
         $(me).find(".tip").html($(this).attr('data-tip'));
         /*
         if (!myeth)
@@ -258,7 +258,7 @@ function bundle_loaded() {
             line += "<td class='tip'>" + item.tip + "</td>";
             line += "<td class='number'><span class='currentprice'>"+item.now_price+"</span> р</td>";
             <!-- не менять! считается само-->
-            line += "<td class='number'>"+item.сapital+"</td>";
+            line += "<td class='number'>"+item.capital+"</td>";
             line += "<td class='number rost'>"+item.result_all+"%</td>";
             <!-- не менять! считается само-->
             line += "<td class='number start'>??</td>";

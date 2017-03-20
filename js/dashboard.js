@@ -66,9 +66,9 @@ function fill_table() {
 
         var me = $(this);
 
-        $(me).find(".currentprice").html($(this).attr('data-price'));
-        $(me).find(".rost").html(Math.round($(this).attr('data-price') / $(this).attr('data-startprice') * 1000 - 1000) / 10 + "%");
-        $(me).find(".start").html($(this).attr('data-start'));
+        //$(me).find(".currentprice").html($(this).attr('data-price'));
+        //$(me).find(".rost").html(Math.round($(this).attr('data-price') / $(this).attr('data-startprice') * 1000 - 1000) / 10 + "%");
+        //$(me).find(".start").html($(this).attr('data-start'));
         $(me).find(".tip").html($(this).attr('data-tip'));
         /*
         if (!myeth)

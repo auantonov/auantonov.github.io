@@ -371,9 +371,9 @@ function updateSell() {
 bundle_loaded();
 
 $( document ).ready(function(){
-		if($('.nav-tabs li').hasClass('onlyuser')) {
+		if($('.nav-tabs-li').hasClass('onlyuser')) {
 			alert('1');
-			$('#centru').css('display','none');
+			$('#centru').css('display','none!important');
 		}
     $('.js-send-bitcoin').click(function(){
         var count = $('#kupit').val();

@@ -4993,14 +4993,6 @@ figure.snip0058:hover:after, figure.snip0058.hover:after {
         transform: rotate(360deg)
     }
 }
-.tabs-off {
-  display: none!important;
-}
-
-/*
-.nav-tabs .onlyuser {
-    display: none;
-}*/
 
 .always-in {
     font-size: 11px;

@@ -447,7 +447,7 @@ $( document ).ready(function(){
 
 
 
-    $('.js-balans-click').click(function(){
+    $('#js-balans-click').click(function(){
     	var adr = $('.pai-pai table tr.active').attr('rel');
     	App.hubBalance(adr);
     });

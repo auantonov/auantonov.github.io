@@ -22123,7 +22123,8 @@ hubBalance: function (address) {
         console.log(tx);
       // Should I use msg=ts.valueOf(); ?
         msg=tx.valueOf();
-        $('#js-balans-status').html(msg);
+        msg=web3.fromWei(msg);
+        self.setStatusPos(pos,msg);
       //  msg=web3.fromWei(msg);
       //  self.setStatusPos(pos,msg);
   });

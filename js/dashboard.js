@@ -179,19 +179,19 @@ function fill_table() {
 
         cur = $(this).attr('data-ticker');
         curaddr = $(this).attr('rel');
-        price = $(this).attr('data-price'); //сколько токенов получаем за 1 биткоин
+        price = $(this).find('.currentprice').html(); //сколько токенов получаем за 1 биткоин
 
         $("#priceinrub").html(price);
         $("#priceinbtc").html(price / $("#rubbtc").text());
 
         $("#x1").html($(this).attr('data-start'));
         $("#x2").html($(this).attr('data-tip'));
-        $("#x3").html($(this).attr('data-interval'));
-        $("#x4").html($(this).attr('data-tokensold'));
-        $("#x5").html($(this).attr('data-price'));
-        $("#x6").html($(this).attr('data-price') * $(this).attr('data-tokensold'));
-        $("#x7").html(Math.round($(this).attr('data-price') / $(this).attr('data-startprice') * 1000 - 1000) / 10 + "%"); //$(this).attr('data-price')/$(this).attr('data-startprice')*100-100+"%"
-        $("#x8").html($(this).attr('data-price') / $(this).attr('data-lastprice') * 100 - 100 + "%");
+        //$("#x3").html($(this).attr('data-interval'));
+        $("#x4").html($(".pie.active").attr('data-count-token'));
+        //$("#x5").html($(this).find('.currentprice').html());
+        //$("#x6").html($(this).find('.currentprice').html()) * $(this).attr('data-tokensold'));
+        //$("#x7").html(Math.round($(this).attr('data-price') / $(this).attr('data-startprice') * 1000 - 1000) / 10 + "%"); //$(this).attr('data-price')/$(this).attr('data-startprice')*100-100+"%"
+        // $("#x8").html($(this).attr('data-price') / $(this).attr('data-lastprice') * 100 - 100 + "%");
         $("#kupit").val(); //сколько он хочет купить
 
         $.get("//reg.bigtime.fund/more.php?id=" + $(this).attr('data-tid'), function(d) {
@@ -262,7 +262,7 @@ function bundle_loaded() {
             line += "<td class='number rost'>"+parseFloat(item.result_all).toFixed(2)+"%</td>";
             <!-- не менять! считается само-->
             line += "<td class='number start'>??</td>";
-            line += "<td class='number end'>" + item.end + "</td>";
+            //line += "<td class='number end'>" + item.end + "</td>";
             line += "<td class=pie-link><a href=# onclick='$(\"#moreinfo\").show();return false'>Подробнее <i class='fa fa-hand-o-right' aria-hidden='true'></i></a></td>";
 
             line += '</tr>';
@@ -332,8 +332,7 @@ function recalc_prices() {
         //$("#rubbtc").html(d.RUB.avg_1h);
         //$("#usdbtc").html(d.USD.avg_1h);
         var currestRub = $("#rubbtc").html();
-        basicRubPrice = $('.pie').attr('data-price');
-        var currestRub = $('#rubbtc').html();
+        basicRubPrice = $('.currentprice').html();
         basicBtcPrice = basicRubPrice / currestRub;
         $('.basicPrice').html(basicRubPrice + ' руб');
 

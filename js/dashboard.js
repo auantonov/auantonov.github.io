@@ -55,6 +55,7 @@ function login1() {
 
 
 var saveCookie = document.cookie;
+var basicRubPrice;
 
 var myeth;
 var cur,
@@ -82,7 +83,20 @@ function fill_table() {
 		*/
     });
 
+
     $("tr.pie").on("click", function() {
+
+				var currentprice = $(this).find('.currentprice').html();
+				basicRubPrice = currentprice;
+				var currestRubPrice = $("#rubbtc").html();
+				basicBtcPrice = $('.basicPrice').html(currentprice + ' руб');
+				basicBtcPrice = currentprice / currestRubPrice;
+
+				updateSell();
+
+				var FixedBtcPrice = basicBtcPrice.toFixed(7);
+
+				$('.FixedBtcPrice').html(FixedBtcPrice + ' btc');
 
 				var self = $(this);
 
@@ -329,12 +343,6 @@ var basicBtcPrice,
 function recalc_prices() {
     $.getJSON("https://buygazprom.com/rateslocal.php", function(d) {
 
-        //$("#rubbtc").html(d.RUB.avg_1h);
-        //$("#usdbtc").html(d.USD.avg_1h);
-        var currestRub = $("#rubbtc").html();
-        basicRubPrice = $('.currentprice').html();
-        basicBtcPrice = basicRubPrice / currestRub;
-        $('.basicPrice').html(basicRubPrice + ' руб');
 
     });
 }
@@ -345,19 +353,17 @@ function updateSell() {
     var inputSellVal = document.getElementById("sell-token").value;
     var SellRubresult = inputSellVal * basicRubPrice;
     var SellBtcresult = inputSellVal * basicBtcPrice;
-    document.getElementById('sell-token-rub').innerHTML = SellRubresult.toFixed(2) + ' руб';
-    document.getElementById('sell-token-btc').innerHTML = SellBtcresult.toFixed(7) + ' btc';
+    document.getElementById('sell-token-rub').innerHTML = SellRubresult.toFixed(2);
+    document.getElementById('sell-token-btc').innerHTML = SellBtcresult.toFixed(7);
     document.getElementById('priceinbtc').innerHTML = SellBtcresult.toFixed(7);
-
 }
 
-setTimeout(function() {
-
-    //var FixedBtcPrice = basicBtcPrice.toFixed(7);
-    //$('.FixedBtcPrice').html(FixedBtcPrice + ' btc');
-    updateSell();
-
-}, 5000);
+// setTimeout(function() {
+//
+//
+//     updateSell();
+//
+// }, 5000);
 
 // var sumInput = $('#kupit').val();
 // alert(sumInput);

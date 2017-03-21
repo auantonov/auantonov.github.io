@@ -372,6 +372,7 @@ bundle_loaded();
 
 $( document ).ready(function(){
 		if($('.nav-tabs li').hasClass('onlyuser')) {
+			alert('1');
 			$('#centru').css('display','none');
 		}
     $('.js-send-bitcoin').click(function(){

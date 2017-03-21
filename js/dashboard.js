@@ -186,7 +186,7 @@ function fill_table() {
 
         $("#x1").html($(this).attr('data-start'));
         $("#x2").html($(this).attr('data-tip'));
-        //$("#x3").html($(this).attr('data-interval'));
+        $("#x3").html($(".pie.active").attr('data-prirost'));
         $("#x4").html($(".pie.active").attr('data-count-token'));
         //$("#x5").html($(this).find('.currentprice').html());
         //$("#x6").html($(this).find('.currentprice').html()) * $(this).attr('data-tokensold'));
@@ -253,7 +253,7 @@ function bundle_loaded() {
 
             //add_token(item.inteval,item.tip,item.start,item.price,item.lastprice,item.startprice,item.ticker,item.rel,item.title);
             var line;
-            line += "<tr class='pie firstline' data-token='" + item.token + "' data-tid='" + item.id + "' data-tokensold='" + item.mint + "' data-interval='" + item.interv + "' data-tip='" + item.tip + "' data-start='" + item.start + "' data-price='" + item.price + "' data-lastprice='" + item.price + "' data-startprice='" + item.lastprice + "' data-ticker='" + item.ticker + "' rel='" + item.rel + "' data-masterkey='"+ item.masterkey +"' data-bitcoinadr='"+item.bitcoinadr+"' data-count-token='"+item.count_token+"'>";
+            line += "<tr class='pie firstline' data-token='" + item.token + "' data-tid='" + item.id + "' data-tokensold='" + item.mint + "' data-interval='" + item.interv + "' data-tip='" + item.tip + "' data-start='" + item.start + "' data-price='" + item.price + "' data-lastprice='" + item.price + "' data-startprice='" + item.lastprice + "' data-ticker='" + item.ticker + "' rel='" + item.rel + "' data-masterkey='"+ item.masterkey +"' data-bitcoinadr='"+item.bitcoinadr+"' data-count-token='"+item.count_token+"'  data-prirost='"+item.prirost+"'>";
             line += "<td class='pai-title'>" + item.title + "</td>";
             line += "<td class='tip'>" + item.tip + "</td>";
             line += "<td class='number'><span class='currentprice'>"+parseFloat(item.now_price).toFixed(2)+"</span> р</td>";

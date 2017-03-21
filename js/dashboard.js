@@ -402,7 +402,7 @@ $( document ).ready(function(){
         $('.thank-text').html("Спасибо! Ожидайте токены в ближайшее время.");
     });
 
-    $('.js-send-another-token').click(function(){
+    $('#js-send-another-token').click(function(){
 
     	var who = $('#js-send-who').val();
     	var count = $('#js-send-count').val();

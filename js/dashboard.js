@@ -262,7 +262,7 @@ function bundle_loaded() {
             line += "<td class='number rost'>"+parseFloat(item.result_all).toFixed(2)+"%</td>";
             <!-- не менять! считается само-->
             line += "<td class='number start'>??</td>";
-            //line += "<td class='number end'>" + item.end + "</td>";
+            line += "<td class='number end'>" + item.end + "</td>";
             line += "<td class=pie-link><a href=# onclick='$(\"#moreinfo\").show();return false'>Подробнее <i class='fa fa-hand-o-right' aria-hidden='true'></i></a></td>";
 
             line += '</tr>';
@@ -353,8 +353,8 @@ function updateSell() {
 
 setTimeout(function() {
 
-    var FixedBtcPrice = basicBtcPrice.toFixed(7);
-    $('.FixedBtcPrice').html(FixedBtcPrice + ' btc');
+    //var FixedBtcPrice = basicBtcPrice.toFixed(7);
+    //$('.FixedBtcPrice').html(FixedBtcPrice + ' btc');
     updateSell();
 
 }, 5000);

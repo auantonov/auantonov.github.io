@@ -276,7 +276,8 @@ function bundle_loaded() {
             line += "<td class='number rost'>"+parseFloat(item.result_all).toFixed(2)+"%</td>";
             <!-- не менять! считается само-->
             line += "<td class='number start'>??</td>";
-            line += "<td class='number end'>" + item.end + "</td>";
+						line += "<td class='number prirost'>"+ +parseFloat(item.prirost).toFixed(2) + '%' +"</td>";
+            line += "<td class='number end'><a href='#' target='_blank'>"+  item.tokenlink + "</a></td>";
             line += "<td class=pie-link><a href=# onclick='$(\"#moreinfo\").show();return false'>Подробнее <i class='fa fa-hand-o-right' aria-hidden='true'></i></a></td>";
 
             line += '</tr>';
@@ -368,9 +369,46 @@ function updateSell() {
 // var sumInput = $('#kupit').val();
 // alert(sumInput);
 
+function checkPercentage(arr) {
+
+	for (var i = 0; i < arr.length; i++) {
+		if(parseInt(arr[i].innerHTML) > 0){
+				arr[i].classList.add('more');
+		}
+		else {
+			 arr[i].classList.add('less');
+		}
+
+	}
+}
+
 bundle_loaded();
 
 $( document ).ready(function(){
+
+		var otherContent = document.querySelector("other");
+		console.log(otherContent)
+
+		setTimeout(function(){
+
+				var rostValues = document.querySelectorAll(".rost");
+				var prirostValues = document.querySelectorAll(".prirost");
+				checkPercentage(rostValues);
+				checkPercentage(prirostValues);
+
+		}, 500);
+
+		//var rostVal = $('.rost').html();
+
+		// rostVal.each(function(index, value) {
+    //     cur = $(this).attr('data-ticker');
+		//
+    //     var me = $(this);
+		// });
+
+		if(window.localStorage.getItem('isuser') != 1) {
+			$('.onlyuser').remove();
+		}
 		// if(!$('.nav-tabs-li').hasClass('onlyuser')) {
 		// 	// alert('off');
 		// 	$('#centru').addClass('tabs-off');

@@ -2931,6 +2931,10 @@ input[type=checkbox] + label:before {
     right: 10px;
 }
 
+.tabs-off {
+  display: none!important;
+}
+
 .metamask-block {
     margin-top: 30px;
     margin-bottom: 5px;
@@ -4197,6 +4201,18 @@ figure.snip0016:hover figcaption::before {
 .pie.firstline.active td {
     background: #6b6b6b;
     color: #ffffff;
+}
+.pie .number {
+  text-align: right;
+}
+
+.rost.more,
+.prirost.more {
+  color: green!important;
+}
+.rost.less,
+.prirost.less{
+  color: red!important;
 }
 
 .pie.firstline.active td i {

@@ -2744,20 +2744,26 @@ input[type=checkbox] + label:before {
     margin-bottom: 8px;
 }
 
-.video-content .button {
+.video-content .button,
+.our-company .button{
     color: #37474f;
     border-color: #37474f;
     padding: 0;
     width: 320px;
     margin: auto;
-    /*border-width: 2px solid #000;*/
+}
+.our-company .button {
+    margin-top: 30px;
+    width: 337px;
 }
 
-.video-content .button--border-thin {
+.video-content .button--border-thin,
+.our-company .button--border-thin {
     border: 2px solid #55caf5;
 }
 
-.video-content .button > span {
+.video-content .button > span,
+.our-company .button > span {
     color: #55caf5;
 }
 
@@ -2934,16 +2940,40 @@ input[type=checkbox] + label:before {
 .fade.in {
     /*background: rgba(0, 0, 0, 0.65);*/
 }
-#myModalMask button {
+/*#myModalMask button {
   width: 100%;
+}*/
+
+.main-content.graphic-buttons #myModalMask .btn-1.in-button {
+    border-color: #1c1b17;
+    color: #1c1b17;
+    font-size: 11px;
+    width: 300px;
+    display: block;
+    margin: 20px auto;
+}
+.main-content.graphic-buttons #myModalMask .btn-1.in-button:hover {
+  color: #fff;
 }
 .noClick {
   display: block!important;
 }
-.Installed {
-  display: none;
+.main-content.graphic-buttons #myModalMask .btn-1.in-button.Installed {
+    display: none;
 }
 
+#myModalMask .modal-dialog {
+    top: 50%;
+    margin-top: -180px;
+}
+
+#myModalMask .modal-dialog h4 {
+    text-align: center;
+    width: 475px;
+    margin: 27px auto 5px;
+    line-height: 29px;
+    font-size: 19px;
+}
 .tabs-off {
   display: none!important;
 }
@@ -4564,7 +4594,7 @@ figure.snip0016:hover figcaption::before {
 }
 
 .inv-our-company {
-    margin-bottom: 60px;
+    margin-bottom: 85px;
 }
 
 .inv-fff {

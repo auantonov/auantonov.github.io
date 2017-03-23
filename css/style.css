@@ -2931,6 +2931,19 @@ input[type=checkbox] + label:before {
     right: 10px;
 }
 
+.fade.in {
+    /*background: rgba(0, 0, 0, 0.65);*/
+}
+#myModalMask button {
+  width: 100%;
+}
+.noClick {
+  display: block!important;
+}
+.Installed {
+  display: none;
+}
+
 .tabs-off {
   display: none!important;
 }

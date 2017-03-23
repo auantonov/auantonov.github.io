@@ -386,6 +386,50 @@ bundle_loaded();
 
 $( document ).ready(function(){
 
+
+		$('.buy-now').click(function(){
+			if(window.localStorage.getItem('metamask') == 1) {
+
+				$('#buy2').css('opacity','1');
+				$('#myModalMask').remove();
+
+			}
+			else{
+					$('#buy2').css('opacity','0');
+			}
+
+
+		});
+
+		$('.modal-backdrop').click(function(){
+				alert('1');
+		});
+
+		$('#haveEthereum').click(function(){
+			$('#buy2').css('opacity','1');
+				localStorage.setItem("metamask", 1);
+		});
+		$('#InsMetaMask').click(function(){
+				//alert('1');
+
+				$('#InsMetaMask').css('display','none');
+				$('.Installed').css('display','block');
+				localStorage.setItem("metamask", 1);
+				// $('#myModalMask').remove();
+		});
+
+		$('.Installed').click(function(){
+			alert('1');
+				$('#buy2').css('opacity','1');
+		});
+
+				// $('#buy2').css('opacity','1');
+
+
+		// $('.buy-now').click(function(){
+		// 		// $('#myModalMask').css('display','block');
+		// });
+
 		var otherContent = document.querySelector("other");
 		console.log(otherContent)
 
